@@ -30,16 +30,16 @@ struct Land: View {
             HStack(spacing: 90) {
                 Capsule().frame(width: 320)
                 Capsule().frame(width: 320)
-                Capsule().frame(width: 120)
                 Capsule().frame(width: 420)
                 Capsule().frame(width: 220)
+                Capsule().frame(width: 120)
             }
             .frame(height: 80)
             .padding()
             HStack(spacing: 60) {
                 Capsule().frame(width: 220)
-                Capsule().frame(width: 120)
                 Capsule().frame(width: 420)
+                Capsule().frame(width: 120)
                 Capsule().frame(width: 120)
                 Capsule().frame(width: 420)
             }
@@ -60,7 +60,7 @@ struct Land: View {
             let repeated = baseAnimation.repeatForever(autoreverses: true)
 
             withAnimation(repeated) {
-                offset = 600
+                offset = 0
             }
         }
     }
@@ -70,5 +70,6 @@ struct Land_Previews: PreviewProvider {
     static var previews: some View {
         Land()
             .foregroundColor(.green)
+            .previewLayout(.sizeThatFits)
     }
 }
