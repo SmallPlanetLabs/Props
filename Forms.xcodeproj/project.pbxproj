@@ -19,6 +19,8 @@
 		A9A8FFE42730318100221A4E /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE22730318000221A4E /* Planet.swift */; };
 		A9A8FFE6273032CA00221A4E /* Land.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE5273032CA00221A4E /* Land.swift */; };
 		A9A8FFE7273032CA00221A4E /* Land.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE5273032CA00221A4E /* Land.swift */; };
+		A9A8FFE92730620500221A4E /* PreviewDisparateDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */; };
+		A9A8FFEA2730620500221A4E /* PreviewDisparateDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		A9A8FFDF2730258D00221A4E /* SpaceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceForm.swift; sourceTree = "<group>"; };
 		A9A8FFE22730318000221A4E /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		A9A8FFE5273032CA00221A4E /* Land.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Land.swift; sourceTree = "<group>"; };
+		A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDisparateDevices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 				A9A8FFDF2730258D00221A4E /* SpaceForm.swift */,
 				A9A8FFE22730318000221A4E /* Planet.swift */,
 				A9A8FFE5273032CA00221A4E /* Land.swift */,
+				A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */,
 				A9A8FFC3273024FD00221A4E /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -188,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8FFE92730620500221A4E /* PreviewDisparateDevices.swift in Sources */,
 				A9A8FFE6273032CA00221A4E /* Land.swift in Sources */,
 				A9A8FFE02730258D00221A4E /* SpaceForm.swift in Sources */,
 				A9A8FFD3273024FD00221A4E /* ContentView.swift in Sources */,
@@ -200,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8FFEA2730620500221A4E /* PreviewDisparateDevices.swift in Sources */,
 				A9A8FFE7273032CA00221A4E /* Land.swift in Sources */,
 				A9A8FFE12730258D00221A4E /* SpaceForm.swift in Sources */,
 				A9A8FFD4273024FD00221A4E /* ContentView.swift in Sources */,

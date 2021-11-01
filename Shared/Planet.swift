@@ -7,30 +7,106 @@
 
 import SwiftUI
 
-struct Planet: View {
-    let primary: Color
-    let land: Color
+struct PlanetPicker: View {
+    @Binding var planet: Planet?
+
     var body: some View {
-        ZStack {
-            GeometryReader { proxy in
-                Circle()
-                    .fill(primary)
-                    .frame(width: proxy.size.width, height: proxy.size.width)
-                    .overlay(Land().foregroundColor(land))
-                    .mask(Circle())
+        VStack {
+            HStack {
+                button(for: .Mercury)
+                button(for: .Venus)
+                button(for: .Earth)
+                button(for:. Mars)
             }
+            HStack {
+                button(for: .Saturn)
+                button(for: .Jupiter)
+                button(for: .Neptune)
+                button(for:. Uranus)
+            }
+        }
+    }
+
+    @ViewBuilder func button(for planet: Planet) -> some View {
+        Button {
+            withAnimation {
+                self.planet = planet
+            }
+        } label: { Text(planet.rawValue) }
+        .buttonStyle(PlanetButtonStyle(planet: planet, selected: planet == self.planet))
+    }
+}
+
+struct PlanetButtonStyle: ButtonStyle {
+    let planet: Planet
+    let selected: Bool
+
+    @Environment(\.isEnabled) var isEnabled
+
+    public func makeBody(configuration: PlanetButtonStyle.Configuration) -> some View {
+        PlanetButton(configuration: configuration, planet: planet, selected: selected)
+    }
+
+    struct PlanetButton: View {
+        let configuration: PlanetButtonStyle.Configuration
+        let planet: Planet
+        let selected: Bool
+
+        var body: some View {
+            configuration.label
+                .foregroundColor(selected ? Color("BrandGradientStart") : .white)
+                .frame(width: 75, height: 75)
+                .background(
+                    ZStack {
+                        Circle()
+                            .fill(Color(white: 1, opacity: selected ? 1 : 0))
+                        Circle()
+                            .strokeBorder(selected ? Color.white : Color("BrandGradientStart"), lineWidth: 1)
+                    }
+                )
+                .compositingGroup()
+                .opacity(configuration.isPressed ? 0.5 : 1.0)
         }
     }
 }
 
+
 struct Planet_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            Planet(primary: .blue, land: .green)
-                .padding()
-            Planet(primary: .red, land: .gray)
-                .padding()
+        PreviewDisparateDevices {
+            PlanetPicker(planet: .constant(.Earth))
+                .padding(20)
+                .background(Color.gray)
         }
-        .background(Color.black)
     }
 }
+
+
+//
+//struct Planet: View {
+//    let primary: Color
+//    let land: Color
+//    var body: some View {
+//        ZStack {
+//            GeometryReader { proxy in
+//                Circle()
+//                    .fill(primary)
+//                    .frame(width: proxy.size.width, height: proxy.size.width)
+//                    .overlay(Land().foregroundColor(land))
+//                    .mask(Circle())
+//            }
+//        }
+//    }
+//}
+//
+//struct Planet_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VStack {
+//            Planet(primary: .blue, land: .green)
+//                .padding()
+//            Planet(primary: .red, land: .gray)
+//                .padding()
+//        }
+//        .background(Color.black)
+//    }
+//}

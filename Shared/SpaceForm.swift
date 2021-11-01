@@ -10,34 +10,40 @@ import SwiftUI
 struct SpaceForm: View {
     @StateObject private var model = SpaceFormModel()
     var body: some View {
-        let gradient: LinearGradient = LinearGradient(colors: [Color("BrandGradientStart"), Color("BrandGradientEnd")], startPoint: .topLeading, endPoint: .bottomTrailing)
 
         ZStack(alignment: .top) {
-            Planet(primary: .blue, land: .green)
-                .offset(x: 200, y: 300)
             ScrollView {
                 VStack(alignment: .leading, spacing: 4) {
-                    SpaceField(title: "Name")
-                    SpaceField(title: "Planet")
-                    SpaceField(title: "Age")
-//                    ExpandingSpaceField(openField: $model.currentField, field: .name)
-//                        .onTapGesture {
-//                            withAnimation { model.currentField = .name }
-//                        }
-//                    Divider()
-//                    ExpandingSpaceField(openField: $model.currentField, field: .age)
-//                        .onTapGesture {
-//                            withAnimation { model.currentField = .age }
-//                        }
-//                    Divider()
-                    SpaceField(title: "About")
-                    Group {
-                        SpaceField(title: "Interests")
-                        SpaceField(title: "Open to travel")
+                    HStack {
+                        Spacer()
+                        Text("Edit profile")
+                            .font(.system(size: 17, weight: .medium))
+                            .padding()
+                        Spacer()
                     }
-                    Spacer()
+                    .background(.ultraThinMaterial)
+                    .overlay(Button(action: { }, label: {} ))
+
+                    SpaceField(title: "Name")
+                    Divider().background(Color.black).padding(.horizontal)
+                    SpaceField(title: "Age")
+                    Divider().background(Color.black).padding(.horizontal)
+                    SpaceField(title: "Planet")
+                    Group {
+                        PlanetPicker(planet: $model.planet)
+                            .padding(.leading)
+
+                        Divider().background(Color.black).padding(.horizontal)
+                        SpaceField(title: "About")
+                        Group {
+                            SpaceField(title: "Interests")
+                            SpaceField(title: "Open to travel")
+                        }
+                        Spacer()
+                    }
                 }
                 .frame(maxWidth: .infinity)
+                //                .background(Color(white: 0.1, opacity: 0.2))
                 .background(.ultraThinMaterial)
                 .cornerRadius(15)
                 .padding()
@@ -46,28 +52,39 @@ struct SpaceForm: View {
 
             // Persistent header
             HStack {
-                Text("Branding").font(.title)
+                Text("STARS ALIGNED")
+                    .font(.system(size: 18, weight: .light))
+                    .kerning(3.5)
                     .padding()
-                Spacer()
             }
-            .padding(.top, 20)
+            .padding(.top, 50)
             .frame(height: 60)
         }
         .edgesIgnoringSafeArea(.all)
         .foregroundColor(.white)
-        .background(gradient)
+        .background(model.gradient)
     }
 }
 
 struct SpaceForm_Previews: PreviewProvider {
     static var previews: some View {
-        SpaceForm()
+        PreviewDisparateDevices(enabled: false) {
+            SpaceForm()
+        }
     }
 }
 
 final class SpaceFormModel: ObservableObject {
     @Published var name = ""
+    @Published var planet: Planet? = .Mars
     @Published var currentField: Field? = .name
+
+    var gradient: LinearGradient {
+        LinearGradient(colors: [Color("BrandGradientStart"), planet?.color ?? Color("BrandGradientEnd")],
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+
+    }
 
     enum Field {
         case name      // fun message after
@@ -96,59 +113,49 @@ final class SpaceFormModel: ObservableObject {
                 return "Open to travel"
             }
         }
-
-        var hint: String {
-            switch self {
-            case .name:
-                return "What should we call you?"
-            case .age:
-                return "How many galactic solar cycles old are you?"
-            case .role:
-                return "What do you do when you're doing?"
-            case .about:
-                return "Tell us all the good stuff!"
-            case .interests:
-                return "Interests"
-            case .location:
-                return "Planet/solar system/galaxy/dimension"
-            case .openToTravel:
-                return "Open to travel"
-            }
-        }
     }
 }
 
 struct SpaceField: View {
-//    @Binding var isOpen: Bool
     let title: String
     var body: some View {
         HStack {
             Text(title)
             Spacer()
+            Image(systemName: "checkmark")
         }
         .padding()
     }
 }
 
-struct ExpandingSpaceField: View {
-    @Binding var openField: SpaceFormModel.Field?
-    @Binding var completeMessage: String?
-    let field: SpaceFormModel.Field
-    var body: some View {
-        VStack {
-            HStack {
-                Text(field.title)
-                Spacer()
-            }
-            if openField == field {
-                Text(field.hint)
-//                Text("Lots of words and things to say about this field, it has a lot of potential content and could get pretty space-y. Get it? `Space`-y? ... oof ... tough crowd.")
-//                    .padding()
-//                    .background(.thinMaterial)
-//                    .cornerRadius(10)
-//                    .foregroundColor(.black)
-            }
+enum Planet: String, CaseIterable {
+    case Mercury
+    case Venus
+    case Earth
+    case Mars
+    case Saturn
+    case Jupiter
+    case Neptune
+    case Uranus
+
+    var color: Color {
+        switch self {
+        case .Mercury:
+            return Color("GradientEndMercury")
+        case .Venus:
+            return Color("GradientEndVenus")
+        case .Earth:
+            return Color("GradientEndEarth")
+        case .Mars:
+            return Color("GradientEndMars")
+        case .Saturn:
+            return Color("GradientEndSaturn")
+        case .Jupiter:
+            return Color("GradientEndJupiter")
+        case .Neptune:
+            return Color("GradientEndNeptune")
+        case .Uranus:
+            return Color("GradientEndUranus")
         }
-        .padding()
     }
 }
