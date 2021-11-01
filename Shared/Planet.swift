@@ -41,8 +41,6 @@ struct PlanetButtonStyle: ButtonStyle {
     let planet: Planet
     let selected: Bool
 
-    @Environment(\.isEnabled) var isEnabled
-
     public func makeBody(configuration: PlanetButtonStyle.Configuration) -> some View {
         PlanetButton(configuration: configuration, planet: planet, selected: selected)
     }
@@ -64,7 +62,6 @@ struct PlanetButtonStyle: ButtonStyle {
                             .strokeBorder(selected ? Color.white : Color("BrandGradientStart"), lineWidth: 1.5)
                     }
                 )
-                .compositingGroup()
                 .opacity(configuration.isPressed ? 0.5 : 1.0)
         }
     }

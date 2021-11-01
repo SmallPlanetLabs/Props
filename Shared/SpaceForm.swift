@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SpaceForm: View {
     @StateObject private var model = SpaceFormModel()
+    @State private var name = "Tim"
     var body: some View {
 
         ZStack(alignment: .top) {
@@ -25,10 +26,12 @@ struct SpaceForm: View {
                     .overlay(Button(action: { }, label: {} ))
 
                     SpaceTextField(field: .name, value: $model.name)
-//                    if mode.is
-                    SpaceTextField(field: .age, value: $model.age)
+                    if model.isVisisble(field: .age) {
+                        SpaceTextField(field: .age, value: $model.age)
+                    }
                     SpaceField(title: "Planet")
                     Group {
+
                         PlanetPicker(planet: $model.planet)
                             .padding(.leading)
 
@@ -42,7 +45,7 @@ struct SpaceForm: View {
                     }
                 }
                 .frame(maxWidth: .infinity)
-                //                .background(Color(white: 0.1, opacity: 0.2))
+                // .background(Color(white: 0.1, opacity: 0.2))
                 .background(.ultraThinMaterial)
                 .cornerRadius(15)
                 .padding()
@@ -163,11 +166,11 @@ struct SpaceTextField: View {
                 .padding(.bottom, 10)
             HStack {
                 TextField("", text: $value, prompt: Text(field.placeholder).font(.system(size: 17, weight: .medium)))
-//                Text(title)
-//                    .font(.system(size: 17, weight: .medium))
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 Spacer()
-//                Image(systemName: "checkmark")
+                Image(systemName: "checkmark")
             }
+
             Divider().background(Color.black)
                 .padding(.top, 3)
         }
