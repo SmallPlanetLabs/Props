@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SpaceForm: View {
     @StateObject private var model = SpaceFormModel()
@@ -25,24 +26,24 @@ struct SpaceForm: View {
                     .background(.ultraThinMaterial)
                     .overlay(Button(action: { }, label: {} ))
 
-                    SpaceTextField(field: .name, value: $model.name)
-                    if model.isVisisble(field: .age) {
-                        SpaceTextField(field: .age, value: $model.age)
+                    SpaceTextField(field: .name, value: $model.name, isDone: $model.isNameDone)
+                    if model.isNameDone {
+                        SpaceTextField(field: .age, value: $model.age, isDone: $model.isAgeDone)
                     }
-                    SpaceField(title: "Planet")
-                    Group {
 
+                    if model.isAgeDone {
+                        SpaceField(title: "Planet")
                         PlanetPicker(planet: $model.planet)
                             .padding(.leading)
-
                         Divider().background(Color.black).padding(.horizontal)
                             .padding(.top, 12)
-                        Group {
-                            SpaceField(title: "Interests")
-//                            SpaceField(title: "Open to travel")
-                        }
-                        Spacer()
                     }
+
+                    if model.isPlanetDone {
+                        SpaceField(title: "Interests")
+                        SpaceField(title: "Open to travel")
+                    }
+                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 // .background(Color(white: 0.1, opacity: 0.2))
@@ -78,10 +79,20 @@ struct SpaceForm_Previews: PreviewProvider {
 
 final class SpaceFormModel: ObservableObject {
     @Published var name: String = ""
+    @Published var isNameDone = false
     @Published var planet: Planet? = .none
+    @Published var isPlanetDone = false
     @Published var age: String = ""
+    @Published var isAgeDone = false
     @Published var interests: [String] = []
     @Published var currentField: Field? = .name
+
+    init() {
+        $planet
+            .map { $0 != nil}
+            .assign(to: &$isPlanetDone)
+    }
+
 
     func isVisisble(field: Field) -> Bool {
         switch field {
@@ -159,13 +170,14 @@ struct SpaceField: View {
 struct SpaceTextField: View {
     let field: SpaceFormModel.Field
     @Binding var value: String
+    @Binding var isDone: Bool
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(field.title)
                 .font(.system(size: 11, weight: .light))
                 .padding(.bottom, 10)
             HStack {
-                TextField("", text: $value, prompt: Text(field.placeholder).font(.system(size: 17, weight: .medium)))
+                TextField(field.placeholder, text: $value, onCommit: { withAnimation { self.isDone = true }})
 //                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 Spacer()
                 Image(systemName: "checkmark")

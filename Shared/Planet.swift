@@ -30,7 +30,7 @@ struct PlanetPicker: View {
     @ViewBuilder func button(for planet: Planet) -> some View {
         Button {
             withAnimation {
-                self.planet = planet
+                self.planet = (self.planet != planet) ? planet : nil
             }
         } label: { Text(planet.rawValue) }
         .buttonStyle(PlanetButtonStyle(planet: planet, selected: planet == self.planet))
