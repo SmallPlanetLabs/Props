@@ -13,6 +13,8 @@
 		A9A8FFD4273024FD00221A4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFC2273024FB00221A4E /* ContentView.swift */; };
 		A9A8FFD5273024FD00221A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A8FFC3273024FD00221A4E /* Assets.xcassets */; };
 		A9A8FFD6273024FD00221A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A8FFC3273024FD00221A4E /* Assets.xcassets */; };
+		A9A8FFE02730258D00221A4E /* SpaceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFDF2730258D00221A4E /* SpaceForm.swift */; };
+		A9A8FFE12730258D00221A4E /* SpaceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFDF2730258D00221A4E /* SpaceForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		A9A8FFC8273024FD00221A4E /* Forms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A8FFCE273024FD00221A4E /* Forms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A8FFD0273024FD00221A4E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		A9A8FFDF2730258D00221A4E /* SpaceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			children = (
 				A9A8FFC1273024FB00221A4E /* FormsApp.swift */,
 				A9A8FFC2273024FB00221A4E /* ContentView.swift */,
+				A9A8FFDF2730258D00221A4E /* SpaceForm.swift */,
 				A9A8FFC3273024FD00221A4E /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -176,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8FFE02730258D00221A4E /* SpaceForm.swift in Sources */,
 				A9A8FFD3273024FD00221A4E /* ContentView.swift in Sources */,
 				A9A8FFD1273024FD00221A4E /* FormsApp.swift in Sources */,
 			);
@@ -185,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8FFE12730258D00221A4E /* SpaceForm.swift in Sources */,
 				A9A8FFD4273024FD00221A4E /* ContentView.swift in Sources */,
 				A9A8FFD2273024FD00221A4E /* FormsApp.swift in Sources */,
 			);
