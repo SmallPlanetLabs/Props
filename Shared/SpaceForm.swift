@@ -13,30 +13,32 @@ struct SpaceForm: View {
 
         ZStack(alignment: .top) {
             ScrollView {
-                VStack(alignment: .leading, spacing: 40) {
+                VStack(alignment: .leading, spacing: 4) {
                     Spacer(minLength: 60)
-                    Text("Name")
-                    Text("Age")
-                    Text("Role")
-                    Text("About")
-                    Text("Interests")
-                    Text("Planet/Solar system/galaxy")
-                    Text("Open to travel")
-                    Text("Language")
+                    SpaceField(title: "Name")
+                    SpaceField(title: "Age")
+                    SpaceField(title: "Role")
+                    SpaceField(title: "About")
+                    SpaceField(title: "Interests")
+                    SpaceField(title: "Planet/Solar system/galaxy")
+                    SpaceField(title: "Open to travel")
+                    SpaceField(title: "Language")
 
                     Spacer()
                 }
+                .padding()
                 .frame(maxWidth: .infinity)
-                .foregroundColor(.white)
             }
             // Persistent header
             HStack {
                 Text("Branding").font(.title)
+                    .padding()
                 Spacer()
             }
             .frame(height: 60)
         }
         .edgesIgnoringSafeArea(.all)
+        .foregroundColor(.white)
         .background(gradient)
     }
 }
@@ -44,5 +46,18 @@ struct SpaceForm: View {
 struct SpaceForm_Previews: PreviewProvider {
     static var previews: some View {
         SpaceForm()
+    }
+}
+
+struct SpaceField: View {
+    let title: String
+    var body: some View {
+        HStack {
+            Text(title)
+            Spacer()
+        }
+        .padding()
+        .background(.ultraThinMaterial)
+        .cornerRadius(15)
     }
 }
