@@ -15,6 +15,10 @@
 		A9A8FFD6273024FD00221A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A8FFC3273024FD00221A4E /* Assets.xcassets */; };
 		A9A8FFE02730258D00221A4E /* SpaceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFDF2730258D00221A4E /* SpaceForm.swift */; };
 		A9A8FFE12730258D00221A4E /* SpaceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFDF2730258D00221A4E /* SpaceForm.swift */; };
+		A9A8FFE32730318100221A4E /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE22730318000221A4E /* Planet.swift */; };
+		A9A8FFE42730318100221A4E /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE22730318000221A4E /* Planet.swift */; };
+		A9A8FFE6273032CA00221A4E /* Land.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE5273032CA00221A4E /* Land.swift */; };
+		A9A8FFE7273032CA00221A4E /* Land.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE5273032CA00221A4E /* Land.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,8 @@
 		A9A8FFCE273024FD00221A4E /* Forms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A8FFD0273024FD00221A4E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		A9A8FFDF2730258D00221A4E /* SpaceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceForm.swift; sourceTree = "<group>"; };
+		A9A8FFE22730318000221A4E /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		A9A8FFE5273032CA00221A4E /* Land.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Land.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,8 @@
 				A9A8FFC1273024FB00221A4E /* FormsApp.swift */,
 				A9A8FFC2273024FB00221A4E /* ContentView.swift */,
 				A9A8FFDF2730258D00221A4E /* SpaceForm.swift */,
+				A9A8FFE22730318000221A4E /* Planet.swift */,
+				A9A8FFE5273032CA00221A4E /* Land.swift */,
 				A9A8FFC3273024FD00221A4E /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -180,9 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8FFE6273032CA00221A4E /* Land.swift in Sources */,
 				A9A8FFE02730258D00221A4E /* SpaceForm.swift in Sources */,
 				A9A8FFD3273024FD00221A4E /* ContentView.swift in Sources */,
 				A9A8FFD1273024FD00221A4E /* FormsApp.swift in Sources */,
+				A9A8FFE32730318100221A4E /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8FFE7273032CA00221A4E /* Land.swift in Sources */,
 				A9A8FFE12730258D00221A4E /* SpaceForm.swift in Sources */,
 				A9A8FFD4273024FD00221A4E /* ContentView.swift in Sources */,
 				A9A8FFD2273024FD00221A4E /* FormsApp.swift in Sources */,
+				A9A8FFE42730318100221A4E /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
