@@ -61,7 +61,7 @@ struct PlanetButtonStyle: ButtonStyle {
                         Circle()
                             .fill(Color(white: 1, opacity: selected ? 1 : 0))
                         Circle()
-                            .strokeBorder(selected ? Color.white : Color("BrandGradientStart"), lineWidth: 1)
+                            .strokeBorder(selected ? Color.white : Color("BrandGradientStart"), lineWidth: 1.5)
                     }
                 )
                 .compositingGroup()

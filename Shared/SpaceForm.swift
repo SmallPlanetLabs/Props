@@ -24,20 +24,19 @@ struct SpaceForm: View {
                     .background(.ultraThinMaterial)
                     .overlay(Button(action: { }, label: {} ))
 
-                    SpaceField(title: "Name")
-                    Divider().background(Color.black).padding(.horizontal)
-                    SpaceField(title: "Age")
-                    Divider().background(Color.black).padding(.horizontal)
+                    SpaceTextField(field: .name, value: $model.name)
+//                    if mode.is
+                    SpaceTextField(field: .age, value: $model.age)
                     SpaceField(title: "Planet")
                     Group {
                         PlanetPicker(planet: $model.planet)
                             .padding(.leading)
 
                         Divider().background(Color.black).padding(.horizontal)
-                        SpaceField(title: "About")
+                            .padding(.top, 12)
                         Group {
                             SpaceField(title: "Interests")
-                            SpaceField(title: "Open to travel")
+//                            SpaceField(title: "Open to travel")
                         }
                         Spacer()
                     }
@@ -75,9 +74,26 @@ struct SpaceForm_Previews: PreviewProvider {
 }
 
 final class SpaceFormModel: ObservableObject {
-    @Published var name = ""
-    @Published var planet: Planet? = .Mars
+    @Published var name: String = ""
+    @Published var planet: Planet? = .none
+    @Published var age: String = ""
+    @Published var interests: [String] = []
     @Published var currentField: Field? = .name
+
+    func isVisisble(field: Field) -> Bool {
+        switch field {
+        case .name:
+            return true
+        case .age:
+            return !name.isEmpty
+        case .location:
+            return !age.isEmpty
+        case .interests:
+            return planet != nil
+        case .openToTravel:
+            return !interests.isEmpty
+        }
+    }
 
     var gradient: LinearGradient {
         LinearGradient(colors: [Color("BrandGradientStart"), planet?.color ?? Color("BrandGradientEnd")],
@@ -89,8 +105,6 @@ final class SpaceFormModel: ObservableObject {
     enum Field {
         case name      // fun message after
         case age       // start small (text entry) but could make slider with t
-        case role      // text field (fun response after setting)
-        case about
         case interests // 6 for MVP, can select multiple
         case location  // Bool picker
         case openToTravel
@@ -101,10 +115,21 @@ final class SpaceFormModel: ObservableObject {
                 return "Name"
             case .age:
                 return "Age"
-            case .role:
-                return "Role"
-            case .about:
-                return "About me"
+            case .interests:
+                return "Interests"
+            case .location:
+                return "Planet"
+            case .openToTravel:
+                return "Open to travel"
+            }
+        }
+
+        var placeholder: String {
+            switch self {
+            case .name:
+                return "Solaris Astra"
+            case .age:
+                return "31 Earth years"
             case .interests:
                 return "Interests"
             case .location:
@@ -122,7 +147,29 @@ struct SpaceField: View {
         HStack {
             Text(title)
             Spacer()
-            Image(systemName: "checkmark")
+//            Image(systemName: "checkmark")
+        }
+        .padding()
+    }
+}
+
+struct SpaceTextField: View {
+    let field: SpaceFormModel.Field
+    @Binding var value: String
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(field.title)
+                .font(.system(size: 11, weight: .light))
+                .padding(.bottom, 10)
+            HStack {
+                TextField("", text: $value, prompt: Text(field.placeholder).font(.system(size: 17, weight: .medium)))
+//                Text(title)
+//                    .font(.system(size: 17, weight: .medium))
+                Spacer()
+//                Image(systemName: "checkmark")
+            }
+            Divider().background(Color.black)
+                .padding(.top, 3)
         }
         .padding()
     }
