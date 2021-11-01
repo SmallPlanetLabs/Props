@@ -11,20 +11,31 @@ struct SpaceForm: View {
     var body: some View {
         let gradient: LinearGradient = LinearGradient(colors: [Color("BrandGradientStart"), Color("BrandGradientEnd")], startPoint: .topLeading, endPoint: .bottomTrailing)
 
-        VStack(spacing: 40) {
+        ZStack(alignment: .top) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 40) {
+                    Spacer(minLength: 60)
+                    Text("Name")
+                    Text("Age")
+                    Text("Role")
+                    Text("About")
+                    Text("Interests")
+                    Text("Planet/Solar system/galaxy")
+                    Text("Open to travel")
+                    Text("Language")
+
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+            }
             // Persistent header
             HStack {
                 Text("Branding").font(.title)
                 Spacer()
             }
-
-            Text("Forms ... in ... SPACE! 🚀")
-            Text("Forms ... in ... SPACE! 🚀")
-            Text("🚀")
-            Text("Forms ... in ... SPACE! 🚀")
-            Spacer()
+            .frame(height: 60)
         }
-        .foregroundColor(.white)
         .edgesIgnoringSafeArea(.all)
         .background(gradient)
     }
