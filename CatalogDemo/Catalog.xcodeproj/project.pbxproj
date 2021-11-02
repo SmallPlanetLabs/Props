@@ -18,6 +18,8 @@
 		A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844927318ED60056F4F9 /* ButtonStyles.swift */; };
 		A910844D2731C34C0056F4F9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844C2731C34C0056F4F9 /* Helpers.swift */; };
 		A910844E2731C34C0056F4F9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844C2731C34C0056F4F9 /* Helpers.swift */; };
+		A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844F2731D6D70056F4F9 /* StyleGuidable.swift */; };
+		A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844F2731D6D70056F4F9 /* StyleGuidable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		A9108447273188C80056F4F9 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A910844927318ED60056F4F9 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		A910844C2731C34C0056F4F9 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A910844F2731D6D70056F4F9 /* StyleGuidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuidable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108447273188C80056F4F9 /* Buttons.swift */,
 				A910844927318ED60056F4F9 /* ButtonStyles.swift */,
+				A910844F2731D6D70056F4F9 /* StyleGuidable.swift */,
 				A910844C2731C34C0056F4F9 /* Helpers.swift */,
 				A9108428273185250056F4F9 /* Assets.xcassets */,
 			);
@@ -189,6 +193,7 @@
 			files = (
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
+				A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
 				A910844D2731C34C0056F4F9 /* Helpers.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
@@ -201,6 +206,7 @@
 			files = (
 				A9108439273185250056F4F9 /* Catalog.swift in Sources */,
 				A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
+				A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
 				A910844E2731C34C0056F4F9 /* Helpers.swift in Sources */,
 			);
