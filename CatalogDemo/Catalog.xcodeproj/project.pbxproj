@@ -16,6 +16,8 @@
 		A9108448273188C80056F4F9 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108447273188C80056F4F9 /* Buttons.swift */; };
 		A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844927318ED60056F4F9 /* ButtonStyles.swift */; };
 		A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844927318ED60056F4F9 /* ButtonStyles.swift */; };
+		A910844D2731C34C0056F4F9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844C2731C34C0056F4F9 /* Helpers.swift */; };
+		A910844E2731C34C0056F4F9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844C2731C34C0056F4F9 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		A9108435273185250056F4F9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		A9108447273188C80056F4F9 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A910844927318ED60056F4F9 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		A910844C2731C34C0056F4F9 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108447273188C80056F4F9 /* Buttons.swift */,
 				A910844927318ED60056F4F9 /* ButtonStyles.swift */,
+				A910844C2731C34C0056F4F9 /* Helpers.swift */,
 				A9108428273185250056F4F9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -186,6 +190,7 @@
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
+				A910844D2731C34C0056F4F9 /* Helpers.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +202,7 @@
 				A9108439273185250056F4F9 /* Catalog.swift in Sources */,
 				A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
+				A910844E2731C34C0056F4F9 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

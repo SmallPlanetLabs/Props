@@ -8,9 +8,8 @@
 
 import SwiftUI
 
-struct ButtonStyles_Previews: PreviewProvider {
-
-    static var previews: some View {
+struct AllButtonStyles: View {
+    var body: some View {
         ScrollView {
             VStack(spacing: 12) {
                 Group {
@@ -36,7 +35,7 @@ struct ButtonStyles_Previews: PreviewProvider {
 
                     Group {
                         EnabledAndDisabled(title: "OutlinedButton") {
-                            Button("OutlinedButton") {}
+                            Button("Outlined Button") {}
                         }
 
                         EnabledAndDisabled (title: nil) {
@@ -52,44 +51,42 @@ struct ButtonStyles_Previews: PreviewProvider {
                     .buttonStyle(OutlinedButton())
 
                     Group {
-                        EnabledAndDisabled(title: "FanciedButton") {
+                        EnabledAndDisabled(title: "PaperShadowedButton") {
                             Button("Button") {}
                         }
                     }
-                    .buttonStyle(FanciedButton())
+                    .buttonStyle(PaperShadowedButton())
                     .font(.custom("ArialRoundedMTBold", fixedSize: 24))
+                    .accentColor(Color(white: 0.5))
 
                 }
                 .accentColor(.blue)
 
                 Group {
                     Text("System ButtonStyles").font(.title)
-                    EnabledAndDisabled(title: "Unstyled Button") {
-                        Button("Unstyled Button") {}
-                    }
-
+                        .padding(.top, 30)
                     EnabledAndDisabled(title: "DefaultButtonStyle") {
-                        Button("DefaultButtonStyle") {}.buttonStyle(DefaultButtonStyle())
+                        Button("Button") {}.buttonStyle(DefaultButtonStyle())
                     }
 
                     if #available(iOS 15.0, *) {
-                        EnabledAndDisabled(title: "BorderedButtonStyle iOS 15+)") {
-                            Button("BorderedButtonStyle") {}.buttonStyle(BorderedButtonStyle())
+                        EnabledAndDisabled(title: "BorderedButtonStyle (iOS 15+)") {
+                            Button("Button") {}.buttonStyle(BorderedButtonStyle())
                         }
 
                         EnabledAndDisabled(title: "BorderedProminentButtonStyle (iOS 15+") {
-                            Button("BorderedProminentButtonStyle") {}.buttonStyle(BorderedProminentButtonStyle())
+                            Button("Button") {}.buttonStyle(BorderedProminentButtonStyle())
                         }
                         .tint(.orange)
 
                     }
 
                     EnabledAndDisabled(title: "BorderlessButtonStyle") {
-                        Button("BorderlessButtonStyle") {}.buttonStyle(BorderlessButtonStyle())
+                        Button("Button") {}.buttonStyle(BorderlessButtonStyle())
                     }
 
                     EnabledAndDisabled(title: "PlainButtonStyle") {
-                        Button("PlainButtonStyle") {}.buttonStyle(PlainButtonStyle())
+                        Button("Button") {}.buttonStyle(PlainButtonStyle())
                     }
                 }
 
@@ -98,6 +95,13 @@ struct ButtonStyles_Previews: PreviewProvider {
             .padding(.bottom, 100)
         .previewLayout(.sizeThatFits)
         }
+
+    }
+}
+
+struct ButtonStyles_Previews: PreviewProvider {
+    static var previews: some View {
+        AllButtonStyles()
     }
 }
 
@@ -129,7 +133,7 @@ struct FilledButton: ButtonStyle {
     }
 }
 
-struct FanciedButton: ButtonStyle {
+struct PaperShadowedButton: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled: Bool
     func makeBody(configuration: Configuration) -> some View {
         let radius = radius(for: configuration)
