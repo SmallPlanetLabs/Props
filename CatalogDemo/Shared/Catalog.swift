@@ -9,8 +9,13 @@ import SwiftUI
 
 struct Catalog: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                NavigationLink("Buttons", destination: Buttons())
+                NavigationLink("TextFields", destination: Buttons())
+            }
+            .navigationTitle("Catalog")
+        }
     }
 }
 
