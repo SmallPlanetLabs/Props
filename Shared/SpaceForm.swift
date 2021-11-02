@@ -10,7 +10,7 @@ import Combine
 
 struct SpaceForm: View {
     @StateObject private var model = SpaceFormModel()
-    @State private var name = "Tim"
+    @FocusState private var focus: SpaceFormModel.Field?
     var body: some View {
 
         ZStack(alignment: .top) {
@@ -27,8 +27,10 @@ struct SpaceForm: View {
                     .overlay(Button(action: { }, label: {} ))
 
                     SpaceTextField(field: .name, value: $model.name, isDone: $model.isNameDone)
+                        .focused($focus, equals: .name)
                     if model.isNameDone {
                         SpaceTextField(field: .age, value: $model.age, isDone: $model.isAgeDone)
+                            .focused($focus, equals: .age)
                     }
 
                     if model.isAgeDone {
@@ -66,6 +68,9 @@ struct SpaceForm: View {
         .edgesIgnoringSafeArea(.all)
         .foregroundColor(.white)
         .background(model.gradient)
+        .onChange(of: model.currentField) { newField in
+            focus = newField
+        }
     }
 }
 
@@ -91,22 +96,20 @@ final class SpaceFormModel: ObservableObject {
         $planet
             .map { $0 != nil}
             .assign(to: &$isPlanetDone)
-    }
 
+        $isNameDone
+            .removeDuplicates()
+            .filter { $0 }
+            .map { _ in .age }
+            .print("QQQ iND")
+            .assign(to: &$currentField)
 
-    func isVisisble(field: Field) -> Bool {
-        switch field {
-        case .name:
-            return true
-        case .age:
-            return !name.isEmpty
-        case .location:
-            return !age.isEmpty
-        case .interests:
-            return planet != nil
-        case .openToTravel:
-            return !interests.isEmpty
-        }
+        $isAgeDone
+            .removeDuplicates()
+            .filter { $0 }
+            .map { _ in nil }
+            .print("QQQ iAD")
+            .assign(to: &$currentField)
     }
 
     var gradient: LinearGradient {
@@ -116,11 +119,11 @@ final class SpaceFormModel: ObservableObject {
 
     }
 
-    enum Field {
+    enum Field: Int, Hashable {
         case name      // fun message after
         case age       // start small (text entry) but could make slider with t
-        case interests // 6 for MVP, can select multiple
         case location  // Bool picker
+        case interests // 6 for MVP, can select multiple
         case openToTravel
 
         var title: String {
@@ -152,6 +155,17 @@ final class SpaceFormModel: ObservableObject {
                 return "Open to travel"
             }
         }
+
+        var keyboardType: UIKeyboardType {
+            switch self {
+            case .name:
+                return .namePhonePad
+            case .age:
+                return .default
+            default:
+                return .default
+            }
+        }
     }
 }
 
@@ -178,6 +192,7 @@ struct SpaceTextField: View {
                 .padding(.bottom, 10)
             HStack {
                 TextField(field.placeholder, text: $value, onCommit: { withAnimation { self.isDone = true }})
+                    .keyboardType(field.keyboardType)
 //                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 Spacer()
                 Image(systemName: "checkmark")
