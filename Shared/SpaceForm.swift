@@ -26,10 +26,21 @@ struct SpaceForm: View {
                     .background(.ultraThinMaterial)
                     .overlay(Button(action: { }, label: {} ))
 
-                    SpaceTextField(field: .name, value: $model.name, isDone: $model.isNameDone)
+                    TextField(SpaceFormModel.Field.name.title, text: $model.name, onCommit: {
+                        self.model.isNameDone = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { self.focus = .age }
+                    })
+//                        .textFieldStyle(.roundedBorder)
+                        .textFieldStyle(SpaceTextFieldStyle(field: .name))
                         .focused($focus, equals: .name)
+                        .padding()
+
                     if model.isNameDone {
-                        SpaceTextField(field: .age, value: $model.age, isDone: $model.isAgeDone)
+                        TextField(SpaceFormModel.Field.age.title, text: $model.age, onCommit: {
+                            self.model.isAgeDone = true
+                            self.focus = .none
+                        })
+                            .textFieldStyle(SpaceTextFieldStyle(field: .age))
                             .focused($focus, equals: .age)
                     }
 
@@ -48,7 +59,6 @@ struct SpaceForm: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                // .background(Color(white: 0.1, opacity: 0.2))
                 .background(.ultraThinMaterial)
                 .cornerRadius(15)
                 .padding()
@@ -82,93 +92,6 @@ struct SpaceForm_Previews: PreviewProvider {
     }
 }
 
-final class SpaceFormModel: ObservableObject {
-    @Published var name: String = ""
-    @Published var isNameDone = false
-    @Published var planet: Planet? = .none
-    @Published var isPlanetDone = false
-    @Published var age: String = ""
-    @Published var isAgeDone = false
-    @Published var interests: [String] = []
-    @Published var currentField: Field? = .name
-
-    init() {
-        $planet
-            .map { $0 != nil}
-            .assign(to: &$isPlanetDone)
-
-        $isNameDone
-            .removeDuplicates()
-            .filter { $0 }
-            .map { _ in .age }
-            .print("QQQ iND")
-            .assign(to: &$currentField)
-
-        $isAgeDone
-            .removeDuplicates()
-            .filter { $0 }
-            .map { _ in nil }
-            .print("QQQ iAD")
-            .assign(to: &$currentField)
-    }
-
-    var gradient: LinearGradient {
-        LinearGradient(colors: [Color("BrandGradientStart"), planet?.color ?? Color("BrandGradientEnd")],
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-
-    }
-
-    enum Field: Int, Hashable {
-        case name      // fun message after
-        case age       // start small (text entry) but could make slider with t
-        case location  // Bool picker
-        case interests // 6 for MVP, can select multiple
-        case openToTravel
-
-        var title: String {
-            switch self {
-            case .name:
-                return "Name"
-            case .age:
-                return "Age"
-            case .interests:
-                return "Interests"
-            case .location:
-                return "Planet"
-            case .openToTravel:
-                return "Open to travel"
-            }
-        }
-
-        var placeholder: String {
-            switch self {
-            case .name:
-                return "Solaris Astra"
-            case .age:
-                return "31 Earth years"
-            case .interests:
-                return "Interests"
-            case .location:
-                return "Planet"
-            case .openToTravel:
-                return "Open to travel"
-            }
-        }
-
-        var keyboardType: UIKeyboardType {
-            switch self {
-            case .name:
-                return .namePhonePad
-            case .age:
-                return .default
-            default:
-                return .default
-            }
-        }
-    }
-}
-
 struct SpaceField: View {
     let title: String
     var body: some View {
@@ -176,30 +99,6 @@ struct SpaceField: View {
             Text(title)
             Spacer()
 //            Image(systemName: "checkmark")
-        }
-        .padding()
-    }
-}
-
-struct SpaceTextField: View {
-    let field: SpaceFormModel.Field
-    @Binding var value: String
-    @Binding var isDone: Bool
-    var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text(field.title)
-                .font(.system(size: 11, weight: .light))
-                .padding(.bottom, 10)
-            HStack {
-                TextField(field.placeholder, text: $value, onCommit: { withAnimation { self.isDone = true }})
-                    .keyboardType(field.keyboardType)
-//                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                Spacer()
-                Image(systemName: "checkmark")
-            }
-
-            Divider().background(Color.black)
-                .padding(.top, 3)
         }
         .padding()
     }
