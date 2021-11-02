@@ -10,91 +10,88 @@ import SwiftUI
 
 struct AllButtonStyles: View {
     var body: some View {
-        ScrollView {
-            VStack(spacing: 12) {
-                Group {
-                    Divider()
-                    Text("Custom ButtonStyles").font(.title)
-
-                    Group {
-                        EnabledAndDisabled(title: "FilledButton") {
-                            Button("Filled Button") {}
-                        }
-
-                        EnabledAndDisabled (title: nil) {
-                            Button { } label: {
-                                HStack { Text("Filled Button").fixedSize(); Image(systemName: "greaterthan") }
-                            }
-                        }
-
-                        EnabledAndDisabled(title: nil) {
-                            Button { } label: { Image(systemName: "greaterthan") }
-                        }
-                    }
-                    .buttonStyle(FilledButton())
-
-                    Group {
-                        EnabledAndDisabled(title: "OutlinedButton") {
-                            Button("Outlined Button") {}
-                        }
-
-                        EnabledAndDisabled (title: nil) {
-                            Button { } label: {
-                                HStack(spacing: 12) { Text("Outlined Button").fixedSize(); Image(systemName: "greaterthan") }
-                            }
-                        }
-
-                        EnabledAndDisabled(title: nil) {
-                            Button { } label: { Image(systemName: "greaterthan") }
-                        }
-                    }
-                    .buttonStyle(OutlinedButton())
-
-                    Group {
-                        EnabledAndDisabled(title: "PaperShadowedButton") {
-                            Button("Button") {}
-                        }
-                    }
-                    .buttonStyle(PaperShadowedButton())
-                    .font(.custom("ArialRoundedMTBold", fixedSize: 24))
-                    .accentColor(Color(white: 0.5))
-
-                }
-                .accentColor(.blue)
+        VStack(spacing: 12) {
+            Group {
+                Text("Custom ButtonStyles").font(.title)
 
                 Group {
-                    Text("System ButtonStyles").font(.title)
-                        .padding(.top, 30)
-                    EnabledAndDisabled(title: "DefaultButtonStyle") {
-                        Button("Button") {}.buttonStyle(DefaultButtonStyle())
-                    }
-
-                    if #available(iOS 15.0, *) {
-                        EnabledAndDisabled(title: "BorderedButtonStyle (iOS 15+)") {
-                            Button("Button") {}.buttonStyle(BorderedButtonStyle())
-                        }
-
-                        EnabledAndDisabled(title: "BorderedProminentButtonStyle (iOS 15+") {
-                            Button("Button") {}.buttonStyle(BorderedProminentButtonStyle())
-                        }
-                        .tint(.orange)
-
-                    }
-
-                    EnabledAndDisabled(title: "BorderlessButtonStyle") {
-                        Button("Button") {}.buttonStyle(BorderlessButtonStyle())
-                    }
-
-                    EnabledAndDisabled(title: "PlainButtonStyle") {
-                        Button("Button") {}.buttonStyle(PlainButtonStyle())
+                    EnabledAndDisabled(title: "PaperShadowedButton") {
+                        Button("Button") {}
                     }
                 }
+                .buttonStyle(PaperShadowedButton())
+                .font(.custom("ArialRoundedMTBold", fixedSize: 24))
+                .accentColor(Color(white: 0.5))
+
+                Group {
+                    EnabledAndDisabled(title: "FilledButton") {
+                        Button("Filled Button") {}
+                    }
+
+                    EnabledAndDisabled (title: nil) {
+                        Button { } label: {
+                            HStack { Text("Filled Button").fixedSize(); Image(systemName: "greaterthan") }
+                        }
+                    }
+
+                    EnabledAndDisabled(title: nil) {
+                        Button { } label: { Image(systemName: "greaterthan") }
+                    }
+                }
+                .buttonStyle(FilledButton())
+
+                Group {
+                    EnabledAndDisabled(title: "OutlinedButton") {
+                        Button("Outlined Button") {}
+                    }
+
+                    EnabledAndDisabled (title: nil) {
+                        Button { } label: {
+                            HStack(spacing: 12) { Text("Outlined Button").fixedSize(); Image(systemName: "greaterthan") }
+                        }
+                    }
+
+                    EnabledAndDisabled(title: nil) {
+                        Button { } label: { Image(systemName: "greaterthan") }
+                    }
+                }
+                .buttonStyle(OutlinedButton())
 
             }
-            .padding()
-            .padding(.bottom, 100)
-        .previewLayout(.sizeThatFits)
+            .accentColor(.blue)
+
+            Divider()
+                .padding(.top, 30)
+            Group {
+                Text("System ButtonStyles").font(.title)
+                EnabledAndDisabled(title: "DefaultButtonStyle") {
+                    Button("Button") {}.buttonStyle(DefaultButtonStyle())
+                }
+
+                if #available(iOS 15.0, *) {
+                    EnabledAndDisabled(title: "BorderedButtonStyle (iOS 15+)") {
+                        Button("Button") {}.buttonStyle(BorderedButtonStyle())
+                    }
+
+                    EnabledAndDisabled(title: "BorderedProminentButtonStyle (iOS 15+") {
+                        Button("Button") {}.buttonStyle(BorderedProminentButtonStyle())
+                    }
+                    .tint(.orange)
+
+                }
+
+                EnabledAndDisabled(title: "BorderlessButtonStyle") {
+                    Button("Button") {}.buttonStyle(BorderlessButtonStyle())
+                }
+
+                EnabledAndDisabled(title: "PlainButtonStyle") {
+                    Button("Button") {}.buttonStyle(PlainButtonStyle())
+                }
+            }
+
         }
+        .padding()
+        .padding(.bottom, 100)
 
     }
 }
@@ -102,10 +99,11 @@ struct AllButtonStyles: View {
 struct ButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
         AllButtonStyles()
+            .previewLayout(.sizeThatFits)
     }
 }
 
-// TODO: add an Environment value for corner radius
+// TODO: explore adding an Environment value for corner radius
 
 struct OutlinedButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {

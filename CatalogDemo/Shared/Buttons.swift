@@ -9,8 +9,10 @@ import SwiftUI
 
 struct Buttons: View {
     var body: some View {
-        AllButtonStyles()
-            .navigationTitle("Buttons")
+        ScrollView {
+            AllButtonStyles()
+                .navigationTitle("Buttons")
+        }
     }
 }
 
