@@ -16,6 +16,9 @@ struct Progress: View {
                 ProgressViewStyles(title: "CircleBarProgressStyle", hideIndeterminate: true)
                     .progressViewStyle(CircleBarProgressStyle())
 
+                ProgressViewStyles(title: "DottedProgressStyle", hideIndeterminate: true)
+                    .progressViewStyle(DottedProgressStyle())
+
                 Text("SystemProgressViewStyles").font(.title)
 
                 ProgressViewStyles(title: "CircularProgressViewStyle")

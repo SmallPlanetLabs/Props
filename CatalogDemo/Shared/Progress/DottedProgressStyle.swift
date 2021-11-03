@@ -1,5 +1,5 @@
 //
-//  CircleBarProgressStyle.swift
+//  DottedProgressStyle.swift
 //  Catalog
 //
 //  Created by Quinn McHenry on 11/2/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleBarProgressStyle: ProgressViewStyle {
+struct DottedProgressStyle: ProgressViewStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         Group {
@@ -42,37 +42,24 @@ struct CircleBarProgressStyle: ProgressViewStyle {
     struct DeterminateView: View {
         let configuration: Configuration
         var fraction: Double { configuration.fractionCompleted ?? 0 }
-        let height = CGFloat(3)
-        let diameter = CGFloat(50)
+        let height = CGFloat(10)
+        let stroke = StrokeStyle(lineWidth: 10, lineCap: CGLineCap.round, lineJoin: CGLineJoin.round, miterLimit: 0, dash: [0, 25], dashPhase: 0)
 
         var body: some View {
             GeometryReader { proxy in
                 ZStack {
-                    Rectangle()
-                        .fill(Color.accentColor.tinted(amount: 0.8))
+                    Line()
+                        .stroke(Color.accentColor.tinted(amount: 0.7), style: stroke)
                         .frame(height: height)
 
-                    Rectangle()
-                        .fill(Color.accentColor)
-                        .frame(height: height)
+                    Line()
+                        .stroke(Color.accentColor, style: stroke)
                         .clipShape(ClipShape(pct: fraction))
-
-                    Circle()
-                        .fill(Color.white)
-                        .frame(width: diameter, height: diameter)
-                        .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
-
-                    Circle()
-                        .stroke(Color.accentColor, style: StrokeStyle(lineWidth: height))
-                        .frame(width: diameter, height: diameter)
-                        .overlay(label)
-                        .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
+                        .frame(height: height)
                 }
                 .animation(.spring())
-                .padding(.vertical, 5)
-                .padding(.horizontal, 10)
             }
-            .frame(height: diameter + 20)
+            .frame(height: height)
         }
 
         @ViewBuilder var label: some View {
@@ -90,16 +77,30 @@ struct CircleBarProgressStyle: ProgressViewStyle {
         }
 
         func path(in rect: CGRect) -> Path {
-            Path(CGRect(origin: .zero, size: CGSize(width: rect.size.width * CGFloat(pct), height: rect.size.height)))
+            Path(CGRect(origin: CGPoint(x: -rect.height / 2, y: -rect.height / 2), size: CGSize(width: (rect.width + rect.height) * CGFloat(pct), height: rect.height)))
         }
     }
+
+     struct Line: Shape {
+         func path(in rect: CGRect) -> Path {
+             var p = Path()
+             p.move(to: .zero)
+             p.addLines([.zero, CGPoint(x: rect.width, y: 0)])
+             return p
+         }
+     }
 }
 
 
-struct CircleBarProgress_Previews: PreviewProvider {
+struct DottedProgressStyle_Previews: PreviewProvider {
+    static var progress: Foundation.Progress = {
+        let progress = Foundation.Progress(totalUnitCount: 20)
+        progress.completedUnitCount = 20
+        return progress
+    }()
     static var previews: some View {
-        ProgressViewStyles(title: "CircleBarProgressStyle", hideIndeterminate: true)
-            .progressViewStyle(CircleBarProgressStyle())
+        ProgressView(progress)
+            .progressViewStyle(DottedProgressStyle())
             .padding()
     }
 }
