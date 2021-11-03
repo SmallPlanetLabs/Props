@@ -95,10 +95,14 @@ struct CircleBarProgressStyle: ProgressViewStyle {
     }
 }
 
-
 struct CircleBarProgress_Previews: PreviewProvider {
+    static var progress: Foundation.Progress = {
+        let progress = Foundation.Progress(totalUnitCount: 20)
+        progress.completedUnitCount = 11
+        return progress
+    }()
     static var previews: some View {
-        ProgressViewStyles(title: "CircleBarProgressStyle", hideIndeterminate: true)
+        ProgressView(progress)
             .progressViewStyle(CircleBarProgressStyle())
             .padding()
     }

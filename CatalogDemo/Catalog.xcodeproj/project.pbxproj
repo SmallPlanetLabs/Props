@@ -31,6 +31,8 @@
 		A9108465273224160056F4F9 /* CircleBarProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */; };
 		A91084672732314E0056F4F9 /* DottedProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084662732314E0056F4F9 /* DottedProgressStyle.swift */; };
 		A91084682732314E0056F4F9 /* DottedProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084662732314E0056F4F9 /* DottedProgressStyle.swift */; };
+		A910846A273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */; };
+		A910846B273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,7 @@
 		A910846027321BA60056F4F9 /* ProgressViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyles.swift; sourceTree = "<group>"; };
 		A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBarProgressStyle.swift; sourceTree = "<group>"; };
 		A91084662732314E0056F4F9 /* DottedProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedProgressStyle.swift; sourceTree = "<group>"; };
+		A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStepProgressStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 				A910845D27321A240056F4F9 /* Progress.swift */,
 				A910846027321BA60056F4F9 /* ProgressViewStyles.swift */,
 				A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */,
+				A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */,
 				A91084662732314E0056F4F9 /* DottedProgressStyle.swift */,
 			);
 			path = Progress;
@@ -243,6 +247,7 @@
 				A91084672732314E0056F4F9 /* DottedProgressStyle.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A9108464273224160056F4F9 /* CircleBarProgressStyle.swift in Sources */,
+				A910846A273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
@@ -253,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A910846B273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */,
 				A9108439273185250056F4F9 /* Catalog.swift in Sources */,
 				A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
 				A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
