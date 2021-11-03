@@ -13,6 +13,7 @@ struct Catalog: View {
             List {
                 NavigationLink("Buttons", destination: Buttons())
                 NavigationLink("Progress", destination: Progress())
+                NavigationLink("Toggles", destination: Toggles())
             }
             .navigationTitle("Catalog")
         }

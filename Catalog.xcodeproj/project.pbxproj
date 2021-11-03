@@ -35,6 +35,9 @@
 		A910846B273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */; };
 		A9D04EC32732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */; };
 		A9D04EC42732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */; };
+		A9D04EC727330A7900599EAD /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC627330A7900599EAD /* Toggles.swift */; };
+		A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC827330AD000599EAD /* ToggleStyles.swift */; };
+		A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04ECA273310B300599EAD /* SystemToggleStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		A91084662732314E0056F4F9 /* DottedProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedProgressStyle.swift; sourceTree = "<group>"; };
 		A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStepProgressStyle.swift; sourceTree = "<group>"; };
 		A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquiggleProgressStyle.swift; sourceTree = "<group>"; };
+		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
+		A9D04EC827330AD000599EAD /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
+		A9D04ECA273310B300599EAD /* SystemToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemToggleStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +96,9 @@
 			children = (
 				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A9108427273185240056F4F9 /* Catalog.swift */,
-				A9108458273210910056F4F9 /* Buttons */,
 				A910844F2731D6D70056F4F9 /* StyleGuidable.swift */,
+				A9D04EC527330A6800599EAD /* Toggles */,
+				A9108458273210910056F4F9 /* Buttons */,
 				A910845C27321A0C0056F4F9 /* Progress */,
 				A9108428273185250056F4F9 /* Assets.xcassets */,
 			);
@@ -137,6 +144,16 @@
 				A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */,
 			);
 			path = Progress;
+			sourceTree = "<group>";
+		};
+		A9D04EC527330A6800599EAD /* Toggles */ = {
+			isa = PBXGroup;
+			children = (
+				A9D04EC627330A7900599EAD /* Toggles.swift */,
+				A9D04EC827330AD000599EAD /* ToggleStyles.swift */,
+				A9D04ECA273310B300599EAD /* SystemToggleStyles.swift */,
+			);
+			path = Toggles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,15 +263,18 @@
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
 				A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
+				A9D04EC727330A7900599EAD /* Toggles.swift in Sources */,
 				A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
 				A91084672732314E0056F4F9 /* DottedProgressStyle.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A9D04EC32732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */,
 				A9108464273224160056F4F9 /* CircleBarProgressStyle.swift in Sources */,
+				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
 				A910846A273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
+				A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
