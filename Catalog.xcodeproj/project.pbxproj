@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
+		A9108437273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
+		A9108438273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
+		A9108439273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
+		A910843A273185250056F4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9108428273185250056F4F9 /* Assets.xcassets */; };
+		A910843B273185250056F4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9108428273185250056F4F9 /* Assets.xcassets */; };
+		A9108448273188C80056F4F9 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108447273188C80056F4F9 /* Buttons.swift */; };
+		A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844927318ED60056F4F9 /* ButtonStyles.swift */; };
+		A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844927318ED60056F4F9 /* ButtonStyles.swift */; };
+		A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844F2731D6D70056F4F9 /* StyleGuidable.swift */; };
+		A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844F2731D6D70056F4F9 /* StyleGuidable.swift */; };
+		A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */; };
+		A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */; };
+		A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108455273205780056F4F9 /* MaterialButtonStyles.swift */; };
+		A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108455273205780056F4F9 /* MaterialButtonStyles.swift */; };
+		A910845B273213FB0056F4F9 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = A910845A273213FB0056F4F9 /* DynamicColor */; };
+		A910845E27321A240056F4F9 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910845D27321A240056F4F9 /* Progress.swift */; };
+		A910845F27321A240056F4F9 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910845D27321A240056F4F9 /* Progress.swift */; };
+		A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910846027321BA60056F4F9 /* ProgressViewStyles.swift */; };
+		A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910846027321BA60056F4F9 /* ProgressViewStyles.swift */; };
+		A9108464273224160056F4F9 /* CircleBarProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */; };
+		A9108465273224160056F4F9 /* CircleBarProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */; };
+		A91084672732314E0056F4F9 /* DottedProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084662732314E0056F4F9 /* DottedProgressStyle.swift */; };
+		A91084682732314E0056F4F9 /* DottedProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084662732314E0056F4F9 /* DottedProgressStyle.swift */; };
+		A910846A273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */; };
+		A910846B273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */; };
+		A9D04EC32732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */; };
+		A9D04EC42732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A9108426273185240056F4F9 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
+		A9108427273185240056F4F9 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		A9108428273185250056F4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A910842D273185250056F4F9 /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9108433273185250056F4F9 /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9108435273185250056F4F9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		A9108447273188C80056F4F9 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		A910844927318ED60056F4F9 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		A910844F2731D6D70056F4F9 /* StyleGuidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuidable.swift; sourceTree = "<group>"; };
+		A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemButtonStyles.swift; sourceTree = "<group>"; };
+		A9108455273205780056F4F9 /* MaterialButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialButtonStyles.swift; sourceTree = "<group>"; };
+		A910845D27321A240056F4F9 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		A910846027321BA60056F4F9 /* ProgressViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyles.swift; sourceTree = "<group>"; };
+		A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBarProgressStyle.swift; sourceTree = "<group>"; };
+		A91084662732314E0056F4F9 /* DottedProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedProgressStyle.swift; sourceTree = "<group>"; };
+		A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStepProgressStyle.swift; sourceTree = "<group>"; };
+		A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquiggleProgressStyle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A910842A273185250056F4F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A910845B273213FB0056F4F9 /* DynamicColor in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9108430273185250056F4F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9108420273185240056F4F9 = {
+			isa = PBXGroup;
+			children = (
+				A9108425273185240056F4F9 /* Shared */,
+				A9108434273185250056F4F9 /* macOS */,
+				A910842E273185250056F4F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9108425273185240056F4F9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A9108426273185240056F4F9 /* CatalogApp.swift */,
+				A9108427273185240056F4F9 /* Catalog.swift */,
+				A9108458273210910056F4F9 /* Buttons */,
+				A910844F2731D6D70056F4F9 /* StyleGuidable.swift */,
+				A910845C27321A0C0056F4F9 /* Progress */,
+				A9108428273185250056F4F9 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A910842E273185250056F4F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A910842D273185250056F4F9 /* Catalog.app */,
+				A9108433273185250056F4F9 /* Catalog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9108434273185250056F4F9 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				A9108435273185250056F4F9 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		A9108458273210910056F4F9 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A9108447273188C80056F4F9 /* Buttons.swift */,
+				A910844927318ED60056F4F9 /* ButtonStyles.swift */,
+				A9108455273205780056F4F9 /* MaterialButtonStyles.swift */,
+				A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A910845C27321A0C0056F4F9 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				A910845D27321A240056F4F9 /* Progress.swift */,
+				A910846027321BA60056F4F9 /* ProgressViewStyles.swift */,
+				A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */,
+				A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */,
+				A91084662732314E0056F4F9 /* DottedProgressStyle.swift */,
+				A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A910842C273185250056F4F9 /* Catalog (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A910843E273185250056F4F9 /* Build configuration list for PBXNativeTarget "Catalog (iOS)" */;
+			buildPhases = (
+				A9108429273185250056F4F9 /* Sources */,
+				A910842A273185250056F4F9 /* Frameworks */,
+				A910842B273185250056F4F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Catalog (iOS)";
+			packageProductDependencies = (
+				A910845A273213FB0056F4F9 /* DynamicColor */,
+			);
+			productName = "Catalog (iOS)";
+			productReference = A910842D273185250056F4F9 /* Catalog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9108432273185250056F4F9 /* Catalog (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9108441273185250056F4F9 /* Build configuration list for PBXNativeTarget "Catalog (macOS)" */;
+			buildPhases = (
+				A910842F273185250056F4F9 /* Sources */,
+				A9108430273185250056F4F9 /* Frameworks */,
+				A9108431273185250056F4F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Catalog (macOS)";
+			productName = "Catalog (macOS)";
+			productReference = A9108433273185250056F4F9 /* Catalog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9108421273185240056F4F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					A910842C273185250056F4F9 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					A9108432273185250056F4F9 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = A9108424273185240056F4F9 /* Build configuration list for PBXProject "Catalog" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9108420273185240056F4F9;
+			packageReferences = (
+				A9108459273213FB0056F4F9 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
+			productRefGroup = A910842E273185250056F4F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A910842C273185250056F4F9 /* Catalog (iOS) */,
+				A9108432273185250056F4F9 /* Catalog (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A910842B273185250056F4F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A910843A273185250056F4F9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9108431273185250056F4F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A910843B273185250056F4F9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9108429273185250056F4F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
+				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
+				A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
+				A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
+				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
+				A91084672732314E0056F4F9 /* DottedProgressStyle.swift in Sources */,
+				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
+				A9D04EC32732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */,
+				A9108464273224160056F4F9 /* CircleBarProgressStyle.swift in Sources */,
+				A910846A273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */,
+				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
+				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
+				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A910842F273185250056F4F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A910846B273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */,
+				A9D04EC42732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */,
+				A9108439273185250056F4F9 /* Catalog.swift in Sources */,
+				A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
+				A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
+				A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
+				A910845F27321A240056F4F9 /* Progress.swift in Sources */,
+				A9108465273224160056F4F9 /* CircleBarProgressStyle.swift in Sources */,
+				A91084682732314E0056F4F9 /* DottedProgressStyle.swift in Sources */,
+				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
+				A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
+				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A910843C273185250056F4F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A910843D273185250056F4F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A910843F273185250056F4F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.catalog;
+				PRODUCT_NAME = Catalog;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9108440273185250056F4F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.catalog;
+				PRODUCT_NAME = Catalog;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9108442273185250056F4F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Catalog;
+				PRODUCT_NAME = Catalog;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A9108443273185250056F4F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Catalog;
+				PRODUCT_NAME = Catalog;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9108424273185240056F4F9 /* Build configuration list for PBXProject "Catalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A910843C273185250056F4F9 /* Debug */,
+				A910843D273185250056F4F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A910843E273185250056F4F9 /* Build configuration list for PBXNativeTarget "Catalog (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A910843F273185250056F4F9 /* Debug */,
+				A9108440273185250056F4F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9108441273185250056F4F9 /* Build configuration list for PBXNativeTarget "Catalog (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9108442273185250056F4F9 /* Debug */,
+				A9108443273185250056F4F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9108459273213FB0056F4F9 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A910845A273213FB0056F4F9 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9108459273213FB0056F4F9 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A9108421273185240056F4F9 /* Project object */;
+}
