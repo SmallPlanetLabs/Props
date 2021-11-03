@@ -1,0 +1,21 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy to Testflight
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Build archive
+        run: make archive
+      - name: Make IPA
+        run: make ipa
+      - name: Validate app
+        run: make validate
+      - name: Upload app
+        run: make upload
+        
