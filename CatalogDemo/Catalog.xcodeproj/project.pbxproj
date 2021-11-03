@@ -23,6 +23,10 @@
 		A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108455273205780056F4F9 /* MaterialButtonStyles.swift */; };
 		A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108455273205780056F4F9 /* MaterialButtonStyles.swift */; };
 		A910845B273213FB0056F4F9 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = A910845A273213FB0056F4F9 /* DynamicColor */; };
+		A910845E27321A240056F4F9 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910845D27321A240056F4F9 /* Progress.swift */; };
+		A910845F27321A240056F4F9 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910845D27321A240056F4F9 /* Progress.swift */; };
+		A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910846027321BA60056F4F9 /* ProgressViewStyles.swift */; };
+		A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910846027321BA60056F4F9 /* ProgressViewStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,8 @@
 		A910844F2731D6D70056F4F9 /* StyleGuidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuidable.swift; sourceTree = "<group>"; };
 		A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemButtonStyles.swift; sourceTree = "<group>"; };
 		A9108455273205780056F4F9 /* MaterialButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialButtonStyles.swift; sourceTree = "<group>"; };
+		A910845D27321A240056F4F9 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		A910846027321BA60056F4F9 /* ProgressViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108458273210910056F4F9 /* Buttons */,
 				A910844F2731D6D70056F4F9 /* StyleGuidable.swift */,
+				A910845C27321A0C0056F4F9 /* Progress */,
 				A9108428273185250056F4F9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -105,6 +112,15 @@
 				A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A910845C27321A0C0056F4F9 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				A910845D27321A240056F4F9 /* Progress.swift */,
+				A910846027321BA60056F4F9 /* ProgressViewStyles.swift */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,11 +228,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
+				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
 				A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
 				A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
+				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +245,9 @@
 			files = (
 				A9108439273185250056F4F9 /* Catalog.swift in Sources */,
 				A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */,
+				A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
 				A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
+				A910845F27321A240056F4F9 /* Progress.swift in Sources */,
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,

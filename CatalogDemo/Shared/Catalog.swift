@@ -12,7 +12,7 @@ struct Catalog: View {
         NavigationView {
             List {
                 NavigationLink("Buttons", destination: Buttons())
-                NavigationLink("TextFields", destination: Buttons())
+                NavigationLink("Progress", destination: Progress())
             }
             .navigationTitle("Catalog")
         }
