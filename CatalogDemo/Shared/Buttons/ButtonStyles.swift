@@ -8,12 +8,9 @@
 
 import SwiftUI
 
-struct AllButtonStyles: View {
+struct ButtonStyles: View {
     var body: some View {
         VStack(spacing: 12) {
-            Group {
-                Text("Custom ButtonStyles").font(.title)
-
                 Group {
                     EnabledAndDisabled(title: "PaperShadowedButton") {
                         Button("Button") {}
@@ -24,23 +21,13 @@ struct AllButtonStyles: View {
                 .accentColor(Color(white: 0.5))
 
                 Group {
-                    EnabledAndDisabled(title: "MonochromaricMaterial") {
-                        Button {} label: {
-                            Text("+").padding(.horizontal)
-                        }
-                    }
-                }
-                .buttonStyle(MonochromaricMaterial(color: Color(hex: 0x9A513D)))
-                .font(.custom("ArialRoundedMTBold", fixedSize: 44))
-
-                Group {
                     EnabledAndDisabled(title: "FilledButton") {
                         Button("Filled Button") {}
                     }
 
                     EnabledAndDisabled (title: nil) {
                         Button { } label: {
-                            HStack { Text("Filled Button").fixedSize(); Image(systemName: "greaterthan") }
+                            HStack { Text("Filled Button"); Image(systemName: "greaterthan") }
                         }
                     }
 
@@ -57,7 +44,7 @@ struct AllButtonStyles: View {
 
                     EnabledAndDisabled (title: nil) {
                         Button { } label: {
-                            HStack(spacing: 12) { Text("Outlined Button").fixedSize(); Image(systemName: "greaterthan") }
+                            HStack(spacing: 12) { Text("Outlined Button"); Image(systemName: "greaterthan") }
                         }
                     }
 
@@ -66,50 +53,18 @@ struct AllButtonStyles: View {
                     }
                 }
                 .buttonStyle(OutlinedButton())
-
-            }
-
-            Divider()
-                .padding(.top, 30)
-//            Group {
-//                Text("System ButtonStyles").font(.title)
-//                EnabledAndDisabled(title: "DefaultButtonStyle") {
-//                    Button("Button") {}.buttonStyle(DefaultButtonStyle())
-//                }
-//
-//                if #available(iOS 15.0, *) {
-//                    EnabledAndDisabled(title: "BorderedButtonStyle (iOS 15+)") {
-//                        Button("Button") {}.buttonStyle(BorderedButtonStyle())
-//                    }
-//
-//                    EnabledAndDisabled(title: "BorderedProminentButtonStyle (iOS 15+") {
-//                        Button("Button") {}.buttonStyle(BorderedProminentButtonStyle())
-//                    }
-//                    .tint(.orange)
-//
-//                }
-//
-//                EnabledAndDisabled(title: "BorderlessButtonStyle") {
-//                    Button("Button") {}.buttonStyle(BorderlessButtonStyle())
-//                }
-//
-//                EnabledAndDisabled(title: "PlainButtonStyle") {
-//                    Button("Button") {}.buttonStyle(PlainButtonStyle())
-//                }
-//            }
-
         }
         .accentColor(.purple)
-        .padding()
-        .padding(.bottom, 100)
-
     }
 }
 
 struct ButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        AllButtonStyles()
-            .previewLayout(.sizeThatFits)
+        ScrollView {
+            ButtonStyles()
+                .padding()
+                .previewLayout(.sizeThatFits)
+        }
     }
 }
 
@@ -138,30 +93,6 @@ struct FilledButton: ButtonStyle {
             .foregroundColor(.white)
             .padding()
             .background(background)
-    }
-}
-
-struct MonochromaricMaterial: ButtonStyle {
-    @Environment(\.isEnabled) var isEnabled: Bool
-    let color: Color
-    func makeBody(configuration: Configuration) -> some View {
-        let background = RoundedRectangle(cornerRadius: 14, style: .continuous)
-            .fill(color(for: configuration))
-
-        configuration
-            .label
-            .padding()
-            .foregroundColor(isEnabled ? color : disabled)
-            .background(background)
-    }
-
-    var disabled: Color {
-        color.shaded(by: 0.5).tinted(by: 0.5)
-    }
-
-    func color(for configuration: Configuration) -> Color {
-        guard isEnabled else { return disabled.tinted(by: 0.7) }
-        return color.tinted(by: configuration.isPressed ? 0.8 : 0.6)
     }
 }
 
