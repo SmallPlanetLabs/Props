@@ -11,6 +11,11 @@ struct Progress: View {
     var body: some View {
         ScrollView {
             VStack {
+                Text("Custom Progress View Styles").font(.title)
+
+                ProgressViewStyles(title: "CircleBarProgressStyle", hideIndeterminate: true)
+                    .progressViewStyle(CircleBarProgressStyle())
+
                 Text("SystemProgressViewStyles").font(.title)
 
                 ProgressViewStyles(title: "CircularProgressViewStyle")

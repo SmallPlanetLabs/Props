@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ProgressViewStyles: View {
+    init(title: String, hideDeterminate: Bool = false, hideIndeterminate: Bool = false) {
+        self.title = title
+        self.hideDeterminate = hideDeterminate
+        self.hideIndeterminate = hideIndeterminate
+    }
+
     let title: String
+    let hideDeterminate: Bool
+    let hideIndeterminate: Bool
+
     @State private var value: Double = 0
-    let progress = Foundation.Progress(totalUnitCount: 1)
+    let progress = Foundation.Progress(totalUnitCount: 11)
     let total: Double = 11
 
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -23,16 +32,19 @@ struct ProgressViewStyles: View {
             }
 
             Group {
-                ProgressView()
+                if !hideIndeterminate {
+                    ProgressView()
+                    ProgressView(value: value, total: total)
+                }
 
-                ProgressView(value: value, total: total)
-
-                ProgressView("Downloading photo \(Int(value)) of \(Int(total))", value: value, total: total)
-
-                ProgressView(progress)
+                if !hideDeterminate {
+                    ProgressView("Downloading photo \(Int(value)) of \(Int(total))", value: value, total: total)
+                    ProgressView(progress)
+                }
             }
-            .padding()
+            .padding(.vertical, 15)
         }
+        .padding()
         .onReceive(timer) { _ in
              value += 1
              progress.completedUnitCount += 1
