@@ -16,14 +16,13 @@
 		A9108448273188C80056F4F9 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108447273188C80056F4F9 /* Buttons.swift */; };
 		A910844A27318ED60056F4F9 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844927318ED60056F4F9 /* ButtonStyles.swift */; };
 		A910844B27318ED60056F4F9 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844927318ED60056F4F9 /* ButtonStyles.swift */; };
-		A910844D2731C34C0056F4F9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844C2731C34C0056F4F9 /* Helpers.swift */; };
-		A910844E2731C34C0056F4F9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844C2731C34C0056F4F9 /* Helpers.swift */; };
 		A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844F2731D6D70056F4F9 /* StyleGuidable.swift */; };
 		A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910844F2731D6D70056F4F9 /* StyleGuidable.swift */; };
 		A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */; };
 		A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */; };
 		A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108455273205780056F4F9 /* MaterialButtonStyles.swift */; };
 		A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108455273205780056F4F9 /* MaterialButtonStyles.swift */; };
+		A910845B273213FB0056F4F9 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = A910845A273213FB0056F4F9 /* DynamicColor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		A9108435273185250056F4F9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		A9108447273188C80056F4F9 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A910844927318ED60056F4F9 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
-		A910844C2731C34C0056F4F9 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A910844F2731D6D70056F4F9 /* StyleGuidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuidable.swift; sourceTree = "<group>"; };
 		A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemButtonStyles.swift; sourceTree = "<group>"; };
 		A9108455273205780056F4F9 /* MaterialButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialButtonStyles.swift; sourceTree = "<group>"; };
@@ -46,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A910845B273213FB0056F4F9 /* DynamicColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +74,6 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108458273210910056F4F9 /* Buttons */,
 				A910844F2731D6D70056F4F9 /* StyleGuidable.swift */,
-				A910844C2731C34C0056F4F9 /* Helpers.swift */,
 				A9108428273185250056F4F9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -125,6 +123,9 @@
 			dependencies = (
 			);
 			name = "Catalog (iOS)";
+			packageProductDependencies = (
+				A910845A273213FB0056F4F9 /* DynamicColor */,
+			);
 			productName = "Catalog (iOS)";
 			productReference = A910842D273185250056F4F9 /* Catalog.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +174,9 @@
 				Base,
 			);
 			mainGroup = A9108420273185240056F4F9;
+			packageReferences = (
+				A9108459273213FB0056F4F9 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
 			productRefGroup = A910842E273185250056F4F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -212,7 +216,6 @@
 				A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
-				A910844D2731C34C0056F4F9 /* Helpers.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);
@@ -228,7 +231,6 @@
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
-				A910844E2731C34C0056F4F9 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9108459273213FB0056F4F9 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A910845A273213FB0056F4F9 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9108459273213FB0056F4F9 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9108421273185240056F4F9 /* Project object */;
 }
