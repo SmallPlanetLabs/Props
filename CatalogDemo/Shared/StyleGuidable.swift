@@ -24,11 +24,11 @@ import SwiftUI
 //}
 
 /// Buttons
-/// Slider
+/// + Slider
 /// Progress - squiggly
 /// Textfield
 /// Label
-/// Toggles
+/// + Toggles
 /// make our own (someday) stylable Card?
 /// Gradient use?
 

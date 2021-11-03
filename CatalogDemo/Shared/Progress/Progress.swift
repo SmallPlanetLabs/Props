@@ -13,6 +13,10 @@ struct Progress: View {
             VStack {
                 Text("Custom Progress View Styles").font(.title)
 
+                ProgressViewStyles(title: "SquiggleProgressStyle", total: 4, hideIndeterminate: true)
+                    .progressViewStyle(SquiggleProgressStyle())
+
+
                 ProgressViewStyles(title: "CircleBarProgressStyle", hideIndeterminate: true)
                     .progressViewStyle(CircleBarProgressStyle())
 

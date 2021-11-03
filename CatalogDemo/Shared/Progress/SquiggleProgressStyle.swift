@@ -1,13 +1,15 @@
 //
-//  CircleBarProgressStyle.swift
+//  SquiggleProgressStyle.swift
 //  Catalog
 //
-//  Created by Quinn McHenry on 11/2/21.
+//  Created by Quinn McHenry on 11/3/21.
 //
 
 import SwiftUI
 
-struct CircleBarProgressStyle: ProgressViewStyle {
+struct SquiggleProgressStyle: ProgressViewStyle {
+    static let thickness = CGFloat(10)
+    static let diameter = CGFloat(50)
 
     func makeBody(configuration: Configuration) -> some View {
         Group {
@@ -42,30 +44,24 @@ struct CircleBarProgressStyle: ProgressViewStyle {
     struct DeterminateView: View {
         let configuration: Configuration
         var fraction: Double { configuration.fractionCompleted ?? 0 }
-        let height = CGFloat(3)
-        let diameter = CGFloat(50)
+        // let thickness = SquiggleProgressStyle.thickness
 
         var body: some View {
             GeometryReader { proxy in
                 ZStack {
-                    Rectangle()
+                    RoundedRectangle(cornerRadius: thickness / 2)
                         .fill(Color.accentColor.tinted(amount: 0.8))
-                        .frame(height: height)
+                        .frame(height: thickness)
+                        .clipShape(ClipShape(pct: fraction, trailing: false))
 
-                    Rectangle()
+                    Wave(magnitude: thickness * 0.75, frequency: 34)
+                        .stroke(Color.accentColor, style: StrokeStyle(lineWidth: thickness, lineCap: .round, lineJoin: .round, miterLimit: 0))
+                        .frame(height: 50)
+                        .clipShape(ClipShape(pct: fraction, trailing: true))
+
+                    Circle()
                         .fill(Color.accentColor)
-                        .frame(height: height)
-                        .clipShape(ClipShape(pct: fraction))
-
-                    Circle()
-                        .fill(Color.white)
                         .frame(width: diameter, height: diameter)
-                        .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
-
-                    Circle()
-                        .stroke(Color.accentColor, style: StrokeStyle(lineWidth: height))
-                        .frame(width: diameter, height: diameter)
-                        .overlay(label)
                         .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
                 }
                 .animation(.spring())
@@ -83,6 +79,7 @@ struct CircleBarProgressStyle: ProgressViewStyle {
 
     struct ClipShape: Shape {
         var pct: Double
+        let trailing: Bool
 
         var animatableData: Double {
             get { pct }
@@ -90,12 +87,39 @@ struct CircleBarProgressStyle: ProgressViewStyle {
         }
 
         func path(in rect: CGRect) -> Path {
-            Path(CGRect(origin: .zero, size: CGSize(width: rect.size.width * CGFloat(pct), height: rect.size.height)))
+            let offset = CGFloat(pct) * rect.width
+            let origin = CGPoint(x: trailing ? -thickness : offset, y: 0)
+            let size = CGSize(width: trailing ? offset : rect.width - offset, height: rect.height)
+            return Path(CGRect(origin: origin, size: size))
+        }
+    }
+
+    struct Wave: Shape {
+        var magnitude: Double
+        var frequency: Double
+
+        func path(in rect: CGRect) -> Path {
+            let path = UIBezierPath()
+            let width = Double(rect.width)
+            let height = Double(rect.height)
+            let midHeight = height / 2
+
+            let wavelength = width / frequency
+            path.move(to: CGPoint(x: 0, y: midHeight))
+
+            for x in stride(from: thickness, through: width, by: 1) {
+                let relativeX = x / wavelength
+                let sine = sin(relativeX)
+                let y = magnitude * sine + midHeight
+                path.addLine(to: CGPoint(x: x, y: y))
+            }
+
+            return Path(path.cgPath)
         }
     }
 }
 
-struct CircleBarProgress_Previews: PreviewProvider {
+struct SquiggleProgressStyle_Previews: PreviewProvider {
     static var progress: Foundation.Progress = {
         let progress = Foundation.Progress(totalUnitCount: 20)
         progress.completedUnitCount = 11
@@ -103,7 +127,7 @@ struct CircleBarProgress_Previews: PreviewProvider {
     }()
     static var previews: some View {
         ProgressView(progress)
-            .progressViewStyle(CircleBarProgressStyle())
+            .progressViewStyle(SquiggleProgressStyle())
             .padding()
     }
 }
