@@ -21,9 +21,7 @@ struct SystemButtonStyles: View {
                 
                 EnabledAndDisabled(title: "BorderedProminentButtonStyle (iOS 15+") {
                     Button("Button") {}.buttonStyle(BorderedProminentButtonStyle())
-                }
-                .tint(.orange)
-                
+                }                
             }
             
             EnabledAndDisabled(title: "BorderlessButtonStyle") {

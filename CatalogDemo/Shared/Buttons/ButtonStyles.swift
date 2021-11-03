@@ -54,7 +54,6 @@ struct ButtonStyles: View {
                 }
                 .buttonStyle(OutlinedButton())
         }
-        .accentColor(.purple)
     }
 }
 
