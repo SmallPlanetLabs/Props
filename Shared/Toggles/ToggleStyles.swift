@@ -7,28 +7,9 @@
 
 import SwiftUI
 
-@available(iOS 15.0, *)
-struct ToggleStyles: View {
-    @State private var flag = false
-
-    var body: some View {
-        VStack(spacing: 10) {
-            Text("is enabled \(flag ? "yes" : "no")")
-
-            Toggle(isOn: $flag) {
-                Text("Enabled")
-            }.toggleStyle(.button)
 
 
-            VStack {
-                Toggle("Vibrate on Ring", isOn: .constant(true))
-                Toggle("Vibrate on Silent", isOn: .constant(false))
-            }
-            .toggleStyle(.switch)
-        }
-        .padding()
-    }
-}
+// MARK: - Helper for rendering multiple toggle states
 
 struct ToggleExample<Content>: View where Content: View {
     let title: String

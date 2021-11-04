@@ -23,7 +23,6 @@ import SwiftUI
 //
 //}
 
-/// + Toggles
 /// + Slider
 /// Label
 /// Gradient use?
