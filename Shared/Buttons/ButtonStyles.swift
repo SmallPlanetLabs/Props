@@ -60,10 +60,12 @@ struct ButtonStyles: View {
 
 struct ButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollView {
-            ButtonStyles()
-                .padding()
-                .previewLayout(.sizeThatFits)
+        MultipleDevices {
+            ScrollView {
+                ButtonStyles()
+                    .padding()
+                    .previewLayout(.sizeThatFits)
+            }
         }
     }
 }
@@ -84,7 +86,7 @@ struct EnabledAndDisabled<Content>: View where Content: View {
             }
             HStack {
                 content
-                content.disabled(true)
+                    .modifier(CloneDisabled())
             }
         }
     }

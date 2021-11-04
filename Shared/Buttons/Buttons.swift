@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Props
 
 struct Buttons: View {
     var body: some View {
@@ -45,6 +46,8 @@ struct AllButtonStyles: View {
 
 struct Buttons_Previews: PreviewProvider {
     static var previews: some View {
-        Buttons()
+        MultipleDevices {
+            Buttons()
+        }
     }
 }
