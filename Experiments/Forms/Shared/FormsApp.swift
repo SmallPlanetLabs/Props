@@ -12,6 +12,7 @@ struct FormsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(SpaceFormModel())
         }
     }
 }

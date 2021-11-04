@@ -25,6 +25,7 @@
 		A9A8FFE7273032CA00221A4E /* Land.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE5273032CA00221A4E /* Land.swift */; };
 		A9A8FFE92730620500221A4E /* PreviewDisparateDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */; };
 		A9A8FFEA2730620500221A4E /* PreviewDisparateDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */; };
+		A9C10451273433A20086AE8C /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A9C10450273433A20086AE8C /* Props */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A9A8FFE22730318000221A4E /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		A9A8FFE5273032CA00221A4E /* Land.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Land.swift; sourceTree = "<group>"; };
 		A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDisparateDevices.swift; sourceTree = "<group>"; };
+		A9C1044E273433940086AE8C /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Props; path = ../../Props; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C10451273433A20086AE8C /* Props in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +66,11 @@
 		A9A8FFBB273024FB00221A4E = {
 			isa = PBXGroup;
 			children = (
+				A9C1044E273433940086AE8C /* Props */,
 				A9A8FFC0273024FB00221A4E /* Shared */,
 				A9A8FFCF273024FD00221A4E /* macOS */,
 				A9A8FFC9273024FD00221A4E /* Products */,
+				A9C1044F273433A20086AE8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +107,13 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		A9C1044F273433A20086AE8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +130,9 @@
 			dependencies = (
 			);
 			name = "Forms (iOS)";
+			packageProductDependencies = (
+				A9C10450273433A20086AE8C /* Props */,
+			);
 			productName = "Forms (iOS)";
 			productReference = A9A8FFC8273024FD00221A4E /* Forms.app */;
 			productType = "com.apple.product-type.application";
@@ -488,6 +503,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9C10450273433A20086AE8C /* Props */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Props;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9A8FFBC273024FB00221A4E /* Project object */;
 }

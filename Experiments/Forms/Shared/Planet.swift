@@ -78,6 +78,37 @@ struct Planet_Previews: PreviewProvider {
     }
 }
 
+enum Planet: String, CaseIterable {
+    case Mercury
+    case Venus
+    case Earth
+    case Mars
+    case Saturn
+    case Jupiter
+    case Neptune
+    case Uranus
+
+    var color: Color {
+        switch self {
+        case .Mercury:
+            return Color("GradientEndMercury")
+        case .Venus:
+            return Color("GradientEndVenus")
+        case .Earth:
+            return Color("GradientEndEarth")
+        case .Mars:
+            return Color("GradientEndMars")
+        case .Saturn:
+            return Color("GradientEndSaturn")
+        case .Jupiter:
+            return Color("GradientEndJupiter")
+        case .Neptune:
+            return Color("GradientEndNeptune")
+        case .Uranus:
+            return Color("GradientEndUranus")
+        }
+    }
+}
 
 //
 //struct Planet: View {

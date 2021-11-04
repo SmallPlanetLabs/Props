@@ -7,9 +7,10 @@
 
 import SwiftUI
 import Combine
+import Props
 
 struct SpaceForm: View {
-    @StateObject private var model = SpaceFormModel()
+    @EnvironmentObject private var model: SpaceFormModel
     @FocusState private var focus: SpaceFormModel.Field?
     var body: some View {
 
@@ -33,7 +34,6 @@ struct SpaceForm: View {
 //                        .textFieldStyle(.roundedBorder)
                         .textFieldStyle(SpaceTextFieldStyle(field: .name))
                         .focused($focus, equals: .name)
-                        .padding()
 
                     if model.isNameDone {
                         TextField(SpaceFormModel.Field.age.title, text: $model.age, onCommit: {
@@ -46,6 +46,8 @@ struct SpaceForm: View {
 
                     if model.isAgeDone {
                         SpaceField(title: "Planet")
+                            .font(.system(size: 11, weight: .light))
+
                         PlanetPicker(planet: $model.planet)
                             .padding(.leading)
                         Divider().background(Color.black).padding(.horizontal)
@@ -54,7 +56,14 @@ struct SpaceForm: View {
 
                     if model.isPlanetDone {
                         SpaceField(title: "Interests")
-                        SpaceField(title: "Open to travel")
+                            .font(.system(size: 11, weight: .light))
+
+                        SpaceField(title: "Open to travel") // this seems redundant
+                            .font(.system(size: 11, weight: .light))
+                        Toggle("Are you open to travel?", isOn: $model.openToTravel)
+                            .toggleStyle(CheckBoxStyle())
+                            .padding()
+                        
                     }
                     Spacer()
                 }
@@ -89,6 +98,7 @@ struct SpaceForm_Previews: PreviewProvider {
         PreviewDisparateDevices(enabled: false) {
             SpaceForm()
         }
+        .environmentObject(SpaceFormModel(name: "Sally", age: "37", planet: .Mars))
     }
 }
 
@@ -101,37 +111,5 @@ struct SpaceField: View {
 //            Image(systemName: "checkmark")
         }
         .padding()
-    }
-}
-
-enum Planet: String, CaseIterable {
-    case Mercury
-    case Venus
-    case Earth
-    case Mars
-    case Saturn
-    case Jupiter
-    case Neptune
-    case Uranus
-
-    var color: Color {
-        switch self {
-        case .Mercury:
-            return Color("GradientEndMercury")
-        case .Venus:
-            return Color("GradientEndVenus")
-        case .Earth:
-            return Color("GradientEndEarth")
-        case .Mars:
-            return Color("GradientEndMars")
-        case .Saturn:
-            return Color("GradientEndSaturn")
-        case .Jupiter:
-            return Color("GradientEndJupiter")
-        case .Neptune:
-            return Color("GradientEndNeptune")
-        case .Uranus:
-            return Color("GradientEndUranus")
-        }
     }
 }

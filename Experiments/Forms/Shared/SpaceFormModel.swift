@@ -13,11 +13,12 @@ final class SpaceFormModel: ObservableObject {
     @Published var planet: Planet? = .none
     @Published var isPlanetDone = false
     @Published var age: String = ""
-    @Published var isAgeDone = false
+    @Published var isAgeDone = true
     @Published var interests: [String] = []
+    @Published var openToTravel: Bool = false
     @Published var currentField: Field? = .name
 
-    init() {
+    init(name: String = "", age: String = "", planet: Planet? = .none) {
         $planet
             .map { $0 != nil}
             .assign(to: &$isPlanetDone)
@@ -26,15 +27,23 @@ final class SpaceFormModel: ObservableObject {
             .removeDuplicates()
             .filter { $0 }
             .map { _ in .age }
-            .print("QQQ iND")
             .assign(to: &$currentField)
+
+        $age
+            .print("age")
+            .removeDuplicates()
+            .map { !$0.isEmpty }
+            .assign(to: &$isAgeDone)
 
         $isAgeDone
             .removeDuplicates()
             .filter { $0 }
-            .map { _ in nil }
-            .print("QQQ iAD")
+            .map { _ in .none }
             .assign(to: &$currentField)
+
+        self.name = name
+        self.age = age
+        self.planet = planet
     }
 
     var gradient: LinearGradient {
