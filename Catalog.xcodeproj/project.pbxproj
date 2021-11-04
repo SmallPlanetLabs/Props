@@ -27,6 +27,7 @@
 		A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910846027321BA60056F4F9 /* ProgressViewStyles.swift */; };
 		A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910846027321BA60056F4F9 /* ProgressViewStyles.swift */; };
 		A9C1044427337E260086AE8C /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A9C1044327337E260086AE8C /* Props */; };
+		A9C10447273391BC0086AE8C /* SunMoonToggleStyle in Frameworks */ = {isa = PBXBuildFile; productRef = A9C10446273391BC0086AE8C /* SunMoonToggleStyle */; };
 		A9D04EC727330A7900599EAD /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC627330A7900599EAD /* Toggles.swift */; };
 		A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC827330AD000599EAD /* ToggleStyles.swift */; };
 		A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04ECA273310B300599EAD /* SystemToggleStyles.swift */; };
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C10447273391BC0086AE8C /* SunMoonToggleStyle in Frameworks */,
 				A9C1044427337E260086AE8C /* Props in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +170,7 @@
 			name = "Catalog (iOS)";
 			packageProductDependencies = (
 				A9C1044327337E260086AE8C /* Props */,
+				A9C10446273391BC0086AE8C /* SunMoonToggleStyle */,
 			);
 			productName = "Catalog (iOS)";
 			productReference = A910842D273185250056F4F9 /* Catalog.app */;
@@ -218,6 +221,7 @@
 			);
 			mainGroup = A9108420273185240056F4F9;
 			packageReferences = (
+				A9C10445273391BC0086AE8C /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */,
 			);
 			productRefGroup = A910842E273185250056F4F9 /* Products */;
 			projectDirPath = "";
@@ -548,10 +552,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		A9C10445273391BC0086AE8C /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/puthnith/SunMoonToggleStyle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		A9C1044327337E260086AE8C /* Props */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Props;
+		};
+		A9C10446273391BC0086AE8C /* SunMoonToggleStyle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9C10445273391BC0086AE8C /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */;
+			productName = SunMoonToggleStyle;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
