@@ -33,6 +33,7 @@
 		A91084682732314E0056F4F9 /* DottedProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91084662732314E0056F4F9 /* DottedProgressStyle.swift */; };
 		A910846A273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */; };
 		A910846B273246A00056F4F9 /* CircleStepProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */; };
+		A9C1044427337E260086AE8C /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A9C1044327337E260086AE8C /* Props */; };
 		A9D04EC32732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */; };
 		A9D04EC42732DC0D00599EAD /* SquiggleProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */; };
 		A9D04EC727330A7900599EAD /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC627330A7900599EAD /* Toggles.swift */; };
@@ -57,6 +58,7 @@
 		A9108463273224160056F4F9 /* CircleBarProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBarProgressStyle.swift; sourceTree = "<group>"; };
 		A91084662732314E0056F4F9 /* DottedProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedProgressStyle.swift; sourceTree = "<group>"; };
 		A9108469273246A00056F4F9 /* CircleStepProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStepProgressStyle.swift; sourceTree = "<group>"; };
+		A9C1044127337DCF0086AE8C /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Props; sourceTree = "<group>"; };
 		A9D04EC22732DC0D00599EAD /* SquiggleProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquiggleProgressStyle.swift; sourceTree = "<group>"; };
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		A9D04EC827330AD000599EAD /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A910845B273213FB0056F4F9 /* DynamicColor in Frameworks */,
+				A9C1044427337E260086AE8C /* Props in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +88,11 @@
 		A9108420273185240056F4F9 = {
 			isa = PBXGroup;
 			children = (
+				A9C1044127337DCF0086AE8C /* Props */,
 				A9108425273185240056F4F9 /* Shared */,
 				A9108434273185250056F4F9 /* macOS */,
 				A910842E273185250056F4F9 /* Products */,
+				A9C1044227337E260086AE8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +151,13 @@
 			path = Progress;
 			sourceTree = "<group>";
 		};
+		A9C1044227337E260086AE8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9D04EC527330A6800599EAD /* Toggles */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +186,7 @@
 			name = "Catalog (iOS)";
 			packageProductDependencies = (
 				A910845A273213FB0056F4F9 /* DynamicColor */,
+				A9C1044327337E260086AE8C /* Props */,
 			);
 			productName = "Catalog (iOS)";
 			productReference = A910842D273185250056F4F9 /* Catalog.app */;
@@ -579,6 +592,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9108459273213FB0056F4F9 /* XCRemoteSwiftPackageReference "DynamicColor" */;
 			productName = DynamicColor;
+		};
+		A9C1044327337E260086AE8C /* Props */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Props;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

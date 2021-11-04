@@ -7,6 +7,7 @@
 
 import SwiftUI
 import DynamicColor
+import Props
 
 struct MaterialButtonStyles: View {
     var body: some View {
@@ -67,15 +68,5 @@ struct MonochromaricMaterial: ButtonStyle {
     func color(for configuration: Configuration) -> Color {
         guard isEnabled else { return disabled.tinted(amount: 0.7) }
         return color.tinted(amount: configuration.isPressed ? 0.8 : 0.6)
-    }
-}
-
-extension Color {
-    func tinted(amount: CGFloat) -> Color {
-        Color(DynamicColor(self).tinted(amount: amount).cgColor)
-    }
-
-    func shaded(amount: CGFloat) -> Color {
-        Color(DynamicColor(self).shaded(amount: amount).cgColor)
     }
 }
