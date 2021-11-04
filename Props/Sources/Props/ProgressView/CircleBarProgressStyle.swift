@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct CircleBarProgressStyle: ProgressViewStyle {
+public struct CircleBarProgressStyle: ProgressViewStyle {
+    public init() {}
 
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         Group {
             if configuration.fractionCompleted == nil {
                 IndeterminateView(configuration: configuration)

@@ -15,7 +15,7 @@ struct Catalog: View {
                 NavigationLink("Progress", destination: Progress())
                 NavigationLink("Toggles", destination: Toggles())
             }
-            .navigationTitle("Catalog")
+            .navigationTitle("Props")
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Props
 
 struct Progress: View {
     var body: some View {

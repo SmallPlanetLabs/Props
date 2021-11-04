@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct DottedProgressStyle: ProgressViewStyle {
+public struct DottedProgressStyle: ProgressViewStyle {
+    public init() {}
 
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         Group {
             if configuration.fractionCompleted == nil {
                 IndeterminateView(configuration: configuration)

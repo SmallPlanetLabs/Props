@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-struct CircleStepProgressStyle: ProgressViewStyle {
+public struct CircleStepProgressStyle: ProgressViewStyle {
+    public init(total: Int) {
+        self.total = total
+    }
+    
     let total: Int
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         DeterminateView(configuration: configuration, total: total)
     }
 

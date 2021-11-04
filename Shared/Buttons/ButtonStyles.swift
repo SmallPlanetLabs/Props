@@ -7,6 +7,7 @@
 // see https://developer.apple.com/documentation/swiftui/buttonstyle
 
 import SwiftUI
+import Props
 
 struct ButtonStyles: View {
     var body: some View {
@@ -63,80 +64,6 @@ struct ButtonStyles_Previews: PreviewProvider {
             ButtonStyles()
                 .padding()
                 .previewLayout(.sizeThatFits)
-        }
-    }
-}
-
-// TODO: explore adding an Environment value for corner radius
-
-struct OutlinedButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
-            .stroke(configuration.isPressed ? .gray : Color.accentColor)
-
-        configuration
-            .label
-            .foregroundColor(configuration.isPressed ? .gray : .accentColor)
-            .padding()
-            .background(background)
-    }
-}
-
-struct FilledButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
-            .fill(configuration.isPressed ? .gray : Color.accentColor)
-
-        configuration
-            .label
-            .foregroundColor(.white)
-            .padding()
-            .background(background)
-    }
-}
-
-struct PaperShadowedButton: ButtonStyle {
-    @Environment(\.isEnabled) var isEnabled: Bool
-    func makeBody(configuration: Configuration) -> some View {
-        let radius = radius(for: configuration)
-        let xy = offset(for: configuration)
-        let background = Capsule()
-            .fill(color(for: configuration))
-            .shadow(color: Color(white: 0.6), radius: radius, x: xy, y: xy)
-
-        configuration
-            .label
-            .padding()
-            .background(background)
-            .foregroundColor(.accentColor.opacity(isEnabled ? 1 : 0.4))
-
-    }
-
-    func color(for configuration: Configuration) -> Color {
-        if configuration.isPressed {
-            return Color(white: 0.95, opacity: 1)
-        } else {
-            return Color(white: 0.95, opacity: 1)
-        }
-    }
-
-    func radius(for configuration: Configuration) -> CGFloat {
-        if configuration.isPressed {
-            return 6
-        } else if isEnabled {
-            return 12
-        } else {
-            return 2
-        }
-    }
-
-    func offset(for configuration: Configuration) -> CGFloat {
-        if configuration.isPressed {
-            return 6
-        } else if isEnabled {
-            return 12
-        } else {
-            return 2
         }
     }
 }

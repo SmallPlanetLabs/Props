@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct SquiggleProgressStyle: ProgressViewStyle {
-    static let thickness = CGFloat(10)
-    static let diameter = CGFloat(50)
+public struct SquiggleProgressStyle: ProgressViewStyle {
+    public init() {}
 
-    func makeBody(configuration: Configuration) -> some View {
+    static let thickness = CGFloat(10)
+
+    public func makeBody(configuration: Configuration) -> some View {
         Group {
             if configuration.fractionCompleted == nil {
                 IndeterminateView(configuration: configuration)
@@ -44,7 +45,8 @@ struct SquiggleProgressStyle: ProgressViewStyle {
     struct DeterminateView: View {
         let configuration: Configuration
         var fraction: Double { configuration.fractionCompleted ?? 0 }
-        // let thickness = SquiggleProgressStyle.thickness
+        let diameter = CGFloat(50)
+        let thickness = SquiggleProgressStyle.thickness
 
         var body: some View {
             GeometryReader { proxy in
@@ -80,6 +82,7 @@ struct SquiggleProgressStyle: ProgressViewStyle {
     struct ClipShape: Shape {
         var pct: Double
         let trailing: Bool
+        let thickness = SquiggleProgressStyle.thickness
 
         var animatableData: Double {
             get { pct }
@@ -97,6 +100,7 @@ struct SquiggleProgressStyle: ProgressViewStyle {
     struct Wave: Shape {
         var magnitude: Double
         var frequency: Double
+        let thickness = SquiggleProgressStyle.thickness
 
         func path(in rect: CGRect) -> Path {
             let path = UIBezierPath()

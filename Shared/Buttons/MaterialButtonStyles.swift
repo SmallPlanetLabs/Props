@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import DynamicColor
 import Props
 
 struct MaterialButtonStyles: View {
@@ -44,29 +43,5 @@ struct MaterialButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
         MaterialButtonStyles()
             .padding()
-    }
-}
-
-struct MonochromaricMaterial: ButtonStyle {
-    @Environment(\.isEnabled) var isEnabled: Bool
-    let color: Color
-    func makeBody(configuration: Configuration) -> some View {
-        let background = RoundedRectangle(cornerRadius: 14, style: .continuous)
-            .fill(color(for: configuration))
-
-        configuration
-            .label
-            .padding()
-            .foregroundColor(isEnabled ? color : disabled)
-            .background(background)
-    }
-
-    var disabled: Color {
-        color.shaded(amount: 0.5).tinted(amount: 0.5)
-    }
-
-    func color(for configuration: Configuration) -> Color {
-        guard isEnabled else { return disabled.tinted(amount: 0.7) }
-        return color.tinted(amount: configuration.isPressed ? 0.8 : 0.6)
     }
 }
