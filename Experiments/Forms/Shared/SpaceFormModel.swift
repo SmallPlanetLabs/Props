@@ -14,9 +14,16 @@ final class SpaceFormModel: ObservableObject {
     @Published var isPlanetDone = false
     @Published var age: Double = 17
     @Published var isAgeDone = true
-    @Published var interests: [String] = []
     @Published var openToTravel: Bool = false
     @Published var currentField: Field? = .name
+    
+    @Published var interest0 = false
+    @Published var interest1 = false
+    @Published var interest2 = false
+    @Published var interest3 = false
+    @Published var interest4 = false
+    @Published var interest5 = false
+    @Published var interest6 = false
 
     init(name: String = "", age: Double = 17, planet: Planet? = .none) {
         $planet

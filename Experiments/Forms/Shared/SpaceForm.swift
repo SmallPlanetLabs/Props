@@ -9,12 +9,13 @@ import SwiftUI
 import Combine
 import Props
 import Sliders
+import SwiftUIFlowLayout
 
 struct SpaceForm: View {
     @EnvironmentObject private var model: SpaceFormModel
     @FocusState private var focus: SpaceFormModel.Field?
     var body: some View {
-
+        
         ZStack(alignment: .top) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 4) {
@@ -27,15 +28,14 @@ struct SpaceForm: View {
                     }
                     .background(.ultraThinMaterial)
                     .overlay(Button(action: { }, label: {} ))
-
+                    
                     TextField(SpaceFormModel.Field.name.title, text: $model.name, onCommit: {
                         self.model.isNameDone = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { self.focus = .age }
                     })
-//                        .textFieldStyle(.roundedBorder)
                         .textFieldStyle(SpaceTextFieldStyle(field: .name))
                         .focused($focus, equals: .name)
-
+                    
                     if model.isNameDone {
                         SpaceField(title: "Age")
                             .font(.system(size: 11, weight: .light))
@@ -57,21 +57,31 @@ struct SpaceForm: View {
                         }
                         .padding(.horizontal)
                     }
-
+                    
                     if model.isAgeDone {
                         SpaceField(title: "Planet")
                             .font(.system(size: 11, weight: .light))
-
-                        PlanetPicker(planet: $model.planet)
                         
-                        Divider().background(Color.black).padding(.horizontal)
-                            .padding(.top, 12)
+                        PlanetPicker(planet: $model.planet)
                     }
-
+                    
                     if model.isAgeDone && model.isPlanetDone {
                         SpaceField(title: "Interests")
                             .font(.system(size: 11, weight: .light))
-
+                        
+                        FlowLayout(mode: .scrollable,
+                                   items: [ Toggle("Star gazing", isOn: $model.interest0),
+                                            Toggle("Moon naming", isOn: $model.interest1),
+                                            Toggle("Cooking", isOn: $model.interest2),
+                                            Toggle("Cloud surfing", isOn: $model.interest3),
+                                            Toggle("Piloting rovers", isOn: $model.interest4),
+                                            Toggle("Ring counting", isOn: $model.interest5),
+                                            Toggle("Moisture farming", isOn: $model.interest6)],
+                                   itemSpacing: 4) { $0 }
+                                   .toggleStyle(.button)
+                        
+                                   .padding(.horizontal)
+                        
                         SpaceField(title: "Open to travel") // this seems redundant
                             .font(.system(size: 11, weight: .light))
                         Toggle("Are you open to travel?", isOn: $model.openToTravel)
@@ -88,7 +98,7 @@ struct SpaceForm: View {
                 .padding()
                 .padding(.top, 80)
             }
-
+            
             // Persistent header
             HStack {
                 Text("STARS ALIGNED")
@@ -107,24 +117,24 @@ struct SpaceForm: View {
         }
     }
 }
-
-struct SpaceForm_Previews: PreviewProvider {
-    static var previews: some View {
-        MultipleDevices(enabled: true) {
-            SpaceForm()
+    
+    struct SpaceForm_Previews: PreviewProvider {
+        static var previews: some View {
+            MultipleDevices(enabled: true) {
+                SpaceForm()
+            }
+            .environmentObject(SpaceFormModel(name: "Sally", age: 27, planet: .Mars))
         }
-        .environmentObject(SpaceFormModel(name: "Sally", age: 27, planet: .Mars))
     }
-}
-
-struct SpaceField: View {
-    let title: String
-    var body: some View {
-        HStack {
-            Text(title)
-            Spacer()
-//            Image(systemName: "checkmark")
+    
+    struct SpaceField: View {
+        let title: String
+        var body: some View {
+            HStack {
+                Text(title)
+                Spacer()
+                //            Image(systemName: "checkmark")
+            }
+            .padding()
         }
-        .padding()
     }
-}
