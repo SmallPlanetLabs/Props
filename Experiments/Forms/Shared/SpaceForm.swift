@@ -49,7 +49,7 @@ struct SpaceForm: View {
                             .font(.system(size: 11, weight: .light))
 
                         PlanetPicker(planet: $model.planet)
-                            .padding(.leading)
+                        
                         Divider().background(Color.black).padding(.horizontal)
                             .padding(.top, 12)
                     }
@@ -62,6 +62,7 @@ struct SpaceForm: View {
                             .font(.system(size: 11, weight: .light))
                         Toggle("Are you open to travel?", isOn: $model.openToTravel)
                             .toggleStyle(CheckBoxStyle())
+                            .accentColor(Color("BrandGradientStart"))
                             .padding()
                         
                     }
@@ -95,10 +96,10 @@ struct SpaceForm: View {
 
 struct SpaceForm_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewDisparateDevices(enabled: false) {
+        MultipleDevices(enabled: true) {
             SpaceForm()
         }
-        .environmentObject(SpaceFormModel(name: "Sally", age: "37", planet: .Mars))
+        .environmentObject(SpaceFormModel(name: "Sally", age: "37", planet: .Jupiter))
     }
 }
 

@@ -26,7 +26,9 @@ public struct CheckBoxStyle: ToggleStyle {
         }
         .frame(height: 44)
         .onTapGesture {
-            configuration.isOn.toggle()
+            withAnimation {
+                configuration.isOn.toggle()
+            }
         }
     }
 }

@@ -11,22 +11,38 @@ struct PlanetPicker: View {
     @Binding var planet: Planet?
 
     var body: some View {
-        VStack {
-            HStack {
+        HStack(spacing: 16) {
+            Spacer()
+            VStack {
                 button(for: .Mercury)
-                button(for: .Venus)
-                button(for: .Earth)
-                button(for:. Mars)
-            }
-            HStack {
                 button(for: .Saturn)
+            }
+            VStack {
+                button(for: .Venus)
                 button(for: .Jupiter)
+            }
+            VStack {
+                button(for: .Earth)
                 button(for: .Neptune)
+            }
+            VStack {
+                button(for:. Mars)
                 button(for:. Uranus)
             }
+            Spacer()
         }
     }
 
+    struct PlanetOption: View {
+        let planet: Planet
+        
+        var body: some View {
+            HStack {
+                Text(planet.rawValue).foregroundColor(.white)
+            }
+        }
+    }
+    
     @ViewBuilder func button(for planet: Planet) -> some View {
         Button {
             withAnimation {
@@ -40,29 +56,31 @@ struct PlanetPicker: View {
 struct PlanetButtonStyle: ButtonStyle {
     let planet: Planet
     let selected: Bool
-
+    
     public func makeBody(configuration: PlanetButtonStyle.Configuration) -> some View {
         PlanetButton(configuration: configuration, planet: planet, selected: selected)
     }
-
+    
     struct PlanetButton: View {
         let configuration: PlanetButtonStyle.Configuration
         let planet: Planet
         let selected: Bool
-
+        
         var body: some View {
-            configuration.label
-                .foregroundColor(selected ? Color("BrandGradientStart") : .white)
-                .frame(width: 75, height: 75)
-                .background(
-                    ZStack {
-                        Circle()
-                            .fill(Color(white: 1, opacity: selected ? 1 : 0))
-                        Circle()
-                            .strokeBorder(selected ? Color.white : Color("BrandGradientStart"), lineWidth: 1.5)
-                    }
-                )
-                .opacity(configuration.isPressed ? 0.5 : 1.0)
+            VStack {
+                ZStack {
+                    Circle()
+                        .fill(Color("BrandGradientStart").opacity(selected ? 1 : 0.001))
+                    Circle()
+                        .strokeBorder(Color("BrandGradientStart"), lineWidth: 1.5)
+                }
+                .frame(width: 40, height: 40)
+                configuration.label
+                    .font(.system(size: 12))
+                    .foregroundColor(Color("BrandGradientStart"))
+                    .opacity(configuration.isPressed ? 0.5 : 1.0)
+            }
+
         }
     }
 }
@@ -87,7 +105,7 @@ enum Planet: String, CaseIterable {
     case Jupiter
     case Neptune
     case Uranus
-
+    
     var color: Color {
         switch self {
         case .Mercury:
