@@ -71,13 +71,15 @@ struct PlanetButtonStyle: ButtonStyle {
                 ZStack {
                     Circle()
                         .fill(Color("BrandGradientStart").opacity(selected ? 1 : 0.001))
+                        .shadow(color: Color("BrandGradientStart").shaded(amount:  0.5).opacity(selected ? 0.4 : 0.001), radius: 3, x: -2, y: 2)
                     Circle()
                         .strokeBorder(Color("BrandGradientStart"), lineWidth: 1.5)
+                    
                 }
                 .frame(width: 40, height: 40)
                 configuration.label
                     .font(.system(size: 12))
-                    .foregroundColor(Color("BrandGradientStart"))
+                    .foregroundColor(.white)
                     .opacity(configuration.isPressed ? 0.5 : 1.0)
             }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import Props
+import Sliders
 
 struct SpaceForm: View {
     @EnvironmentObject private var model: SpaceFormModel
@@ -36,12 +37,25 @@ struct SpaceForm: View {
                         .focused($focus, equals: .name)
 
                     if model.isNameDone {
-                        TextField(SpaceFormModel.Field.age.title, text: $model.age, onCommit: {
-                            self.model.isAgeDone = true
-                            self.focus = .none
-                        })
-                            .textFieldStyle(SpaceTextFieldStyle(field: .age))
-                            .focused($focus, equals: .age)
+                        SpaceField(title: "Age")
+                            .font(.system(size: 11, weight: .light))
+                        Group {
+                            HStack(alignment: .firstTextBaseline) {
+                                Text("\(Int(model.age))").monospacedDigit()
+                                Text("Earth years")
+                                if !model.isAgeDone {
+                                    Spacer()
+                                    Text("Must be 18+ to continue")
+                                        .font(.system(size: 10, weight: .light))
+                                }
+                            }
+                            ValueSlider(value: $model.age, in: 0...100)
+                                .valueSliderStyle(
+                                    HorizontalValueSliderStyle(track: Color("BrandGradientStart").tinted(amount: 0.25).frame(height: 3).cornerRadius(1.5))
+                                )
+                                .accentColor(Color("BrandGradientStart"))
+                        }
+                        .padding(.horizontal)
                     }
 
                     if model.isAgeDone {
@@ -54,7 +68,7 @@ struct SpaceForm: View {
                             .padding(.top, 12)
                     }
 
-                    if model.isPlanetDone {
+                    if model.isAgeDone && model.isPlanetDone {
                         SpaceField(title: "Interests")
                             .font(.system(size: 11, weight: .light))
 
@@ -99,7 +113,7 @@ struct SpaceForm_Previews: PreviewProvider {
         MultipleDevices(enabled: true) {
             SpaceForm()
         }
-        .environmentObject(SpaceFormModel(name: "Sally", age: "37", planet: .Jupiter))
+        .environmentObject(SpaceFormModel(name: "Sally", age: 27, planet: .Mars))
     }
 }
 

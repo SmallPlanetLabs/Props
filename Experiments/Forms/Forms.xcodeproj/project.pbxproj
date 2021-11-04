@@ -11,6 +11,7 @@
 		A910841C2730E15B0056F4F9 /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910841A2730E15B0056F4F9 /* TextFieldStyles.swift */; };
 		A910841E2730E1830056F4F9 /* SpaceFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910841D2730E1830056F4F9 /* SpaceFormModel.swift */; };
 		A910841F2730E1830056F4F9 /* SpaceFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910841D2730E1830056F4F9 /* SpaceFormModel.swift */; };
+		A951AF822734658D00C39E17 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = A951AF812734658D00C39E17 /* Sliders */; };
 		A9A8FFD1273024FD00221A4E /* FormsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFC1273024FB00221A4E /* FormsApp.swift */; };
 		A9A8FFD2273024FD00221A4E /* FormsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFC1273024FB00221A4E /* FormsApp.swift */; };
 		A9A8FFD3273024FD00221A4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8FFC2273024FB00221A4E /* ContentView.swift */; };
@@ -50,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9C10451273433A20086AE8C /* Props in Frameworks */,
+				A951AF822734658D00C39E17 /* Sliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +134,7 @@
 			name = "Forms (iOS)";
 			packageProductDependencies = (
 				A9C10450273433A20086AE8C /* Props */,
+				A951AF812734658D00C39E17 /* Sliders */,
 			);
 			productName = "Forms (iOS)";
 			productReference = A9A8FFC8273024FD00221A4E /* Forms.app */;
@@ -181,6 +184,9 @@
 				Base,
 			);
 			mainGroup = A9A8FFBB273024FB00221A4E;
+			packageReferences = (
+				A951AF802734658D00C39E17 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+			);
 			productRefGroup = A9A8FFC9273024FD00221A4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -504,7 +510,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		A951AF802734658D00C39E17 /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-sliders";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		A951AF812734658D00C39E17 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A951AF802734658D00C39E17 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
 		A9C10450273433A20086AE8C /* Props */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Props;

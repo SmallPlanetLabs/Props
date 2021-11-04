@@ -12,16 +12,21 @@ final class SpaceFormModel: ObservableObject {
     @Published var isNameDone = false
     @Published var planet: Planet? = .none
     @Published var isPlanetDone = false
-    @Published var age: String = ""
+    @Published var age: Double = 17
     @Published var isAgeDone = true
     @Published var interests: [String] = []
     @Published var openToTravel: Bool = false
     @Published var currentField: Field? = .name
 
-    init(name: String = "", age: String = "", planet: Planet? = .none) {
+    init(name: String = "", age: Double = 17, planet: Planet? = .none) {
         $planet
             .map { $0 != nil}
             .assign(to: &$isPlanetDone)
+
+        $name
+            .removeDuplicates()
+            .map { !$0.isEmpty }
+            .assign(to: &$isNameDone)
 
         $isNameDone
             .removeDuplicates()
@@ -30,9 +35,8 @@ final class SpaceFormModel: ObservableObject {
             .assign(to: &$currentField)
 
         $age
-            .print("age")
             .removeDuplicates()
-            .map { !$0.isEmpty }
+            .map { $0 >= 18 }
             .assign(to: &$isAgeDone)
 
         $isAgeDone
