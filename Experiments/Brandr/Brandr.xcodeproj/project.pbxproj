@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9462CFA27357AD900D661DE /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF227357AD900D661DE /* Lora-Regular.ttf */; };
+		A9462CFB27357AD900D661DE /* Lora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF327357AD900D661DE /* Lora-SemiBold.ttf */; };
+		A9462CFC27357AD900D661DE /* Lora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF427357AD900D661DE /* Lora-Medium.ttf */; };
+		A9462CFD27357AD900D661DE /* Barlow-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF527357AD900D661DE /* Barlow-SemiBold.ttf */; };
+		A9462CFE27357AD900D661DE /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF627357AD900D661DE /* Barlow-Medium.ttf */; };
+		A9462CFF27357AD900D661DE /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF727357AD900D661DE /* Lora-Bold.ttf */; };
+		A9462D0027357AD900D661DE /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF827357AD900D661DE /* Barlow-Regular.ttf */; };
+		A9462D0127357AD900D661DE /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9462CF927357AD900D661DE /* Barlow-Bold.ttf */; };
+		A9462D0327358F1D00D661DE /* BrandrBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D0227358F1D00D661DE /* BrandrBrand.swift */; };
+		A9462D0527359EBA00D661DE /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D0427359EBA00D661DE /* ResultsView.swift */; };
+		A9462D072735A00200D661DE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D062735A00200D661DE /* ViewModel.swift */; };
+		A951AF932734C61100C39E17 /* BrandrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951AF922734C61100C39E17 /* BrandrApp.swift */; };
+		A951AF952734C61100C39E17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951AF942734C61100C39E17 /* ContentView.swift */; };
+		A951AF972734C61100C39E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A951AF962734C61100C39E17 /* Assets.xcassets */; };
+		A951AF9A2734C61100C39E17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A951AF992734C61100C39E17 /* Preview Assets.xcassets */; };
+		A951AFA42734C6D400C39E17 /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A951AFA32734C6D400C39E17 /* Props */; };
+		A951AFA62734C6D400C39E17 /* SPBrand in Frameworks */ = {isa = PBXBuildFile; productRef = A951AFA52734C6D400C39E17 /* SPBrand */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A9462CF0273575E000D661DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A9462CF227357AD900D661DE /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lora-Regular.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Lora-Regular.ttf"; sourceTree = "<group>"; };
+		A9462CF327357AD900D661DE /* Lora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lora-SemiBold.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Lora-SemiBold.ttf"; sourceTree = "<group>"; };
+		A9462CF427357AD900D661DE /* Lora-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lora-Medium.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Lora-Medium.ttf"; sourceTree = "<group>"; };
+		A9462CF527357AD900D661DE /* Barlow-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Barlow-SemiBold.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Barlow-SemiBold.ttf"; sourceTree = "<group>"; };
+		A9462CF627357AD900D661DE /* Barlow-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Barlow-Medium.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Barlow-Medium.ttf"; sourceTree = "<group>"; };
+		A9462CF727357AD900D661DE /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lora-Bold.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Lora-Bold.ttf"; sourceTree = "<group>"; };
+		A9462CF827357AD900D661DE /* Barlow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Barlow-Regular.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Barlow-Regular.ttf"; sourceTree = "<group>"; };
+		A9462CF927357AD900D661DE /* Barlow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Barlow-Bold.ttf"; path = "../../../../../../../Brand/SPBrand/Sources/SPBrand/Resources/Fonts/Barlow-Bold.ttf"; sourceTree = "<group>"; };
+		A9462D0227358F1D00D661DE /* BrandrBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandrBrand.swift; sourceTree = "<group>"; };
+		A9462D0427359EBA00D661DE /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		A9462D062735A00200D661DE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A951AF8F2734C61100C39E17 /* Brandr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A951AF922734C61100C39E17 /* BrandrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandrApp.swift; sourceTree = "<group>"; };
+		A951AF942734C61100C39E17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A951AF962734C61100C39E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A951AF992734C61100C39E17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A951AFA02734C67A00C39E17 /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Props; path = ../../Props; sourceTree = "<group>"; };
+		A951AFA12734C69200C39E17 /* SPBrand */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPBrand; path = ../../../../../Brand/SPBrand; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A951AF8C2734C61100C39E17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A951AFA42734C6D400C39E17 /* Props in Frameworks */,
+				A951AFA62734C6D400C39E17 /* SPBrand in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9462CF127357ABC00D661DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A9462CF927357AD900D661DE /* Barlow-Bold.ttf */,
+				A9462CF627357AD900D661DE /* Barlow-Medium.ttf */,
+				A9462CF827357AD900D661DE /* Barlow-Regular.ttf */,
+				A9462CF527357AD900D661DE /* Barlow-SemiBold.ttf */,
+				A9462CF727357AD900D661DE /* Lora-Bold.ttf */,
+				A9462CF427357AD900D661DE /* Lora-Medium.ttf */,
+				A9462CF227357AD900D661DE /* Lora-Regular.ttf */,
+				A9462CF327357AD900D661DE /* Lora-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A951AF862734C61100C39E17 = {
+			isa = PBXGroup;
+			children = (
+				A951AFA12734C69200C39E17 /* SPBrand */,
+				A951AFA02734C67A00C39E17 /* Props */,
+				A951AF912734C61100C39E17 /* Brandr */,
+				A951AF902734C61100C39E17 /* Products */,
+				A951AFA22734C6D400C39E17 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A951AF902734C61100C39E17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A951AF8F2734C61100C39E17 /* Brandr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A951AF912734C61100C39E17 /* Brandr */ = {
+			isa = PBXGroup;
+			children = (
+				A9462CF127357ABC00D661DE /* Fonts */,
+				A9462CF0273575E000D661DE /* Info.plist */,
+				A951AF922734C61100C39E17 /* BrandrApp.swift */,
+				A9462D0227358F1D00D661DE /* BrandrBrand.swift */,
+				A951AF942734C61100C39E17 /* ContentView.swift */,
+				A9462D0427359EBA00D661DE /* ResultsView.swift */,
+				A9462D062735A00200D661DE /* ViewModel.swift */,
+				A951AF962734C61100C39E17 /* Assets.xcassets */,
+				A951AF982734C61100C39E17 /* Preview Content */,
+			);
+			path = Brandr;
+			sourceTree = "<group>";
+		};
+		A951AF982734C61100C39E17 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A951AF992734C61100C39E17 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A951AFA22734C6D400C39E17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A951AF8E2734C61100C39E17 /* Brandr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A951AF9D2734C61100C39E17 /* Build configuration list for PBXNativeTarget "Brandr" */;
+			buildPhases = (
+				A951AF8B2734C61100C39E17 /* Sources */,
+				A951AF8C2734C61100C39E17 /* Frameworks */,
+				A951AF8D2734C61100C39E17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brandr;
+			packageProductDependencies = (
+				A951AFA32734C6D400C39E17 /* Props */,
+				A951AFA52734C6D400C39E17 /* SPBrand */,
+			);
+			productName = Brandr;
+			productReference = A951AF8F2734C61100C39E17 /* Brandr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A951AF872734C61100C39E17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					A951AF8E2734C61100C39E17 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = A951AF8A2734C61100C39E17 /* Build configuration list for PBXProject "Brandr" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A951AF862734C61100C39E17;
+			productRefGroup = A951AF902734C61100C39E17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A951AF8E2734C61100C39E17 /* Brandr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A951AF8D2734C61100C39E17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9462CFC27357AD900D661DE /* Lora-Medium.ttf in Resources */,
+				A951AF9A2734C61100C39E17 /* Preview Assets.xcassets in Resources */,
+				A9462CFE27357AD900D661DE /* Barlow-Medium.ttf in Resources */,
+				A9462CFA27357AD900D661DE /* Lora-Regular.ttf in Resources */,
+				A951AF972734C61100C39E17 /* Assets.xcassets in Resources */,
+				A9462CFF27357AD900D661DE /* Lora-Bold.ttf in Resources */,
+				A9462D0127357AD900D661DE /* Barlow-Bold.ttf in Resources */,
+				A9462CFD27357AD900D661DE /* Barlow-SemiBold.ttf in Resources */,
+				A9462D0027357AD900D661DE /* Barlow-Regular.ttf in Resources */,
+				A9462CFB27357AD900D661DE /* Lora-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A951AF8B2734C61100C39E17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9462D072735A00200D661DE /* ViewModel.swift in Sources */,
+				A951AF952734C61100C39E17 /* ContentView.swift in Sources */,
+				A9462D0527359EBA00D661DE /* ResultsView.swift in Sources */,
+				A9462D0327358F1D00D661DE /* BrandrBrand.swift in Sources */,
+				A951AF932734C61100C39E17 /* BrandrApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A951AF9B2734C61100C39E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A951AF9C2734C61100C39E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A951AF9E2734C61100C39E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Brandr/Preview Content\"";
+				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brandr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Brandr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A951AF9F2734C61100C39E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Brandr/Preview Content\"";
+				DEVELOPMENT_TEAM = 4WR66L3TZA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brandr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Brandr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A951AF8A2734C61100C39E17 /* Build configuration list for PBXProject "Brandr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A951AF9B2734C61100C39E17 /* Debug */,
+				A951AF9C2734C61100C39E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A951AF9D2734C61100C39E17 /* Build configuration list for PBXNativeTarget "Brandr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A951AF9E2734C61100C39E17 /* Debug */,
+				A951AF9F2734C61100C39E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A951AFA32734C6D400C39E17 /* Props */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Props;
+		};
+		A951AFA52734C6D400C39E17 /* SPBrand */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SPBrand;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A951AF872734C61100C39E17 /* Project object */;
+}
