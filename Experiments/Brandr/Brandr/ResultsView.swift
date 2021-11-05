@@ -10,11 +10,16 @@ import SwiftUI
 struct ResultsView: View {
     @ObservedObject var model: ViewModel
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(model.brands, id: \.self) { brand in
-                    Text(brand)
-                        .font(.h3)
+
+        let gridItems = [GridItem(.adaptive(minimum: 150, maximum: .infinity), spacing: 10)]
+
+        VStack {
+            ScrollView(.vertical) {
+                LazyVGrid(columns: gridItems, spacing: 10) {
+                    ForEach(model.brands, id: \.self) { brand in
+                        BrandCard(brand: Brand(name: brand))
+                            .frame(height: 120)
+                    }
                 }
             }
         }
@@ -23,6 +28,7 @@ struct ResultsView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .background(Color.pearlyWhite)
+        .edgesIgnoringSafeArea(.vertical)
     }
 }
 

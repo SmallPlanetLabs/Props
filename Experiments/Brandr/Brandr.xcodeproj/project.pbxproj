@@ -18,6 +18,8 @@
 		A9462D0327358F1D00D661DE /* BrandrBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D0227358F1D00D661DE /* BrandrBrand.swift */; };
 		A9462D0527359EBA00D661DE /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D0427359EBA00D661DE /* ResultsView.swift */; };
 		A9462D072735A00200D661DE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D062735A00200D661DE /* ViewModel.swift */; };
+		A9462D092735BBA600D661DE /* BrandCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D082735BBA600D661DE /* BrandCard.swift */; };
+		A9462D0B2735BFFC00D661DE /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9462D0A2735BFFC00D661DE /* Brand.swift */; };
 		A951AF932734C61100C39E17 /* BrandrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951AF922734C61100C39E17 /* BrandrApp.swift */; };
 		A951AF952734C61100C39E17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951AF942734C61100C39E17 /* ContentView.swift */; };
 		A951AF972734C61100C39E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A951AF962734C61100C39E17 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		A9462D0227358F1D00D661DE /* BrandrBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandrBrand.swift; sourceTree = "<group>"; };
 		A9462D0427359EBA00D661DE /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		A9462D062735A00200D661DE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A9462D082735BBA600D661DE /* BrandCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCard.swift; sourceTree = "<group>"; };
+		A9462D0A2735BFFC00D661DE /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		A951AF8F2734C61100C39E17 /* Brandr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A951AF922734C61100C39E17 /* BrandrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandrApp.swift; sourceTree = "<group>"; };
 		A951AF942734C61100C39E17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				A9462D0227358F1D00D661DE /* BrandrBrand.swift */,
 				A951AF942734C61100C39E17 /* ContentView.swift */,
 				A9462D0427359EBA00D661DE /* ResultsView.swift */,
+				A9462D082735BBA600D661DE /* BrandCard.swift */,
+				A9462D0A2735BFFC00D661DE /* Brand.swift */,
 				A9462D062735A00200D661DE /* ViewModel.swift */,
 				A951AF962734C61100C39E17 /* Assets.xcassets */,
 				A951AF982734C61100C39E17 /* Preview Content */,
@@ -212,7 +218,9 @@
 				A951AF952734C61100C39E17 /* ContentView.swift in Sources */,
 				A9462D0527359EBA00D661DE /* ResultsView.swift in Sources */,
 				A9462D0327358F1D00D661DE /* BrandrBrand.swift in Sources */,
+				A9462D0B2735BFFC00D661DE /* Brand.swift in Sources */,
 				A951AF932734C61100C39E17 /* BrandrApp.swift in Sources */,
+				A9462D092735BBA600D661DE /* BrandCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
