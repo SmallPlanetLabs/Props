@@ -7,20 +7,20 @@
 import SwiftUI
 
 public struct CheckBoxStyle: ToggleStyle {
+    @Environment(\.primaryColor) var primaryColor: Color
     public init() {}
     public func makeBody(configuration: Self.Configuration) -> some View {
         HStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 3)
                     .stroke(lineWidth: 1)
-                    .fill(Color.accentColor)
+                    .fill(primaryColor)
                     .frame(width: 19, height: 19)
 
-                if configuration.isOn {
-                    RoundedRectangle(cornerRadius: 3.0)
-                        .fill(Color.accentColor)
-                        .frame(width: 13, height: 13)
-                }
+                RoundedRectangle(cornerRadius: 3.0)
+                    .fill(primaryColor)
+                    .frame(width: 13, height: 13)
+                    .opacity(configuration.isOn ? 1 : 0)
             }
             configuration.label
         }

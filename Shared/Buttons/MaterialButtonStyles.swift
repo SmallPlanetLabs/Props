@@ -14,14 +14,15 @@ struct MaterialButtonStyles: View {
             EnabledAndDisabled(title: "MonochromaricMaterial") {
                 VStack {
                     Button {} label: { Image(systemName: "plus") }
-                    .buttonStyle(MonochromaricMaterial(color: Color(hex: 0x9A513D)))
+                        .primaryColor(Color(hex: 0x9A513D))
 
                     Button {} label: { Text("Send").padding(.horizontal) }
-                    .buttonStyle(MonochromaricMaterial(color: Color(hex: 0x097660)))
+                        .primaryColor(Color(hex: 0x097660))
 
                     Button {} label: { Image(systemName: "stopwatch") }
-                    .buttonStyle(MonochromaricMaterial(color: Color(hex: 0x65889b)))
+                        .primaryColor(Color(hex: 0x65889b))
                 }
+                .buttonStyle(MonochromaricMaterial())
             }
         }
         .font(.custom("ArialRoundedMTBold", fixedSize: 24))

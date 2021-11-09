@@ -19,7 +19,7 @@ struct ButtonStyles: View {
                 }
                 .buttonStyle(PaperShadowedButton())
                 .font(.custom("ArialRoundedMTBold", fixedSize: 24))
-                .accentColor(Color(white: 0.5))
+                .primaryColor(Color(white: 0.5))
 
                 Group {
                     EnabledAndDisabled(title: "FilledButton") {

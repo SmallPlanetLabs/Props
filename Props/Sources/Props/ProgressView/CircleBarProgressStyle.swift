@@ -41,6 +41,8 @@ public struct CircleBarProgressStyle: ProgressViewStyle {
     }
 
     struct DeterminateView: View {
+        @Environment(\.primaryColor) var primaryColor: Color
+        @Environment(\.secondaryColor) var secondaryColor: Color
         let configuration: Configuration
         var fraction: Double { configuration.fractionCompleted ?? 0 }
         let height = CGFloat(3)
@@ -50,11 +52,11 @@ public struct CircleBarProgressStyle: ProgressViewStyle {
             GeometryReader { proxy in
                 ZStack {
                     Rectangle()
-                        .fill(Color.accentColor.tinted(amount: 0.8))
+                        .fill(secondaryColor)
                         .frame(height: height)
 
                     Rectangle()
-                        .fill(Color.accentColor)
+                        .fill(primaryColor)
                         .frame(height: height)
                         .clipShape(ClipShape(pct: fraction))
 
@@ -64,7 +66,7 @@ public struct CircleBarProgressStyle: ProgressViewStyle {
                         .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
 
                     Circle()
-                        .stroke(Color.accentColor, style: StrokeStyle(lineWidth: height))
+                        .stroke(primaryColor, style: StrokeStyle(lineWidth: height))
                         .frame(width: diameter, height: diameter)
                         .overlay(label)
                         .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
@@ -78,7 +80,7 @@ public struct CircleBarProgressStyle: ProgressViewStyle {
 
         @ViewBuilder var label: some View {
             Text(String(format: "%.0f", fraction * 100))
-                .foregroundColor(.accentColor)
+                .foregroundColor(primaryColor)
         }
     }
 

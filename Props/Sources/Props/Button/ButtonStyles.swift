@@ -7,13 +7,14 @@
 import SwiftUI
 
 public struct OutlinedButton: ButtonStyle {
+    @Environment(\.primaryColor) var primaryColor: Color
     public func makeBody(configuration: Configuration) -> some View {
         let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
-            .stroke(configuration.isPressed ? .gray : Color.accentColor)
+            .stroke(configuration.isPressed ? .gray : primaryColor)
 
         configuration
             .label
-            .foregroundColor(configuration.isPressed ? .gray : .accentColor)
+            .foregroundColor(configuration.isPressed ? .gray : primaryColor)
             .padding()
             .background(background)
     }
@@ -21,9 +22,10 @@ public struct OutlinedButton: ButtonStyle {
 }
 
 public struct FilledButton: ButtonStyle {
+    @Environment(\.primaryColor) var primaryColor: Color
     public func makeBody(configuration: Configuration) -> some View {
         let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
-            .fill(configuration.isPressed ? .gray : Color.accentColor)
+            .fill(configuration.isPressed ? .gray : primaryColor)
 
         configuration
             .label
@@ -36,6 +38,7 @@ public struct FilledButton: ButtonStyle {
 
 public struct PaperShadowedButton: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled: Bool
+    @Environment(\.primaryColor) var primaryColor: Color
     public func makeBody(configuration: Configuration) -> some View {
         let radius = radius(for: configuration)
         let xy = offset(for: configuration)
@@ -47,7 +50,7 @@ public struct PaperShadowedButton: ButtonStyle {
             .label
             .padding()
             .background(background)
-            .foregroundColor(.accentColor.opacity(isEnabled ? 1 : 0.4))
+            .foregroundColor(primaryColor.opacity(isEnabled ? 1 : 0.4))
 
     }
 

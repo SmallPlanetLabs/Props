@@ -38,6 +38,8 @@ struct Progress: View {
             }
             .padding()
             .navigationTitle("Progress")
+            .environment(\.primaryColor, .purple)
+            .environment(\.secondaryColor, .purple.opacity(0.3))
         }
     }
 }

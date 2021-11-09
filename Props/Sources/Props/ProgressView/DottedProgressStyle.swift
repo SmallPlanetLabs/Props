@@ -41,6 +41,8 @@ public struct DottedProgressStyle: ProgressViewStyle {
     }
 
     struct DeterminateView: View {
+        @Environment(\.primaryColor) var primaryColor: Color
+        @Environment(\.secondaryColor) var secondaryColor: Color
         let configuration: Configuration
         var fraction: Double { configuration.fractionCompleted ?? 0 }
         let height = CGFloat(10)
@@ -50,11 +52,11 @@ public struct DottedProgressStyle: ProgressViewStyle {
             GeometryReader { proxy in
                 ZStack {
                     Line()
-                        .stroke(Color.accentColor.tinted(amount: 0.7), style: stroke)
+                        .stroke(secondaryColor, style: stroke)
                         .frame(height: height)
 
                     Line()
-                        .stroke(Color.accentColor, style: stroke)
+                        .stroke(primaryColor, style: stroke)
                         .clipShape(ClipShape(pct: fraction))
                         .frame(height: height)
                 }
@@ -65,7 +67,7 @@ public struct DottedProgressStyle: ProgressViewStyle {
 
         @ViewBuilder var label: some View {
             Text(String(format: "%.1f", fraction * 100))
-                .foregroundColor(.accentColor)
+                .foregroundColor(primaryColor)
         }
     }
 

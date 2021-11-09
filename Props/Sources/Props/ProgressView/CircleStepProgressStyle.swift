@@ -18,6 +18,7 @@ public struct CircleStepProgressStyle: ProgressViewStyle {
     }
 
     struct DeterminateView: View {
+        @Environment(\.primaryColor) var primaryColor: Color
         let configuration: Configuration
         let total: Int
         var fraction: Double { configuration.fractionCompleted ?? 0 }
@@ -29,17 +30,17 @@ public struct CircleStepProgressStyle: ProgressViewStyle {
             GeometryReader { proxy in
                 ZStack {
                     Rectangle()
-                        .fill(Color.accentColor)
+                        .fill(primaryColor)
                         .frame(height: height)
 
                     ForEach(0..<total) { index in
                         Circle()
-                            .fill(index == currentStep ? Color.accentColor : Color.white)
+                            .fill(index == currentStep ? primaryColor : Color.white)
                             .frame(width: diameter, height: diameter)
                             .offset(x: offset(width: proxy.size.width, index: index))
 
                         Circle()
-                            .stroke(Color.accentColor, style: StrokeStyle(lineWidth: height))
+                            .stroke(primaryColor, style: StrokeStyle(lineWidth: height))
                             .frame(width: diameter, height: diameter)
                             .overlay(label(index: index))
                             .offset(x: offset(width: proxy.size.width, index: index))
@@ -54,9 +55,9 @@ public struct CircleStepProgressStyle: ProgressViewStyle {
                 if currentStep == index {
                     Text("\(index)").foregroundColor(.white)
                 } else if currentStep > index {
-                    Image(systemName: "checkmark").font(.title.bold()).foregroundColor(.accentColor)
+                    Image(systemName: "checkmark").font(.title.bold()).foregroundColor(primaryColor)
                 } else {
-                    Text("\(index)").foregroundColor(.accentColor)
+                    Text("\(index)").foregroundColor(primaryColor)
                 }
             }
         }

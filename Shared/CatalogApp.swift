@@ -12,6 +12,7 @@ struct CatalogApp: App {
     var body: some Scene {
         WindowGroup {
             Catalog()
+                .primaryColor(.blue)
         }
     }
 }

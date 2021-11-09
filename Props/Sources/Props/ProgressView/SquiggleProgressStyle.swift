@@ -43,6 +43,8 @@ public struct SquiggleProgressStyle: ProgressViewStyle {
     }
 
     struct DeterminateView: View {
+        @Environment(\.primaryColor) var primaryColor: Color
+        @Environment(\.secondaryColor) var secondaryColor: Color
         let configuration: Configuration
         var fraction: Double { configuration.fractionCompleted ?? 0 }
         let diameter = CGFloat(50)
@@ -52,17 +54,17 @@ public struct SquiggleProgressStyle: ProgressViewStyle {
             GeometryReader { proxy in
                 ZStack {
                     RoundedRectangle(cornerRadius: thickness / 2)
-                        .fill(Color.accentColor.tinted(amount: 0.8))
+                        .fill(secondaryColor)
                         .frame(height: thickness)
                         .clipShape(ClipShape(pct: fraction, trailing: false))
 
                     Wave(magnitude: thickness * 0.75, frequency: 34)
-                        .stroke(Color.accentColor, style: StrokeStyle(lineWidth: thickness, lineCap: .round, lineJoin: .round, miterLimit: 0))
+                        .stroke(primaryColor, style: StrokeStyle(lineWidth: thickness, lineCap: .round, lineJoin: .round, miterLimit: 0))
                         .frame(height: 50)
                         .clipShape(ClipShape(pct: fraction, trailing: true))
 
                     Circle()
-                        .fill(Color.accentColor)
+                        .fill(primaryColor)
                         .frame(width: diameter, height: diameter)
                         .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
                 }
@@ -75,7 +77,7 @@ public struct SquiggleProgressStyle: ProgressViewStyle {
 
         @ViewBuilder var label: some View {
             Text(String(format: "%.0f", fraction * 100))
-                .foregroundColor(.accentColor)
+                .foregroundColor(primaryColor)
         }
     }
 
