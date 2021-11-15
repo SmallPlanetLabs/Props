@@ -8,29 +8,118 @@
 import SwiftUI
 import Props
 
+extension PropCatalog {
+    static let systemButtons: [PropSampleable] = [
+        DefaultButtonSample(),
+        BorderedButtonSample(),
+        BorderedProminentButtonSample(),
+        BorderlessButtonSample(),
+        PlainButtonSample(),
+    ]
+}
+
+struct DefaultButtonSample: PropSampleable {
+    let name = "Default button style"
+    let notes: String? = ".buttonStyle(DefaultButtonStyle())"
+    let source = "System"
+    let keywords = "button system flat default"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            EnabledAndDisabled {
+                Button { } label: {
+                    Text("Button")
+                }
+            }
+                .buttonStyle(DefaultButtonStyle())
+        )
+    }
+}
+
+struct BorderedButtonSample: PropSampleable {
+    let name = "Bordered button style"
+    let notes: String? = ".buttonStyle(BorderedButtonStyle()) - iOS 15+"
+    let source = "System"
+    let keywords = "button system flat default border"
+    @ViewBuilder var body: AnyView {
+        AnyView( Group {
+            if #available(iOS 15.0, *) {
+                EnabledAndDisabled {
+                    Button { } label: {
+                        Text("Button")
+                    }
+                }
+                .buttonStyle(BorderedButtonStyle())
+            } else {
+                Text("Available from iOS 15")
+            }
+        })
+    }
+}
+
+struct BorderedProminentButtonSample: PropSampleable {
+    let name = "Bordered prominent button style"
+    let notes: String? = ".buttonStyle(BorderedProminentButtonStyle()) - iOS 15+"
+    let source = "System"
+    let keywords = "button system flat default border prominent"
+    @ViewBuilder var body: AnyView {
+        AnyView( Group {
+            if #available(iOS 15.0, *) {
+                EnabledAndDisabled {
+                    Button { } label: {
+                        Text("Button")
+                    }
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+            } else {
+                Text("Available from iOS 15")
+            }
+        })
+    }
+}
+
+struct BorderlessButtonSample: PropSampleable {
+    let name = "Default button style"
+    let notes: String? = ".buttonStyle(BorderlessButtonStyle())"
+    let source = "System"
+    let keywords = "button system flat default"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            EnabledAndDisabled {
+                Button { } label: {
+                    Text("Button")
+                }
+            }
+            .buttonStyle(BorderlessButtonStyle())
+        )
+    }
+}
+
+struct PlainButtonSample: PropSampleable {
+    let name = "Plain button style"
+    let notes: String? = ".buttonStyle(PlainButtonStyle())"
+    let source = "System"
+    let keywords = "button system flat default"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            EnabledAndDisabled {
+                Button { } label: {
+                    Text("Button")
+                }
+            }
+            .buttonStyle(PlainButtonStyle())
+        )
+    }
+}
+
 struct SystemButtonStyles: View {
     var body: some View {
-        VStack(spacing: 12) {
-            EnabledAndDisabled(title: "DefaultButtonStyle") {
-                Button("Button") {}.buttonStyle(DefaultButtonStyle())
-            }
-            
-            if #available(iOS 15.0, *) {
-                EnabledAndDisabled(title: "BorderedButtonStyle (iOS 15+)") {
-                    Button("Button") {}.buttonStyle(BorderedButtonStyle())
-                }
-                
-                EnabledAndDisabled(title: "BorderedProminentButtonStyle (iOS 15+") {
-                    Button("Button") {}.buttonStyle(BorderedProminentButtonStyle())
-                }                
-            }
-            
-            EnabledAndDisabled(title: "BorderlessButtonStyle") {
-                Button("Button") {}.buttonStyle(BorderlessButtonStyle())
-            }
-            
-            EnabledAndDisabled(title: "PlainButtonStyle") {
-                Button("Button") {}.buttonStyle(PlainButtonStyle())
+        ScrollView {
+            VStack {
+                PropCard(sample: DefaultButtonSample())
+                PropCard(sample: BorderedButtonSample())
+                PropCard(sample: BorderedProminentButtonSample())
+                PropCard(sample: BorderlessButtonSample())
+                PropCard(sample: PlainButtonSample())
             }
         }
     }

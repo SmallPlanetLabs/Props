@@ -13,7 +13,7 @@ struct ButtonStyles: View {
     var body: some View {
         VStack(spacing: 12) {
                 Group {
-                    EnabledAndDisabled(title: "PaperShadowedButton") {
+                    EnabledAndDisabled {
                         Button("Button") {}
                     }
                 }
@@ -22,34 +22,34 @@ struct ButtonStyles: View {
                 .primaryColor(Color(white: 0.5))
 
                 Group {
-                    EnabledAndDisabled(title: "FilledButton") {
+                    EnabledAndDisabled {
                         Button("Filled Button") {}
                     }
 
-                    EnabledAndDisabled (title: nil) {
+                    EnabledAndDisabled {
                         Button { } label: {
                             HStack { Text("Filled Button"); Image(systemName: "greaterthan") }
                         }
                     }
 
-                    EnabledAndDisabled(title: nil) {
+                    EnabledAndDisabled {
                         Button { } label: { Image(systemName: "greaterthan") }
                     }
                 }
                 .buttonStyle(FilledButton())
 
                 Group {
-                    EnabledAndDisabled(title: "OutlinedButton") {
+                    EnabledAndDisabled {
                         Button("Outlined Button") {}
                     }
 
-                    EnabledAndDisabled (title: nil) {
+                    EnabledAndDisabled {
                         Button { } label: {
                             HStack(spacing: 12) { Text("Outlined Button"); Image(systemName: "greaterthan") }
                         }
                     }
 
-                    EnabledAndDisabled(title: nil) {
+                    EnabledAndDisabled {
                         Button { } label: { Image(systemName: "greaterthan") }
                     }
                 }
@@ -67,27 +67,19 @@ struct ButtonStyles_Previews: PreviewProvider {
                     .previewLayout(.sizeThatFits)
             }
         }
+        .primaryColor(.purple)
     }
 }
 
 // MARK: - Helpers
 
 struct EnabledAndDisabled<Content>: View where Content: View {
-    let title: String?
     @ViewBuilder var content: Content
 
     var body: some View {
         VStack(spacing: 10) {
-            if let title = title {
-                HStack {
-                    Text(title).font(.caption)
-                    Spacer()
-                }
-            }
-            HStack {
-                content
-                    .modifier(CloneDisabled())
-            }
+            content
+                .modifier(CloneDisabled())
         }
     }
 }

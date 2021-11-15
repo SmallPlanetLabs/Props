@@ -21,6 +21,9 @@ struct Catalog: View {
     }
 }
 
+struct PropCatalog {
+}
+
 struct Catalog_Previews: PreviewProvider {
     static var previews: some View {
         Catalog()

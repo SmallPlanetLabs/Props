@@ -8,44 +8,12 @@
 import SwiftUI
 import Props
 
-//protocol Prop {
-//    associatedtype Body : View
-//    var name: String { get }
-//    var notes: String? { get }
-//    @ViewBuilder var body: Self.Body { get }
-//}
-//
-////protocol Prop {
-////    var name: String { get }
-////    var notes: String? { get }
-////    func body() -> AnyView
-////}
-//
-//protocol Categorizable {
-//    var category: String { get }
-//    var subcategories: [Categorizable] { get }
-//    var props: [Prop] { get }
-//}
-//
-//struct ButtonCategory: Categorizable {
-//    let category = "Buttons"
-//    var subcategories = [Categorizable]()
-//    var props = [Prop]()
-//}
-//
-//struct ButtonProp: Prop {
-//    let name: String
-//    let notes: String?
-//    var sample: () -> AnyView
-//    func body() -> AnyView {
-//        AnyView(
-//            VStack {
-//                sample()
-//                sample().disabled(true)
-//            }
-//        )
-//    }
-//}
+extension PropCatalog {
+    static let buttons: [PropGroup] = [
+        PropGroup(name: "System buttons", group: systemButtons),
+        PropGroup(name: "Material buttons", group: materialButtons)
+    ]
+}
 
 struct Buttons: View {
     var body: some View {
@@ -86,7 +54,16 @@ struct AllButtonStyles: View {
 struct Buttons_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices {
-            Buttons()
+            ScrollView {
+                VStack {
+                    ForEach(PropCatalog.buttons, id: \.name) { group in
+                        ForEach(group.group, id: \.name) { sample in
+                            PropCard(sample: sample)
+                        }
+                    }
+                }
+                .padding()
+            }
         }
     }
 }
