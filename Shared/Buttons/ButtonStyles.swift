@@ -9,51 +9,79 @@
 import SwiftUI
 import Props
 
-struct ButtonStyles: View {
-    var body: some View {
-        VStack(spacing: 12) {
-                Group {
-                    EnabledAndDisabled {
-                        Button("Button") {}
-                    }
-                }
-                .buttonStyle(PaperShadowedButton())
-                .font(.custom("ArialRoundedMTBold", fixedSize: 24))
-                .primaryColor(Color(white: 0.5))
+extension PropGroup {
+    static let flatButtons = PropGroup(name: "System buttons", samples: [
+        FilledButtonSample()
+    ])
+}
 
-                Group {
-                    EnabledAndDisabled {
-                        Button("Filled Button") {}
+struct FilledButtonSample: PropSampleable {
+    let name = "Filled button style"
+    let notes: String? = ".buttonStyle(FilledButton())"
+    let source = "Custom"
+    let keywords = "button custom flat rectangle filled"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            EnabledAndDisabled {
+                HStack {
+                    Button { } label: {
+                        Text("Filled Button")
                     }
-
-                    EnabledAndDisabled {
-                        Button { } label: {
-                            HStack { Text("Filled Button"); Image(systemName: "greaterthan") }
-                        }
-                    }
-
-                    EnabledAndDisabled {
-                        Button { } label: { Image(systemName: "greaterthan") }
+                    Button { } label: {
+                        Label("Filled Button", systemImage: "heart.fill")
                     }
                 }
                 .buttonStyle(FilledButton())
+            }
+        )
+    }
+}
 
-                Group {
-                    EnabledAndDisabled {
-                        Button("Outlined Button") {}
-                    }
+struct ButtonStyles: View {
+    var body: some View {
+        VStack(spacing: 12) {
+            Group {
+                EnabledAndDisabled {
+                    Button("Button") {}
+                }
+            }
+            .buttonStyle(PaperShadowedButton())
+            .font(.custom("ArialRoundedMTBold", fixedSize: 24))
+            .primaryColor(Color(white: 0.5))
 
-                    EnabledAndDisabled {
-                        Button { } label: {
-                            HStack(spacing: 12) { Text("Outlined Button"); Image(systemName: "greaterthan") }
-                        }
-                    }
+            Group {
+                EnabledAndDisabled {
+                    Button("Filled Button") {}
+                }
 
-                    EnabledAndDisabled {
-                        Button { } label: { Image(systemName: "greaterthan") }
+                EnabledAndDisabled {
+                    Button { } label: {
+                        HStack { Text("Filled Button"); Image(systemName: "greaterthan") }
                     }
                 }
-                .buttonStyle(OutlinedButton())
+
+                EnabledAndDisabled {
+                    Button { } label: { Image(systemName: "greaterthan") }
+                }
+            }
+            .buttonStyle(FilledButton())
+
+            Group {
+                EnabledAndDisabled {
+                    Button("Outlined Button") {}
+                }
+
+                EnabledAndDisabled {
+                    Button { } label: {
+                        HStack(spacing: 12) { Text("Outlined Button"); Image(systemName: "greaterthan") }
+                    }
+                }
+
+                EnabledAndDisabled {
+                    Button { } label: { Image(systemName: "greaterthan") }
+                }
+            }
+            .buttonStyle(OutlinedButton())
         }
     }
 }
@@ -61,11 +89,7 @@ struct ButtonStyles: View {
 struct ButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices {
-            ScrollView {
-                ButtonStyles()
-                    .padding()
-                    .previewLayout(.sizeThatFits)
-            }
+            PropGroupView(group: .flatButtons)
         }
         .primaryColor(.purple)
     }

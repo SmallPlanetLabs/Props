@@ -22,16 +22,27 @@ public struct OutlinedButton: ButtonStyle {
 }
 
 public struct FilledButton: ButtonStyle {
+    @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
     public func makeBody(configuration: Configuration) -> some View {
         let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
-            .fill(configuration.isPressed ? .gray : primaryColor)
+            .fill(backgroundColor(for: configuration))
 
         configuration
             .label
             .foregroundColor(.white)
             .padding()
             .background(background)
+    }
+    func backgroundColor(for configuration: Configuration) -> Color {
+        switch (isEnabled, configuration.isPressed) {
+        case (false, _):
+            return primaryColor.tinted(amount: 0.5)
+        case (true, false):
+            return primaryColor
+        case (true, true):
+            return primaryColor.tinted(amount: 0.7)
+        }
     }
     public init() {}
 }
