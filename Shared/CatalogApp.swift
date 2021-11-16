@@ -11,8 +11,10 @@ import SwiftUI
 struct CatalogApp: App {
     var body: some Scene {
         WindowGroup {
-            Catalog()
-                .primaryColor(.blue)
+            NavigationView {
+                Catalog()
+                    .primaryColor(.blue)
+            }
         }
     }
 }

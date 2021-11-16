@@ -41,9 +41,3 @@ struct PropCard_Previews: PreviewProvider {
         .padding()
     }
 }
-
-struct PropGroup: Identifiable {
-    let name: String
-    let group: [PropSampleable]
-    var id: String { return name }
-}

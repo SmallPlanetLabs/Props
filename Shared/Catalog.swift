@@ -9,23 +9,19 @@ import SwiftUI
 
 struct Catalog: View {
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink("Buttons", destination: Buttons())
-                NavigationLink("Progress", destination: Progress())
-                NavigationLink("Sliders", destination: Sliders())
-                NavigationLink("Toggles", destination: Toggles())
+        List {
+            ForEach(PropGroup.allGroups.subgroups) { group in
+                NavigationLink(group.name, destination: PropGroupView(group: group))
             }
-            .navigationTitle("Props")
+            .navigationTitle(PropGroup.allGroups.name)
         }
     }
 }
 
-struct PropCatalog {
-}
-
 struct Catalog_Previews: PreviewProvider {
     static var previews: some View {
-        Catalog()
+        NavigationView {
+            Catalog()
+        }
     }
 }

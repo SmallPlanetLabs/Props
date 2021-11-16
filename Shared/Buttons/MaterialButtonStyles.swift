@@ -8,10 +8,10 @@
 import SwiftUI
 import Props
 
-extension PropCatalog {
-    static let materialButtons: [PropSampleable] = [
+extension PropGroup {
+    static let materialButtons = PropGroup(name: "Material buttons", samples: [
         MonochromaricMaterialSample()
-    ]
+    ])
 }
 
 struct MonochromaricMaterialSample: PropSampleable {
@@ -62,9 +62,7 @@ struct MaterialButtonStyles: View {
 struct MaterialButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices {
-            ForEach(PropCatalog.materialButtons, id: \.name) { sample in
-                PropCard(sample: sample)
-            }
+            PropGroupView(group: .materialButtons)
         }
     }
 }

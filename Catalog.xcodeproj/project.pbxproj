@@ -30,6 +30,8 @@
 		A933E6A82742EA5100FB5D0D /* PropCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6A62742EA5100FB5D0D /* PropCard.swift */; };
 		A933E6AA2742ECB000FB5D0D /* PropSampleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6A92742ECB000FB5D0D /* PropSampleable.swift */; };
 		A933E6AB2742ECB000FB5D0D /* PropSampleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6A92742ECB000FB5D0D /* PropSampleable.swift */; };
+		A933E6AD27435EAE00FB5D0D /* PropGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6AC27435EAE00FB5D0D /* PropGroup.swift */; };
+		A933E6AE27435EAE00FB5D0D /* PropGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6AC27435EAE00FB5D0D /* PropGroup.swift */; };
 		A9C1044427337E260086AE8C /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A9C1044327337E260086AE8C /* Props */; };
 		A9C10447273391BC0086AE8C /* SunMoonToggleStyle in Frameworks */ = {isa = PBXBuildFile; productRef = A9C10446273391BC0086AE8C /* SunMoonToggleStyle */; };
 		A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C1044A2733962D0086AE8C /* Sliders.swift */; };
@@ -55,6 +57,7 @@
 		A910846027321BA60056F4F9 /* ProgressViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyles.swift; sourceTree = "<group>"; };
 		A933E6A62742EA5100FB5D0D /* PropCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropCard.swift; sourceTree = "<group>"; };
 		A933E6A92742ECB000FB5D0D /* PropSampleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropSampleable.swift; sourceTree = "<group>"; };
+		A933E6AC27435EAE00FB5D0D /* PropGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropGroup.swift; sourceTree = "<group>"; };
 		A9C1044127337DCF0086AE8C /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Props; sourceTree = "<group>"; };
 		A9C1044A2733962D0086AE8C /* Sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders.swift; sourceTree = "<group>"; };
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A933E6A62742EA5100FB5D0D /* PropCard.swift */,
+				A933E6AC27435EAE00FB5D0D /* PropGroup.swift */,
 				A933E6A92742ECB000FB5D0D /* PropSampleable.swift */,
 			);
 			path = CatalogViews;
@@ -296,6 +300,7 @@
 				A91084502731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
+				A933E6AD27435EAE00FB5D0D /* PropGroup.swift in Sources */,
 				A933E6AA2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
@@ -316,6 +321,7 @@
 				A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A910845F27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6A82742EA5100FB5D0D /* PropCard.swift in Sources */,
+				A933E6AE27435EAE00FB5D0D /* PropGroup.swift in Sources */,
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A91084512731D6D70056F4F9 /* StyleGuidable.swift in Sources */,
 				A933E6AB2742ECB000FB5D0D /* PropSampleable.swift in Sources */,

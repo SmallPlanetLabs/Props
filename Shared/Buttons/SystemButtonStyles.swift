@@ -8,14 +8,14 @@
 import SwiftUI
 import Props
 
-extension PropCatalog {
-    static let systemButtons: [PropSampleable] = [
+extension PropGroup {
+    static let systemButtons = PropGroup(name: "System buttons", samples: [
         DefaultButtonSample(),
         BorderedButtonSample(),
         BorderedProminentButtonSample(),
         BorderlessButtonSample(),
         PlainButtonSample(),
-    ]
+    ])
 }
 
 struct DefaultButtonSample: PropSampleable {
@@ -113,15 +113,7 @@ struct PlainButtonSample: PropSampleable {
 
 struct SystemButtonStyles: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                PropCard(sample: DefaultButtonSample())
-                PropCard(sample: BorderedButtonSample())
-                PropCard(sample: BorderedProminentButtonSample())
-                PropCard(sample: BorderlessButtonSample())
-                PropCard(sample: PlainButtonSample())
-            }
-        }
+        PropGroupView(group: .systemButtons)
     }
 }
 

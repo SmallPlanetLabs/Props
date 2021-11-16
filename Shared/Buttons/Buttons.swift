@@ -8,11 +8,11 @@
 import SwiftUI
 import Props
 
-extension PropCatalog {
-    static let buttons: [PropGroup] = [
-        PropGroup(name: "System buttons", group: systemButtons),
-        PropGroup(name: "Material buttons", group: materialButtons)
-    ]
+extension PropGroup {
+    static let buttons = PropGroup(name: "Buttons", subgroups: [
+        .systemButtons,
+        .materialButtons
+    ])
 }
 
 struct Buttons: View {
@@ -54,16 +54,8 @@ struct AllButtonStyles: View {
 struct Buttons_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices {
-            ScrollView {
-                VStack {
-                    ForEach(PropCatalog.buttons, id: \.name) { group in
-                        ForEach(group.group, id: \.name) { sample in
-                            PropCard(sample: sample)
-                        }
-                    }
-                }
+            PropGroupView(group: .buttons)
                 .padding()
-            }
         }
     }
 }
