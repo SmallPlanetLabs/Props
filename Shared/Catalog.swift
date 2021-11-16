@@ -9,12 +9,7 @@ import SwiftUI
 
 struct Catalog: View {
     var body: some View {
-        List {
-            ForEach(PropGroup.allGroups.subgroups) { group in
-                NavigationLink(group.name, destination: PropGroupView(group: group))
-            }
-            .navigationTitle(PropGroup.allGroups.name)
-        }
+        PropGroupView(group: .allGroups)
     }
 }
 

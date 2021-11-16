@@ -47,10 +47,11 @@ struct PropGroupView: View {
                     }
                 }
             }
+            .padding()
         }
-        .padding()
         .navigationTitle(group.name)
         .navigationViewStyle(.automatic)
+        .background(Color.background.edgesIgnoringSafeArea(.all))
     }
 }
 
@@ -75,13 +76,12 @@ struct PropGroupView_Previews: PreviewProvider {
         Group {
             NavigationView {
                 PropGroupView(group: PropGroup(name: "Test Subgroups", subgroups: groups))
-                    .padding()
             }
 
             NavigationView {
                 PropGroupView(group: PropGroup(name: "Test Samples", samples: samples))
-                    .padding()
             }
+            .preferredColorScheme(.dark)
         }
     }
 }
