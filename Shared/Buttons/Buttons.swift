@@ -11,44 +11,10 @@ import Props
 extension PropGroup {
     static let buttons = PropGroup(name: "Buttons", subgroups: [
         .systemButtons,
-        .materialButtons
+        .materialButtons,
+        .flatButtons,
+        .customButtons
     ])
-}
-
-struct Buttons: View {
-    var body: some View {
-        ScrollView {
-            VStack {
-                Text("MaterialButtonStyles").font(.title)
-                MaterialButtonStyles()
-
-                Divider()
-                    .padding(.top, 30)
-
-                Text("ButtonStyles").font(.title)
-                ButtonStyles()
-
-                Divider()
-                    .padding(.top, 30)
-
-                Text("SystemButtonStyles").font(.title)
-                SystemButtonStyles()
-                    .padding(.bottom, 100)
-
-            }
-            .padding()
-            .navigationTitle("Buttons")
-        }
-    }
-}
-
-struct AllButtonStyles: View {
-    var body: some View {
-        VStack {
-            ButtonStyles()
-            SystemButtonStyles()
-        }
-    }
 }
 
 struct Buttons_Previews: PreviewProvider {
@@ -56,6 +22,19 @@ struct Buttons_Previews: PreviewProvider {
         MultipleDevices {
             PropGroupView(group: .buttons)
                 .padding()
+        }
+    }
+}
+
+// MARK: - Helpers
+
+struct EnabledAndDisabled<Content>: View where Content: View {
+    @ViewBuilder var content: Content
+
+    var body: some View {
+        VStack(spacing: 10) {
+            content
+                .modifier(CloneDisabled())
         }
     }
 }

@@ -6,22 +6,44 @@
 
 import SwiftUI
 
-public struct OutlinedButton: ButtonStyle {
+protocol Enableable {
+    var isEnabled: Bool { get }
+}
+
+protocol PrimaryColorable {
+    var primaryColor: Color { get }
+}
+
+extension ButtonStyle where Self: Enableable & PrimaryColorable {
+    func backgroundColor(for configuration: Configuration) -> Color {
+        switch (isEnabled, configuration.isPressed) {
+        case (false, _):
+            return primaryColor.tinted(amount: 0.5)
+        case (true, false):
+            return primaryColor
+        case (true, true):
+            return primaryColor.tinted(amount: 0.7)
+        }
+    }
+}
+
+public struct OutlinedButton: ButtonStyle, Enableable, PrimaryColorable {
+    @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
     public func makeBody(configuration: Configuration) -> some View {
         let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
-            .stroke(configuration.isPressed ? .gray : primaryColor)
+            .stroke(backgroundColor(for: configuration))
 
         configuration
             .label
-            .foregroundColor(configuration.isPressed ? .gray : primaryColor)
+            .foregroundColor(backgroundColor(for: configuration))
             .padding()
             .background(background)
     }
     public init() {}
 }
 
-public struct FilledButton: ButtonStyle {
+public struct FilledButton: ButtonStyle, Enableable, PrimaryColorable {
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
     public func makeBody(configuration: Configuration) -> some View {
@@ -33,16 +55,6 @@ public struct FilledButton: ButtonStyle {
             .foregroundColor(.white)
             .padding()
             .background(background)
-    }
-    func backgroundColor(for configuration: Configuration) -> Color {
-        switch (isEnabled, configuration.isPressed) {
-        case (false, _):
-            return primaryColor.tinted(amount: 0.5)
-        case (true, false):
-            return primaryColor
-        case (true, true):
-            return primaryColor.tinted(amount: 0.7)
-        }
     }
     public init() {}
 }
