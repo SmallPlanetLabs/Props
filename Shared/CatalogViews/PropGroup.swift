@@ -53,6 +53,7 @@ struct PropGroupView: View {
         .navigationViewStyle(.automatic)
         .background(Color.background.edgesIgnoringSafeArea(.all))
         .primaryColor(.foreground)
+        .secondaryColor(.background)
     }
 }
 
@@ -70,9 +71,9 @@ struct PropGroupRow: View {
 }
 
 struct PropGroupView_Previews: PreviewProvider {
-    static private let groups: [PropGroup] = [.materialButtons, .systemButtons]
-    static private let samples: [PropSampleable] = PropGroup.systemButtons.samples
-    static private let group = PropGroup(name: "Test group", samples: samples, subgroups: groups)
+    private static let groups: [PropGroup] = [.materialButtons, .systemButtons]
+    private static let samples: [PropSampleable] = PropGroup.systemButtons.samples
+    private static let group = PropGroup(name: "Test group", samples: samples, subgroups: groups)
     static var previews: some View {
         Group {
             NavigationView {

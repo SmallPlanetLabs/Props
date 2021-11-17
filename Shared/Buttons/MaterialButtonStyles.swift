@@ -5,12 +5,12 @@
 //  Created by Quinn McHenry on 11/2/21.
 //
 
-import SwiftUI
 import Props
+import SwiftUI
 
 extension PropGroup {
     static let materialButtons = PropGroup(name: "Material buttons", samples: [
-        MonochromaricMaterialSample()
+        MonochromaricMaterialSample(),
     ])
 }
 
@@ -30,7 +30,7 @@ struct MonochromaricMaterialSample: PropSampleable {
                         .primaryColor(Color(hex: 0x097660))
 
                     Button {} label: { Image(systemName: "stopwatch") }
-                        .primaryColor(Color(hex: 0x65889b))
+                        .primaryColor(Color(hex: 0x65889B))
                 }
                 .buttonStyle(MonochromaricMaterial())
             }
@@ -50,7 +50,7 @@ struct MaterialButtonStyles: View {
                         .primaryColor(Color(hex: 0x097660))
 
                     Button {} label: { Image(systemName: "stopwatch") }
-                        .primaryColor(Color(hex: 0x65889b))
+                        .primaryColor(Color(hex: 0x65889B))
                 }
                 .buttonStyle(MonochromaricMaterial())
             }

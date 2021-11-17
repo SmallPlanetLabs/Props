@@ -5,8 +5,8 @@
 //  Created by Quinn McHenry on 11/2/21.
 //
 
-import SwiftUI
 import Props
+import SwiftUI
 
 struct Progress: View {
     var body: some View {
@@ -16,7 +16,6 @@ struct Progress: View {
 
                 ProgressViewStyles(title: "SquiggleProgressStyle", total: 4, hideIndeterminate: true)
                     .progressViewStyle(SquiggleProgressStyle())
-
 
                 ProgressViewStyles(title: "CircleBarProgressStyle", hideIndeterminate: true)
                     .progressViewStyle(CircleBarProgressStyle())
@@ -34,7 +33,6 @@ struct Progress: View {
 
                 ProgressViewStyles(title: "DefaultProgressViewStyle")
                     .progressViewStyle(DefaultProgressViewStyle())
-
             }
             .padding()
             .navigationTitle("Progress")

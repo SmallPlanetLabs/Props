@@ -11,7 +11,7 @@ import Props
 
 extension PropGroup {
     static let customButtons = PropGroup(name: "Custom buttons", samples: [
-        PaperShadowedButtonSample()
+        PaperShadowedButtonSample(),
     ])
 }
 
@@ -24,10 +24,10 @@ struct PaperShadowedButtonSample: PropSampleable {
         AnyView(
             EnabledAndDisabled {
                 HStack {
-                    Button { } label: {
+                    Button {} label: {
                         Text("Paper Button")
                     }
-                    Button { } label: {
+                    Button {} label: {
                         Label("Paper", systemImage: "heart.fill")
                     }
                 }

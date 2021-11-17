@@ -11,7 +11,7 @@ struct ProgressViewStyles: View {
     init(title: String, total: Double = 11, hideDeterminate: Bool = false, hideIndeterminate: Bool = false) {
         self.title = title
         self.total = total
-        self.progress = Foundation.Progress(totalUnitCount: Int64(total))
+        progress = Foundation.Progress(totalUnitCount: Int64(total))
         self.hideDeterminate = hideDeterminate
         self.hideIndeterminate = hideIndeterminate
     }
@@ -46,14 +46,14 @@ struct ProgressViewStyles: View {
         }
         .padding()
         .onReceive(timer) { _ in
-             value += 1
-             progress.completedUnitCount += 1
+            value += 1
+            progress.completedUnitCount += 1
 
-             if value > total {
-                 value = 0
-                 progress.completedUnitCount = 0
-             }
-         }
+            if value > total {
+                value = 0
+                progress.completedUnitCount = 0
+            }
+        }
     }
 }
 

@@ -10,24 +10,25 @@ import SwiftUI
 struct PropCard: View {
     let sample: PropSampleable
     var body: some View {
-            VStack(alignment: .leading, spacing: 20) {
-                Text(sample.name)
-                HStack {
-                    Spacer()
-                    sample.body
-                    Spacer()
-                }
-                .padding()
-                if let notes = sample.notes {
-                    Text(notes)
-                        .font(.footnote)
-                    .fixedSize(horizontal: false, vertical: true)            }
-                Text(sample.source)
-                    .font(.footnote)
+        VStack(alignment: .leading, spacing: 20) {
+            Text(sample.name)
+            HStack {
+                Spacer()
+                sample.body
+                Spacer()
             }
             .padding()
-            .backport.materialBackground()
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            if let notes = sample.notes {
+                Text(notes)
+                    .font(.footnote)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Text(sample.source)
+                .font(.footnote)
+        }
+        .padding()
+        .backport.materialBackground()
+        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 

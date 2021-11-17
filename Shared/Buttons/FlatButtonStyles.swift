@@ -6,13 +6,13 @@
 //
 // see https://developer.apple.com/documentation/swiftui/buttonstyle
 
-import SwiftUI
 import Props
+import SwiftUI
 
 extension PropGroup {
     static let flatButtons = PropGroup(name: "Flat buttons", samples: [
         FilledButtonSample(),
-        OutlinedButtonSample()
+        OutlinedButtonSample(),
     ])
 }
 
@@ -25,10 +25,10 @@ struct FilledButtonSample: PropSampleable {
         AnyView(
             EnabledAndDisabled {
                 HStack {
-                    Button { } label: {
+                    Button {} label: {
                         Text("Filled Button")
                     }
-                    Button { } label: {
+                    Button {} label: {
                         Label("Filled Button", systemImage: "heart.fill")
                     }
                 }
@@ -47,10 +47,10 @@ struct OutlinedButtonSample: PropSampleable {
         AnyView(
             EnabledAndDisabled {
                 HStack {
-                    Button { } label: {
+                    Button {} label: {
                         Text("Outlined")
                     }
-                    Button { } label: {
+                    Button {} label: {
                         Label("Outlined", systemImage: "eye.fill")
                     }
                 }

@@ -4,8 +4,8 @@
 //  Created by Ryan Goodlett on 10/19/21.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
 
 /// This struct is used to contain work-arounds for iOS version issues
 /// that can be removed easily when that version of iOS is no longer needed
@@ -31,4 +31,3 @@ extension Backport where Content: View {
         }
     }
 }
-

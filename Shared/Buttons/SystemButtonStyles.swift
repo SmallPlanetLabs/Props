@@ -5,8 +5,8 @@
 //  Created by Quinn McHenry on 11/2/21.
 //
 
-import SwiftUI
 import Props
+import SwiftUI
 
 extension PropGroup {
     static let systemButtons = PropGroup(name: "System buttons", samples: [
@@ -26,11 +26,11 @@ struct DefaultButtonSample: PropSampleable {
     @ViewBuilder var body: AnyView {
         AnyView(
             EnabledAndDisabled {
-                Button { } label: {
+                Button {} label: {
                     Text("Button")
                 }
             }
-                .buttonStyle(DefaultButtonStyle())
+            .buttonStyle(DefaultButtonStyle())
         )
     }
 }
@@ -41,10 +41,10 @@ struct BorderedButtonSample: PropSampleable {
     let source = "System"
     let keywords = "button system flat default border"
     @ViewBuilder var body: AnyView {
-        AnyView( Group {
+        AnyView(Group {
             if #available(iOS 15.0, *) {
                 EnabledAndDisabled {
-                    Button { } label: {
+                    Button {} label: {
                         Text("Button")
                     }
                 }
@@ -62,10 +62,10 @@ struct BorderedProminentButtonSample: PropSampleable {
     let source = "System"
     let keywords = "button system flat default border prominent"
     @ViewBuilder var body: AnyView {
-        AnyView( Group {
+        AnyView(Group {
             if #available(iOS 15.0, *) {
                 EnabledAndDisabled {
-                    Button { } label: {
+                    Button {} label: {
                         Text("Button")
                     }
                 }
@@ -85,7 +85,7 @@ struct BorderlessButtonSample: PropSampleable {
     @ViewBuilder var body: AnyView {
         AnyView(
             EnabledAndDisabled {
-                Button { } label: {
+                Button {} label: {
                     Text("Button")
                 }
             }
@@ -102,7 +102,7 @@ struct PlainButtonSample: PropSampleable {
     @ViewBuilder var body: AnyView {
         AnyView(
             EnabledAndDisabled {
-                Button { } label: {
+                Button {} label: {
                     Text("Button")
                 }
             }

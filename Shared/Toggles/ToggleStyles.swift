@@ -5,14 +5,14 @@
 //  Created by Quinn McHenry on 11/3/21.
 //
 
-import SwiftUI
 import Props
 import SunMoonToggleStyle
+import SwiftUI
 
 extension PropGroup {
     static let customToggles = PropGroup(name: "Custom toggles", samples: [
         SunMoonToggleSample(),
-        CheckboxToggleSample()
+        CheckboxToggleSample(),
     ])
 }
 

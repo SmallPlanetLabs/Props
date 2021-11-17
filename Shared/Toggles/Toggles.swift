@@ -5,13 +5,13 @@
 //  Created by Quinn McHenry on 11/3/21.
 //
 
-import SwiftUI
 import Props
+import SwiftUI
 
 extension PropGroup {
     static let toggles = PropGroup(name: "Toggles", subgroups: [
         .systemToggles,
-        .customToggles
+        .customToggles,
     ])
 }
 

@@ -5,15 +5,15 @@
 //  Created by Quinn McHenry on 11/2/21.
 //
 
-import SwiftUI
 import Props
+import SwiftUI
 
 extension PropGroup {
     static let buttons = PropGroup(name: "Buttons", subgroups: [
         .systemButtons,
         .materialButtons,
         .flatButtons,
-        .customButtons
+        .customButtons,
     ])
 }
 

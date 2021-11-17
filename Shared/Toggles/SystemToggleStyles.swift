@@ -10,7 +10,7 @@ import SwiftUI
 extension PropGroup {
     static let systemToggles = PropGroup(name: "System toggles", samples: [
         SwitchToggleSample(),
-        ButtonToggleSample()
+        ButtonToggleSample(),
     ])
 }
 
@@ -35,7 +35,7 @@ struct ButtonToggleSample: PropSampleable {
     let source = "System"
     let keywords = "toggle system default button"
     @ViewBuilder var body: AnyView {
-        AnyView( Group {
+        AnyView(Group {
             if #available(iOS 15.0, *) {
                 ToggleExample(title: ".button") {
                     Text("Toggler")
