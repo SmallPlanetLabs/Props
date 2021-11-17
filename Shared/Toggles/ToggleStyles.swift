@@ -6,40 +6,52 @@
 //
 
 import SwiftUI
+import Props
+import SunMoonToggleStyle
 
+extension PropGroup {
+    static let customToggles = PropGroup(name: "Custom toggles", samples: [
+        SunMoonToggleSample(),
+        CheckboxToggleSample()
+    ])
+}
 
-
-// MARK: - Helper for rendering multiple toggle states
-
-struct ToggleExample<Content>: View where Content: View {
-    let title: String
-    @State private var isOn = true
-    @State private var isOnClone = false
-    @ViewBuilder var content: Content
-
-    var body: some View {
-        VStack {
-            HStack {
-                Text(title).font(.caption)
-                Spacer()
+struct CheckboxToggleSample: PropSampleable {
+    let name = "Checkbox toggle style"
+    let notes: String? = ".toggleStyle(CheckboxStyle())"
+    let source = "Props"
+    let keywords = "toggle custom props checkbox"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ToggleExample(title: nil) {
+                Text("Do the thing?")
             }
-            Toggle(isOn: $isOn) {
-                content
-            }
-            Toggle(isOn: $isOnClone) {
-                content
-            }
-        }
+            .toggleStyle(CheckBoxStyle())
+        )
     }
 }
 
-@available(iOS 15.0, *)
-struct ToggleStyles_Previews: PreviewProvider {
+struct SunMoonToggleSample: PropSampleable {
+    let name = "Sun/moon toggle style"
+    let notes: String? = ".toggleStyle(SunMoonToggleStyle())"
+    let source = "Custom"
+    let keywords = "toggle custom 3rd party animated"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ToggleExample(title: nil) {
+                Text("Sun or moon?")
+            }
+            .toggleStyle(SunMoonToggleStyle())
+        )
+    }
+}
+
+struct CustomToggleStyles_Previews: PreviewProvider {
     static var previews: some View {
-        ToggleExample(title: ".button") {
-            Text("Toggler")
+        MultipleDevices {
+            PropGroupView(group: .customToggles)
+                .primaryColor(.foreground)
         }
-        .toggleStyle(.button)
-        .padding()
+        .preferredColorScheme(.dark)
     }
 }

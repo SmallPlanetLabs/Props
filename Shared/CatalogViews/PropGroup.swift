@@ -23,7 +23,7 @@ struct PropGroup: Identifiable {
 }
 
 extension PropGroup {
-    static let allGroups = PropGroup(name: "Prop Catalog", subgroups: [.buttons])
+    static let allGroups = PropGroup(name: "Prop Catalog", subgroups: [.buttons, .toggles])
 }
 
 // MARK: - View
@@ -52,6 +52,7 @@ struct PropGroupView: View {
         .navigationTitle(group.name)
         .navigationViewStyle(.automatic)
         .background(Color.background.edgesIgnoringSafeArea(.all))
+        .primaryColor(.foreground)
     }
 }
 

@@ -9,4 +9,5 @@ import SwiftUI
 
 extension Color {
     static let background = Color("Background")
+    static let foreground = Color("Foreground")
 }

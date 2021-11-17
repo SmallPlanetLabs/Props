@@ -6,31 +6,54 @@
 //
 
 import SwiftUI
-import SunMoonToggleStyle
+import Props
 
-struct Toggles: View {
-    var body: some View {
-        ScrollView {
-            VStack(spacing: 30) {
-                Text("Custom Toggle Styles").font(.title)
-
-                ToggleExample(title: "SunMoonToggleStyle (3rd party)") {
-                    Text("Sun/moon")
-                }
-                .toggleStyle(SunMoonToggleStyle())
-
-                Text("System Toggle Styles").font(.title)
-                SystemToggleStyles()
-
-                Divider()
-            }
-            .padding()
-        }
-    }
+extension PropGroup {
+    static let toggles = PropGroup(name: "Toggles", subgroups: [
+        .systemToggles,
+        .customToggles
+    ])
 }
 
 struct Toggles_Previews: PreviewProvider {
     static var previews: some View {
-        Toggles()
+        MultipleDevices {
+            PropGroupView(group: .toggles)
+        }
+    }
+}
+
+// MARK: - Helper for rendering multiple toggle states
+
+struct ToggleExample<Content>: View where Content: View {
+    let title: String?
+    @State private var isOn = true
+    @State private var isOnClone = false
+    @ViewBuilder var content: Content
+
+    var body: some View {
+        VStack {
+            if let title = title {
+                HStack {
+                    Text(title).font(.caption)
+                    Spacer()
+                }
+            }
+            Toggle(isOn: $isOn) {
+                content
+            }
+            Toggle(isOn: $isOnClone) {
+                content
+            }
+        }
+    }
+}
+
+@available(iOS 15.0, *)
+struct ToggleStyles_Previews: PreviewProvider {
+    static var previews: some View {
+        MultipleDevices {
+            PropGroupView(group: .customToggles)
+        }
     }
 }

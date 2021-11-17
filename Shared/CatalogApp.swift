@@ -13,7 +13,6 @@ struct CatalogApp: App {
         WindowGroup {
             NavigationView {
                 Catalog()
-                    .primaryColor(.blue)
             }
         }
     }

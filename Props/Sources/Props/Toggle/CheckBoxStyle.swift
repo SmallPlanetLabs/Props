@@ -23,6 +23,7 @@ public struct CheckBoxStyle: ToggleStyle {
                     .opacity(configuration.isOn ? 1 : 0)
             }
             configuration.label
+                .foregroundColor(primaryColor)
         }
         .frame(height: 44)
         .onTapGesture {
