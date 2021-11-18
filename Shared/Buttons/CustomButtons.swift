@@ -39,7 +39,7 @@ struct PaperShadowedButtonSample: PropSampleable {
 
 struct CustomButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        MultipleDevices(combos: .defaults) {
             PropGroupView(group: .customButtons)
         }
         .primaryColor(.purple)

@@ -120,6 +120,5 @@ struct SystemButtonStyles: View {
 struct SystemButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
         SystemButtonStyles()
-            .padding()
     }
 }

@@ -11,12 +11,13 @@ import SwiftUI
 
 final class ViewModel: ObservableObject {
     let totalBrands = 100
-    @Published var category = "Architecture"
+    @Published var category: String?
     @Published var keywords = ""
     @Published var brands = [String]()
 
     let categories = [
-        "Architecture ",
+        "Choose discipline",
+        "Architecture",
         "Interior Design",
         "UX & UI",
         "Research & Strategy",
@@ -29,10 +30,11 @@ final class ViewModel: ObservableObject {
     ]
 
     init(category: String = "Architecture", keywords: String = "") {
-        self.category = category
+        self.category = categories.first
         self.keywords = keywords
 
         $category
+            .compactMap{ $0 }
             .combineLatest($keywords)
             .removeDuplicates(by: { $0 == $1 })
             .map { self.makeBrands(category: $0, keywords: $1) }
