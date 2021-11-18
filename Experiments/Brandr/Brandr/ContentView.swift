@@ -5,6 +5,7 @@
 //  Created by Quinn McHenry on 11/4/21.
 //
 
+import Lottie
 import SwiftUI
 import SPBrand
 import Props
@@ -15,64 +16,84 @@ struct ContentView: View {
     @State var showResults = false
 
     var body: some View {
-        VStack(spacing: 8) {
-            Text("Let's get brandrrred")
-                .foregroundColor(.trinidad)
-                .font(.h1)
-                .padding(.bottom, 38)
-
-            HStack {
-                Text("What do you do?").font(.h3)
-                Spacer()
-            }
-
-            HStack {
-                Picker("", selection: $model.category) {
-                    ForEach(model.categories, id: \.self) { category in
-                        HStack {
-                            Text(category)
-                        }
-                        .tag(category)
-                    }
+        ScrollView {
+            VStack(spacing: 8) {
+                HStack(spacing: 2) {
+                    Image("RedPanda")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 40)
+                    Text("Brandit")
+                        .foregroundColor(.trinidad)
+                        .font(Font.custom("Lora-Bold", size: 20))
                 }
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(RoundedRectangle(cornerRadius: 8).strokeBorder())
-                .accentColor(.midnightBlack)
-                .pickerStyle(.menu)
+                .padding(.bottom, 58)
 
-                Spacer()
-            }
-            .padding(.bottom)
+                Text("Let's Brandit.")
+                    .foregroundColor(.midnightBlack)
+                    .font(.h1)
+                    .padding(.bottom, 38)
 
-            HStack {
-                Text("Describe your brand").font(.h3)
-                Spacer()
-            }
+                HStack {
+                    Text("What do you do?").font(.h3)
+                    Spacer()
+                }
 
-            TextField("Brand keywords", text: $model.keywords, prompt: nil)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                HStack {
+                    Picker("", selection: $model.category) {
+                        ForEach(model.categories, id: \.self) { category in
+                            HStack {
+                                Text(category)
+                            }
+                            .tag(category)
+                        }
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .background(RoundedRectangle(cornerRadius: 8).strokeBorder(Color.trinidad))
+                    .accentColor(.midnightBlack)
+                    .pickerStyle(.menu)
+
+                    Spacer()
+                }
                 .padding(.bottom)
 
-                Button("Next", action: { showResults = true })
-                    .buttonStyle(FilledButton())
-                    .primaryColor(.trinidad)
-                    .secondaryColor(.pearlyWhite)
-                    .disabled(false)
+                HStack {
+                    Text("Describe your brand").font(.h3)
+                    Spacer()
+                }
 
-            NavigationLink("", destination: ResultsView(model: model), isActive: $showResults)
+                TextField("Brand keywords", text: $model.keywords, prompt: nil)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.bottom)
+
+                Button {
+                    showResults = true
+                } label: {
+                    LottieView(name: "button", loopMode: .loop)
+                        .frame(width: 200, height: 200)
+                }
+                .offset(y: -60)
+
+                NavigationLink("", destination: ResultsView(model: model), isActive: $showResults)
+
+                Spacer()
+            }
         }
         .foregroundColor(.midnightBlack)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .background(Color.pearlyWhite)
+        .navigationBarHidden(true)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices(combos: .defaults) {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
 //        .environment(\.sizeCategory, .accessibilityLarge)
     }
