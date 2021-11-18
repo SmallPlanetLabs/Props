@@ -27,7 +27,7 @@ public struct MultipleDevices<Content: View>: View {
                 .previewDevice(SwiftUI.PreviewDevice(rawValue: combo.device.name))
                 .previewDisplayName(combo.name)
                 .colorScheme(combo.colorScheme)
-                // .previewInterfaceOrientation(combo.orientation)
+                .backport.previewInterfaceOrientation(combo.orientation)
         }
     }
 }
@@ -35,16 +35,16 @@ public struct MultipleDevices<Content: View>: View {
 public struct PreviewCombo {
     let device: PreviewDevice
     let colorScheme: ColorScheme
-    // let orientation: InterfaceOrientation
+    let orientation: InterfaceOrientation
 
     var name: String {
         "\(device.name) \(colorScheme)" //" \(orientation)"
     }
 
-    public init(device: PreviewDevice, scheme: ColorScheme = .light) { // }, orientation: InterfaceOrientation = .portrait) {
+    public init(device: PreviewDevice, scheme: ColorScheme = .light, orientation: InterfaceOrientation = .portrait) {
         self.device = device
         self.colorScheme = scheme
-        // self.orientation = orientation
+        self.orientation = orientation
     }
 }
 
@@ -53,21 +53,27 @@ public typealias MultipleDeviceCombo = [PreviewCombo]
 extension MultipleDeviceCombo {
     public static let defaults: [PreviewCombo] = [
         PreviewCombo(device: .iPhone13ProMax),
+        PreviewCombo(device: .iPhone8),
         PreviewCombo(device: .iPodTouch7),
     ]
 
     public static let iPhonesAndiPad: [PreviewCombo] = [
         PreviewCombo(device: .iPhone13ProMax, scheme: .dark),
-        PreviewCombo(device: .iPadAir4),
         PreviewCombo(device: .iPodTouch7),
+        PreviewCombo(device: .iPadAir4),
     ]
 
-//    public static let iPhoneOrientations: [PreviewCombo] = [
-//        PreviewCombo(device: .iPhone13ProMax),
-//        PreviewCombo(device: .iPhone13ProMax, orientation: .landscapeLeft),
-//        PreviewCombo(device: .iPhone13ProMax, orientation: .landscapeRight),
-//        PreviewCombo(device: .iPhone13ProMax, orientation: .portraitUpsideDown),
-//    ]
+    public static let iPhoneOrientations: [PreviewCombo] = [
+        PreviewCombo(device: .iPhone13ProMax),
+        PreviewCombo(device: .iPhone13ProMax, orientation: .landscapeLeft),
+        PreviewCombo(device: .iPhone13ProMax, orientation: .landscapeRight),
+        PreviewCombo(device: .iPhone13ProMax, orientation: .portraitUpsideDown),
+    ]
+
+    public static let iPadOrientations: [PreviewCombo] = [
+        PreviewCombo(device: .iPadAir4, orientation: .portrait),
+        PreviewCombo(device: .iPadAir4, orientation: .landscapeLeft),
+    ]
 }
 
 public enum PreviewDevice {
