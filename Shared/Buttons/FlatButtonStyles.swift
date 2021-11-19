@@ -64,7 +64,7 @@ struct OutlinedButtonSample: PropSampleable {
 
 struct FlatButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDark) {
+        MultipleDevices(combos: .lightDarkiPhoneBig + .lightDarkiPhoneSmall) {
             PropGroupView(group: .flatButtons)
         }
     }

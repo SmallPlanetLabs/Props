@@ -12,6 +12,24 @@ import SwiftUI
 /// Builds a Group of `Content` on `iPhone 13 Pro Max`,
 /// `iPhone 8`, `iPhone 8`,
 /// and `iPod touch (7th generation)`.
+
+
+
+
+/// Create SwiftUI previews on multiple devices
+///
+/// There are several predefined MultiplePreviewCombo static vars including `defaults` which defines the set of
+/// device configuration combinations to show when `combos` is not supplied. Because these are arrays, they can
+/// be added together as shown below.
+///
+///      struct FlatButtonStyles_Previews: PreviewProvider {
+///          static var previews: some View {
+///              MultipleDevices(combos: .lightDarkiPhoneBig + .lightDarkiPhoneSmall) {
+///                  Text("Cool SwiftUI stuff here")
+///              }
+///          }
+///      }
+///
 public struct MultipleDevices<Content: View>: View {
     let combos: [PreviewCombo]
     let content: Content
@@ -28,6 +46,7 @@ public struct MultipleDevices<Content: View>: View {
                 .previewDisplayName(combo.name)
                 .colorScheme(combo.colorScheme)
                 .backport.previewInterfaceOrientation(combo.orientation)
+                .environment(\.sizeCategory, combo.sizeCategory)
         }
     }
 }

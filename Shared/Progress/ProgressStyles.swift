@@ -59,8 +59,10 @@ struct DottedProgressStyleSample: PropSampleable {
 
 struct CustomProgressViewStyles_Previews: PreviewProvider {
     static var previews: some View {
-        PropGroupView(group: .customProgress)
-            .primaryColor(.purple)
+        MultipleDevices(combos: .iPhone13ProMaxSizeCategories) {
+            PropGroupView(group: .customProgress)
+                .primaryColor(.purple)
             .secondaryColor(.gray)
+        }
     }
 }
