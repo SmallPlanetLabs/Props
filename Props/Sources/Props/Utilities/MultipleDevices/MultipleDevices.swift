@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-// todo: OptionSet parameter for what devices to show with a .default option as below, potentially adding light/dark choices, too
-
-/// Builds a Group of `Content` on `iPhone 13 Pro Max`,
-/// `iPhone 8`, `iPhone 8`,
-/// and `iPod touch (7th generation)`.
-
-
-
-
 /// Create SwiftUI previews on multiple devices
 ///
 /// There are several predefined MultiplePreviewCombo static vars including `defaults` which defines the set of
