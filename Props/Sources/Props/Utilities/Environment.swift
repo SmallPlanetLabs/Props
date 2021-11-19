@@ -33,6 +33,6 @@ extension View {
     }
 
     public func secondaryColor(_ color: Color) -> some View {
-        environment(\.primaryColor, color)
+        environment(\.secondaryColor, color)
     }
 }

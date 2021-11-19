@@ -18,7 +18,7 @@ extension PropGroup {
 
 struct FilledButtonSample: PropSampleable {
     let name = "Filled button style"
-    let notes: String? = ".buttonStyle(FilledButton())"
+    let notes: String? = ".buttonStyle(FilledButton(cornerRadius:)) where cornerRadius defaults to 0"
     let source = "Custom"
     let keywords = "button custom flat rectangle filled"
     @ViewBuilder var body: AnyView {
@@ -28,11 +28,14 @@ struct FilledButtonSample: PropSampleable {
                     Button {} label: {
                         Text("Filled Button")
                     }
+                    .buttonStyle(FilledButton())
                     Button {} label: {
                         Label("Filled Button", systemImage: "heart.fill")
                     }
+                    .buttonStyle(FilledButton(cornerRadius: 16))
                 }
-                .buttonStyle(FilledButton())
+                .primaryColor(.blue)
+                .secondaryColor(.white)
             }
         )
     }
@@ -40,7 +43,7 @@ struct FilledButtonSample: PropSampleable {
 
 struct OutlinedButtonSample: PropSampleable {
     let name = "Outlined button style"
-    let notes: String? = ".buttonStyle(OutlinedButton())"
+    let notes: String? = ".buttonStyle(OutlinedButton(cornerRadius:)) where cornerRadius defaults to 0"
     let source = "Custom"
     let keywords = "button custom flat rectangle outlined"
     @ViewBuilder var body: AnyView {
@@ -50,11 +53,12 @@ struct OutlinedButtonSample: PropSampleable {
                     Button {} label: {
                         Text("Outlined")
                     }
+                    .buttonStyle(OutlinedButton(cornerRadius: 12))
                     Button {} label: {
                         Label("Outlined", systemImage: "eye.fill")
                     }
+                    .buttonStyle(OutlinedButton())
                 }
-                .buttonStyle(OutlinedButton())
             }
         )
     }
@@ -62,7 +66,7 @@ struct OutlinedButtonSample: PropSampleable {
 
 struct FlatButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        MultipleDevices(combos: .lightDark) {
             PropGroupView(group: .flatButtons)
         }
         .primaryColor(.purple)

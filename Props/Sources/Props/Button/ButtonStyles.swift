@@ -31,7 +31,7 @@ extension ButtonStyle where Self: Enableable & PrimaryColorable & ColorSchemable
     }
 
     func tintOrShade(color: Color, amount: CGFloat) -> Color {
-        scheme == .dark ? color.shaded(amount: amount) : color.tinted(amount: amount)
+        scheme == .dark ? color.tinted(amount: amount) : color.tinted(amount: amount)
     }
 }
 
@@ -39,9 +39,10 @@ public struct OutlinedButton: ButtonStyle, Enableable, PrimaryColorable, ColorSc
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.colorScheme) var scheme: ColorScheme
+    let cornerRadius: CGFloat
 
     public func makeBody(configuration: Configuration) -> some View {
-        let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
+        let background = RoundedRectangle(cornerRadius: cornerRadius)
             .stroke(backgroundColor(for: configuration))
 
         configuration
@@ -50,7 +51,10 @@ public struct OutlinedButton: ButtonStyle, Enableable, PrimaryColorable, ColorSc
             .padding()
             .background(background)
     }
-    public init() {}
+
+    public init(cornerRadius: CGFloat = 0) {
+        self.cornerRadius = cornerRadius
+    }
 }
 
 public struct FilledButton: ButtonStyle, Enableable, PrimaryColorable, ColorSchemable  {
@@ -58,18 +62,21 @@ public struct FilledButton: ButtonStyle, Enableable, PrimaryColorable, ColorSche
     @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.secondaryColor) var secondaryColor: Color
     @Environment(\.colorScheme) var scheme: ColorScheme
+    let cornerRadius: CGFloat
 
     public func makeBody(configuration: Configuration) -> some View {
-        let background = RoundedRectangle(cornerRadius: 2, style: .continuous)
+        let background = RoundedRectangle(cornerRadius: cornerRadius)
             .fill(backgroundColor(for: configuration))
 
-        configuration
-            .label
+        configuration.label
             .foregroundColor(secondaryColor)
             .padding()
             .background(background)
     }
-    public init() {}
+
+    public init(cornerRadius: CGFloat = 0) {
+        self.cornerRadius = cornerRadius
+    }
 }
 
 public struct PaperShadowedButton: ButtonStyle {
