@@ -36,6 +36,8 @@
 		A933E6B1274444F400FB5D0D /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6AF274444F400FB5D0D /* CustomButtons.swift */; };
 		A933E6B327444CC100FB5D0D /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6B227444CC100FB5D0D /* Backport.swift */; };
 		A933E6B427444CC100FB5D0D /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6B227444CC100FB5D0D /* Backport.swift */; };
+		A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */; };
+		A933E6BE27482FF900FB5D0D /* ProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */; };
 		A9C1044427337E260086AE8C /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A9C1044327337E260086AE8C /* Props */; };
 		A9C10447273391BC0086AE8C /* SunMoonToggleStyle in Frameworks */ = {isa = PBXBuildFile; productRef = A9C10446273391BC0086AE8C /* SunMoonToggleStyle */; };
 		A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C1044A2733962D0086AE8C /* Sliders.swift */; };
@@ -64,6 +66,7 @@
 		A933E6AC27435EAE00FB5D0D /* PropGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropGroup.swift; sourceTree = "<group>"; };
 		A933E6AF274444F400FB5D0D /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		A933E6B227444CC100FB5D0D /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
+		A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStyles.swift; sourceTree = "<group>"; };
 		A9C1044127337DCF0086AE8C /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Props; sourceTree = "<group>"; };
 		A9C1044A2733962D0086AE8C /* Sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders.swift; sourceTree = "<group>"; };
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				A910845D27321A240056F4F9 /* Progress.swift */,
+				A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */,
 				A910846027321BA60056F4F9 /* ProgressViewStyles.swift */,
 			);
 			path = Progress;
@@ -315,6 +319,7 @@
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
+				A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
 				A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 				A933E6B327444CC100FB5D0D /* Backport.swift in Sources */,
@@ -337,6 +342,7 @@
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A91084512731D6D70056F4F9 /* Styling.swift in Sources */,
 				A933E6AB2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
+				A933E6BE27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

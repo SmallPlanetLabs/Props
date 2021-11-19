@@ -90,11 +90,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .defaults) {
+        MultipleDevices(combos: .lightDark) {
             NavigationView {
                 ContentView()
             }
         }
-//        .environment(\.sizeCategory, .accessibilityLarge)
+//        .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
     }
 }

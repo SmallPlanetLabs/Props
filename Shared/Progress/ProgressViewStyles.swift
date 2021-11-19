@@ -7,58 +7,35 @@
 
 import SwiftUI
 
-struct ProgressViewStyles: View {
-    init(title: String, total: Double = 11, hideDeterminate: Bool = false, hideIndeterminate: Bool = false) {
-        self.title = title
-        self.total = total
-        progress = Foundation.Progress(totalUnitCount: Int64(total))
-        self.hideDeterminate = hideDeterminate
-        self.hideIndeterminate = hideIndeterminate
+extension PropGroup {
+    static let systemProgress = PropGroup(name: "System progress views", samples: [
+        SystemDeterminateSample(),
+        SystemIndeterminateSample()
+    ])
+}
+
+struct SystemDeterminateSample: PropSampleable {
+    let name = "Default determinate progress view"
+    let notes: String? = nil
+    let source = "System"
+    let keywords = "progress determinate system"
+    @ViewBuilder var body: AnyView {
+        AnyView( ProgressExample(total: 12))
     }
+}
 
-    let title: String
-    let hideDeterminate: Bool
-    let hideIndeterminate: Bool
-
-    @State private var value: Double = 0
-    let progress: Foundation.Progress
-    let total: Double
-
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
-    var body: some View {
-        VStack {
-            HStack {
-                Text(title).font(.caption)
-                Spacer()
-            }
-
-            Group {
-                if !hideIndeterminate {
-                    ProgressView()
-                }
-
-                if !hideDeterminate {
-                    ProgressView(progress)
-                }
-            }
-            .padding(.vertical, 15)
-        }
-        .padding()
-        .onReceive(timer) { _ in
-            value += 1
-            progress.completedUnitCount += 1
-
-            if value > total {
-                value = 0
-                progress.completedUnitCount = 0
-            }
-        }
+struct SystemIndeterminateSample: PropSampleable {
+    let name = "Default indeterminate progress view"
+    let notes: String? = nil
+    let source = "System"
+    let keywords = "progress indeterminate system"
+    @ViewBuilder var body: AnyView {
+        AnyView( ProgressIndeterminateExample())
     }
 }
 
 struct SystemProgressViewStyles_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressViewStyles(title: "DefaultProgressViewStyle")
+        PropGroupView(group: .systemProgress)
     }
 }

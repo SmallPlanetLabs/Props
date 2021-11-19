@@ -8,42 +8,81 @@
 import Props
 import SwiftUI
 
-struct Progress: View {
-    var body: some View {
-        ScrollView {
-            VStack {
-                Text("Custom Progress View Styles").font(.title)
-
-                ProgressViewStyles(title: "SquiggleProgressStyle", total: 4, hideIndeterminate: true)
-                    .progressViewStyle(SquiggleProgressStyle())
-
-                ProgressViewStyles(title: "CircleBarProgressStyle", hideIndeterminate: true)
-                    .progressViewStyle(CircleBarProgressStyle())
-
-                ProgressViewStyles(title: "CircleStepProgressStyle", total: 3, hideIndeterminate: true)
-                    .progressViewStyle(CircleStepProgressStyle(total: 3))
-
-                ProgressViewStyles(title: "DottedProgressStyle", hideIndeterminate: true)
-                    .progressViewStyle(DottedProgressStyle())
-
-                Text("SystemProgressViewStyles").font(.title)
-
-                ProgressViewStyles(title: "CircularProgressViewStyle")
-                    .progressViewStyle(CircularProgressViewStyle())
-
-                ProgressViewStyles(title: "DefaultProgressViewStyle")
-                    .progressViewStyle(DefaultProgressViewStyle())
-            }
-            .padding()
-            .navigationTitle("Progress")
-            .environment(\.primaryColor, .purple)
-            .environment(\.secondaryColor, .purple.opacity(0.3))
-        }
-    }
+extension PropGroup {
+    static let progress = PropGroup(name: "Progress", subgroups: [
+        .customProgress,
+        .systemProgress,
+    ])
 }
+
+
 
 struct Progress_Previews: PreviewProvider {
     static var previews: some View {
-        Progress()
+        PropGroupView(group: .progress)
+    }
+}
+
+// MARK: - Helpers
+
+// Example for determinate progress view (known total value)
+struct ProgressExample: View {
+    let title: String?
+    @State private var value: Double = 0
+    let progress: Foundation.Progress
+    let total: Double
+
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    var body: some View {
+        VStack {
+            if let title = title {
+                HStack {
+                    Text(title).font(.caption)
+                    Spacer()
+                }
+            }
+
+            ProgressView(progress)
+        }
+        .padding()
+        .onReceive(timer) { _ in
+            value += 1
+            progress.completedUnitCount += 1
+
+            if value > total {
+                value = 0
+                progress.completedUnitCount = 0
+            }
+        }
+    }
+
+    init(title: String? = nil, total: Double = 11) {
+        self.title = title
+        self.total = total
+        progress = Foundation.Progress(totalUnitCount: Int64(total))
+    }
+}
+
+// Example for an indeterminate progress view (total value not known)
+struct ProgressIndeterminateExample: View {
+    let title: String?
+
+    var body: some View {
+        VStack {
+            if let title = title {
+                HStack {
+                    Text(title).font(.caption)
+                    Spacer()
+                }
+            }
+
+            ProgressView()
+        }
+        .padding()
+    }
+
+    init(title: String? = nil, total: Double = 11) {
+        self.title = title
     }
 }

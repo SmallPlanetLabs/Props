@@ -34,8 +34,6 @@ struct FilledButtonSample: PropSampleable {
                     }
                     .buttonStyle(FilledButton(cornerRadius: 16))
                 }
-                .primaryColor(.blue)
-                .secondaryColor(.white)
             }
         )
     }
@@ -69,6 +67,5 @@ struct FlatButtonStyles_Previews: PreviewProvider {
         MultipleDevices(combos: .lightDark) {
             PropGroupView(group: .flatButtons)
         }
-        .primaryColor(.purple)
     }
 }
