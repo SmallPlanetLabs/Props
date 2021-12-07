@@ -79,7 +79,11 @@ private struct SoftInnerShadowViewModifier<S: Shape> : ViewModifier {
 extension View {
     public func softInnerShadow<S : Shape>(_ content: S, darkShadow: Color = Neumorphic.shared.darkShadowColor(), lightShadow: Color = Neumorphic.shared.lightShadowColor(), spread: CGFloat = 0.5, radius: CGFloat = 10) -> some View {
         modifier(
-            SoftInnerShadowViewModifier(shape: content, darkShadowColor: darkShadow, lightShadowColor: lightShadow, spread: spread, radius: radius)
+            SoftInnerShadowViewModifier(shape: content,
+                                        darkShadowColor: darkShadow,
+                                        lightShadowColor: lightShadow,
+                                        spread: spread,
+                                        radius: radius)
         )
     }
 }
