@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AF23254275F409A0087EBB1 /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF23253275F409A0087EBB1 /* NeumorphicButtonStyles.swift */; };
+		1AF23255275F409A0087EBB1 /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF23253275F409A0087EBB1 /* NeumorphicButtonStyles.swift */; };
 		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108437273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108438273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
@@ -48,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AF23253275F409A0087EBB1 /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
 		A9108426273185240056F4F9 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		A9108427273185240056F4F9 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		A9108428273185250056F4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 				A910844927318ED60056F4F9 /* FlatButtonStyles.swift */,
 				A9108455273205780056F4F9 /* MaterialButtonStyles.swift */,
 				A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */,
+				1AF23253275F409A0087EBB1 /* NeumorphicButtonStyles.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -317,6 +321,7 @@
 				A933E6AA2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
+				1AF23254275F409A0087EBB1 /* NeumorphicButtonStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
@@ -343,6 +348,7 @@
 				A91084512731D6D70056F4F9 /* Styling.swift in Sources */,
 				A933E6AB2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
 				A933E6BE27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
+				1AF23255275F409A0087EBB1 /* NeumorphicButtonStyles.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
