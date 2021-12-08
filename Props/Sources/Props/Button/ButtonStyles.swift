@@ -129,12 +129,14 @@ public struct PaperShadowedButton: ButtonStyle {
     public init() {}
 }
 
-public struct NeumorphicButtonStyle: ButtonStyle {
+public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, ColorSchemable {
     
     // MARK: - Properties
+    @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.secondaryColor) var secondaryColor: Color
     @Environment(\.shadowColor) var shadowColor: Color
+    @Environment(\.colorScheme) var scheme: ColorScheme
     let cornerRadius: CGFloat
     
     // MARK: - Public API
@@ -146,18 +148,28 @@ public struct NeumorphicButtonStyle: ButtonStyle {
                 .background(
                     ZStack {
                         RoundedRectangle(cornerRadius: cornerRadius)
-                            .fill(primaryColor)
+                            .fill(color(for: configuration))
                             .shadow(color: shadowColor, radius: 15, x: -10, y: -10)
                             .opacity(configuration.isPressed ? 0 : 1)
                         
                         RoundedRectangle(cornerRadius: cornerRadius)
-                            .fill(primaryColor)
+                            .fill(backgroundColor(for: configuration))
                             .shadow(color: shadowColor, radius: 15, x: 10, y: 10)
                             .opacity(configuration.isPressed ? 1 : 0)
                     }
                 )
                 .foregroundColor(secondaryColor)
         }
+    }
+    
+    // MARK: - Private API
+    private var disabled: Color {
+        primaryColor
+    }
+    
+    private func color(for configuration: Configuration) -> Color {
+        guard isEnabled else { return disabled.tinted(amount: 0.7) }
+        return primaryColor.tinted(amount: configuration.isPressed ? 0.8 : 0.6)
     }
     
     // MARK: - Initializer

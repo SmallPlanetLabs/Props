@@ -28,7 +28,7 @@ public struct MonochromaticMaterial: ButtonStyle {
 
     private func color(for configuration: Configuration) -> Color {
         guard isEnabled else { return disabled.tinted(amount: 0.7) }
-        return primaryColor.tinted(amount: configuration.isPressed ? 0.8 : 0.6)
+        return primaryColor.tinted(amount: configuration.isPressed ? 0.6 : 0.8)
     }
     
     public init() {}
