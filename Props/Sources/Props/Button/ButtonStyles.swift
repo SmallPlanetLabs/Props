@@ -145,11 +145,19 @@ public struct NeumorphicStyle: ButtonStyle {
                 .scaleEffect(configuration.isPressed ? 0.97 : 1)
                 .padding(20)
                 .background(
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .fill(mainColor)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: cornerRadius)
+                            .fill(mainColor)
+                            .shadow(color: lightShadowColor, radius: 15, x: -10, y: -10)
+                            .opacity(configuration.isPressed ? 0 : 1)
+                        
+                        RoundedRectangle(cornerRadius: cornerRadius)
+                            .fill(mainColor)
+                            .shadow(color: darkShadowColor, radius: 15, x: 10, y: 10)
+                            .opacity(configuration.isPressed ? 1 : 0)
+                    }
                 )
                 .shadow(color: darkShadowColor, radius: 15, x: 10, y: 10)
-                .shadow(color: lightShadowColor, radius: 15, x: -10, y: -10)
                 .foregroundColor(textColor)
         }
     }
