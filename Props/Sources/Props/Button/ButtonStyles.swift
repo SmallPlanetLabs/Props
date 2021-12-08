@@ -132,10 +132,9 @@ public struct PaperShadowedButton: ButtonStyle {
 public struct NeumorphicStyle: ButtonStyle {
     
     // MARK: - Properties
-    let mainColor = Color("Neumorphic Primary")
-    var textColor = Color("Neumorphic Secondary")
-    var darkShadowColor = Color("Dark Shadow")
-    var lightShadowColor = Color("Light Shadow")
+    @Environment(\.primaryColor) var primaryColor: Color
+    @Environment(\.secondaryColor) var secondaryColor: Color
+    @Environment(\.shadowColor) var shadowColor: Color
     let cornerRadius: CGFloat
     
     // MARK: - Public API
@@ -147,18 +146,17 @@ public struct NeumorphicStyle: ButtonStyle {
                 .background(
                     ZStack {
                         RoundedRectangle(cornerRadius: cornerRadius)
-                            .fill(mainColor)
-                            .shadow(color: lightShadowColor, radius: 15, x: -10, y: -10)
+                            .fill(primaryColor)
+                            .shadow(color: shadowColor, radius: 15, x: -10, y: -10)
                             .opacity(configuration.isPressed ? 0 : 1)
                         
                         RoundedRectangle(cornerRadius: cornerRadius)
-                            .fill(mainColor)
-                            .shadow(color: darkShadowColor, radius: 15, x: 10, y: 10)
+                            .fill(primaryColor)
+                            .shadow(color: shadowColor, radius: 15, x: 10, y: 10)
                             .opacity(configuration.isPressed ? 1 : 0)
                     }
                 )
-                .shadow(color: darkShadowColor, radius: 15, x: 10, y: 10)
-                .foregroundColor(textColor)
+                .foregroundColor(secondaryColor)
         }
     }
     
