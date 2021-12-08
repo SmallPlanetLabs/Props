@@ -164,12 +164,12 @@ public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, 
     
     // MARK: - Private API
     private var disabled: Color {
-        primaryColor
+        primaryColor.shaded(amount: 0.8).tinted(amount: 0.5)
     }
     
     private func color(for configuration: Configuration) -> Color {
         guard isEnabled else { return disabled.tinted(amount: 0.7) }
-        return primaryColor.tinted(amount: configuration.isPressed ? 0.8 : 0.6)
+        return primaryColor.tinted(amount: configuration.isPressed ? 0.6 : 0.5).tinted(amount: 0.5)
     }
     
     // MARK: - Initializer
