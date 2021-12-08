@@ -129,7 +129,7 @@ public struct PaperShadowedButton: ButtonStyle {
     public init() {}
 }
 
-public struct NeumorphicStyle: ButtonStyle {
+public struct NeumorphicButtonStyle: ButtonStyle {
     
     // MARK: - Properties
     @Environment(\.primaryColor) var primaryColor: Color

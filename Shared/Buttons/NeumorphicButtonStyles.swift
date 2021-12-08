@@ -18,7 +18,7 @@ struct NeumorphicButtonSample: PropSampleable {
     
     // MARK: - Properties
     let name = "Neumorphic button style"
-    let notes: String? = ".buttonStyle(NeumorphicStyle())"
+    let notes: String? = ".buttonStyle(NeumorphicButtonStyle())"
     let source = "Neumorphic"
     let keywords = "button neumorphic default"
     
@@ -30,7 +30,7 @@ struct NeumorphicButtonSample: PropSampleable {
                     Button {} label: {
                         Text("Neumorph Button")
                     }
-                    .buttonStyle(NeumorphicStyle())
+                    .buttonStyle(NeumorphicButtonStyle())
                 }
             }
         )
