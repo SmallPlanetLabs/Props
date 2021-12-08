@@ -129,90 +129,34 @@ public struct PaperShadowedButton: ButtonStyle {
     public init() {}
 }
 
-public struct SoftDynamicButtonStyle<S: Shape> : ButtonStyle {
+public struct NeumorphicStyle: ButtonStyle {
     
     // MARK: - Properties
-    var shape: S
-    var mainColor: Color
-    var textColor: Color
-    var darkShadowColor: Color
-    var lightShadowColor: Color
-    
-    // MARK: - Initializer
-    public init(_ shape: S, mainColor: Color, textColor: Color, darkShadowColor: Color, lightShadowColor: Color) {
-        self.shape = shape
-        self.mainColor = mainColor
-        self.textColor = textColor
-        self.darkShadowColor = darkShadowColor
-        self.lightShadowColor = lightShadowColor
-    }
+    let mainColor = Color("Neumorphic Primary")
+    var textColor = Color("Neumorphic Secondary")
+    var darkShadowColor = Color("Dark Shadow")
+    var lightShadowColor = Color("Light Shadow")
+    let cornerRadius: CGFloat
     
     // MARK: - Public API
     public func makeBody(configuration: Self.Configuration) -> some View {
         ZStack {
             configuration.label
-                .foregroundColor(textColor)
-                .padding()
                 .scaleEffect(configuration.isPressed ? 0.97 : 1)
+                .padding(20)
                 .background(
-                    ZStack {
-                        shape.fill(mainColor)
-                            .softInnerShadow(shape, darkShadow: darkShadowColor, lightShadow: lightShadowColor, spread: 0.15, radius: 3)
-                            .opacity(configuration.isPressed ? 1 : 0)
-                        
-                        shape.fill(mainColor)
-                            .softOuterShadow(darkShadow: darkShadowColor, lightShadow: lightShadowColor, offset: 6, radius: 3)
-                            .opacity(configuration.isPressed ? 0 : 1)
-                    }
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .fill(mainColor)
                 )
+                .shadow(color: darkShadowColor, radius: 15, x: 10, y: 10)
+                .shadow(color: lightShadowColor, radius: 15, x: -10, y: -10)
+                .foregroundColor(textColor)
         }
-        
     }
-    
-}
-
-@available(*, deprecated, message: "Use SoftDynamicButtonStyle instead")
-public struct SoftButtonStyle<S: Shape> : ButtonStyle {
-    
-    // MARK: - Properties
-    var shape: S
-    var mainColor: Color
-    var textColor: Color
-    var darkShadowColor: Color
-    var lightShadowColor: Color
     
     // MARK: - Initializer
-    public init(_ shape: S, mainColor : Color, textColor : Color, darkShadowColor: Color, lightShadowColor: Color) {
-        self.shape = shape
-        self.mainColor = mainColor
-        self.textColor = textColor
-        self.darkShadowColor = darkShadowColor
-        self.lightShadowColor = lightShadowColor
+    public init(cornerRadius: CGFloat = 10) {
+        self.cornerRadius = cornerRadius
     }
     
-    // MARK: - Public API
-    public func makeBody(configuration: Self.Configuration) -> some View {
-        ZStack {
-            shape.fill(mainColor)
-                .softInnerShadow(shape, darkShadow: darkShadowColor, lightShadow: lightShadowColor, spread: 0.15, radius: 3)
-                .opacity(configuration.isPressed ? 1 : 0)
-            
-            shape.fill(mainColor)
-                .softOuterShadow(darkShadow: darkShadowColor, lightShadow: lightShadowColor, offset: 6, radius: 3)
-                .opacity(configuration.isPressed ? 0 : 1)
-            
-            configuration.label
-                .foregroundColor(textColor)
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .padding()
-                .scaleEffect(configuration.isPressed ? 0.97 : 1)
-        }
-    }
-    
-}
-
-extension Button {
-    public func softButtonStyle<S : Shape>(_ content: S, mainColor: Color = Neumorphic.shared.mainColor(), textColor: Color = Neumorphic.shared.secondaryColor(), darkShadowColor: Color = Neumorphic.shared.darkShadowColor(), lightShadowColor: Color = Neumorphic.shared.lightShadowColor()) -> some View {
-        self.buttonStyle(SoftDynamicButtonStyle(content, mainColor: mainColor, textColor: textColor, darkShadowColor: darkShadowColor, lightShadowColor: lightShadowColor))
-    }
 }

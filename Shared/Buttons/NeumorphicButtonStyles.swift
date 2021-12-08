@@ -18,7 +18,7 @@ struct NeumorphicButtonSample: PropSampleable {
     
     // MARK: - Properties
     let name = "Neumorphic button style"
-    let notes: String? = ".buttonStyle(NeumorphicButtonSample())"
+    let notes: String? = ".buttonStyle(NeumorphicStyle())"
     let source = "Neumorphic"
     let keywords = "button neumorphic default"
     
@@ -28,9 +28,9 @@ struct NeumorphicButtonSample: PropSampleable {
             EnabledAndDisabled {
                 VStack {
                     Button {} label: {
-                        Text("Soft Button")
+                        Text("Neumorph Button")
                     }
-                    .softButtonStyle(RoundedRectangle(cornerRadius: 15))
+                    .buttonStyle(NeumorphicStyle())
                 }
             }
         )

@@ -1,5 +1,5 @@
 //
-//  Styleing.swift
+//  Styling.swift
 //  Catalog
 //
 //  Created by Quinn McHenry on 11/2/21.
