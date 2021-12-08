@@ -155,7 +155,7 @@ public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, 
                         RoundedRectangle(cornerRadius: cornerRadius)
                             .fill(backgroundColor(for: configuration))
                             .shadow(color: shadowColor, radius: 15, x: 10, y: 10)
-                            .opacity(configuration.isPressed ? 1 : 0)
+                            .opacity(configuration.isPressed ? 0.5 : 0)
                     }
                 )
                 .foregroundColor(secondaryColor)
@@ -164,12 +164,12 @@ public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, 
     
     // MARK: - Private API
     private var disabled: Color {
-        primaryColor.shaded(amount: 0.8).tinted(amount: 0.5)
+        primaryColor.shaded(amount: 0.8).tinted(amount: 0.2)
     }
     
     private func color(for configuration: Configuration) -> Color {
         guard isEnabled else { return disabled.tinted(amount: 0.7) }
-        return primaryColor.tinted(amount: configuration.isPressed ? 0.6 : 0.5).tinted(amount: 0.5)
+        return primaryColor.tinted(amount: configuration.isPressed ? 0.72 : 0.7).tinted(amount: 0.5)
     }
     
     // MARK: - Initializer
