@@ -149,12 +149,12 @@ public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, 
                     ZStack {
                         RoundedRectangle(cornerRadius: cornerRadius)
                             .fill(color(for: configuration))
-                            .shadow(color: shadowColor, radius: 15, x: -10, y: -10)
-                            .opacity(configuration.isPressed ? 0 : 1)
+                            .shadow(color: shadowColor, radius: 15, x: -5, y: -5)
+                            .opacity(configuration.isPressed ? 0 : 0.5)
                         
                         RoundedRectangle(cornerRadius: cornerRadius)
                             .fill(backgroundColor(for: configuration))
-                            .shadow(color: shadowColor, radius: 15, x: 10, y: 10)
+                            .shadow(color: shadowColor, radius: 15, x: 5, y: 5)
                             .opacity(configuration.isPressed ? 0.5 : 0)
                     }
                 )
