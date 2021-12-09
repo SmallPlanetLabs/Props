@@ -29,9 +29,11 @@ extension ButtonStyle where Self: Enableable & PrimaryColorable & ColorSchemable
             return tintOrShade(color: primaryColor, amount: 0.7)
         }
     }
+}
 
+extension ButtonStyle where Self: ColorSchemable {
     func tintOrShade(color: Color, amount: CGFloat) -> Color {
-        scheme == .dark ? color.tinted(amount: amount) : color.tinted(amount: amount)
+        scheme == .dark ? color.tinted(amount: amount) : color.shaded(amount: amount)
     }
 }
 
@@ -155,7 +157,7 @@ public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, 
                         RoundedRectangle(cornerRadius: cornerRadius)
                             .fill(backgroundColor(for: configuration))
                             .shadow(color: shadowColor, radius: 15, x: 5, y: 5)
-                            .opacity(configuration.isPressed ? 0.5 : 0)
+                            .opacity(configuration.isPressed ? 0.8 : 0)
                     }
                 )
                 .foregroundColor(secondaryColor)
@@ -164,12 +166,12 @@ public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, 
     
     // MARK: - Private API
     private var disabled: Color {
-        primaryColor.shaded(amount: 0.8)
+        scheme == .light ? primaryColor.shaded(amount: 0.3) : primaryColor.shaded(amount: 0.3)
     }
     
     private func color(for configuration: Configuration) -> Color {
-        guard isEnabled else { return disabled.tinted(amount: 0.7) }
-        return primaryColor.tinted(amount: configuration.isPressed ? 0.72 : 0.7)
+        guard isEnabled else { return disabled.tinted(amount: 0.5) }
+        return scheme == .light ? primaryColor.tinted(amount: 0.3) : primaryColor.shaded(amount: 0.3)
     }
     
     // MARK: - Initializer

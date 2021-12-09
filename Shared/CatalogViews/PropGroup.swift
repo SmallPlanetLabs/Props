@@ -27,6 +27,7 @@ extension PropGroup {
         .buttons,
         .toggles,
         .progress,
+        .colors,
     ])
 }
 
