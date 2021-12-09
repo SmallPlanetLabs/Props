@@ -31,6 +31,9 @@ struct NeumorphicButtonSample: PropSampleable {
                         Text("Neumorph Button")
                     }
                     .buttonStyle(NeumorphicButtonStyle())
+                    .primaryColor(.background)
+                    .secondaryColor(.foreground)
+                    .shadowColor(.gray.opacity(0.5))
                 }
             }
         )
