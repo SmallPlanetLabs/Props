@@ -19,7 +19,7 @@ struct NeumorphicButtonSample: PropSampleable {
     // MARK: - Properties
     let name = "Neumorphic button style"
     let notes: String? = ".buttonStyle(NeumorphicButtonStyle())"
-    let source = "Neumorphic"
+    let source = "Props"
     let keywords = "button neumorphic default"
     
     // MARK: - ViewBuilder
