@@ -62,7 +62,7 @@ struct CustomProgressViewStyles_Previews: PreviewProvider {
         MultipleDevices(combos: .iPhone13ProMaxSizeCategories) {
             PropGroupView(group: .customProgress)
                 .primaryColor(.purple)
-            .secondaryColor(.gray)
+                .secondaryColor(.gray)
         }
     }
 }

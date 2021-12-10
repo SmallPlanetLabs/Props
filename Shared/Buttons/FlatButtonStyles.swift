@@ -19,7 +19,7 @@ extension PropGroup {
 struct FilledButtonSample: PropSampleable {
     let name = "Filled button style"
     let notes: String? = ".buttonStyle(FilledButton(cornerRadius:)) where cornerRadius defaults to 0"
-    let source = "Custom"
+    let source = "Props"
     let keywords = "button custom flat rectangle filled"
     @ViewBuilder var body: AnyView {
         AnyView(
@@ -42,7 +42,7 @@ struct FilledButtonSample: PropSampleable {
 struct OutlinedButtonSample: PropSampleable {
     let name = "Outlined button style"
     let notes: String? = ".buttonStyle(OutlinedButton(cornerRadius:)) where cornerRadius defaults to 0"
-    let source = "Custom"
+    let source = "Props"
     let keywords = "button custom flat rectangle outlined"
     @ViewBuilder var body: AnyView {
         AnyView(
@@ -64,7 +64,7 @@ struct OutlinedButtonSample: PropSampleable {
 
 struct FlatButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig + .lightDarkiPhoneSmall) {
+        MultipleDevices(combos: .lightDarkiPhoneBig) {
             PropGroupView(group: .flatButtons)
         }
     }

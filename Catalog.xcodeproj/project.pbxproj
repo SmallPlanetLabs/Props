@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3C88B52763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */; };
+		1A3C88B62763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */; };
+		1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
+		1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108437273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108438273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
@@ -38,6 +42,10 @@
 		A933E6B427444CC100FB5D0D /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6B227444CC100FB5D0D /* Backport.swift */; };
 		A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */; };
 		A933E6BE27482FF900FB5D0D /* ProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */; };
+		A947874C2762635A001EAE3D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874B2762635A001EAE3D /* Colors.swift */; };
+		A947874D2762635A001EAE3D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874B2762635A001EAE3D /* Colors.swift */; };
+		A947875027627232001EAE3D /* TintingShading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874F27627232001EAE3D /* TintingShading.swift */; };
+		A947875127627232001EAE3D /* TintingShading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874F27627232001EAE3D /* TintingShading.swift */; };
 		A9C1044427337E260086AE8C /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A9C1044327337E260086AE8C /* Props */; };
 		A9C10447273391BC0086AE8C /* SunMoonToggleStyle in Frameworks */ = {isa = PBXBuildFile; productRef = A9C10446273391BC0086AE8C /* SunMoonToggleStyle */; };
 		A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C1044A2733962D0086AE8C /* Sliders.swift */; };
@@ -48,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenButtonStyles.swift; sourceTree = "<group>"; };
+		1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
 		A9108426273185240056F4F9 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		A9108427273185240056F4F9 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		A9108428273185250056F4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +77,8 @@
 		A933E6AF274444F400FB5D0D /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		A933E6B227444CC100FB5D0D /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
 		A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStyles.swift; sourceTree = "<group>"; };
+		A947874B2762635A001EAE3D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A947874F27627232001EAE3D /* TintingShading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintingShading.swift; sourceTree = "<group>"; };
 		A9C1044127337DCF0086AE8C /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Props; sourceTree = "<group>"; };
 		A9C1044A2733962D0086AE8C /* Sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders.swift; sourceTree = "<group>"; };
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
@@ -109,15 +121,16 @@
 		A9108425273185240056F4F9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A933E6A52742EA5100FB5D0D /* CatalogViews */,
-				A9108426273185240056F4F9 /* CatalogApp.swift */,
+				A9108428273185250056F4F9 /* Assets.xcassets */,
 				A9108427273185240056F4F9 /* Catalog.swift */,
+				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A910844F2731D6D70056F4F9 /* Styling.swift */,
-				A9D04EC527330A6800599EAD /* Toggles */,
 				A9108458273210910056F4F9 /* Buttons */,
+				A933E6A52742EA5100FB5D0D /* CatalogViews */,
+				A947874E27626362001EAE3D /* Colors */,
 				A910845C27321A0C0056F4F9 /* Progress */,
 				A9C10449273395F90086AE8C /* Sliders */,
-				A9108428273185250056F4F9 /* Assets.xcassets */,
+				A9D04EC527330A6800599EAD /* Toggles */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -147,6 +160,8 @@
 				A910844927318ED60056F4F9 /* FlatButtonStyles.swift */,
 				A9108455273205780056F4F9 /* MaterialButtonStyles.swift */,
 				A91084522731F4AC0056F4F9 /* SystemButtonStyles.swift */,
+				1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */,
+				1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -170,6 +185,15 @@
 				A933E6B227444CC100FB5D0D /* Backport.swift */,
 			);
 			path = CatalogViews;
+			sourceTree = "<group>";
+		};
+		A947874E27626362001EAE3D /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A947874B2762635A001EAE3D /* Colors.swift */,
+				A947874F27627232001EAE3D /* TintingShading.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		A9C1044227337E260086AE8C /* Frameworks */ = {
@@ -304,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A947875027627232001EAE3D /* TintingShading.swift in Sources */,
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A933E6A72742EA5100FB5D0D /* PropCard.swift in Sources */,
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
@@ -314,13 +339,16 @@
 				A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
 				A933E6AD27435EAE00FB5D0D /* PropGroup.swift in Sources */,
+				A947874C2762635A001EAE3D /* Colors.swift in Sources */,
 				A933E6AA2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
+				1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
 				A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */,
+				1A3C88B52763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 				A933E6B327444CC100FB5D0D /* Backport.swift in Sources */,
 			);
@@ -339,10 +367,14 @@
 				A910845F27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6A82742EA5100FB5D0D /* PropCard.swift in Sources */,
 				A933E6AE27435EAE00FB5D0D /* PropGroup.swift in Sources */,
+				A947874D2762635A001EAE3D /* Colors.swift in Sources */,
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A91084512731D6D70056F4F9 /* Styling.swift in Sources */,
+				1A3C88B62763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
 				A933E6AB2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
 				A933E6BE27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
+				A947875127627232001EAE3D /* TintingShading.swift in Sources */,
+				1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

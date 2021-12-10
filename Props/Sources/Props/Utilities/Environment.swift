@@ -15,6 +15,10 @@ private struct SecondaryColorKey: EnvironmentKey {
     static let defaultValue = Color.gray
 }
 
+private struct ShadowColorKey: EnvironmentKey {
+    static let defaultValue = Color.gray.opacity(0.2)
+}
+
 extension EnvironmentValues {
     public var primaryColor: Color {
         get { self[PrimaryColorKey.self] }
@@ -25,6 +29,11 @@ extension EnvironmentValues {
         get { self[SecondaryColorKey.self] }
         set { self[SecondaryColorKey.self] = newValue }
     }
+    
+    public var shadowColor: Color {
+        get { self[ShadowColorKey.self] }
+        set { self[ShadowColorKey.self] = newValue }
+    }
 }
 
 extension View {
@@ -34,5 +43,9 @@ extension View {
 
     public func secondaryColor(_ color: Color) -> some View {
         environment(\.secondaryColor, color)
+    }
+    
+    public func shadowColor(_ color: Color) -> some View {
+        environment(\.shadowColor, color)
     }
 }
