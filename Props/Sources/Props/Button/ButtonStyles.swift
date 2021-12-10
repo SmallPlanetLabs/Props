@@ -33,6 +33,6 @@ extension ButtonStyle where Self: Enableable & PrimaryColorable & ColorSchemable
 
 extension ButtonStyle where Self: ColorSchemable {
     func tintOrShade(color: Color, amount: CGFloat) -> Color {
-        scheme == .dark ? color.tinted(amount: amount) : color.shaded(amount: amount)
+        scheme == .light ? color.tinted(amount: amount) : color.shaded(amount: amount)
     }
 }

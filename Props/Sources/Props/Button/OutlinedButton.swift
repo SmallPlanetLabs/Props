@@ -28,3 +28,7 @@ public struct OutlinedButton: ButtonStyle, Enableable, PrimaryColorable, ColorSc
         self.cornerRadius = cornerRadius
     }
 }
+
+extension ButtonStyle where Self == OutlinedButton {
+    public static var outlined: OutlinedButton { OutlinedButton() }
+}

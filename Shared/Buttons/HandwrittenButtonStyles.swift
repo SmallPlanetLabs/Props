@@ -30,7 +30,8 @@ struct HandwrittenButtonSample: PropSampleable {
                     Button {} label: {
                         Text("Handwritten Button")
                     }
-                    .buttonStyle(HandwrittenButtonStyle(shape: .shape1))
+                    .buttonStyle(HandwrittenButtonStyle())
+                    .primaryColor(.foreground)
                 }
             }
         )

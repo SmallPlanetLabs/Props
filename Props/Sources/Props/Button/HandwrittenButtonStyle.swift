@@ -18,7 +18,7 @@ public struct HandwrittenButtonStyle: ButtonStyle, Enableable, ColorSchemable {
     // MARK: - Properties
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.colorScheme) var scheme: ColorScheme
-    @Environment(\.secondaryColor) var secondaryColor: Color
+    @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.shadowColor) var shadowColor: Color
     let shape: ShapeType
     
@@ -30,11 +30,10 @@ public struct HandwrittenButtonStyle: ButtonStyle, Enableable, ColorSchemable {
             .background(
                 Image(shape.rawValue, bundle: .module)
                     .resizable()
-                    .foregroundColor(secondaryColor)
             )
-            .shadow(color: isEnabled ? shadowColor : .clear, radius: 4, x: 5, y: 5)
+            .foregroundColor(primaryColor.opacity(isEnabled ? 1 : 0.5))
     }
-    
+
     // MARK: - Initializer
     public init(shape: ShapeType = .shape1) {
         self.shape = shape
