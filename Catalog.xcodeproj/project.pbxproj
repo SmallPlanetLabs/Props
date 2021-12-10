@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3C88B1276394CA005D6757 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C88B0276394CA005D6757 /* Cards.swift */; };
+		1A3C88B32763958E005D6757 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C88B22763958E005D6757 /* Card.swift */; };
 		1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3C88B0276394CA005D6757 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		1A3C88B22763958E005D6757 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
 		A9108426273185240056F4F9 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		A9108427273185240056F4F9 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A3C88AF276394B1005D6757 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				1A3C88B0276394CA005D6757 /* Cards.swift */,
+				1A3C88B22763958E005D6757 /* Card.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		A9108420273185240056F4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 				A9108458273210910056F4F9 /* Buttons */,
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108426273185240056F4F9 /* CatalogApp.swift */,
+				1A3C88AF276394B1005D6757 /* Cards */,
 				A933E6A52742EA5100FB5D0D /* CatalogViews */,
 				A947874E27626362001EAE3D /* Colors */,
 				A910845C27321A0C0056F4F9 /* Progress */,
@@ -331,6 +345,7 @@
 				A910844A27318ED60056F4F9 /* FlatButtonStyles.swift in Sources */,
 				A9D04EC727330A7900599EAD /* Toggles.swift in Sources */,
 				A933E6B0274444F400FB5D0D /* CustomButtons.swift in Sources */,
+				1A3C88B32763958E005D6757 /* Card.swift in Sources */,
 				A91084502731D6D70056F4F9 /* Styling.swift in Sources */,
 				A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
@@ -341,6 +356,7 @@
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
 				1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
+				1A3C88B1276394CA005D6757 /* Cards.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
 				A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */,
