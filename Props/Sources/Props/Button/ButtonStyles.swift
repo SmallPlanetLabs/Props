@@ -198,17 +198,15 @@ public struct HandwrittenButtonStyle: ButtonStyle, Enableable, ColorSchemable {
     
     // MARK: - Public API
     public func makeBody(configuration: Self.Configuration) -> some View {
-        ZStack {
-            configuration.label
-                .font(Font.custom("ChalkboardSE-Light", fixedSize: 16))
-                .padding()
-                .background(
-                    Image(shape.rawValue, bundle: .module)
-                        .resizable()
-                        .foregroundColor(secondaryColor)
-                )
-                .shadow(color: isEnabled ? shadowColor : .clear, radius: 4, x: 5, y: 5)
-        }
+        configuration.label
+            .font(Font.custom("ChalkboardSE-Light", fixedSize: 16))
+            .padding()
+            .background(
+                Image(shape.rawValue, bundle: .module)
+                    .resizable()
+                    .foregroundColor(secondaryColor)
+            )
+            .shadow(color: isEnabled ? shadowColor : .clear, radius: 4, x: 5, y: 5)
     }
     
     // MARK: - Initializer
