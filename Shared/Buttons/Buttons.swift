@@ -14,7 +14,8 @@ extension PropGroup {
         .materialButtons,
         .flatButtons,
         .customButtons,
-        .neumorphicButtons
+        .neumorphicButtons,
+        .handwrittenButtons,
     ])
 }
 

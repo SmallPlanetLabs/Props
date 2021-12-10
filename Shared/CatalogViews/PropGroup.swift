@@ -28,7 +28,6 @@ extension PropGroup {
         .toggles,
         .progress,
         .colors,
-        .handwriting,
     ])
 }
 
