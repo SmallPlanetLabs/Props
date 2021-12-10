@@ -28,7 +28,7 @@
 		A951AF972734C61100C39E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A951AF962734C61100C39E17 /* Assets.xcassets */; };
 		A951AF9A2734C61100C39E17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A951AF992734C61100C39E17 /* Preview Assets.xcassets */; };
 		A951AFA42734C6D400C39E17 /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A951AFA32734C6D400C39E17 /* Props */; };
-		A951AFA62734C6D400C39E17 /* SPBrand in Frameworks */ = {isa = PBXBuildFile; productRef = A951AFA52734C6D400C39E17 /* SPBrand */; };
+		A9845B3A2763D15A00DFA374 /* SPBrand in Frameworks */ = {isa = PBXBuildFile; productRef = A9845B392763D15A00DFA374 /* SPBrand */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +53,6 @@
 		A951AF942734C61100C39E17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A951AF962734C61100C39E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A951AF992734C61100C39E17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A951AFA12734C69200C39E17 /* SPBrand */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPBrand; path = ../../../../../Brand/SPBrand; sourceTree = "<group>"; };
 		A9845B352763C2B100DFA374 /* module_ios_Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = module_ios_Props; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,8 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9845B3A2763D15A00DFA374 /* SPBrand in Frameworks */,
 				A951AFA42734C6D400C39E17 /* Props in Frameworks */,
-				A951AFA62734C6D400C39E17 /* SPBrand in Frameworks */,
 				A933E6B72746EF0C00FB5D0D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				A9845B352763C2B100DFA374 /* module_ios_Props */,
-				A951AFA12734C69200C39E17 /* SPBrand */,
 				A951AF912734C61100C39E17 /* Brandr */,
 				A951AF902734C61100C39E17 /* Products */,
 				A951AFA22734C6D400C39E17 /* Frameworks */,
@@ -158,8 +156,8 @@
 			name = Brandr;
 			packageProductDependencies = (
 				A951AFA32734C6D400C39E17 /* Props */,
-				A951AFA52734C6D400C39E17 /* SPBrand */,
 				A933E6B62746EF0C00FB5D0D /* Lottie */,
+				A9845B392763D15A00DFA374 /* SPBrand */,
 			);
 			productName = Brandr;
 			productReference = A951AF8F2734C61100C39E17 /* Brandr.app */;
@@ -191,6 +189,7 @@
 			mainGroup = A951AF862734C61100C39E17;
 			packageReferences = (
 				A933E6B52746EF0C00FB5D0D /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A9845B382763D15A00DFA374 /* XCRemoteSwiftPackageReference "smallplanet_Brand" */,
 			);
 			productRefGroup = A951AF902734C61100C39E17 /* Products */;
 			projectDirPath = "";
@@ -449,6 +448,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		A9845B382763D15A00DFA374 /* XCRemoteSwiftPackageReference "smallplanet_Brand" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SmallPlanetClients/smallplanet_Brand";
+			requirement = {
+				branch = apple;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -461,8 +468,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Props;
 		};
-		A951AFA52734C6D400C39E17 /* SPBrand */ = {
+		A9845B392763D15A00DFA374 /* SPBrand */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = A9845B382763D15A00DFA374 /* XCRemoteSwiftPackageReference "smallplanet_Brand" */;
 			productName = SPBrand;
 		};
 /* End XCSwiftPackageProductDependency section */
