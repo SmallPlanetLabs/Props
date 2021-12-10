@@ -210,7 +210,7 @@ public struct HandwrittenButtonStyle: ButtonStyle, Enableable, ColorSchemable {
     }
     
     // MARK: - Initializer
-    public init(shape: ShapeType) {
+    public init(shape: ShapeType = .shape1) {
         self.shape = shape
     }
     
