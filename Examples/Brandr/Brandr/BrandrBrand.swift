@@ -19,7 +19,7 @@ extension Font {
 struct BrandrBrand_Previews: PreviewProvider {
 
     static var previews: some View {
-        MultipleDevices(combos: .lightDark) {
+        MultipleDevices(combos: .lightDarkiPhoneBig) {
             VStack(spacing: 20) {
                 Text("Text in H1").font(.h1)
                 Text("Text in H2").font(.h2)

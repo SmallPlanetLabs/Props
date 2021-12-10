@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		A910841A2730E15B0056F4F9 /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
 		A910841D2730E1830056F4F9 /* SpaceFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceFormModel.swift; sourceTree = "<group>"; };
+		A9845B372763C37C00DFA374 /* module_ios_Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = module_ios_Props; path = ../..; sourceTree = "<group>"; };
 		A9A8FFC1273024FB00221A4E /* FormsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsApp.swift; sourceTree = "<group>"; };
 		A9A8FFC2273024FB00221A4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A9A8FFC3273024FD00221A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		A9A8FFE22730318000221A4E /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		A9A8FFE5273032CA00221A4E /* Land.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Land.swift; sourceTree = "<group>"; };
 		A9A8FFE82730620500221A4E /* PreviewDisparateDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDisparateDevices.swift; sourceTree = "<group>"; };
-		A9C1044E273433940086AE8C /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Props; path = ../../Props; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		A9A8FFBB273024FB00221A4E = {
 			isa = PBXGroup;
 			children = (
-				A9C1044E273433940086AE8C /* Props */,
+				A9845B372763C37C00DFA374 /* module_ios_Props */,
 				A9A8FFC0273024FB00221A4E /* Shared */,
 				A9A8FFCF273024FD00221A4E /* macOS */,
 				A9A8FFC9273024FD00221A4E /* Products */,

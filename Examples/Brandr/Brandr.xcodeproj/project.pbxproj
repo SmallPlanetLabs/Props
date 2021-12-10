@@ -53,8 +53,8 @@
 		A951AF942734C61100C39E17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A951AF962734C61100C39E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A951AF992734C61100C39E17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A951AFA02734C67A00C39E17 /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Props; path = ../../Props; sourceTree = "<group>"; };
 		A951AFA12734C69200C39E17 /* SPBrand */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPBrand; path = ../../../../../Brand/SPBrand; sourceTree = "<group>"; };
+		A9845B352763C2B100DFA374 /* module_ios_Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = module_ios_Props; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 		A951AF862734C61100C39E17 = {
 			isa = PBXGroup;
 			children = (
+				A9845B352763C2B100DFA374 /* module_ios_Props */,
 				A951AFA12734C69200C39E17 /* SPBrand */,
-				A951AFA02734C67A00C39E17 /* Props */,
 				A951AF912734C61100C39E17 /* Brandr */,
 				A951AF902734C61100C39E17 /* Products */,
 				A951AFA22734C6D400C39E17 /* Frameworks */,
