@@ -90,7 +90,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDark) {
+        MultipleDevices(combos: .lightDarkiPhoneBig) {
             NavigationView {
                 ContentView()
             }

@@ -120,7 +120,7 @@ struct SpaceForm: View {
     
     struct SpaceForm_Previews: PreviewProvider {
         static var previews: some View {
-            MultipleDevices(enabled: true) {
+            MultipleDevices(combos: .lightDarkiPhoneBig) {
                 SpaceForm()
             }
             .environmentObject(SpaceFormModel(name: "Sally", age: 27, planet: .Mars))

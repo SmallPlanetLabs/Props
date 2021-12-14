@@ -79,7 +79,7 @@
 		A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStyles.swift; sourceTree = "<group>"; };
 		A947874B2762635A001EAE3D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A947874F27627232001EAE3D /* TintingShading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintingShading.swift; sourceTree = "<group>"; };
-		A9C1044127337DCF0086AE8C /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Props; sourceTree = "<group>"; };
+		A9845B332763C24B00DFA374 /* module_ios_Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = module_ios_Props; path = ../..; sourceTree = "<group>"; };
 		A9C1044A2733962D0086AE8C /* Sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders.swift; sourceTree = "<group>"; };
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		A9D04EC827330AD000599EAD /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 		A9108420273185240056F4F9 = {
 			isa = PBXGroup;
 			children = (
+				A9845B322763C24B00DFA374 /* Packages */,
 				A9108425273185240056F4F9 /* Shared */,
-				A9C1044127337DCF0086AE8C /* Props */,
 				A9108434273185250056F4F9 /* macOS */,
 				A910842E273185250056F4F9 /* Products */,
 				A9C1044227337E260086AE8C /* Frameworks */,
@@ -194,6 +194,14 @@
 				A947874F27627232001EAE3D /* TintingShading.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		A9845B322763C24B00DFA374 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A9845B332763C24B00DFA374 /* module_ios_Props */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		A9C1044227337E260086AE8C /* Frameworks */ = {
