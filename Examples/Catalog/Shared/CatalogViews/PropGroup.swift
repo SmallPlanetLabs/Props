@@ -42,14 +42,20 @@ struct PropGroupView: View {
     let group: PropGroup
     @State private var queryString = ""
     var isSearchActive: Bool { !queryString.isEmpty }
+    var isSearchHasResults: Bool { isSearchActive && filteredComponents.isEmpty }
     var filteredComponents: [PropSampleable] { group.getSamples(by: queryString) }
 
     var body: some View {
-        ScrollView {
-            if isSearchActive && filteredComponents.isEmpty {
-                Text("No matching props")
-                    .padding(.top, 200)
-            } else {
+        ZStack {
+            if isSearchHasResults {
+                Rectangle()
+                    .fill(Color.clear)
+                    .overlay(
+                        Text("No matching props")
+                    )
+            }
+            
+            ScrollView {
                 VStack {
                     if !isSearchActive {
                         if !group.subgroups.isEmpty {
@@ -71,7 +77,7 @@ struct PropGroupView: View {
         }
         .navigationTitle(group.name)
         .navigationViewStyle(.automatic)
-        .background(isSearchActive && filteredComponents.isEmpty ? Color.clear.edgesIgnoringSafeArea(.all) : Color.background.edgesIgnoringSafeArea(.all))
+        .background(Color.background.edgesIgnoringSafeArea(.all))
         .searchable(text: $queryString, prompt: "Search Components")
     }
 
