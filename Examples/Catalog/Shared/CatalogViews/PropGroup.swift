@@ -20,6 +20,11 @@ struct PropGroup: Identifiable {
         self.samples = samples
         self.subgroups = subgroups
     }
+
+    func getSamples(by term: String) -> [PropSampleable] {
+        samples.filter { $0.keywords.contains(term.lowercased()) } + subgroups.flatMap
+        { $0.getSamples(by: term) }
+    }
 }
 
 extension PropGroup {
@@ -35,28 +40,51 @@ extension PropGroup {
 
 struct PropGroupView: View {
     let group: PropGroup
+    @State private var queryString = ""
+    var isSearchActive: Bool { !queryString.isEmpty }
+    var isSearchHasResults: Bool { isSearchActive && filteredComponents.isEmpty }
+    var filteredComponents: [PropSampleable] { group.getSamples(by: queryString) }
 
     var body: some View {
-        ScrollView {
-            VStack {
-                if !group.subgroups.isEmpty {
-                    ForEach(group.subgroups) { subgroup in
-                        NavigationLink(destination: PropGroupView(group: subgroup)) {
-                            PropGroupRow(group: subgroup)
+        ZStack {
+            if isSearchHasResults {
+                Rectangle()
+                    .fill(Color.clear)
+                    .overlay(
+                        Text("No matching props")
+                    )
+            }
+            
+            ScrollView {
+                VStack {
+                    if !isSearchActive {
+                        if !group.subgroups.isEmpty {
+                            ForEach(group.subgroups) { subgroup in
+                                NavigationLink(destination: PropGroupView(group: subgroup)) {
+                                    PropGroupRow(group: subgroup)
+                                }
+                            }
+                            .navigationTitle(group.name)
+                        } else {
+                            sampleCards(for: group.samples)
                         }
-                    }
-                    .navigationTitle(group.name)
-                } else {
-                    ForEach(group.samples, id: \.name) { sample in
-                        PropCard(sample: sample)
+                    } else {
+                        sampleCards(for: filteredComponents)
                     }
                 }
+                .padding()
             }
-            .padding()
         }
         .navigationTitle(group.name)
         .navigationViewStyle(.automatic)
         .background(Color.background.edgesIgnoringSafeArea(.all))
+        .searchable(text: $queryString, prompt: "Search Components")
+    }
+
+    func sampleCards(for samples: [PropSampleable]) -> some View {
+        ForEach(samples, id: \.name) { sample in
+            PropCard(sample: sample)
+        }
     }
 }
 
