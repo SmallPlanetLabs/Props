@@ -15,6 +15,8 @@
 		1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1AAE90DC27746435007FDBAA /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DB27746435007FDBAA /* TabViews.swift */; };
 		1AAE90DE2774646C007FDBAA /* SystemTabViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */; };
+		1AAE90E1277468A9007FDBAA /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90E0277468A9007FDBAA /* Lists.swift */; };
+		1AAE90E3277468D5007FDBAA /* SystemListStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90E2277468D5007FDBAA /* SystemListStyles.swift */; };
 		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108437273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108438273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
@@ -66,6 +68,8 @@
 		1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
 		1AAE90DB27746435007FDBAA /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
 		1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTabViewStyles.swift; sourceTree = "<group>"; };
+		1AAE90E0277468A9007FDBAA /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		1AAE90E2277468D5007FDBAA /* SystemListStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemListStyles.swift; sourceTree = "<group>"; };
 		A9108426273185240056F4F9 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		A9108427273185240056F4F9 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		A9108428273185250056F4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 			path = "Tab Views";
 			sourceTree = "<group>";
 		};
+		1AAE90DF2774689E007FDBAA /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				1AAE90E0277468A9007FDBAA /* Lists.swift */,
+				1AAE90E2277468D5007FDBAA /* SystemListStyles.swift */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
 		A9108420273185240056F4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A910844F2731D6D70056F4F9 /* Styling.swift */,
+				1AAE90DF2774689E007FDBAA /* Lists */,
 				1AAE90DA27746421007FDBAA /* Tab Views */,
 				1A3272EA2772144800C4BA31 /* Text Fields */,
 				A9108458273210910056F4F9 /* Buttons */,
@@ -365,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A947875027627232001EAE3D /* TintingShading.swift in Sources */,
+				1AAE90E3277468D5007FDBAA /* SystemListStyles.swift in Sources */,
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A933E6A72742EA5100FB5D0D /* PropCard.swift in Sources */,
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
@@ -377,6 +392,7 @@
 				1A3272EE2772148C00C4BA31 /* SystemTextFieldStyles.swift in Sources */,
 				A933E6AD27435EAE00FB5D0D /* PropGroup.swift in Sources */,
 				A947874C2762635A001EAE3D /* Colors.swift in Sources */,
+				1AAE90E1277468A9007FDBAA /* Lists.swift in Sources */,
 				A933E6AA2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,

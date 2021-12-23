@@ -34,7 +34,8 @@ extension PropGroup {
         .progress,
         .colors,
         .textFields,
-        .tabViews
+        .tabViews,
+        .lists,
     ])
 }
 
