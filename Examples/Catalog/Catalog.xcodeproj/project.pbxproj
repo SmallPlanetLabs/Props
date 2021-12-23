@@ -13,6 +13,8 @@
 		1A3C88B62763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */; };
 		1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
+		1AAE90DC27746435007FDBAA /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DB27746435007FDBAA /* TabViews.swift */; };
+		1AAE90DE2774646C007FDBAA /* SystemTabViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */; };
 		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108437273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108438273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
@@ -62,6 +64,8 @@
 		1A3272ED2772148C00C4BA31 /* SystemTextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTextFieldStyles.swift; sourceTree = "<group>"; };
 		1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenButtonStyles.swift; sourceTree = "<group>"; };
 		1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
+		1AAE90DB27746435007FDBAA /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
+		1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTabViewStyles.swift; sourceTree = "<group>"; };
 		A9108426273185240056F4F9 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		A9108427273185240056F4F9 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		A9108428273185250056F4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +124,15 @@
 			path = "Text Fields";
 			sourceTree = "<group>";
 		};
+		1AAE90DA27746421007FDBAA /* Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AAE90DB27746435007FDBAA /* TabViews.swift */,
+				1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */,
+			);
+			path = "Tab Views";
+			sourceTree = "<group>";
+		};
 		A9108420273185240056F4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +151,7 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A910844F2731D6D70056F4F9 /* Styling.swift */,
+				1AAE90DA27746421007FDBAA /* Tab Views */,
 				1A3272EA2772144800C4BA31 /* Text Fields */,
 				A9108458273210910056F4F9 /* Buttons */,
 				A933E6A52742EA5100FB5D0D /* CatalogViews */,
@@ -366,10 +380,12 @@
 				A933E6AA2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
 				A9108456273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
+				1AAE90DE2774646C007FDBAA /* SystemTabViewStyles.swift in Sources */,
 				1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
+				1AAE90DC27746435007FDBAA /* TabViews.swift in Sources */,
 				A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */,
 				1A3C88B52763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
