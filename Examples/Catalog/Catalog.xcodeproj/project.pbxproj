@@ -21,7 +21,8 @@
 		1AAE90E3277468D5007FDBAA /* SystemListStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90E2277468D5007FDBAA /* SystemListStyles.swift */; };
 		1AEDAB6F277DA4E900B57079 /* GroupBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB6E277DA4E900B57079 /* GroupBoxes.swift */; };
 		1AEDAB71277DA4F300B57079 /* GroupBoxStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB70277DA4F300B57079 /* GroupBoxStyles.swift */; };
-		1AEDAB73277DA67E00B57079 /* HandwrittenBoxStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB72277DA67E00B57079 /* HandwrittenBoxStyles.swift */; };
+		1AEDAB73277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB72277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift */; };
+		1AEDAB75277DADB200B57079 /* PlainGroupBoxStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB74277DADB200B57079 /* PlainGroupBoxStyles.swift */; };
 		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108437273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108438273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
@@ -79,7 +80,8 @@
 		1AAE90E2277468D5007FDBAA /* SystemListStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemListStyles.swift; sourceTree = "<group>"; };
 		1AEDAB6E277DA4E900B57079 /* GroupBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBoxes.swift; sourceTree = "<group>"; };
 		1AEDAB70277DA4F300B57079 /* GroupBoxStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBoxStyles.swift; sourceTree = "<group>"; };
-		1AEDAB72277DA67E00B57079 /* HandwrittenBoxStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenBoxStyles.swift; sourceTree = "<group>"; };
+		1AEDAB72277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenGroupBoxStyles.swift; sourceTree = "<group>"; };
+		1AEDAB74277DADB200B57079 /* PlainGroupBoxStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainGroupBoxStyles.swift; sourceTree = "<group>"; };
 		A9108426273185240056F4F9 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		A9108427273185240056F4F9 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		A9108428273185250056F4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,7 +172,8 @@
 			children = (
 				1AEDAB6E277DA4E900B57079 /* GroupBoxes.swift */,
 				1AEDAB70277DA4F300B57079 /* GroupBoxStyles.swift */,
-				1AEDAB72277DA67E00B57079 /* HandwrittenBoxStyles.swift */,
+				1AEDAB72277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift */,
+				1AEDAB74277DADB200B57079 /* PlainGroupBoxStyles.swift */,
 			);
 			path = "Group Boxes";
 			sourceTree = "<group>";
@@ -415,11 +418,12 @@
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A933E6A72742EA5100FB5D0D /* PropCard.swift in Sources */,
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
-				1AEDAB73277DA67E00B57079 /* HandwrittenBoxStyles.swift in Sources */,
+				1AEDAB73277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift in Sources */,
 				A910844A27318ED60056F4F9 /* FlatButtonStyles.swift in Sources */,
 				A9D04EC727330A7900599EAD /* Toggles.swift in Sources */,
 				A933E6B0274444F400FB5D0D /* CustomButtons.swift in Sources */,
 				A91084502731D6D70056F4F9 /* Styling.swift in Sources */,
+				1AEDAB75277DADB200B57079 /* PlainGroupBoxStyles.swift in Sources */,
 				A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */,
 				1A08B072277C628500AF0273 /* SystemMenuStyles.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,

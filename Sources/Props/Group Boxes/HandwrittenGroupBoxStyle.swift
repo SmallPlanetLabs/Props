@@ -18,19 +18,21 @@ public struct HandwrittenGroupBoxStyle: GroupBoxStyle {
     let shape: ShapeType
     
     public func makeBody(configuration: Configuration) -> some View {
-        configuration.content
-            .padding()
-            .background(
-                Image(shape.rawValue, bundle: .module)
-                    .resizable()
-            )
-            .opacity(0.4)
-            .overlay(
-                configuration.label
-                    .font(Font.custom("ChalkboardSE-Light", fixedSize: 16))
-                    .padding(.leading, 4),
-                alignment: .topLeading
-            )
+        VStack {
+            configuration.content
+                .padding()
+                .background(
+                    Image(shape.rawValue, bundle: .module)
+                        .resizable()
+                )
+                .opacity(0.4)
+                .overlay(
+                    configuration.label
+                        .font(Font.custom("ChalkboardSE-Light", fixedSize: 16))
+                        .padding(.leading, 4),
+                    alignment: .topLeading
+                )
+        }
     }
     
     // MARK: - Initializer

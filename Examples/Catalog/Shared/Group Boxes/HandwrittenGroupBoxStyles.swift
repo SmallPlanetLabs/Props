@@ -1,5 +1,5 @@
 //
-//  HandwrittenBoxStyles.swift
+//  HandwrittenGroupBoxStyles.swift
 //  Catalog (iOS)
 //
 //  Created by Djuro on 12/30/21.
@@ -27,8 +27,6 @@ struct HandwrittenGroupBoxSample: PropSampleable {
         AnyView(
             GroupBox(label: Label("Title Label", systemImage: "person")) {
                 Text("GroupBox Content")
-                    .font(Font.custom("ChalkboardSE-Light", fixedSize: 16))
-                Text("Even more content")
                     .font(Font.custom("ChalkboardSE-Light", fixedSize: 16))
             }
             .groupBoxStyle(HandwrittenGroupBoxStyle(shape: .shape1))
