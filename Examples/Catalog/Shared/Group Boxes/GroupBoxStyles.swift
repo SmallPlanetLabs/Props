@@ -25,7 +25,7 @@ struct DefaultGroupBoxSample: PropSampleable {
                 Text("GroupBox Content")
                 Text("Even more content")
             }
-                .groupBoxStyle(DefaultGroupBoxStyle())
+            .groupBoxStyle(DefaultGroupBoxStyle())
         )
     }
 }

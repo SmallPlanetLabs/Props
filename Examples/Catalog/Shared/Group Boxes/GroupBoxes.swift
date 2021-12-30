@@ -12,6 +12,7 @@ import SwiftUI
 extension PropGroup {
     static let groupBoxes = PropGroup(name: "Group Boxes", subgroups: [
         .systemGroupBoxes,
+        .handwrittenGroupBoxes,
     ])
 }
 
