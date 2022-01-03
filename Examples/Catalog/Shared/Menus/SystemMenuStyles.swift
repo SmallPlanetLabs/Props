@@ -33,7 +33,7 @@ struct DefaultMenuSample: PropSampleable {
 
 struct BorderlessMenuSample: PropSampleable {
     let name = "Borderless button menu style"
-    let notes: String? = ".menuStyle(BorderlessButtonMenuStyle())"
+    let notes: String? = ".menuStyle(BorderlessButtonMenuStyle())\nOn iOS, this is the only available menu style, so it is the same as default above. The style view modifier can be left off with no effect."
     let source = "System"
     let keywords = "menu system borderless menu"
     @ViewBuilder var body: AnyView {
@@ -41,8 +41,9 @@ struct BorderlessMenuSample: PropSampleable {
             Menu("Menu") {
                 Button("Item #1", action: { })
                 Button("Item #2", action: { })
+                Button(role: .destructive, action: {}, label: { Label("Destructive action", systemImage: "trash")})
             }
-            .menuStyle(BorderlessButtonMenuStyle())
+            .menuStyle(.borderlessButton)
         )
     }
 }
