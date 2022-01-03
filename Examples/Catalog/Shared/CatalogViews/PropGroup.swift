@@ -37,6 +37,7 @@ extension PropGroup {
         .tabViews,
         .lists,
         .menus,
+        .groupBoxes,
     ])
 }
 
