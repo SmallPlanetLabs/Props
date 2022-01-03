@@ -24,12 +24,16 @@ struct DefaultTabViewSample: PropSampleable {
         AnyView(
             TabView {
                 Text("First")
+                    .tabItem({ Label("First", systemImage: "1.circle.fill")})
                 Text("Second")
+                    .tabItem({ Label("Second", systemImage: "2.circle.fill")})
                 Text("Third")
+                    .tabItem({ Label("Third", systemImage: "3.circle.fill")})
                 Text("Fourth")
+                    .tabItem({ Label("Fourth", systemImage: "4.circle.fill")})
             }
             .frame(height: 200)
-            .tabViewStyle(DefaultTabViewStyle())
+                .tabViewStyle(.automatic)
         )
     }
 }
@@ -49,7 +53,7 @@ struct PageTabViewSample: PropSampleable {
             }
             .frame(height: 200)
             .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
         )
     }
 }
