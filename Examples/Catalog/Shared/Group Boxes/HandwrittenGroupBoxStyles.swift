@@ -18,9 +18,9 @@ struct HandwrittenGroupBoxSample: PropSampleable {
     
     // MARK: - Properties
     let name = "Handwritten group box style"
-    let notes: String? = ".groupBoxStyle(HandwrittenGroupBoxStyle())"
+    let notes: String? = ".groupBoxStyle(HandwrittenGroupBoxStyle(shape: .shape1))"
     let source = "Props"
-    let keywords = "group box handwritten default"
+    let keywords = "group box handwritten"
     
     // MARK: - ViewBuilder
     @ViewBuilder var body: AnyView {
