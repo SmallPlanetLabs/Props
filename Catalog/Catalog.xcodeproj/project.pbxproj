@@ -103,7 +103,7 @@
 		A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStyles.swift; sourceTree = "<group>"; };
 		A947874B2762635A001EAE3D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A947874F27627232001EAE3D /* TintingShading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintingShading.swift; sourceTree = "<group>"; };
-		A9845B332763C24B00DFA374 /* module_ios_Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = module_ios_Props; path = ../..; sourceTree = "<group>"; };
+		A966BADD27838A9A000A3904 /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Props; path = ..; sourceTree = "<group>"; };
 		A9C1044A2733962D0086AE8C /* Sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders.swift; sourceTree = "<group>"; };
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		A9D04EC827330AD000599EAD /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		A9845B322763C24B00DFA374 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				A9845B332763C24B00DFA374 /* module_ios_Props */,
+				A966BADD27838A9A000A3904 /* Props */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
