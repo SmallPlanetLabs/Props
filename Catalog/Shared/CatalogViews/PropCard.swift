@@ -27,7 +27,7 @@ struct PropCard: View {
                 .font(.footnote)
         }
         .padding()
-        .backport.materialBackground()
+        .background(.thickMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }

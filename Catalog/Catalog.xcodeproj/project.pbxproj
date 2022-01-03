@@ -50,8 +50,6 @@
 		A933E6AE27435EAE00FB5D0D /* PropGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6AC27435EAE00FB5D0D /* PropGroup.swift */; };
 		A933E6B0274444F400FB5D0D /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6AF274444F400FB5D0D /* CustomButtons.swift */; };
 		A933E6B1274444F400FB5D0D /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6AF274444F400FB5D0D /* CustomButtons.swift */; };
-		A933E6B327444CC100FB5D0D /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6B227444CC100FB5D0D /* Backport.swift */; };
-		A933E6B427444CC100FB5D0D /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6B227444CC100FB5D0D /* Backport.swift */; };
 		A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */; };
 		A933E6BE27482FF900FB5D0D /* ProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */; };
 		A947874C2762635A001EAE3D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874B2762635A001EAE3D /* Colors.swift */; };
@@ -99,7 +97,6 @@
 		A933E6A92742ECB000FB5D0D /* PropSampleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropSampleable.swift; sourceTree = "<group>"; };
 		A933E6AC27435EAE00FB5D0D /* PropGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropGroup.swift; sourceTree = "<group>"; };
 		A933E6AF274444F400FB5D0D /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
-		A933E6B227444CC100FB5D0D /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
 		A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStyles.swift; sourceTree = "<group>"; };
 		A947874B2762635A001EAE3D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A947874F27627232001EAE3D /* TintingShading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintingShading.swift; sourceTree = "<group>"; };
@@ -258,7 +255,6 @@
 				A933E6A62742EA5100FB5D0D /* PropCard.swift */,
 				A933E6AC27435EAE00FB5D0D /* PropGroup.swift */,
 				A933E6A92742ECB000FB5D0D /* PropSampleable.swift */,
-				A933E6B227444CC100FB5D0D /* Backport.swift */,
 			);
 			path = CatalogViews;
 			sourceTree = "<group>";
@@ -445,7 +441,6 @@
 				A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */,
 				1A3C88B52763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
-				A933E6B327444CC100FB5D0D /* Backport.swift in Sources */,
 				1A3272EC2772146800C4BA31 /* TextFields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +454,6 @@
 				A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
 				A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A933E6B1274444F400FB5D0D /* CustomButtons.swift in Sources */,
-				A933E6B427444CC100FB5D0D /* Backport.swift in Sources */,
 				A910845F27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6A82742EA5100FB5D0D /* PropCard.swift in Sources */,
 				A933E6AE27435EAE00FB5D0D /* PropGroup.swift in Sources */,
