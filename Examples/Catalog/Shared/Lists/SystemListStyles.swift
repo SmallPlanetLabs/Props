@@ -41,7 +41,7 @@ struct DefaultListSample: PropSampleable {
 
 struct GroupedListSample: PropSampleable {
     let name = "Grouped list style"
-    let notes: String? = ".listStyle(GroupedListStyle())"
+    let notes: String? = ".listStyle(.grouped)"
     let source = "System"
     let keywords = "list system grouped"
     @ViewBuilder var body: AnyView {
@@ -53,7 +53,7 @@ struct GroupedListSample: PropSampleable {
                     Text("Third")
                 }
             }
-            .listStyle(GroupedListStyle())
+            .listStyle(.grouped)
             .frame(height: 200)
         )
     }
@@ -61,7 +61,7 @@ struct GroupedListSample: PropSampleable {
 
 struct InsetGroupedListSample: PropSampleable {
     let name = "Inset grouped list style"
-    let notes: String? = ".listStyle(InsetGroupedListStyle())"
+    let notes: String? = ".listStyle(.insetGrouped)"
     let source = "System"
     let keywords = "list system inset grouped"
     @ViewBuilder var body: AnyView {
@@ -73,7 +73,7 @@ struct InsetGroupedListSample: PropSampleable {
                     Text("Third")
                 }
             }
-            .listStyle(InsetGroupedListStyle())
+                .listStyle(.insetGrouped)
             .frame(height: 200)
         )
     }
@@ -81,7 +81,7 @@ struct InsetGroupedListSample: PropSampleable {
 
 struct InsetListSample: PropSampleable {
     let name = "Inset list style"
-    let notes: String? = ".listStyle(InsetListStyle())"
+    let notes: String? = ".listStyle(.inset)"
     let source = "System"
     let keywords = "list system inset"
     @ViewBuilder var body: AnyView {
@@ -93,7 +93,7 @@ struct InsetListSample: PropSampleable {
                     Text("Third")
                 }
             }
-            .listStyle(InsetListStyle())
+                .listStyle(.inset)
             .frame(height: 200)
         )
     }
@@ -101,7 +101,7 @@ struct InsetListSample: PropSampleable {
 
 struct PlainListSample: PropSampleable {
     let name = "Plain list style"
-    let notes: String? = ".listStyle(PlainListStyle())"
+    let notes: String? = ".listStyle(.plain)"
     let source = "System"
     let keywords = "list system plain"
     @ViewBuilder var body: AnyView {
@@ -113,7 +113,7 @@ struct PlainListSample: PropSampleable {
                     Text("Third")
                 }
             }
-            .listStyle(PlainListStyle())
+                .listStyle(.plain)
             .frame(height: 200)
         )
     }
@@ -121,9 +121,9 @@ struct PlainListSample: PropSampleable {
 
 struct SidebarListSample: PropSampleable {
     let name = "Sidebar list style"
-    let notes: String? = ".listStyle(SidebarListStyle())"
+    let notes: String? = ".listStyle(.sidebar)"
     let source = "System"
-    let keywords = "list system plain"
+    let keywords = "list system sidebar"
     @ViewBuilder var body: AnyView {
         AnyView(
             List {
@@ -133,7 +133,7 @@ struct SidebarListSample: PropSampleable {
                     Text("Third")
                 }
             }
-            .listStyle(SidebarListStyle())
+            .listStyle(.sidebar)
             .frame(height: 200)
         )
     }
