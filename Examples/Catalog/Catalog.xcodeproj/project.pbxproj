@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A08B070277C627900AF0273 /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08B06F277C627900AF0273 /* Menus.swift */; };
+		1A08B072277C628500AF0273 /* SystemMenuStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08B071277C628500AF0273 /* SystemMenuStyles.swift */; };
 		1A3272EC2772146800C4BA31 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3272EB2772146800C4BA31 /* TextFields.swift */; };
 		1A3272EE2772148C00C4BA31 /* SystemTextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3272ED2772148C00C4BA31 /* SystemTextFieldStyles.swift */; };
 		1A3C88B52763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A08B06F277C627900AF0273 /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menus.swift; sourceTree = "<group>"; };
+		1A08B071277C628500AF0273 /* SystemMenuStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMenuStyles.swift; sourceTree = "<group>"; };
 		1A3272EB2772146800C4BA31 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 		1A3272ED2772148C00C4BA31 /* SystemTextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTextFieldStyles.swift; sourceTree = "<group>"; };
 		1A3C88B42763A5DF005D6757 /* HandwrittenButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwrittenButtonStyles.swift; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A08B06E277C626100AF0273 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				1A08B06F277C627900AF0273 /* Menus.swift */,
+				1A08B071277C628500AF0273 /* SystemMenuStyles.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
 		1A3272EA2772144800C4BA31 /* Text Fields */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +177,7 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A910844F2731D6D70056F4F9 /* Styling.swift */,
+				1A08B06E277C626100AF0273 /* Menus */,
 				1AAE90DF2774689E007FDBAA /* Lists */,
 				1AAE90DA27746421007FDBAA /* Tab Views */,
 				1A3272EA2772144800C4BA31 /* Text Fields */,
@@ -380,6 +394,7 @@
 			files = (
 				A947875027627232001EAE3D /* TintingShading.swift in Sources */,
 				1AAE90E3277468D5007FDBAA /* SystemListStyles.swift in Sources */,
+				1A08B070277C627900AF0273 /* Menus.swift in Sources */,
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A933E6A72742EA5100FB5D0D /* PropCard.swift in Sources */,
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
@@ -388,6 +403,7 @@
 				A933E6B0274444F400FB5D0D /* CustomButtons.swift in Sources */,
 				A91084502731D6D70056F4F9 /* Styling.swift in Sources */,
 				A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */,
+				1A08B072277C628500AF0273 /* SystemMenuStyles.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
 				1A3272EE2772148C00C4BA31 /* SystemTextFieldStyles.swift in Sources */,
 				A933E6AD27435EAE00FB5D0D /* PropGroup.swift in Sources */,
