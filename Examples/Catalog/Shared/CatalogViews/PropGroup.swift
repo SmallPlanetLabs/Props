@@ -33,6 +33,7 @@ extension PropGroup {
         .toggles,
         .progress,
         .colors,
+        .textFields,
     ])
 }
 
