@@ -18,7 +18,7 @@ struct VerticalLabelSample: PropSampleable {
     
     // MARK: - Properties
     let name = "Vertical label style"
-    let notes: String? = ".labelStyle(VerticalLabelStyle())"
+    let notes: String? = ".labelStyle(.vertical(spacing: 10))"
     let source = "Props"
     let keywords = "label vertical style"
     
@@ -34,7 +34,7 @@ struct VerticalLabelSample: PropSampleable {
                     .scaledToFit()
                     .frame(width: 20)
             }
-            .labelStyle(VerticalLabelStyle(spacing: 10))
+                .labelStyle(.vertical(spacing: 10))
         )
     }
 }

@@ -40,7 +40,7 @@ struct DefaultLabelSample: PropSampleable {
 
 struct IconOnlyLabelSample: PropSampleable {
     let name = "Icon only label style"
-    let notes: String? = ".labelStyle(IconOnlyLabelStyle())"
+    let notes: String? = ".labelStyle(.iconOnly)"
     let source = "System"
     let keywords = "label system icon only"
     @ViewBuilder var body: AnyView {
@@ -54,14 +54,14 @@ struct IconOnlyLabelSample: PropSampleable {
                     .scaledToFit()
                     .frame(width: 20)
             }
-            .labelStyle(IconOnlyLabelStyle())
+            .labelStyle(.iconOnly)
         )
     }
 }
 
 struct TitleAndIconLabelSample: PropSampleable {
     let name = "Title and icon label style"
-    let notes: String? = ".labelStyle(TitleAndIconLabelStyle())"
+    let notes: String? = ".labelStyle(.titleAndIcon)"
     let source = "System"
     let keywords = "label system title icon"
     @ViewBuilder var body: AnyView {
@@ -75,14 +75,14 @@ struct TitleAndIconLabelSample: PropSampleable {
                     .scaledToFit()
                     .frame(width: 20)
             }
-            .labelStyle(TitleAndIconLabelStyle())
+            .labelStyle(.titleAndIcon)
         )
     }
 }
 
 struct TitleOnlyLabelSample: PropSampleable {
     let name = "Title only label style"
-    let notes: String? = ".labelStyle(TitleOnlyLabelStyle())"
+    let notes: String? = ".labelStyle(.titleOnly)"
     let source = "System"
     let keywords = "label system title only"
     @ViewBuilder var body: AnyView {
@@ -96,7 +96,7 @@ struct TitleOnlyLabelSample: PropSampleable {
                     .scaledToFit()
                     .frame(width: 20)
             }
-            .labelStyle(TitleOnlyLabelStyle())
+            .labelStyle(.titleOnly)
         )
     }
 }
@@ -109,6 +109,8 @@ struct SystemLabelStyles: View {
 
 struct SystemLabelStyles_Previews: PreviewProvider {
     static var previews: some View {
-        SystemLabelStyles()
+        MultipleDevices(combos: .lightDarkiPhoneBig) {
+            SystemLabelStyles()
+        }
     }
 }
