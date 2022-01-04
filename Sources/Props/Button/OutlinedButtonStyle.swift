@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct OutlinedButton: ButtonStyle, Enableable, PrimaryColorable, ColorSchemable {
+public struct OutlinedButtonStyle: ButtonStyle, Enableable, PrimaryColorable, ColorSchemable {
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.colorScheme) var scheme: ColorScheme
@@ -29,6 +29,6 @@ public struct OutlinedButton: ButtonStyle, Enableable, PrimaryColorable, ColorSc
     }
 }
 
-extension ButtonStyle where Self == OutlinedButton {
-    public static var outlined: OutlinedButton { OutlinedButton() }
+extension ButtonStyle where Self == OutlinedButtonStyle {
+    public static var outlined: OutlinedButtonStyle { OutlinedButtonStyle() }
 }
