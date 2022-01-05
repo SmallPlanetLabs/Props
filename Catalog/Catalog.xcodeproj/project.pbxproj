@@ -16,6 +16,8 @@
 		1A46028227842E0100796A2B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A46028127842E0100796A2B /* Labels.swift */; };
 		1A46028427842E3600796A2B /* LabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A46028327842E3600796A2B /* LabelStyles.swift */; };
 		1A4602862784307800796A2B /* VerticalLabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4602852784307800796A2B /* VerticalLabelStyles.swift */; };
+		1A4C39CC27857D6900B1EC9C /* Pickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C39CB27857D6900B1EC9C /* Pickers.swift */; };
+		1A4C39CE27857D9E00B1EC9C /* PickerStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C39CD27857D9E00B1EC9C /* PickerStyles.swift */; };
 		1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1AAE90DC27746435007FDBAA /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DB27746435007FDBAA /* TabViews.swift */; };
@@ -77,6 +79,8 @@
 		1A46028127842E0100796A2B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		1A46028327842E3600796A2B /* LabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyles.swift; sourceTree = "<group>"; };
 		1A4602852784307800796A2B /* VerticalLabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelStyles.swift; sourceTree = "<group>"; };
+		1A4C39CB27857D6900B1EC9C /* Pickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pickers.swift; sourceTree = "<group>"; };
+		1A4C39CD27857D9E00B1EC9C /* PickerStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerStyles.swift; sourceTree = "<group>"; };
 		1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
 		1AAE90DB27746435007FDBAA /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
 		1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTabViewStyles.swift; sourceTree = "<group>"; };
@@ -162,6 +166,15 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		1A4C39CA27857D5C00B1EC9C /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				1A4C39CB27857D6900B1EC9C /* Pickers.swift */,
+				1A4C39CD27857D9E00B1EC9C /* PickerStyles.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
 		1AAE90DA27746421007FDBAA /* Tab Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +222,7 @@
 				A9108427273185240056F4F9 /* Catalog.swift */,
 				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A910844F2731D6D70056F4F9 /* Styling.swift */,
+				1A4C39CA27857D5C00B1EC9C /* Pickers */,
 				1A46028027842DF700796A2B /* Labels */,
 				1AEDAB6D277DA4D900B57079 /* Group Boxes */,
 				1A08B06E277C626100AF0273 /* Menus */,
@@ -433,6 +447,7 @@
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
 				1AEDAB73277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift in Sources */,
 				A910844A27318ED60056F4F9 /* FlatButtonStyles.swift in Sources */,
+				1A4C39CE27857D9E00B1EC9C /* PickerStyles.swift in Sources */,
 				A9D04EC727330A7900599EAD /* Toggles.swift in Sources */,
 				A933E6B0274444F400FB5D0D /* CustomButtons.swift in Sources */,
 				A91084502731D6D70056F4F9 /* Styling.swift in Sources */,
@@ -440,6 +455,7 @@
 				A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */,
 				1A08B072277C628500AF0273 /* SystemMenuStyles.swift in Sources */,
 				A9108438273185250056F4F9 /* Catalog.swift in Sources */,
+				1A4C39CC27857D6900B1EC9C /* Pickers.swift in Sources */,
 				1A3272EE2772148C00C4BA31 /* SystemTextFieldStyles.swift in Sources */,
 				A933E6AD27435EAE00FB5D0D /* PropGroup.swift in Sources */,
 				A947874C2762635A001EAE3D /* Colors.swift in Sources */,

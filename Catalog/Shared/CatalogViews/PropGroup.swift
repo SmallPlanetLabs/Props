@@ -39,6 +39,7 @@ extension PropGroup {
         .menus,
         .groupBoxes,
         .labels,
+        .pickers,
     ])
 }
 
