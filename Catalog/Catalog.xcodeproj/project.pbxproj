@@ -16,6 +16,8 @@
 		1A46028227842E0100796A2B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A46028127842E0100796A2B /* Labels.swift */; };
 		1A46028427842E3600796A2B /* LabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A46028327842E3600796A2B /* LabelStyles.swift */; };
 		1A4602862784307800796A2B /* VerticalLabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4602852784307800796A2B /* VerticalLabelStyles.swift */; };
+		1A4C39D42785934B00B1EC9C /* ControlGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C39D32785934B00B1EC9C /* ControlGroups.swift */; };
+		1A4C39D62785935300B1EC9C /* ControlGroupStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C39D52785935300B1EC9C /* ControlGroupStyles.swift */; };
 		1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1AAE90DC27746435007FDBAA /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DB27746435007FDBAA /* TabViews.swift */; };
@@ -77,6 +79,8 @@
 		1A46028127842E0100796A2B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		1A46028327842E3600796A2B /* LabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyles.swift; sourceTree = "<group>"; };
 		1A4602852784307800796A2B /* VerticalLabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelStyles.swift; sourceTree = "<group>"; };
+		1A4C39D32785934B00B1EC9C /* ControlGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlGroups.swift; sourceTree = "<group>"; };
+		1A4C39D52785935300B1EC9C /* ControlGroupStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlGroupStyles.swift; sourceTree = "<group>"; };
 		1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
 		1AAE90DB27746435007FDBAA /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
 		1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTabViewStyles.swift; sourceTree = "<group>"; };
@@ -162,6 +166,15 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		1A4C39D22785933300B1EC9C /* Control Groups */ = {
+			isa = PBXGroup;
+			children = (
+				1A4C39D32785934B00B1EC9C /* ControlGroups.swift */,
+				1A4C39D52785935300B1EC9C /* ControlGroupStyles.swift */,
+			);
+			path = "Control Groups";
+			sourceTree = "<group>";
+		};
 		1AAE90DA27746421007FDBAA /* Tab Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +224,7 @@
 				A910844F2731D6D70056F4F9 /* Styling.swift */,
 				1A46028027842DF700796A2B /* Labels */,
 				1AEDAB6D277DA4D900B57079 /* Group Boxes */,
+				1A4C39D22785933300B1EC9C /* Control Groups */,
 				1A08B06E277C626100AF0273 /* Menus */,
 				1AAE90DF2774689E007FDBAA /* Lists */,
 				1AAE90DA27746421007FDBAA /* Tab Views */,
@@ -458,8 +472,10 @@
 				1AEDAB6F277DA4E900B57079 /* GroupBoxes.swift in Sources */,
 				1AAE90DC27746435007FDBAA /* TabViews.swift in Sources */,
 				A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */,
+				1A4C39D62785935300B1EC9C /* ControlGroupStyles.swift in Sources */,
 				1A46028227842E0100796A2B /* Labels.swift in Sources */,
 				1A3C88B52763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
+				1A4C39D42785934B00B1EC9C /* ControlGroups.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 				1A3272EC2772146800C4BA31 /* TextFields.swift in Sources */,
 			);
