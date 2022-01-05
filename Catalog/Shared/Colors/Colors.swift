@@ -14,6 +14,7 @@ import Props
 extension PropGroup {
     static let colors = PropGroup(name: "Colors", subgroups: [
         .tintingShading,
+        .buttonTintingShading
     ])
 }
 
