@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct FilledButton: ButtonStyle, Enableable, PrimaryColorable, ColorSchemable  {
+public struct FilledButtonStyle: ButtonStyle, Enableable, PrimaryColorable, ColorSchemable  {
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.secondaryColor) var secondaryColor: Color

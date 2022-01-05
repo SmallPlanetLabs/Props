@@ -28,11 +28,11 @@ struct FilledButtonSample: PropSampleable {
                     Button {} label: {
                         Text("Filled Button")
                     }
-                    .buttonStyle(FilledButton())
+                    .buttonStyle(FilledButtonStyle())
                     Button {} label: {
                         Label("Filled Button", systemImage: "heart.fill")
                     }
-                    .buttonStyle(FilledButton(cornerRadius: 16))
+                    .buttonStyle(FilledButtonStyle(cornerRadius: 16))
                 }
             }
         )
@@ -51,11 +51,11 @@ struct OutlinedButtonSample: PropSampleable {
                     Button {} label: {
                         Text("Outlined")
                     }
-                    .buttonStyle(OutlinedButton(cornerRadius: 12))
+                    .buttonStyle(OutlinedButtonStyle(cornerRadius: 12))
                     Button {} label: {
                         Label("Outlined", systemImage: "eye.fill")
                     }
-                    .buttonStyle(OutlinedButton())
+                    .buttonStyle(OutlinedButtonStyle())
                 }
             }
         )
