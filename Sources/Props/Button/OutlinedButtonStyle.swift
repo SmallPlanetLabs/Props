@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  OutlinedButtonStyle.swift
 //  Props
 //
 //  Created by Djuro on 12/10/21.
