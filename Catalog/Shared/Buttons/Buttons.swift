@@ -9,7 +9,7 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let buttons = PropGroup(name: "Buttons", subgroups: [
+    static let buttons = PropGroup(name: "Buttons", systemImage: "cursorarrow.rays", subgroups: [
         .systemButtons,
         .materialButtons,
         .flatButtons,

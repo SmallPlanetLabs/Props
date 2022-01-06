@@ -10,7 +10,7 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let lists = PropGroup(name: "Lists", subgroups: [
+    static let lists = PropGroup(name: "Lists", systemImage: "list.number" ,subgroups: [
         .systemLists,
     ])
 }
