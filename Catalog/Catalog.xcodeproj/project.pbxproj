@@ -209,20 +209,17 @@
 			isa = PBXGroup;
 			children = (
 				A9108428273185250056F4F9 /* Assets.xcassets */,
-				A9108427273185240056F4F9 /* Catalog.swift */,
-				A9108426273185240056F4F9 /* CatalogApp.swift */,
-				A910844F2731D6D70056F4F9 /* Styling.swift */,
-				1A46028027842DF700796A2B /* Labels */,
-				1AEDAB6D277DA4D900B57079 /* Group Boxes */,
-				1A08B06E277C626100AF0273 /* Menus */,
-				1AAE90DF2774689E007FDBAA /* Lists */,
-				1AAE90DA27746421007FDBAA /* Tab Views */,
-				1A3272EA2772144800C4BA31 /* Text Fields */,
 				A9108458273210910056F4F9 /* Buttons */,
 				A933E6A52742EA5100FB5D0D /* CatalogViews */,
 				A947874E27626362001EAE3D /* Colors */,
+				1AEDAB6D277DA4D900B57079 /* Group Boxes */,
+				1A46028027842DF700796A2B /* Labels */,
+				1AAE90DF2774689E007FDBAA /* Lists */,
+				1A08B06E277C626100AF0273 /* Menus */,
 				A910845C27321A0C0056F4F9 /* Progress */,
 				A9C10449273395F90086AE8C /* Sliders */,
+				1AAE90DA27746421007FDBAA /* Tab Views */,
+				1A3272EA2772144800C4BA31 /* Text Fields */,
 				A9D04EC527330A6800599EAD /* Toggles */,
 			);
 			path = Shared;
@@ -272,9 +269,12 @@
 		A933E6A52742EA5100FB5D0D /* CatalogViews */ = {
 			isa = PBXGroup;
 			children = (
+				A9108427273185240056F4F9 /* Catalog.swift */,
+				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A933E6A62742EA5100FB5D0D /* PropCard.swift */,
 				A933E6AC27435EAE00FB5D0D /* PropGroup.swift */,
 				A933E6A92742ECB000FB5D0D /* PropSampleable.swift */,
+				A910844F2731D6D70056F4F9 /* Styling.swift */,
 			);
 			path = CatalogViews;
 			sourceTree = "<group>";

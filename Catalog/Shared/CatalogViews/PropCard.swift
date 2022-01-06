@@ -12,12 +12,13 @@ struct PropCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(sample.name)
+            Spacer()
             HStack {
                 Spacer()
                 sample.body
                 Spacer()
             }
-            .padding()
+            Spacer()
             if let notes = sample.notes {
                 Text(notes)
                     .font(.footnote)
@@ -27,6 +28,7 @@ struct PropCard: View {
                 .font(.footnote)
         }
         .padding()
+        .frame(minHeight: 340)
         .background(.thickMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }

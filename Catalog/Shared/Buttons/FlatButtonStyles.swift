@@ -26,12 +26,12 @@ struct FilledButtonSample: PropSampleable {
             EnabledAndDisabled {
                 HStack {
                     Button {} label: {
-                        Text("Filled Button")
+                        Text("Filled")
                     }
                     .buttonStyle(.filled)
 
                     Button {} label: {
-                        Label("Filled Button", systemImage: "heart.fill")
+                        Label("Filled", systemImage: "heart.fill")
                     }
                     .buttonStyle(.filled(cornerRadius: 16))
                 }

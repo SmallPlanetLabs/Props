@@ -42,7 +42,7 @@ struct ButtonTintingShadingDemo: View {
     let amount: CGFloat
 
     private let labelWidth: CGFloat = 140
-    private let height: CGFloat = 30
+    private let height: CGFloat = 24
 
     var body: some View {
         VStack {

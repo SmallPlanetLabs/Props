@@ -52,7 +52,7 @@ struct ShadingTintingDemo: View {
     let shading: Bool
 
     private let labelWidth: CGFloat = 80
-    private let height: CGFloat = 30
+    private let height: CGFloat = 24
 
     var body: some View {
         VStack {

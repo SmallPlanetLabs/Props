@@ -78,7 +78,7 @@ struct BorderedProminentButtonSample: PropSampleable {
 }
 
 struct BorderlessButtonSample: PropSampleable {
-    let name = "Default button style"
+    let name = "Borderless button style"
     let notes: String? = ".buttonStyle(BorderlessButtonStyle())"
     let source = "System"
     let keywords = "button system flat default"
