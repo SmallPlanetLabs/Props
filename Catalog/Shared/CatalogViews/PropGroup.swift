@@ -87,7 +87,7 @@ struct PropGroupView: View {
         }
         .navigationTitle(group.name)
         .background(Color.background.edgesIgnoringSafeArea(.all))
-        .searchable(text: $queryString, prompt: "Search Components")
+        .searchable(text: $queryString, prompt: "Search Props")
     }
 
     func sampleCards(for samples: [PropSampleable]) -> some View {
