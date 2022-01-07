@@ -9,13 +9,13 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let progress = PropGroup(name: "Progress", systemImage: "stopwatch.fill", subgroups: [
-        .customProgress,
-        .systemProgress,
-    ])
+    static let progress = PropGroup(name: "Progress",
+                                    systemImage: "stopwatch.fill",
+                                    subgroups: [
+                                        .customProgress,
+                                        .systemProgress,
+                                    ])
 }
-
-
 
 struct Progress_Previews: PreviewProvider {
     static var previews: some View {
@@ -82,7 +82,7 @@ struct ProgressIndeterminateExample: View {
         .padding()
     }
 
-    init(title: String? = nil, total: Double = 11) {
+    init(title: String? = nil) {
         self.title = title
     }
 }

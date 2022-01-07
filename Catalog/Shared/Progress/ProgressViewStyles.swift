@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Props
 
 extension PropGroup {
     static let systemProgress = PropGroup(name: "System progress views", samples: [
@@ -20,7 +21,7 @@ struct SystemDeterminateSample: PropSampleable {
     let source = "System"
     let keywords = "progress determinate system"
     @ViewBuilder var body: AnyView {
-        AnyView( ProgressExample(total: 12))
+        AnyView(ProgressExample(total: 12))
     }
 }
 
@@ -30,12 +31,14 @@ struct SystemIndeterminateSample: PropSampleable {
     let source = "System"
     let keywords = "progress indeterminate system"
     @ViewBuilder var body: AnyView {
-        AnyView( ProgressIndeterminateExample())
+        AnyView(ProgressIndeterminateExample())
     }
 }
 
 struct SystemProgressViewStyles_Previews: PreviewProvider {
     static var previews: some View {
-        PropGroupView(group: .systemProgress)
+        MultipleDevices(combos:  .lightDarkiPhoneBig) {
+            PropGroupView(group: .systemProgress)
+        }
     }
 }

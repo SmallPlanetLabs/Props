@@ -9,10 +9,11 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let systemTabViews = PropGroup(name: "System tab views", samples: [
-        DefaultTabViewSample(),
-        PageTabViewSample()
-    ])
+    static let systemTabViews = PropGroup(name: "System tab views",
+                                          samples: [
+                                              DefaultTabViewSample(),
+                                              PageTabViewSample()
+                                          ])
 }
 
 struct DefaultTabViewSample: PropSampleable {

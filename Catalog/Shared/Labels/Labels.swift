@@ -10,10 +10,12 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let labels = PropGroup(name: "Labels", systemImage: "textformat", subgroups: [
-        .systemLabels,
-        .verticalLabels,
-    ])
+    static let labels = PropGroup(name: "Labels",
+                                  systemImage: "textformat",
+                                  subgroups: [
+                                    .systemLabels,
+                                    .verticalLabels,
+                                  ])
 }
 
 struct Labels_Previews: PreviewProvider {

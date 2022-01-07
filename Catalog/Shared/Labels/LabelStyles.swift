@@ -9,12 +9,13 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let systemLabels = PropGroup(name: "System labels", samples: [
-        DefaultLabelSample(),
-        IconOnlyLabelSample(),
-        TitleAndIconLabelSample(),
-        TitleOnlyLabelSample()
-    ])
+    static let systemLabels = PropGroup(name: "System labels",
+                                        samples: [
+                                            DefaultLabelSample(),
+                                            IconOnlyLabelSample(),
+                                            TitleAndIconLabelSample(),
+                                            TitleOnlyLabelSample()
+                                        ])
 }
 
 struct DefaultLabelSample: PropSampleable {

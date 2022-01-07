@@ -16,7 +16,7 @@ private struct SecondaryColorKey: EnvironmentKey {
 }
 
 private struct ShadowColorKey: EnvironmentKey {
-    static let defaultValue = Color.gray.opacity(0.2)
+    static let defaultValue = Color.gray.opacity(0.6)
 }
 
 extension EnvironmentValues {
