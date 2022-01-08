@@ -18,7 +18,7 @@ extension PropGroup {
 struct Pickers_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices {
-            PropGroupView(group: .systemPickers)
+            PropGroupView(group: .pickers)
         }
     }
 }
