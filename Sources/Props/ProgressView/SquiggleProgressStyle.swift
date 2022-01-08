@@ -68,7 +68,7 @@ public struct SquiggleProgressStyle: ProgressViewStyle {
                         .frame(width: diameter, height: diameter)
                         .offset(x: (proxy.size.width - diameter) * (fraction - 0.5))
                 }
-                .animation(.spring())
+                .animation(.spring(), value: fraction)
                 .padding(.vertical, 5)
                 .padding(.horizontal, 10)
             }

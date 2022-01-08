@@ -12,8 +12,9 @@ import Props
 /// Future possibilities: gradients, shadows
 
 extension PropGroup {
-    static let colors = PropGroup(name: "Colors", subgroups: [
+    static let colors = PropGroup(name: "Colors", systemImage: "paintpalette.fill", subgroups: [
         .tintingShading,
+        .buttonTintingShading
     ])
 }
 

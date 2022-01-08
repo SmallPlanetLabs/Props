@@ -9,7 +9,7 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let progress = PropGroup(name: "Progress", subgroups: [
+    static let progress = PropGroup(name: "Progress", systemImage: "stopwatch.fill", subgroups: [
         .customProgress,
         .systemProgress,
     ])

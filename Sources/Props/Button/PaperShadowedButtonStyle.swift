@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct PaperShadowedButton: ButtonStyle {
+public struct PaperShadowedButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.secondaryColor) var secondaryColor: Color
     
