@@ -20,7 +20,7 @@ extension PropGroup {
 struct GroupBoxes_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices {
-            PropGroupView(group: .systemGroupBoxes)
+            PropGroupView(group: .groupBoxes)
         }
     }
 }

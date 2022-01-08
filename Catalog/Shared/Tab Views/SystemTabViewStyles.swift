@@ -17,7 +17,7 @@ extension PropGroup {
 
 struct DefaultTabViewSample: PropSampleable {
     let name = "Default tab view style"
-    let notes: String? = ".tabViewStyle(DefaultTabViewStyle())"
+    let notes: String? = ".tabViewStyle(.automatic)"
     let source = "System"
     let keywords = "tab view system default"
     @ViewBuilder var body: AnyView {
@@ -40,7 +40,7 @@ struct DefaultTabViewSample: PropSampleable {
 
 struct PageTabViewSample: PropSampleable {
     let name = "Page tab view style"
-    let notes: String? = ".tabViewStyle(PageTabViewStyle())"
+    let notes: String? = ".tabViewStyle(.page)"
     let source = "System"
     let keywords = "tab view system page"
     @ViewBuilder var body: AnyView {
@@ -52,8 +52,8 @@ struct PageTabViewSample: PropSampleable {
                 Text("Fourth")
             }
             .frame(height: 200)
-            .tabViewStyle(PageTabViewStyle())
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
         )
     }
 }
