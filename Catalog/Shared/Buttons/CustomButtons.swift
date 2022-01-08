@@ -31,7 +31,7 @@ struct PaperShadowedButtonSample: PropSampleable {
                         Label("Paper", systemImage: "heart.fill")
                     }
                 }
-                .buttonStyle(PaperShadowedButton())
+                .buttonStyle(PaperShadowedButtonStyle())
             }
         )
     }

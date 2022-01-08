@@ -18,7 +18,7 @@ extension PropGroup {
 struct DatePickers_Previews: PreviewProvider {
     static var previews: some View {
         MultipleDevices {
-            PropGroupView(group: .systemDatePickers)
+            PropGroupView(group: .datePickers)
         }
     }
 }

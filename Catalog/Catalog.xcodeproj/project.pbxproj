@@ -68,6 +68,8 @@
 		A9D04EC727330A7900599EAD /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC627330A7900599EAD /* Toggles.swift */; };
 		A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04EC827330AD000599EAD /* ToggleStyles.swift */; };
 		A9D04ECB273310B300599EAD /* SystemToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D04ECA273310B300599EAD /* SystemToggleStyles.swift */; };
+		A9E4D7C02785F3040075BCB0 /* ButtonTintingShading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4D7BF2785F3040075BCB0 /* ButtonTintingShading.swift */; };
+		A9E4D7C12785F3040075BCB0 /* ButtonTintingShading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4D7BF2785F3040075BCB0 /* ButtonTintingShading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,7 @@
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		A9D04EC827330AD000599EAD /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
 		A9D04ECA273310B300599EAD /* SystemToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemToggleStyles.swift; sourceTree = "<group>"; };
+		A9E4D7BF2785F3040075BCB0 /* ButtonTintingShading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTintingShading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,21 +222,17 @@
 			isa = PBXGroup;
 			children = (
 				A9108428273185250056F4F9 /* Assets.xcassets */,
-				A9108427273185240056F4F9 /* Catalog.swift */,
-				A9108426273185240056F4F9 /* CatalogApp.swift */,
-				A910844F2731D6D70056F4F9 /* Styling.swift */,
-				1A46028027842DF700796A2B /* Labels */,
-				1AEDAB6D277DA4D900B57079 /* Group Boxes */,
-				1A08B06E277C626100AF0273 /* Menus */,
-				1AAE90DF2774689E007FDBAA /* Lists */,
-				1AAE90DA27746421007FDBAA /* Tab Views */,
-				1A3272EA2772144800C4BA31 /* Text Fields */,
 				A9108458273210910056F4F9 /* Buttons */,
 				A933E6A52742EA5100FB5D0D /* CatalogViews */,
 				A947874E27626362001EAE3D /* Colors */,
-				1A4C39D72785961D00B1EC9C /* Date Pickers */,
+				1AEDAB6D277DA4D900B57079 /* Group Boxes */,
+				1A46028027842DF700796A2B /* Labels */,
+				1AAE90DF2774689E007FDBAA /* Lists */,
+				1A08B06E277C626100AF0273 /* Menus */,
 				A910845C27321A0C0056F4F9 /* Progress */,
 				A9C10449273395F90086AE8C /* Sliders */,
+				1AAE90DA27746421007FDBAA /* Tab Views */,
+				1A3272EA2772144800C4BA31 /* Text Fields */,
 				A9D04EC527330A6800599EAD /* Toggles */,
 			);
 			path = Shared;
@@ -283,9 +282,12 @@
 		A933E6A52742EA5100FB5D0D /* CatalogViews */ = {
 			isa = PBXGroup;
 			children = (
+				A9108427273185240056F4F9 /* Catalog.swift */,
+				A9108426273185240056F4F9 /* CatalogApp.swift */,
 				A933E6A62742EA5100FB5D0D /* PropCard.swift */,
 				A933E6AC27435EAE00FB5D0D /* PropGroup.swift */,
 				A933E6A92742ECB000FB5D0D /* PropSampleable.swift */,
+				A910844F2731D6D70056F4F9 /* Styling.swift */,
 			);
 			path = CatalogViews;
 			sourceTree = "<group>";
@@ -295,6 +297,7 @@
 			children = (
 				A947874B2762635A001EAE3D /* Colors.swift */,
 				A947874F27627232001EAE3D /* TintingShading.swift */,
+				A9E4D7BF2785F3040075BCB0 /* ButtonTintingShading.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				1AEDAB71277DA4F300B57079 /* GroupBoxStyles.swift in Sources */,
 				A9D04EC927330AD000599EAD /* ToggleStyles.swift in Sources */,
 				1AAE90DE2774646C007FDBAA /* SystemTabViewStyles.swift in Sources */,
+				A9E4D7C02785F3040075BCB0 /* ButtonTintingShading.swift in Sources */,
 				1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
@@ -495,6 +499,7 @@
 				A933E6AE27435EAE00FB5D0D /* PropGroup.swift in Sources */,
 				A947874D2762635A001EAE3D /* Colors.swift in Sources */,
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
+				A9E4D7C12785F3040075BCB0 /* ButtonTintingShading.swift in Sources */,
 				A91084512731D6D70056F4F9 /* Styling.swift in Sources */,
 				1A3C88B62763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
 				A933E6AB2742ECB000FB5D0D /* PropSampleable.swift in Sources */,

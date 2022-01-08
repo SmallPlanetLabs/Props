@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-/// The names of these devices can be updated by running
+/// Enumeration of devices available to ``MultipleDevices``
+///
+/// The names of these devices can be updated by running:
 /// `xcrun simctl list devicetypes | rev | cut -d\( -f2- | rev`
 /// Devices before the iPhone 6s cannot run SwiftUI and are excluded
-
 public enum PreviewDevice {
     case iPhopne6s
     case iPhone6sPlus

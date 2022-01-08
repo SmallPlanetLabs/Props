@@ -18,7 +18,7 @@ extension PropGroup {
 
 struct FilledButtonSample: PropSampleable {
     let name = "Filled button style"
-    let notes: String? = ".buttonStyle(FilledButton(cornerRadius:)) where cornerRadius defaults to 0"
+    let notes: String? = ".buttonStyle(.filled(cornerRadius: 16)) where cornerRadius defaults to 0"
     let source = "Props"
     let keywords = "button custom flat rectangle filled"
     @ViewBuilder var body: AnyView {
@@ -26,14 +26,17 @@ struct FilledButtonSample: PropSampleable {
             EnabledAndDisabled {
                 HStack {
                     Button {} label: {
-                        Text("Filled Button")
+                        Text("Filled")
                     }
-                    .buttonStyle(FilledButton())
+                    .buttonStyle(.filled)
+
                     Button {} label: {
-                        Label("Filled Button", systemImage: "heart.fill")
+                        Label("Filled", systemImage: "heart.fill")
                     }
-                    .buttonStyle(FilledButton(cornerRadius: 16))
+                    .buttonStyle(.filled(cornerRadius: 16))
                 }
+                .primaryColor(.blue)
+                .secondaryColor(.background)
             }
         )
     }
@@ -41,7 +44,7 @@ struct FilledButtonSample: PropSampleable {
 
 struct OutlinedButtonSample: PropSampleable {
     let name = "Outlined button style"
-    let notes: String? = ".buttonStyle(OutlinedButton(cornerRadius:)) where cornerRadius defaults to 0"
+    let notes: String? = ".buttonStyle(.outlined(cornerRadius: 12)) where cornerRadius defaults to 0"
     let source = "Props"
     let keywords = "button custom flat rectangle outlined"
     @ViewBuilder var body: AnyView {
@@ -51,12 +54,13 @@ struct OutlinedButtonSample: PropSampleable {
                     Button {} label: {
                         Text("Outlined")
                     }
-                    .buttonStyle(OutlinedButton(cornerRadius: 12))
+                    .buttonStyle(.outlined(cornerRadius: 12))
                     Button {} label: {
                         Label("Outlined", systemImage: "eye.fill")
                     }
-                    .buttonStyle(OutlinedButton())
+                    .buttonStyle(.outlined)
                 }
+                .primaryColor(.blue)
             }
         )
     }

@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
+import Props
 
 struct PropGroup: Identifiable {
     let name: String
+    let systemImage: String?
     let samples: [PropSampleable]
     let subgroups: [PropGroup]
     var id: String { return name }
 
     var hasGroupsAndSamples: Bool { !(subgroups.isEmpty && samples.isEmpty) }
 
-    init(name: String, samples: [PropSampleable] = [], subgroups: [PropGroup] = []) {
+    init(name: String, systemImage: String? = nil, samples: [PropSampleable] = [], subgroups: [PropGroup] = []) {
         self.name = name
+        self.systemImage = systemImage
         self.samples = samples
         self.subgroups = subgroups
     }
@@ -51,6 +54,7 @@ struct PropGroupView: View {
     var isSearchActive: Bool { !queryString.isEmpty }
     var isSearchHasResults: Bool { isSearchActive && filteredComponents.isEmpty }
     var filteredComponents: [PropSampleable] { group.getSamples(by: queryString) }
+    let columns = [GridItem(.flexible(minimum: 300, maximum: 400)), GridItem(.flexible(minimum: 300, maximum: 400)), GridItem(.flexible(minimum: 300, maximum: 400))]
 
     var body: some View {
         ZStack {
@@ -63,7 +67,7 @@ struct PropGroupView: View {
             }
             
             ScrollView {
-                VStack {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300))]) {
                     if !isSearchActive {
                         if !group.subgroups.isEmpty {
                             ForEach(group.subgroups) { subgroup in
@@ -83,9 +87,8 @@ struct PropGroupView: View {
             }
         }
         .navigationTitle(group.name)
-        .navigationViewStyle(.automatic)
         .background(Color.background.edgesIgnoringSafeArea(.all))
-        .searchable(text: $queryString, prompt: "Search Components")
+        .searchable(text: $queryString, prompt: "Search Props")
     }
 
     func sampleCards(for samples: [PropSampleable]) -> some View {
@@ -99,29 +102,22 @@ struct PropGroupRow: View {
     let group: PropGroup
 
     var body: some View {
-        HStack {
-            Text(group.name)
-            Spacer()
-            Image(systemName: "greaterthan")
-        }
-        .frame(height: 44)
+        Label(group.name, systemImage: group.systemImage ?? "book.closed")
+            .labelStyle(.outlined(cornerRadius: 8))
+            .foregroundColor(.foreground)
     }
 }
 
 struct PropGroupView_Previews: PreviewProvider {
     private static let groups: [PropGroup] = [.materialButtons, .systemButtons]
     private static let samples: [PropSampleable] = PropGroup.systemButtons.samples
-    private static let group = PropGroup(name: "Test group", samples: samples, subgroups: groups)
+    private static let group = PropGroup(name: "Test group", subgroups: groups)
     static var previews: some View {
-        Group {
-            NavigationView {
-                PropGroupView(group: PropGroup(name: "Test Subgroups", subgroups: groups))
-            }
-
+        MultipleDevices(combos: .iPadOrientations) {
             NavigationView {
                 PropGroupView(group: PropGroup(name: "Test Samples", samples: samples))
             }
-            .preferredColorScheme(.dark)
         }
+        .navigationViewStyle(.stack)
     }
 }

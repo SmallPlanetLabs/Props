@@ -37,6 +37,21 @@ extension MultiplePreviewCombo {
         PreviewCombo(device: .iPhone13Mini, scheme: .dark),
     ]
 
+    public static let lightDarkiPhoneBigLandscape: MultiplePreviewCombo = [
+        PreviewCombo(device: .iPhone13ProMax, scheme: .light, orientation: .landscapeLeft),
+        PreviewCombo(device: .iPhone13ProMax, scheme: .dark, orientation: .landscapeLeft),
+    ]
+
+    public static let lightDarkiPhoneMediumLandscape: MultiplePreviewCombo = [
+        PreviewCombo(device: .iPhone8, scheme: .light, orientation: .landscapeLeft),
+        PreviewCombo(device: .iPhone8, scheme: .dark, orientation: .landscapeLeft),
+    ]
+
+    public static let lightDarkiPhoneSmallLandscape: MultiplePreviewCombo = [
+        PreviewCombo(device: .iPhone13Mini, scheme: .light, orientation: .landscapeLeft),
+        PreviewCombo(device: .iPhone13Mini, scheme: .dark, orientation: .landscapeLeft),
+    ]
+
     public static let iPhonesAndiPad: MultiplePreviewCombo = [
         PreviewCombo(device: .iPhone13ProMax),
         PreviewCombo(device: .iPodTouch7),

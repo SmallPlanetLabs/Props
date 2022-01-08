@@ -32,7 +32,7 @@ struct MonochromaticMaterialSample: PropSampleable {
                     Button {} label: { Image(systemName: "stopwatch") }
                         .primaryColor(Color(hex: 0x65889B))
                 }
-                .buttonStyle(MonochromaticMaterial())
+                .buttonStyle(MonochromaticMaterialButtonStyle())
             }
         )
     }
@@ -52,7 +52,7 @@ struct MaterialButtonStyles: View {
                     Button {} label: { Image(systemName: "stopwatch") }
                         .primaryColor(Color(hex: 0x65889B))
                 }
-                .buttonStyle(MonochromaticMaterial())
+                .buttonStyle(MonochromaticMaterialButtonStyle())
             }
         }
         .font(.custom("ArialRoundedMTBold", fixedSize: 24))

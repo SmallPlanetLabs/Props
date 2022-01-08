@@ -30,7 +30,7 @@ public struct NeumorphicButtonStyle: ButtonStyle, Enableable, PrimaryColorable, 
                         .opacity(configuration.isPressed ? 0 : 0.5)
                     
                     RoundedRectangle(cornerRadius: cornerRadius)
-                        .fill(backgroundColor(for: configuration))
+                        .fill(primaryColor(modifiedFor: configuration))
                         .shadow(color: shadowColor, radius: 15, x: 5, y: 5)
                         .opacity(configuration.isPressed ? 0.8 : 0)
                 }
