@@ -9,7 +9,7 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let toggles = PropGroup(name: "Toggles", subgroups: [
+    static let toggles = PropGroup(name: "Toggles", systemImage: "switch.2", subgroups: [
         .systemToggles,
         .customToggles,
     ])

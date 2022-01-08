@@ -18,5 +18,6 @@ struct Catalog_Previews: PreviewProvider {
         NavigationView {
             Catalog()
         }
+        .navigationViewStyle(.stack)
     }
 }

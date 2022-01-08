@@ -10,7 +10,7 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let tabViews = PropGroup(name: "Tab Views", subgroups: [
+    static let tabViews = PropGroup(name: "Tab Views", systemImage: "rectangle.and.pencil.and.ellipsis", subgroups: [
         .systemTabViews,
     ])
 }

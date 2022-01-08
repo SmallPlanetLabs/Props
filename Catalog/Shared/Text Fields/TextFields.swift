@@ -10,7 +10,7 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let textFields = PropGroup(name: "Text Fields", subgroups: [
+    static let textFields = PropGroup(name: "Text Fields", systemImage: "character.cursor.ibeam", subgroups: [
         .systemTextFields,
     ])
 }

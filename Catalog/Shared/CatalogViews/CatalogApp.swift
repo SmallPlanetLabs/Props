@@ -14,6 +14,7 @@ struct CatalogApp: App {
             NavigationView {
                 Catalog()
             }
+            .navigationViewStyle(.stack)
         }
     }
 }

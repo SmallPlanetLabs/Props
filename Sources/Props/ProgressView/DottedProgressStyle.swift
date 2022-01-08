@@ -60,7 +60,7 @@ public struct DottedProgressStyle: ProgressViewStyle {
                         .clipShape(ClipShape(pct: fraction))
                         .frame(height: height)
                 }
-                .animation(.spring())
+                .animation(.spring(), value: fraction)
             }
             .frame(height: height)
         }

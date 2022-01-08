@@ -7,7 +7,7 @@
 import SwiftUI
 import DynamicColor
 
-public struct MonochromaticMaterial: ButtonStyle {
+public struct MonochromaticMaterialButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
 

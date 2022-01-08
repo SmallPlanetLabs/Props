@@ -19,7 +19,7 @@ protocol ColorSchemable {
 }
 
 extension ButtonStyle where Self: Enableable & PrimaryColorable & ColorSchemable {
-    func backgroundColor(for configuration: Configuration) -> Color {
+    func primaryColor(modifiedFor configuration: Configuration) -> Color {
         switch (isEnabled, configuration.isPressed) {
         case (false, _):
             return tintOrShade(color: primaryColor, amount: 0.5)
