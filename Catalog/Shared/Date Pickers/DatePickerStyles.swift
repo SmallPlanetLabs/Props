@@ -19,52 +19,52 @@ extension PropGroup {
 
 struct DefaultDatePickerSample: PropSampleable {
     let name = "Default date picker style"
-    let notes: String? = ".datePickerStyle(DefaultDatePickerStyle())"
+    let notes: String? = ".datePickerStyle(.automatic)"
     let source = "System"
     let keywords = "date picker system default"
     @ViewBuilder var body: AnyView {
         AnyView(
             DatePicker("Choose a date 📆", selection: .constant(Date()))
-                .datePickerStyle(DefaultDatePickerStyle())
+                .datePickerStyle(.automatic)
         )
     }
 }
 
 struct WheelDatePickerSample: PropSampleable {
     let name = "Wheel date picker style"
-    let notes: String? = ".datePickerStyle(WheelDatePickerStyle())"
+    let notes: String? = ".datePickerStyle(.wheel)"
     let source = "System"
     let keywords = "date picker system wheel"
     @ViewBuilder var body: AnyView {
         AnyView(
             DatePicker("Choose a date 📆", selection: .constant(Date()))
-                .datePickerStyle(WheelDatePickerStyle())
+                .datePickerStyle(.wheel)
         )
     }
 }
 
 struct GraphicalDatePickerSample: PropSampleable {
     let name = "Graphical date picker style"
-    let notes: String? = ".datePickerStyle(GraphicalDatePickerStyle())"
+    let notes: String? = ".datePickerStyle(.graphical)"
     let source = "System"
     let keywords = "date picker system graphical"
     @ViewBuilder var body: AnyView {
         AnyView(
             DatePicker("Choose a date 📆", selection: .constant(Date()))
-                .datePickerStyle(GraphicalDatePickerStyle())
+                .datePickerStyle(.graphical)
         )
     }
 }
 
 struct CompactDatePickerSample: PropSampleable {
     let name = "Compact date picker style"
-    let notes: String? = ".datePickerStyle(CompactDatePickerStyle())"
+    let notes: String? = ".datePickerStyle(.compact)"
     let source = "System"
     let keywords = "date picker system compact"
     @ViewBuilder var body: AnyView {
         AnyView(
             DatePicker("Choose a date 📆", selection: .constant(Date()))
-                .datePickerStyle(CompactDatePickerStyle())
+                .datePickerStyle(.compact)
         )
     }
 }
