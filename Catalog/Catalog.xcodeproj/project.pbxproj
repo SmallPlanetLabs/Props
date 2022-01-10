@@ -18,6 +18,18 @@
 		1A4602862784307800796A2B /* VerticalLabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4602852784307800796A2B /* VerticalLabelStyles.swift */; };
 		1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
 		1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */; };
+		1AA5C4432789DBBD00509E4D /* DatePickerStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43B2789DBBD00509E4D /* DatePickerStyles.swift */; };
+		1AA5C4442789DBBD00509E4D /* DatePickerStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43B2789DBBD00509E4D /* DatePickerStyles.swift */; };
+		1AA5C4452789DBBD00509E4D /* DatePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43C2789DBBD00509E4D /* DatePickers.swift */; };
+		1AA5C4462789DBBD00509E4D /* DatePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43C2789DBBD00509E4D /* DatePickers.swift */; };
+		1AA5C4472789DBBD00509E4D /* Pickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43E2789DBBD00509E4D /* Pickers.swift */; };
+		1AA5C4482789DBBD00509E4D /* Pickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43E2789DBBD00509E4D /* Pickers.swift */; };
+		1AA5C4492789DBBD00509E4D /* PickerStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43F2789DBBD00509E4D /* PickerStyles.swift */; };
+		1AA5C44A2789DBBD00509E4D /* PickerStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C43F2789DBBD00509E4D /* PickerStyles.swift */; };
+		1AA5C44B2789DBBD00509E4D /* ControlGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C4412789DBBD00509E4D /* ControlGroups.swift */; };
+		1AA5C44C2789DBBD00509E4D /* ControlGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C4412789DBBD00509E4D /* ControlGroups.swift */; };
+		1AA5C44D2789DBBD00509E4D /* ControlGroupStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C4422789DBBD00509E4D /* ControlGroupStyles.swift */; };
+		1AA5C44E2789DBBD00509E4D /* ControlGroupStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5C4422789DBBD00509E4D /* ControlGroupStyles.swift */; };
 		1AAE90DC27746435007FDBAA /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DB27746435007FDBAA /* TabViews.swift */; };
 		1AAE90DE2774646C007FDBAA /* SystemTabViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */; };
 		1AAE90E1277468A9007FDBAA /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE90E0277468A9007FDBAA /* Lists.swift */; };
@@ -80,6 +92,12 @@
 		1A46028327842E3600796A2B /* LabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyles.swift; sourceTree = "<group>"; };
 		1A4602852784307800796A2B /* VerticalLabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelStyles.swift; sourceTree = "<group>"; };
 		1A939EC82761321C0006312F /* NeumorphicButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyles.swift; sourceTree = "<group>"; };
+		1AA5C43B2789DBBD00509E4D /* DatePickerStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerStyles.swift; sourceTree = "<group>"; };
+		1AA5C43C2789DBBD00509E4D /* DatePickers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickers.swift; sourceTree = "<group>"; };
+		1AA5C43E2789DBBD00509E4D /* Pickers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pickers.swift; sourceTree = "<group>"; };
+		1AA5C43F2789DBBD00509E4D /* PickerStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerStyles.swift; sourceTree = "<group>"; };
+		1AA5C4412789DBBD00509E4D /* ControlGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlGroups.swift; sourceTree = "<group>"; };
+		1AA5C4422789DBBD00509E4D /* ControlGroupStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlGroupStyles.swift; sourceTree = "<group>"; };
 		1AAE90DB27746435007FDBAA /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
 		1AAE90DD2774646C007FDBAA /* SystemTabViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTabViewStyles.swift; sourceTree = "<group>"; };
 		1AAE90E0277468A9007FDBAA /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
@@ -165,6 +183,33 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		1AA5C43A2789DBBD00509E4D /* Date Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				1AA5C43C2789DBBD00509E4D /* DatePickers.swift */,
+				1AA5C43B2789DBBD00509E4D /* DatePickerStyles.swift */,
+			);
+			path = "Date Pickers";
+			sourceTree = "<group>";
+		};
+		1AA5C43D2789DBBD00509E4D /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				1AA5C43E2789DBBD00509E4D /* Pickers.swift */,
+				1AA5C43F2789DBBD00509E4D /* PickerStyles.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		1AA5C4402789DBBD00509E4D /* Control Groups */ = {
+			isa = PBXGroup;
+			children = (
+				1AA5C4412789DBBD00509E4D /* ControlGroups.swift */,
+				1AA5C4422789DBBD00509E4D /* ControlGroupStyles.swift */,
+			);
+			path = "Control Groups";
+			sourceTree = "<group>";
+		};
 		1AAE90DA27746421007FDBAA /* Tab Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +257,13 @@
 				A9108458273210910056F4F9 /* Buttons */,
 				A933E6A52742EA5100FB5D0D /* CatalogViews */,
 				A947874E27626362001EAE3D /* Colors */,
+				1AA5C4402789DBBD00509E4D /* Control Groups */,
+				1AA5C43A2789DBBD00509E4D /* Date Pickers */,
 				1AEDAB6D277DA4D900B57079 /* Group Boxes */,
 				1A46028027842DF700796A2B /* Labels */,
 				1AAE90DF2774689E007FDBAA /* Lists */,
 				1A08B06E277C626100AF0273 /* Menus */,
+				1AA5C43D2789DBBD00509E4D /* Pickers */,
 				A910845C27321A0C0056F4F9 /* Progress */,
 				A9C10449273395F90086AE8C /* Sliders */,
 				1AAE90DA27746421007FDBAA /* Tab Views */,
@@ -429,16 +477,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA5C4432789DBBD00509E4D /* DatePickerStyles.swift in Sources */,
 				A947875027627232001EAE3D /* TintingShading.swift in Sources */,
 				1AAE90E3277468D5007FDBAA /* SystemListStyles.swift in Sources */,
+				1AA5C4452789DBBD00509E4D /* DatePickers.swift in Sources */,
 				1A08B070277C627900AF0273 /* Menus.swift in Sources */,
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A933E6A72742EA5100FB5D0D /* PropCard.swift in Sources */,
+				1AA5C4472789DBBD00509E4D /* Pickers.swift in Sources */,
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
 				1AEDAB73277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift in Sources */,
 				A910844A27318ED60056F4F9 /* FlatButtonStyles.swift in Sources */,
 				A9D04EC727330A7900599EAD /* Toggles.swift in Sources */,
 				A933E6B0274444F400FB5D0D /* CustomButtons.swift in Sources */,
+				1AA5C44D2789DBBD00509E4D /* ControlGroupStyles.swift in Sources */,
 				A91084502731D6D70056F4F9 /* Styling.swift in Sources */,
 				1AEDAB75277DADB200B57079 /* PlainGroupBoxStyles.swift in Sources */,
 				A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */,
@@ -456,6 +508,7 @@
 				A9E4D7C02785F3040075BCB0 /* ButtonTintingShading.swift in Sources */,
 				1A939EC92761321C0006312F /* NeumorphicButtonStyles.swift in Sources */,
 				A91084532731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
+				1AA5C44B2789DBBD00509E4D /* ControlGroups.swift in Sources */,
 				A910845E27321A240056F4F9 /* Progress.swift in Sources */,
 				1A4602862784307800796A2B /* VerticalLabelStyles.swift in Sources */,
 				A933E6BD27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
@@ -467,6 +520,7 @@
 				1A3C88B52763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
 				A9108436273185250056F4F9 /* CatalogApp.swift in Sources */,
 				1A3272EC2772146800C4BA31 /* TextFields.swift in Sources */,
+				1AA5C4492789DBBD00509E4D /* PickerStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,19 +531,25 @@
 				A9108439273185250056F4F9 /* Catalog.swift in Sources */,
 				A910844B27318ED60056F4F9 /* FlatButtonStyles.swift in Sources */,
 				A910846227321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
+				1AA5C4462789DBBD00509E4D /* DatePickers.swift in Sources */,
 				A9108457273205780056F4F9 /* MaterialButtonStyles.swift in Sources */,
 				A933E6B1274444F400FB5D0D /* CustomButtons.swift in Sources */,
 				A910845F27321A240056F4F9 /* Progress.swift in Sources */,
 				A933E6A82742EA5100FB5D0D /* PropCard.swift in Sources */,
+				1AA5C44C2789DBBD00509E4D /* ControlGroups.swift in Sources */,
 				A933E6AE27435EAE00FB5D0D /* PropGroup.swift in Sources */,
+				1AA5C4482789DBBD00509E4D /* Pickers.swift in Sources */,
 				A947874D2762635A001EAE3D /* Colors.swift in Sources */,
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
 				A9E4D7C12785F3040075BCB0 /* ButtonTintingShading.swift in Sources */,
 				A91084512731D6D70056F4F9 /* Styling.swift in Sources */,
 				1A3C88B62763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,
+				1AA5C44A2789DBBD00509E4D /* PickerStyles.swift in Sources */,
 				A933E6AB2742ECB000FB5D0D /* PropSampleable.swift in Sources */,
+				1AA5C4442789DBBD00509E4D /* DatePickerStyles.swift in Sources */,
 				A933E6BE27482FF900FB5D0D /* ProgressStyles.swift in Sources */,
 				A947875127627232001EAE3D /* TintingShading.swift in Sources */,
+				1AA5C44E2789DBBD00509E4D /* ControlGroupStyles.swift in Sources */,
 				1A939ECA2761321C0006312F /* NeumorphicButtonStyles.swift in Sources */,
 				A9108437273185250056F4F9 /* CatalogApp.swift in Sources */,
 			);

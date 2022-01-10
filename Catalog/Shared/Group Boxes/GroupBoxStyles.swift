@@ -16,7 +16,7 @@ extension PropGroup {
 
 struct DefaultGroupBoxSample: PropSampleable {
     let name = "Default group box style"
-    let notes: String? = ".groupBoxStyle(DefaultGroupBoxStyle())"
+    let notes: String? = ".groupBoxStyle(.automatic)"
     let source = "System"
     let keywords = "group box system default"
     @ViewBuilder var body: AnyView {
@@ -25,7 +25,7 @@ struct DefaultGroupBoxSample: PropSampleable {
                 Text("GroupBox Content")
                 Text("Even more content")
             }
-            .groupBoxStyle(DefaultGroupBoxStyle())
+            .groupBoxStyle(.automatic)
         )
     }
 }
