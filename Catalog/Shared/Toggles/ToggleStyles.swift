@@ -13,6 +13,7 @@ extension PropGroup {
     static let customToggles = PropGroup(name: "Custom toggles", samples: [
         SunMoonToggleSample(),
         CheckboxToggleSample(),
+        GravityToggleSample(),
     ])
 }
 
@@ -42,6 +43,22 @@ struct SunMoonToggleSample: PropSampleable {
                 Text("Sun or moon?")
             }
             .toggleStyle(SunMoonToggleStyle())
+        )
+    }
+}
+
+struct GravityToggleSample: PropSampleable {
+    let name = "gravity toggle style"
+    let notes: String? = ".toggleStyle(GravityToggleStyle())"
+    let source = "Custom"
+    let keywords = "toggle custom 3rd party animated gravity"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ToggleExample(title: nil) {
+                Text("")
+            }
+            .frame(width: 200, height: 100)
+            .toggleStyle(GravityToggleStyle())
         )
     }
 }
