@@ -28,7 +28,7 @@ public struct GravityToggleStyle: ToggleStyle {
             HStack {
                 Text(offLabel)
                     .fontWeight(.bold)
-                    .foregroundColor(configuration.isOn ? .gray : .black)
+                    .foregroundColor(configuration.isOn ? primaryColor.opacity(0.3) : primaryColor)
                 
                 ZStack {
                     Capsule()
@@ -37,7 +37,7 @@ public struct GravityToggleStyle: ToggleStyle {
                     Circle()
                         .fill(.white)
                         .padding(4)
-                        .shadow(color: Color.black.opacity(0.4),
+                        .shadow(color: primaryColor.opacity(0.4),
                                 radius: 10.0,
                                 x: 7.0,
                                 y: 7.0)
@@ -52,7 +52,7 @@ public struct GravityToggleStyle: ToggleStyle {
                 
                 Text(onLabel)
                     .fontWeight(.bold)
-                    .foregroundColor(configuration.isOn ? .black : .gray)
+                    .foregroundColor(configuration.isOn ? primaryColor : primaryColor.opacity(0.3))
             }
         }
     }
