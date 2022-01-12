@@ -38,13 +38,13 @@ public struct FilledButtonStyle: ButtonStyle {
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 extension ButtonStyle where Self == FilledButtonStyle {
 
-    /// A ``ButtonStyle`` displaying a rectangular button filled with `primaryColor`.
+    /// A `ButtonStyle` displaying a rectangular button filled with `primaryColor`.
     /// The label is tinted with `secondaryColor`
     public static var filled: FilledButtonStyle {
         FilledButtonStyle()
     }
 
-    /// A ``ButtonStyle`` displaying a rounded rectangular button filled with `primaryColor`.
+    /// A `ButtonStyle` displaying a rounded rectangular button filled with `primaryColor`.
     /// The label is tinted with `secondaryColor`
     /// - Parameter cornerRadius: Size of corner radius
     public static func filled(cornerRadius: CGFloat) -> FilledButtonStyle {

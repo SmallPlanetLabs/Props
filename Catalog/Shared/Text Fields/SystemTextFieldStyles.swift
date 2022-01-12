@@ -9,11 +9,12 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let systemTextFields = PropGroup(name: "System text fields", samples: [
-        DefaultTextFieldSample(),
-        PlainTextFieldSample(),
-        RoundedBorderTextFieldSample()
-    ])
+    static let systemTextFields = PropGroup(name: "System text fields",
+                                            samples: [
+                                                DefaultTextFieldSample(),
+                                                PlainTextFieldSample(),
+                                                RoundedBorderTextFieldSample()
+                                            ])
 }
 
 struct DefaultTextFieldSample: PropSampleable {

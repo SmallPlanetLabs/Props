@@ -10,9 +10,11 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let tabViews = PropGroup(name: "Tab Views", systemImage: "rectangle.and.pencil.and.ellipsis", subgroups: [
-        .systemTabViews,
-    ])
+    static let tabViews = PropGroup(name: "Tab Views",
+                                    systemImage: "rectangle.and.pencil.and.ellipsis",
+                                    subgroups: [
+                                        .systemTabViews,
+                                    ])
 }
 
 struct TabViews_Previews: PreviewProvider {

@@ -7,6 +7,10 @@
 import SwiftUI
 import DynamicColor
 
+/// A `ButtonStyle` that creates a rounded rectangular button filled with a diminshed version of the text color
+///
+/// The button is tinted with `primaryColor`
+/// You can also use ``MonochromaticMaterialButtonStyle/monochromaticMaterial``  to construct this style.
 public struct MonochromaticMaterialButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled: Bool
     @Environment(\.primaryColor) var primaryColor: Color
@@ -32,4 +36,15 @@ public struct MonochromaticMaterialButtonStyle: ButtonStyle {
     }
     
     public init() {}
+}
+
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+extension ButtonStyle where Self == MonochromaticMaterialButtonStyle {
+
+    /// A ButtonStyle that creates a rounded rectangular button filled with a diminshed version of the text color.
+    ///
+    /// The button is tinted with `primaryColor`
+    public static var monochromaticMaterial: MonochromaticMaterialButtonStyle {
+        MonochromaticMaterialButtonStyle()
+    }
 }
