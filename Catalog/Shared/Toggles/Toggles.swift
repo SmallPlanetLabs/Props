@@ -32,7 +32,7 @@ struct ToggleExample<Content>: View where Content: View {
     @ViewBuilder var content: Content
 
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             if let title = title {
                 HStack {
                     Text(title).font(.caption)
