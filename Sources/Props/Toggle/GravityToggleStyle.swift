@@ -22,39 +22,36 @@ public struct GravityToggleStyle: ToggleStyle {
     
     // MARK: - ToggleStyle
     public func makeBody(configuration: Self.Configuration) -> some View {
-        GeometryReader { geometry in
-            let offset = geometry.size.width/2 - 3 * geometry.size.height/2 + 10
+        HStack {
+            Text(offLabel)
+                .fontWeight(.bold)
+                .foregroundColor(configuration.isOn ? primaryColor.opacity(0.3) : primaryColor)
             
-            HStack {
-                Text(offLabel)
-                    .fontWeight(.bold)
-                    .foregroundColor(configuration.isOn ? primaryColor.opacity(0.3) : primaryColor)
+            ZStack {
+                Capsule()
+                    .fill(primaryColor)
                 
-                ZStack {
-                    Capsule()
-                        .fill(primaryColor)
-                    
-                    Circle()
-                        .fill(.white)
-                        .padding(4)
-                        .shadow(color: primaryColor.opacity(0.4),
-                                radius: 10.0,
-                                x: 7.0,
-                                y: 7.0)
-                        .offset(x: configuration.isOn ? offset : -offset)
-                        .animation(.spring(), value: configuration.isOn)
-                        .onTapGesture {
-                            configuration.isOn.toggle()
-                        }
-                }
-                .rotationEffect(Angle(degrees: configuration.isOn ? 10 : 0))
-                .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 0.2), value: configuration.isOn)
-                
-                Text(onLabel)
-                    .fontWeight(.bold)
-                    .foregroundColor(configuration.isOn ? primaryColor : primaryColor.opacity(0.3))
+                Circle()
+                    .fill(.white)
+                    .padding(4)
+                    .shadow(color: primaryColor.opacity(0.4),
+                            radius: 10.0,
+                            x: 7.0,
+                            y: 7.0)
+                    .offset(x: configuration.isOn ? 36 : -36)
+                    .animation(.spring(), value: configuration.isOn)
             }
+            .rotationEffect(Angle(degrees: configuration.isOn ? 10 : 0))
+            .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 0.2), value: configuration.isOn)
+            .onTapGesture {
+                configuration.isOn.toggle()
+            }
+            
+            Text(onLabel)
+                .fontWeight(.bold)
+                .foregroundColor(configuration.isOn ? primaryColor : primaryColor.opacity(0.3))
         }
+        .frame(width: 200, height: 50)
     }
 }
 

@@ -57,7 +57,6 @@ struct GravityToggleSample: PropSampleable {
             ToggleExample(title: nil) {
                 Text("")
             }
-            .frame(width: 200, height: 100)
             .toggleStyle(GravityToggleStyle())
         )
     }
