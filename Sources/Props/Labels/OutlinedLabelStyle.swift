@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// A ``LabelStyle`` surrounded by a rectangular stroked outline in `primaryColor` with optionally rounded corners
+/// A `LabelStyle` surrounded by a rectangular stroked outline in `primaryColor` with optionally rounded corners
 ///
 /// - Parameter cornerRadius: Size of corner radius
 ///
@@ -34,12 +34,12 @@ public struct OutlinedLabelStyle: LabelStyle {
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 extension LabelStyle where Self == OutlinedLabelStyle {
 
-    /// A ``ButtonStyle`` displaying a rectangular button stroked with `primaryColor`.
+    /// A `ButtonStyle` displaying a rectangular button stroked with `primaryColor`.
     public static var outlined: OutlinedLabelStyle {
         OutlinedLabelStyle()
     }
 
-    /// A ``GroupBoxStyle`` surrounded by a rectangular stroked outline in `primaryColor` with rounded corners .
+    /// A `GroupBoxStyle` surrounded by a rectangular stroked outline in `primaryColor` with rounded corners .
     /// - Parameter cornerRadius: Size of corner radius
     public static func outlined(cornerRadius: CGFloat) -> OutlinedLabelStyle {
         OutlinedLabelStyle(cornerRadius: cornerRadius)

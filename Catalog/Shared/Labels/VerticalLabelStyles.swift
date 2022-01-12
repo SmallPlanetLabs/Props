@@ -9,9 +9,10 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let verticalLabels = PropGroup(name: "Vertical labels", samples: [
-        VerticalLabelSample(),
-    ])
+    static let verticalLabels = PropGroup(name: "Vertical labels",
+                                          samples: [
+                                              VerticalLabelSample(),
+                                          ])
 }
 
 struct VerticalLabelSample: PropSampleable {

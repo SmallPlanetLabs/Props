@@ -9,14 +9,13 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let materialButtons = PropGroup(name: "Material buttons", samples: [
-        MonochromaticMaterialSample(),
-    ])
+    static let materialButtons = PropGroup(name: "Material buttons",
+                                           samples: [MonochromaticMaterialSample()])
 }
 
 struct MonochromaticMaterialSample: PropSampleable {
     let name = "MonochromaticMaterial button style"
-    let notes: String? = ".buttonStyle(MonochromaticMaterial())"
+    let notes: String? = ".buttonStyle(.monochromaticMaterial)"
     let source = "Custom (Props package)"
     let keywords = "button custom flat material"
     @ViewBuilder var body: AnyView {
@@ -32,7 +31,7 @@ struct MonochromaticMaterialSample: PropSampleable {
                     Button {} label: { Image(systemName: "stopwatch") }
                         .primaryColor(Color(hex: 0x65889B))
                 }
-                .buttonStyle(MonochromaticMaterialButtonStyle())
+                .buttonStyle(.monochromaticMaterial)
             }
         )
     }

@@ -23,7 +23,10 @@ struct SquiggleProgressStyleSample: PropSampleable {
     let source = "Props"
     let keywords = "progress determinate custom squiggle"
     @ViewBuilder var body: AnyView {
-        AnyView( ProgressExample(total: 12).progressViewStyle(SquiggleProgressStyle()))
+        AnyView(
+            ProgressExample(total: 12)
+                .progressViewStyle(SquiggleProgressStyle())
+        )
     }
 }
 
@@ -33,7 +36,10 @@ struct CircleBarProgressStyleSample: PropSampleable {
     let source = "Props"
     let keywords = "progress determinate custom circles"
     @ViewBuilder var body: AnyView {
-        AnyView( ProgressExample(total: 15).progressViewStyle(CircleBarProgressStyle()))
+        AnyView(
+            ProgressExample(total: 15)
+                .progressViewStyle(CircleBarProgressStyle())
+        )
     }
 }
 
@@ -43,7 +49,10 @@ struct CircleStepProgressStyleSample: PropSampleable {
     let source = "Props"
     let keywords = "progress determinate custom circles"
     @ViewBuilder var body: AnyView {
-        AnyView( ProgressExample(total: 3).progressViewStyle(CircleStepProgressStyle(total: 3)))
+        AnyView(
+            ProgressExample(total: 3)
+                .progressViewStyle(CircleStepProgressStyle(total: 3))
+        )
     }
 }
 
@@ -53,7 +62,10 @@ struct DottedProgressStyleSample: PropSampleable {
     let source = "Props"
     let keywords = "progress determinate custom dotted dots"
     @ViewBuilder var body: AnyView {
-        AnyView( ProgressExample(total: 12).progressViewStyle(DottedProgressStyle()))
+        AnyView(
+            ProgressExample(total: 12)
+                .progressViewStyle(DottedProgressStyle())
+        )
     }
 }
 

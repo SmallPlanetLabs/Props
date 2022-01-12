@@ -10,9 +10,9 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let textFields = PropGroup(name: "Text Fields", systemImage: "character.cursor.ibeam", subgroups: [
-        .systemTextFields,
-    ])
+    static let textFields = PropGroup(name: "Text Fields",
+                                      systemImage: "character.cursor.ibeam",
+                                      subgroups: [.systemTextFields])
 }
 
 struct TextFields_Previews: PreviewProvider {

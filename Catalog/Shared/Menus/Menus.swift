@@ -10,9 +10,9 @@ import Props
 import SwiftUI
 
 extension PropGroup {
-    static let menus = PropGroup(name: "Menus", systemImage: "filemenu.and.selection", subgroups: [
-        .systemMenus,
-    ])
+    static let menus = PropGroup(name: "Menus",
+                                 systemImage: "filemenu.and.selection",
+                                 subgroups: [.systemMenus])
 }
 
 struct Menus_Previews: PreviewProvider {

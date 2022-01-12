@@ -38,12 +38,12 @@ public struct OutlinedButtonStyle: ButtonStyle {
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 extension ButtonStyle where Self == OutlinedButtonStyle {
 
-    /// A ``ButtonStyle`` displaying a rectangular button stroked with `primaryColor`.
+    /// A `ButtonStyle` displaying a rectangular button stroked with `primaryColor`.
     public static var outlined: OutlinedButtonStyle {
         OutlinedButtonStyle()
     }
 
-    /// A ``ButtonStyle`` displaying a rounded rectangular button stroked with `primaryColor`.
+    /// A `ButtonStyle` displaying a rounded rectangular button stroked with `primaryColor`.
     /// - Parameter cornerRadius: Size of corner radius
     public static func outlined(cornerRadius: CGFloat) -> OutlinedButtonStyle {
         OutlinedButtonStyle(cornerRadius: cornerRadius)

@@ -73,7 +73,7 @@ struct InsetGroupedListSample: PropSampleable {
                     Text("Third")
                 }
             }
-                .listStyle(.insetGrouped)
+            .listStyle(.insetGrouped)
             .frame(height: 200)
         )
     }
@@ -93,7 +93,7 @@ struct InsetListSample: PropSampleable {
                     Text("Third")
                 }
             }
-                .listStyle(.inset)
+            .listStyle(.inset)
             .frame(height: 200)
         )
     }
@@ -113,7 +113,7 @@ struct PlainListSample: PropSampleable {
                     Text("Third")
                 }
             }
-                .listStyle(.plain)
+            .listStyle(.plain)
             .frame(height: 200)
         )
     }
