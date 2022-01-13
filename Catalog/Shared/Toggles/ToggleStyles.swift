@@ -14,6 +14,7 @@ extension PropGroup {
         SunMoonToggleSample(),
         CheckboxToggleSample(),
         GravityToggleSample(),
+        RolloverToggleSample(),
     ])
 }
 
@@ -58,6 +59,21 @@ struct GravityToggleSample: PropSampleable {
                 Text("")
             }
             .toggleStyle(GravityToggleStyle())
+        )
+    }
+}
+
+struct RolloverToggleSample: PropSampleable {
+    let name = "rollover toggle style"
+    let notes: String? = ".toggleStyle(RolloverToggleStyle())"
+    let source = "Custom"
+    let keywords = "toggle custom 3rd party animated rollover"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ToggleExample(title: nil) {
+                Text("")
+            }
+            .toggleStyle(RolloverToggleStyle())
         )
     }
 }
