@@ -11,6 +11,7 @@ public struct GravityToggleStyle: ToggleStyle {
     
     // MARK: - Properties
     @Environment(\.primaryColor) var primaryColor: Color
+    @Environment(\.secondaryColor) var secondaryColor: Color
     private let onLabel: String
     private let offLabel: String
     
@@ -32,7 +33,7 @@ public struct GravityToggleStyle: ToggleStyle {
                     .fill(primaryColor)
                 
                 Circle()
-                    .fill(.white)
+                    .fill(secondaryColor)
                     .padding(4)
                     .shadow(color: primaryColor.opacity(0.4),
                             radius: 10.0,
