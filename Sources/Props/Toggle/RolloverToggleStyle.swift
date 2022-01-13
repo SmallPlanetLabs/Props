@@ -11,6 +11,7 @@ public struct RolloverToggleStyle: ToggleStyle {
     
     // MARK: - Properties
     @Environment(\.primaryColor) var primaryColor: Color
+    @Environment(\.secondaryColor) var secondaryColor: Color
     private let onLabel: String
     private let offLabel: String
     
@@ -32,7 +33,7 @@ public struct RolloverToggleStyle: ToggleStyle {
                     .fill(primaryColor)
                 
                 Circle()
-                    .fill(.white)
+                    .fill(secondaryColor)
                     .padding(4)
                     .overlay(
                         Image(systemName: "globe.europe.africa.fill")
@@ -41,9 +42,9 @@ public struct RolloverToggleStyle: ToggleStyle {
                             .foregroundColor(configuration.isOn ? Color.black : Color.blue)
                     )
                     .shadow(color: Color.black.opacity(0.4),
-                            radius: 10.0,
-                            x: 7.0,
-                            y: 7.0)
+                            radius: 4.0,
+                            x: 2.0,
+                            y: 2.0)
                     .rotationEffect(.degrees(configuration.isOn ? 0 : -360))
                     .offset(x: configuration.isOn ? 33 : -33)
                     .animation(.easeIn, value: configuration.isOn)
