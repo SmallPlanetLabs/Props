@@ -53,7 +53,7 @@ public extension Color {
     ///    - isActive: represents the active (i.e., pressed) state of the desired color, true if active. Defaults to false.
     ///    - amount: floating point fractional amount to tint/shade the color in the range 0...1. Default 0.25
     /// - Returns: `Color` diminished if disabled, enhanced if pressed, and unchanged otherwise. See ``DynamicColor/diminshed`` and ``DynamicColor/enhanced`` for details.
-    func tintOrShade(for colorScheme: ColorScheme, isEnabled: Bool, isActive: Bool = false, amount: CGFloat = 0.25) -> Color {
+    func tintOrShade(for colorScheme: ColorScheme, isEnabled: Bool = true, isActive: Bool = false, amount: CGFloat = 0.25) -> Color {
         switch (colorScheme, isEnabled, isActive) {
         case (.light, false, _):
             return diminished(amount: amount)
