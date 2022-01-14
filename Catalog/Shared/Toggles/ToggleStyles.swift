@@ -49,7 +49,7 @@ struct SunMoonToggleSample: PropSampleable {
 
 struct GravityToggleSample: PropSampleable {
     let name = "gravity toggle style"
-    let notes: String? = ".toggleStyle(GravityToggleStyle())"
+    let notes: String? = ".toggleStyle(.gravity)"
     let source = "Custom"
     let keywords = "toggle custom props animated gravity"
     @ViewBuilder var body: AnyView {
