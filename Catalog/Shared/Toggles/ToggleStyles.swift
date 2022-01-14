@@ -68,7 +68,7 @@ struct GravityToggleSample: PropSampleable {
 struct RolloverToggleSample: PropSampleable {
     let name = "rollover toggle style"
     let notes: String? = ".toggleStyle(.rollover)"
-    let source = "Props"
+    let source = "Custom"
     let keywords = "toggle custom props animated rollover"
     @ViewBuilder var body: AnyView {
         AnyView(
