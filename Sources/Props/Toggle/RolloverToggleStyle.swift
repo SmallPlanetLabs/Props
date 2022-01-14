@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+/// A `ToggleStyle` with a rollover-inspired animation when toggled.
+/// The toggle is tinted with both `primaryColor` and `secondaryColor`
+/// - Parameter onLabel: String displayed next to the "on" side. Default: "Night"
+/// - Parameter offLabel: String displayed next to the "off" side. Default: "Day"
 public struct RolloverToggleStyle: ToggleStyle {
     
     // MARK: - Properties
     @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.secondaryColor) var secondaryColor: Color
+    @Environment(\.shadowColor) var shadowColor: Color
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     private let onLabel: String
     private let offLabel: String
     
@@ -26,7 +32,7 @@ public struct RolloverToggleStyle: ToggleStyle {
         HStack {
             Text(offLabel)
                 .fontWeight(.bold)
-                .foregroundColor(configuration.isOn ? primaryColor.opacity(0.3) : primaryColor)
+                .foregroundColor(primaryColor.tintOrShade(for: colorScheme, isEnabled: !configuration.isOn))
             
             ZStack {
                 Capsule()
@@ -39,12 +45,9 @@ public struct RolloverToggleStyle: ToggleStyle {
                         Image(systemName: "globe.europe.africa.fill")
                             .resizable()
                             .frame(width: 41, height: 41)
-                            .foregroundColor(configuration.isOn ? Color.black : Color.blue)
+                            .foregroundColor(configuration.isOn ? primaryColor : Color.blue)
                     )
-                    .shadow(color: Color.black.opacity(0.4),
-                            radius: 4.0,
-                            x: 2.0,
-                            y: 2.0)
+                    .shadow(color: shadowColor, radius: 3.0, x: 1.0, y: 1.0)
                     .rotationEffect(.degrees(configuration.isOn ? 0 : -360))
                     .offset(x: configuration.isOn ? 33 : -33)
                     .animation(.easeIn, value: configuration.isOn)
@@ -57,17 +60,26 @@ public struct RolloverToggleStyle: ToggleStyle {
             
             Text(onLabel)
                 .fontWeight(.bold)
-                .foregroundColor(configuration.isOn ? primaryColor : primaryColor.opacity(0.3))
+                .foregroundColor(primaryColor.tintOrShade(for: colorScheme, isEnabled: configuration.isOn))
         }
         .frame(width: 220, height: 50)
     }
 }
 
-struct RolloverToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            Toggle("", isOn: .constant(true))
-        }
-        .toggleStyle(RolloverToggleStyle())
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+extension ToggleStyle where Self == RolloverToggleStyle {
+    
+    /// A `ToggleStyle` with a rollover-inspired animation when toggled.
+    /// The toggle is tinted with both `primaryColor` and `secondaryColor`
+    public static var rollover: RolloverToggleStyle {
+        RolloverToggleStyle()
+    }
+    
+    /// A `ToggleStyle` with a rollover-inspired animation when toggled.
+    /// The toggle is tinted with both `primaryColor` and `secondaryColor`
+    /// - Parameter onLabel: String displayed next to the "on" side
+    /// - Parameter offLabel: String displayed next to the "off" side
+    public static func rollover(onLabel: String, offLabel: String) -> RolloverToggleStyle {
+        RolloverToggleStyle(onLabel: onLabel, offLabel: offLabel)
     }
 }
