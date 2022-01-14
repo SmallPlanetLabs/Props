@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+/// A `ToggleStyle` with a gravity-inspired animation when toggled.
+/// The toggle is tinted with both `primaryColor` and `secondaryColor`
+/// - Parameter onLabel: String displayed next to the "on" side. Default: "On"
+/// - Parameter offLabel: String displayed next to the "off" side. Default: "Off"
 public struct GravityToggleStyle: ToggleStyle {
     
     // MARK: - Properties
     @Environment(\.primaryColor) var primaryColor: Color
     @Environment(\.secondaryColor) var secondaryColor: Color
+    @Environment(\.shadowColor) var shadowColor: Color
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     private let onLabel: String
     private let offLabel: String
     
@@ -26,7 +32,7 @@ public struct GravityToggleStyle: ToggleStyle {
         HStack {
             Text(offLabel)
                 .fontWeight(.bold)
-                .foregroundColor(configuration.isOn ? primaryColor.opacity(0.3) : primaryColor)
+                .foregroundColor(primaryColor.tintOrShade(for: colorScheme, isEnabled: !configuration.isOn))
             
             ZStack {
                 Capsule()
@@ -35,10 +41,7 @@ public struct GravityToggleStyle: ToggleStyle {
                 Circle()
                     .fill(secondaryColor)
                     .padding(4)
-                    .shadow(color: primaryColor.opacity(0.4),
-                            radius: 10.0,
-                            x: 7.0,
-                            y: 7.0)
+                    .shadow(color: shadowColor, radius: 10.0, x: 7.0, y: 7.0)
                     .offset(x: configuration.isOn ? 36 : -36)
                     .animation(.spring(), value: configuration.isOn)
             }
@@ -50,17 +53,26 @@ public struct GravityToggleStyle: ToggleStyle {
             
             Text(onLabel)
                 .fontWeight(.bold)
-                .foregroundColor(configuration.isOn ? primaryColor : primaryColor.opacity(0.3))
+                .foregroundColor(primaryColor.tintOrShade(for: colorScheme, isEnabled: configuration.isOn))
         }
         .frame(width: 200, height: 50)
     }
 }
 
-struct GravityToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            Toggle("", isOn: .constant(true))
-        }
-        .toggleStyle(GravityToggleStyle())
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+extension ToggleStyle where Self == GravityToggleStyle {
+
+    /// A `ToggleStyle` with a gravity-inspired animation when toggled.
+    /// The toggle is tinted with both `primaryColor` and `secondaryColor`
+    public static var gravity: GravityToggleStyle {
+        GravityToggleStyle()
+    }
+
+    /// A `ToggleStyle` with a gravity-inspired animation when toggled.
+    /// The toggle is tinted with both `primaryColor` and `secondaryColor`
+    /// - Parameter onLabel: String displayed next to the "on" side
+    /// - Parameter offLabel: String displayed next to the "off" side
+    public static func gravity(onLabel: String, offLabel: String) -> GravityToggleStyle {
+        GravityToggleStyle(onLabel: onLabel, offLabel: offLabel)
     }
 }

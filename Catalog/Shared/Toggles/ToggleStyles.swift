@@ -51,23 +51,24 @@ struct GravityToggleSample: PropSampleable {
     let name = "gravity toggle style"
     let notes: String? = ".toggleStyle(GravityToggleStyle())"
     let source = "Custom"
-    let keywords = "toggle custom 3rd party animated gravity"
+    let keywords = "toggle custom props animated gravity"
     @ViewBuilder var body: AnyView {
         AnyView(
             ToggleExample(title: nil) {
                 Text("")
             }
-            .toggleStyle(GravityToggleStyle())
+            .toggleStyle(.gravity)
+            .primaryColor(.foreground)
+            .secondaryColor(.background)
         )
     }
 }
 
 struct CustomToggleStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        MultipleDevices(combos: .lightDarkiPhoneBig) {
             PropGroupView(group: .customToggles)
                 .primaryColor(.foreground)
         }
-        .preferredColorScheme(.dark)
     }
 }
