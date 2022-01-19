@@ -42,7 +42,7 @@ jobs:
       - name: Process buildinfo
         run: |
           touch "$PWD/build/buildinfo.tmp"
-	  /usr/bin/egrep "cfBundleVersion|cfBundleShortVersionString" "$PWD/build/buildinfo.tmp" > "$PWD/build/buildinfo.txt"
+          egrep "cfBundleVersion|cfBundleShortVersionString" "$PWD/build/buildinfo.tmp" > "$PWD/build/buildinfo.txt"
       - name: Archive IPA
         uses: actions/upload-artifact@v2
         with:
