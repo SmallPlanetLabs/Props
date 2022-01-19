@@ -42,9 +42,10 @@ public struct GravityToggleStyle: ToggleStyle {
                     .fill(secondaryColor)
                     .padding(4)
                     .shadow(color: shadowColor, radius: 10.0, x: 7.0, y: 7.0)
-                    .offset(x: configuration.isOn ? 36 : -36)
+                    .offset(x: configuration.isOn ? 15 : -15)
                     .animation(.spring(), value: configuration.isOn)
             }
+            .frame(width: 61.0, height: 31.0)
             .rotationEffect(Angle(degrees: configuration.isOn ? 10 : 0))
             .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 0.2), value: configuration.isOn)
             .onTapGesture {
@@ -55,7 +56,6 @@ public struct GravityToggleStyle: ToggleStyle {
                 .fontWeight(.bold)
                 .foregroundColor(primaryColor.tintOrShade(for: colorScheme, isEnabled: configuration.isOn))
         }
-        .frame(width: 200, height: 50)
     }
 }
 
