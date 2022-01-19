@@ -1,0 +1,62 @@
+name: Deploy
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  push:
+    branches:
+      - '**actions'
+jobs:
+  deploy:
+    name: Deploying to Testflight
+    runs-on: [self-hosted]
+    env:
+      SCHEME: Release (iOS)
+      CONFIGURATION: Release
+      EXPORT_OPTIONS_PATH: ../.github/workflows/export_options.plist
+      APPSTORECONNECT_USERNAME: ${{ secrets.APPSTORECONNECT_USERNAME }}
+      APPSTORECONNECT_PASSWORD: ${{ secrets.APPSTORECONNECT_PASSWORD }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2.4.0
+      - name: Unlock keychain
+        env:
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          # security unlock-keychain -p "$KEYCHAIN_PASSWORD" ~/Library/Keychains/login.keychain-db
+          # security list-keychains -s ~/Library/Keychains/login.keychain-db /Library/Keychains/System.keychain
+      - name: Build archive
+        run: |
+          xcodebuild clean -scheme "$SCHEME" -sdk iphoneos
+          xcodebuild -allowProvisioningUpdates -alltargets -scheme "$SCHEME" -sdk iphoneos -configuration "$CONFIGURATION" archive -archivePath "$(PWD)/build/TestFlight.xcarchive"
+      - name: Make IPA
+        run: |
+          xcodebuild -allowProvisioningUpdates -exportArchive -archivePath "$(PWD)/build/TestFlight.xcarchive" -exportOptionsPlist "$EXPORT_OPTIONS_PATH" -exportPath "$(PWD)/build"
+      - name: Validate app
+        run: |
+          xcrun altool --validate-app -type ios -f "$PWD/build/$IPA_NAME.ipa" -u "$APPSTORECONNECT_USERNAME" -p "$APPSTORECONNECT_PASSWORD"
+      - name: Upload app
+        run: |
+          xcrun altool --verbose --upload-app -type ios -f "$(PWD)/build/$IPA_NAME.ipa" -u "$APPSTORECONNECT_USERNAME" -p "$APPSTORECONNECT_PASSWORD" 2>&1 | tee "$PWD/build/buildinfo.tmp"
+      - name: Process buildinfo
+        run: |
+          touch "$PWD/build/buildinfo.tmp"
+	  /usr/bin/egrep "cfBundleVersion|cfBundleShortVersionString" "$PWD/build/buildinfo.tmp" > "$PWD/build/buildinfo.txt"
+      - name: Archive IPA
+        uses: actions/upload-artifact@v2
+        with:
+          name: ipa
+          path: build/$IPA_NAME.ipa        
+      - name: Upload build details
+        uses: actions/upload-artifact@v2
+        with:
+          name: buildinfo.txt
+          path: build/buildinfo.txt
+      - name: Remove certificates and provisioning profile
+        run: |
+          # security delete-keychain "$RUNNER_TEMP/app-signing.keychain-db"
+          # rm ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision
+      - name: Slack status on failure
+        if: ${{ failure() }}
+        run: curl -X POST -H 'Content-type:\ application/json' --data '{"text":"Github action run number ${{ github.run_number }} status = ${{ job.status }}"}' "${{ secrets.ACTION_MONITORING_SLACK }}"
