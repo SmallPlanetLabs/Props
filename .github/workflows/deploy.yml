@@ -38,7 +38,7 @@ jobs:
           xcrun altool --validate-app -type ios -f "$PWD/build/$IPA_NAME.ipa" -u "$APPSTORECONNECT_USERNAME" -p "$APPSTORECONNECT_PASSWORD"
       - name: Upload app
         run: |
-          xcrun altool --verbose --upload-app -type ios -f "$(PWD)/build/$IPA_NAME.ipa" -u "$APPSTORECONNECT_USERNAME" -p "$APPSTORECONNECT_PASSWORD" 2>&1 | tee "$PWD/build/buildinfo.tmp"
+          xcrun altool --verbose --upload-app -type ios -f "$PWD/build/$IPA_NAME.ipa" -u "$APPSTORECONNECT_USERNAME" -p "$APPSTORECONNECT_PASSWORD" 2>&1 | tee "$PWD/build/buildinfo.tmp"
       - name: Process buildinfo
         run: |
           touch "$PWD/build/buildinfo.tmp"
