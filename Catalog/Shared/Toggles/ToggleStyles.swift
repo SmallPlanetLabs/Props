@@ -11,9 +11,10 @@ import SwiftUI
 
 extension PropGroup {
     static let customToggles = PropGroup(name: "Custom toggles", samples: [
-        SunMoonToggleSample(),
-        CheckboxToggleSample(),
+        RolloverToggleSample(),
         GravityToggleSample(),
+        CheckboxToggleSample(),
+        SunMoonToggleSample(),
     ])
 }
 
@@ -58,6 +59,23 @@ struct GravityToggleSample: PropSampleable {
                 Text("")
             }
             .toggleStyle(.gravity)
+            .primaryColor(.foreground)
+            .secondaryColor(.background)
+        )
+    }
+}
+
+struct RolloverToggleSample: PropSampleable {
+    let name = "rollover toggle style"
+    let notes: String? = ".toggleStyle(.rollover)"
+    let source = "Custom"
+    let keywords = "toggle custom props animated rollover"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ToggleExample(title: nil) {
+                Text("")
+            }
+            .toggleStyle(.rollover)
             .primaryColor(.foreground)
             .secondaryColor(.background)
         )
