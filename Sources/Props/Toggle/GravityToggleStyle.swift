@@ -41,11 +41,11 @@ public struct GravityToggleStyle: ToggleStyle {
                 Circle()
                     .fill(secondaryColor)
                     .padding(4)
-                    .shadow(color: shadowColor, radius: 10.0, x: 7.0, y: 7.0)
+                    .shadow(color: shadowColor, radius: 10, x: 7, y: 7)
                     .offset(x: configuration.isOn ? 15 : -15)
                     .animation(.spring(), value: configuration.isOn)
             }
-            .frame(width: 61.0, height: 31.0)
+            .frame(width: 61, height: 31)
             .rotationEffect(Angle(degrees: configuration.isOn ? 10 : 0))
             .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 0.2), value: configuration.isOn)
             .onTapGesture {
