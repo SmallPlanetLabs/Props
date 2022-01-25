@@ -11,10 +11,10 @@ import SwiftUI
 
 extension PropGroup {
     static let customToggles = PropGroup(name: "Custom toggles", samples: [
-        SunMoonToggleSample(),
-        CheckboxToggleSample(),
-        GravityToggleSample(),
         RolloverToggleSample(),
+        GravityToggleSample(),
+        CheckboxToggleSample(),
+        SunMoonToggleSample(),
     ])
 }
 

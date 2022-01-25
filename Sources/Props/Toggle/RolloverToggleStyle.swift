@@ -20,6 +20,7 @@ public struct RolloverToggleStyle: ToggleStyle {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     private let onLabel: String
     private let offLabel: String
+    private let height = CGFloat(31)
     
     // MARK: - Initializer
     public init(onLabel: String = "NIGHT", offLabel: String = "DAY") {
@@ -36,7 +37,7 @@ public struct RolloverToggleStyle: ToggleStyle {
             
             ZStack {
                 Capsule()
-                    .fill(primaryColor)
+//                    .fill(primaryColor)
                 
                 Circle()
                     .fill(secondaryColor)
@@ -44,14 +45,15 @@ public struct RolloverToggleStyle: ToggleStyle {
                     .overlay(
                         Image(systemName: "globe.europe.africa.fill")
                             .resizable()
-                            .frame(width: 41, height: 41)
+                            .frame(width: height - 4, height: height - 4)
                             .foregroundColor(configuration.isOn ? primaryColor : Color.blue)
                     )
-                    .shadow(color: shadowColor, radius: 3.0, x: 1.0, y: 1.0)
+                    .shadow(color: shadowColor, radius: 3, x: 1, y: 1)
                     .rotationEffect(.degrees(configuration.isOn ? 0 : -360))
-                    .offset(x: configuration.isOn ? 33 : -33)
+                    .offset(x: (configuration.isOn ? 0.5 : -0.5) * (height - 2))
                     .animation(.easeIn, value: configuration.isOn)
             }
+            .frame(width: 61, height: height)
             .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 0.2), value: configuration.isOn)
             .offset(x: configuration.isOn ? 3 : -3)
             .onTapGesture {
@@ -62,7 +64,6 @@ public struct RolloverToggleStyle: ToggleStyle {
                 .fontWeight(.bold)
                 .foregroundColor(primaryColor.tintOrShade(for: colorScheme, isEnabled: configuration.isOn))
         }
-        .frame(width: 220, height: 50)
     }
 }
 
