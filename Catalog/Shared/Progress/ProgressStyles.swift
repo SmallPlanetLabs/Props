@@ -10,11 +10,11 @@ import Props
 
 extension PropGroup {
     static let customProgress = PropGroup(name: "Custom progress views", samples: [
+        BarsProgressStyleSample(),
         SquiggleProgressStyleSample(),
         CircleBarProgressStyleSample(),
         CircleStepProgressStyleSample(),
         DottedProgressStyleSample(),
-        BarsProgressStyleSample(),
     ])
 }
 
