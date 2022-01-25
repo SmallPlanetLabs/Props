@@ -14,6 +14,7 @@ extension PropGroup {
         CircleBarProgressStyleSample(),
         CircleStepProgressStyleSample(),
         DottedProgressStyleSample(),
+        BarsProgressStyleSample(),
     ])
 }
 
@@ -65,6 +66,19 @@ struct DottedProgressStyleSample: PropSampleable {
         AnyView(
             ProgressExample(total: 12)
                 .progressViewStyle(DottedProgressStyle())
+        )
+    }
+}
+
+struct BarsProgressStyleSample: PropSampleable {
+    let name = "Bars progress view"
+    let notes: String? = ".progressViewStyle(BarsProgressStyle())"
+    let source = "Props"
+    let keywords = "progress determinate custom bars"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ProgressExample(total: 100)
+                .progressViewStyle(BarsProgressStyle())
         )
     }
 }
