@@ -14,7 +14,7 @@ public struct BarsProgressStyle: ProgressViewStyle {
     
     // MARK: - ProgressViewStyle
     public func makeBody(configuration: Configuration) -> some View {
-        BarsIndicatorView(count: 8,
+        IndeterminateView(count: 8,
                           spacing: 8,
                           cornerRadius: 8,
                           scaleRange: 0.5...1,
@@ -22,7 +22,7 @@ public struct BarsProgressStyle: ProgressViewStyle {
             .frame(width: 200, height: 50)
     }
     
-    struct BarsIndicatorView: View {
+    struct IndeterminateView: View {
         
         // MARK: - Properties
         @State var isOn = false
@@ -69,6 +69,15 @@ public struct BarsProgressStyle: ProgressViewStyle {
     
 }
 
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+extension ProgressViewStyle where Self == BarsProgressStyle {
+    
+    /// A `ProgressViewStyle` with a bars collapsing and expanding animation.
+    public static var bars: BarsProgressStyle {
+        BarsProgressStyle()
+    }
+}
+
 struct BarsProgressStyle_Previews: PreviewProvider {
     static var progress: Foundation.Progress = {
         let progress = Foundation.Progress(totalUnitCount: 100)
@@ -78,7 +87,7 @@ struct BarsProgressStyle_Previews: PreviewProvider {
     
     static var previews: some View {
         ProgressView(progress)
-            .progressViewStyle(BarsProgressStyle())
+            .progressViewStyle(.bars)
             .padding()
     }
 }

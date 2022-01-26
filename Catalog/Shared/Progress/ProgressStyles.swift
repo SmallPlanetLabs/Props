@@ -72,13 +72,13 @@ struct DottedProgressStyleSample: PropSampleable {
 
 struct BarsProgressStyleSample: PropSampleable {
     let name = "Bars progress view"
-    let notes: String? = ".progressViewStyle(BarsProgressStyle())"
+    let notes: String? = ".progressViewStyle(.bars)"
     let source = "Props"
     let keywords = "progress determinate custom bars"
     @ViewBuilder var body: AnyView {
         AnyView(
             ProgressExample(total: 100)
-                .progressViewStyle(BarsProgressStyle())
+                .progressViewStyle(.bars)
         )
     }
 }
