@@ -33,7 +33,6 @@ public struct BarsProgressStyle: ProgressViewStyle {
         let cornerRadius: CGFloat
         let scaleRange: ClosedRange<Double>
         let opacityRange: ClosedRange<Double>
-        private let animation =  Animation.default.repeatCount(.max, autoreverses: true)
         private var scale: CGFloat {
             CGFloat(isOn ? scaleRange.lowerBound : scaleRange.upperBound)
         }
@@ -51,14 +50,13 @@ public struct BarsProgressStyle: ProgressViewStyle {
                         .animation(
                             Animation
                                 .default
-                                .repeatCount(isOn ? .max : 1, autoreverses: true)
+                                .repeatCount(.max, autoreverses: true)
                                 .delay(Double(index) / Double(count) / 2)
-                        )
+                            , value: isOn)
                     
                     Spacer()
                 }
             }
-            .animation(animation, value: isOn)
             .onAppear {
                 isOn = true
             }
