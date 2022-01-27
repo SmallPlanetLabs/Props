@@ -14,12 +14,14 @@ public struct BarsProgressStyle: ProgressViewStyle {
     
     // MARK: - ProgressViewStyle
     public func makeBody(configuration: Configuration) -> some View {
-        IndeterminateView(count: 8,
-                          spacing: 8,
-                          cornerRadius: 8,
-                          scaleRange: 0.5...2,
-                          opacityRange: 0.25...1)
-            .frame(maxWidth: 150, maxHeight: 50)
+        IndeterminateView(
+            count: 8,
+            spacing: 8,
+            cornerRadius: 8,
+            scaleRange: 0.5...2,
+            opacityRange: 0.25...1
+        )
+        .frame(maxWidth: 150, maxHeight: 50)
     }
     
     struct IndeterminateView: View {
@@ -31,34 +33,35 @@ public struct BarsProgressStyle: ProgressViewStyle {
         let cornerRadius: CGFloat
         let scaleRange: ClosedRange<Double>
         let opacityRange: ClosedRange<Double>
-        private var scale: CGFloat { CGFloat(isOn ? scaleRange.lowerBound : scaleRange.upperBound) }
-        private var opacity: Double { isOn ? opacityRange.lowerBound : opacityRange.upperBound }
+        private let animation =  Animation.default.repeatCount(.max, autoreverses: true)
+        private var scale: CGFloat {
+            CGFloat(isOn ? scaleRange.lowerBound : scaleRange.upperBound)
+        }
+        private var opacity: Double {
+            isOn ? opacityRange.lowerBound : opacityRange.upperBound
+        }
         
         var body: some View {
             HStack {
                 ForEach(0..<count) { index in
-                    bar(forIndex: index)
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .frame(width: 1)
+                        .scaleEffect(x: 1, y: scale)
+                        .opacity(opacity)
+                        .animation(
+                            Animation
+                                .default
+                                .repeatCount(isOn ? .max : 1, autoreverses: true)
+                                .delay(Double(index) / Double(count) / 2)
+                        )
+                    
                     Spacer()
                 }
             }
-            .aspectRatio(contentMode: .fit)
+            .animation(animation, value: isOn)
             .onAppear {
                 isOn = true
             }
-        }
-        
-        // MARK: - Private API
-        private func bar(forIndex index: Int) -> some View {
-            RoundedRectangle(cornerRadius: cornerRadius,  style: .continuous)
-                .frame(width: 1)
-                .scaleEffect(x: 1, y: scale, anchor: .center)
-                .opacity(opacity)
-                .animation(
-                    Animation
-                        .default
-                        .repeatCount(isOn ? .max : 1, autoreverses: true)
-                        .delay(Double(index) / Double(count) / 2)
-                )
         }
     }
     
