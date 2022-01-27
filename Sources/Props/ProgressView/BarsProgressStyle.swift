@@ -17,9 +17,9 @@ public struct BarsProgressStyle: ProgressViewStyle {
         IndeterminateView(count: 8,
                           spacing: 8,
                           cornerRadius: 8,
-                          scaleRange: 0.5...1,
+                          scaleRange: 0.5...2,
                           opacityRange: 0.25...1)
-            .frame(width: 200, height: 50)
+            .frame(maxWidth: 150, maxHeight: 50)
     }
     
     struct IndeterminateView: View {
@@ -35,9 +35,10 @@ public struct BarsProgressStyle: ProgressViewStyle {
         private var opacity: Double { isOn ? opacityRange.lowerBound : opacityRange.upperBound }
         
         var body: some View {
-            GeometryReader { geometry in
+            HStack {
                 ForEach(0..<count) { index in
-                    bar(forIndex: index, in: geometry.size)
+                    bar(forIndex: index)
+                    Spacer()
                 }
             }
             .aspectRatio(contentMode: .fit)
@@ -47,14 +48,9 @@ public struct BarsProgressStyle: ProgressViewStyle {
         }
         
         // MARK: - Private API
-        private func size(count: Int, geometry: CGSize) -> CGFloat {
-            (geometry.width/CGFloat(count)) - (spacing - 2)
-        }
-        
-        private func bar(forIndex index: Int, in geometrySize: CGSize) -> some View {
+        private func bar(forIndex index: Int) -> some View {
             RoundedRectangle(cornerRadius: cornerRadius,  style: .continuous)
-                .frame(width: size(count: count, geometry: geometrySize),
-                       height: geometrySize.height)
+                .frame(width: 1)
                 .scaleEffect(x: 1, y: scale, anchor: .center)
                 .opacity(opacity)
                 .animation(
@@ -63,7 +59,6 @@ public struct BarsProgressStyle: ProgressViewStyle {
                         .repeatCount(isOn ? .max : 1, autoreverses: true)
                         .delay(Double(index) / Double(count) / 2)
                 )
-                .offset(x: CGFloat(index) * (size(count: count, geometry: geometrySize) + spacing))
         }
     }
     
