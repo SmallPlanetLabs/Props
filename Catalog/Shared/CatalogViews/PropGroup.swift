@@ -115,7 +115,7 @@ struct PropGroupView_Previews: PreviewProvider {
     private static let samples: [PropSampleable] = PropGroup.systemButtons.samples
     private static let group = PropGroup(name: "Test group", subgroups: groups)
     static var previews: some View {
-        MultipleDevices(combos: .iPadOrientations) {
+        PreviewMultiple(devices: .iPadOrientations) {
             NavigationView {
                 PropGroupView(group: PropGroup(name: "Test Samples", samples: samples))
             }

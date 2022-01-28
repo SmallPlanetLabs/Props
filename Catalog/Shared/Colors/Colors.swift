@@ -20,7 +20,7 @@ extension PropGroup {
 
 struct Colors_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             PropGroupView(group: .colors)
         }
     }

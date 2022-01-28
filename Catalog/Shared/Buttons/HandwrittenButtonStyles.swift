@@ -46,7 +46,7 @@ struct HandwrittenButtonSamples: View {
 
 struct HandwrittenButtonSample_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             HandwrittenButtonSamples()
         }
     }

@@ -37,7 +37,7 @@ struct SystemIndeterminateSample: PropSampleable {
 
 struct SystemProgressViewStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos:  .lightDarkiPhoneBig) {
+        PreviewMultiple(devices:  .lightDarkiPhoneBig) {
             PropGroupView(group: .systemProgress)
         }
     }

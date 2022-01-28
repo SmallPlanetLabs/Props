@@ -20,7 +20,7 @@ extension PropGroup {
 
 struct Labels_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .labels)
         }
     }

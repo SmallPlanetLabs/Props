@@ -44,7 +44,7 @@ struct PLainGroupBoxSamples: View {
 
 struct PlainGroupBoxSamples_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             PLainGroupBoxSamples()
         }
     }

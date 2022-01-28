@@ -126,7 +126,7 @@ struct SystemPickerStyles: View {
 
 struct SystemPickerStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             SystemPickerStyles()
         }
     }

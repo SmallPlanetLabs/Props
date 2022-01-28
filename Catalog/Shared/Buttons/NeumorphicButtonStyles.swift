@@ -48,7 +48,7 @@ struct NeumorphicButtonSamples: View {
 
 struct NeumorphicButtonSample_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             NeumorphicButtonSamples()
         }
     }

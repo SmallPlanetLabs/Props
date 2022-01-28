@@ -42,7 +42,7 @@ struct HandwrittenGroupBoxSamples: View {
 
 struct HandwrittenGroupBoxSamples_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             HandwrittenGroupBoxSamples()
         }
     }

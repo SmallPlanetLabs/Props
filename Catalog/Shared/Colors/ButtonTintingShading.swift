@@ -17,7 +17,7 @@ extension PropGroup {
 
 struct ButtonTintingShading_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBigLandscape) {
+        PreviewMultiple(devices: .lightDarkiPhoneBigLandscape) {
             PropGroupView(group: .buttonTintingShading)
         }
     }

@@ -32,4 +32,4 @@ A Catalog app is included that demonstrates all of the styling props in this rep
 - ``CheckBoxStyle``
 
 ### Utilities
-- ``MultipleDevices``
+- ``PreviewMultiple``

@@ -55,7 +55,7 @@ struct SystemControlGroupStyles: View {
 
 struct SystemControlGroupStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             SystemControlGroupStyles()
         }
     }

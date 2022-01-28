@@ -77,7 +77,7 @@ struct SystemDatePickerStyles: View {
 
 struct SystemDatePickerStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             SystemDatePickerStyles()
         }
     }

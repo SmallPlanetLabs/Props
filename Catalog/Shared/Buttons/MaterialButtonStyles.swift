@@ -60,7 +60,7 @@ struct MaterialButtonStyles: View {
 
 struct MaterialButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .materialButtons)
         }
     }

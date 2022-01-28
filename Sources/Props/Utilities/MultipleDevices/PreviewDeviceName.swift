@@ -1,5 +1,5 @@
 //
-//  PreviewDevice.swift
+//  PreviewDeviceName.swift
 //  Props
 //
 //  Created by Quinn McHenry on 11/18/21.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-/// Enumeration of devices available to ``MultipleDevices``
+/// Enumeration of devices available to ``PreviewMultiple``
 ///
 /// The names of these devices can be updated by running:
 /// `xcrun simctl list devicetypes | rev | cut -d\( -f2- | rev`
 /// Devices before the iPhone 6s cannot run SwiftUI and are excluded
-public enum PreviewDevice {
+public enum PreviewDeviceName {
     case iPhopne6s
     case iPhone6sPlus
     case iPhoneSE1

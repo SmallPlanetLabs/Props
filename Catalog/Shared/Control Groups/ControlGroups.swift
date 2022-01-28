@@ -17,7 +17,7 @@ extension PropGroup {
 
 struct ControlGroups_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .controlGroups)
         }
     }

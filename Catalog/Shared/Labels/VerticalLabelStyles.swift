@@ -48,7 +48,7 @@ struct VerticalLabelSamples: View {
 
 struct VerticalLabelSamples_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             VerticalLabelSamples()
         }
     }
