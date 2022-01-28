@@ -11,6 +11,7 @@ import Props
 extension PropGroup {
     static let customProgress = PropGroup(name: "Custom progress views", samples: [
         BarsProgressStyleSample(),
+        ArcsProgressStyleSample(),
         SquiggleProgressStyleSample(),
         CircleBarProgressStyleSample(),
         CircleStepProgressStyleSample(),
@@ -79,6 +80,19 @@ struct BarsProgressStyleSample: PropSampleable {
         AnyView(
             ProgressExample(total: 100)
                 .progressViewStyle(.bars)
+        )
+    }
+}
+
+struct ArcsProgressStyleSample: PropSampleable {
+    let name = "Arcs progress view"
+    let notes: String? = ".progressViewStyle(.arcs)"
+    let source = "Props"
+    let keywords = "progress determinate custom arcs"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ProgressExample(total: 100)
+                .progressViewStyle(.arcs)
         )
     }
 }
