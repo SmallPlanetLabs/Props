@@ -38,6 +38,7 @@
 		1AEDAB71277DA4F300B57079 /* GroupBoxStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB70277DA4F300B57079 /* GroupBoxStyles.swift */; };
 		1AEDAB73277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB72277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift */; };
 		1AEDAB75277DADB200B57079 /* PlainGroupBoxStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDAB74277DADB200B57079 /* PlainGroupBoxStyles.swift */; };
+		A90A377227A4E8AF00F773E5 /* PreviewMultiple in Frameworks */ = {isa = PBXBuildFile; productRef = A90A377127A4E8AF00F773E5 /* PreviewMultiple */; };
 		A9108436273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108437273185250056F4F9 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108426273185240056F4F9 /* CatalogApp.swift */; };
 		A9108438273185250056F4F9 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9108427273185240056F4F9 /* Catalog.swift */; };
@@ -140,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9C1044D273396480086AE8C /* Sliders in Frameworks */,
+				A90A377227A4E8AF00F773E5 /* PreviewMultiple in Frameworks */,
 				A9C10447273391BC0086AE8C /* SunMoonToggleStyle in Frameworks */,
 				A9C1044427337E260086AE8C /* Props in Frameworks */,
 			);
@@ -390,6 +392,7 @@
 				A9C1044327337E260086AE8C /* Props */,
 				A9C10446273391BC0086AE8C /* SunMoonToggleStyle */,
 				A9C1044C273396480086AE8C /* Sliders */,
+				A90A377127A4E8AF00F773E5 /* PreviewMultiple */,
 			);
 			productName = "Catalog (iOS)";
 			productReference = A910842D273185250056F4F9 /* Catalog.app */;
@@ -442,6 +445,7 @@
 			packageReferences = (
 				A9C10445273391BC0086AE8C /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */,
 				A9C104482733956D0086AE8C /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+				A90A377027A4E8AF00F773E5 /* XCRemoteSwiftPackageReference "PreviewMultiple" */,
 			);
 			productRefGroup = A910842E273185250056F4F9 /* Products */;
 			projectDirPath = "";
@@ -823,6 +827,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A90A377027A4E8AF00F773E5 /* XCRemoteSwiftPackageReference "PreviewMultiple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SmallPlanetLabs/PreviewMultiple";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		A9C10445273391BC0086AE8C /* XCRemoteSwiftPackageReference "SunMoonToggleStyle" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/puthnith/SunMoonToggleStyle";
@@ -842,6 +854,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A90A377127A4E8AF00F773E5 /* PreviewMultiple */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90A377027A4E8AF00F773E5 /* XCRemoteSwiftPackageReference "PreviewMultiple" */;
+			productName = PreviewMultiple;
+		};
 		A9C1044327337E260086AE8C /* Props */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Props;

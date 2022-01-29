@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let systemDatePickers = PropGroup(name: "System date pickers", samples: [

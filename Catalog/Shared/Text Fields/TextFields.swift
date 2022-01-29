@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let textFields = PropGroup(name: "Text Fields",

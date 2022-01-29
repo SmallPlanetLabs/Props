@@ -8,6 +8,7 @@
 import Props
 import SunMoonToggleStyle
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let customToggles = PropGroup(name: "Custom toggles", samples: [

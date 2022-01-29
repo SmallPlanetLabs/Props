@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Props
+import PreviewMultiple
 
 struct PropGroup: Identifiable {
     let name: String

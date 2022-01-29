@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let systemControlGroups = PropGroup(name: "System control groups", samples: [

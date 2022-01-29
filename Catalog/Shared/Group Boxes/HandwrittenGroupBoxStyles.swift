@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let handwrittenGroupBoxes = PropGroup(name: "Handwritten group boxes", samples: [

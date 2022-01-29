@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Props
+import PreviewMultiple
 
 extension PropGroup {
     static let systemProgress = PropGroup(name: "System progress views", samples: [

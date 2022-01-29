@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let toggles = PropGroup(name: "Toggles", systemImage: "switch.2", subgroups: [

@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-
 import Props
+import PreviewMultiple
 
 extension PropGroup {
     static let customButtons = PropGroup(name: "Custom buttons",

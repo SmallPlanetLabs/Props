@@ -8,6 +8,7 @@
 import SwiftUI
 import DynamicColor
 import Props
+import PreviewMultiple
 
 extension PropGroup {
     static let tintingShading = PropGroup(name: "Color tinting and shading", samples: [

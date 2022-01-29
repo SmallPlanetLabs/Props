@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let pickers = PropGroup(name: "Pickers", systemImage: "list.bullet", subgroups: [

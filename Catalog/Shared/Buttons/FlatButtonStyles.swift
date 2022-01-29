@@ -8,6 +8,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let flatButtons = PropGroup(name: "Flat buttons", samples: [

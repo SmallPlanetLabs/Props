@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let plainGroupBoxes = PropGroup(name: "Plain group boxes", samples: [

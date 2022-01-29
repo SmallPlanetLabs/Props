@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let groupBoxes = PropGroup(name: "Group Boxes", systemImage: "rectangle.3.group.fill", subgroups: [
