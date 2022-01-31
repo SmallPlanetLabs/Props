@@ -12,6 +12,7 @@ import PreviewMultiple
 
 extension PropGroup {
     static let customToggles = PropGroup(name: "Custom toggles", samples: [
+        ScantronToggleSample(),
         RolloverToggleSample(),
         GravityToggleSample(),
         CheckboxToggleSample(),
@@ -19,9 +20,24 @@ extension PropGroup {
     ])
 }
 
+struct ScantronToggleSample: PropSampleable {
+    let name = "Scantron toggle style"
+    let notes: String? = ".toggleStyle(.scantron)"
+    let source = "Props"
+    let keywords = "toggle custom props scantron"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ToggleExample(title: nil) {
+                Text("True or false?")
+            }
+            .toggleStyle(.scantron)
+        )
+    }
+}
+
 struct CheckboxToggleSample: PropSampleable {
     let name = "Checkbox toggle style"
-    let notes: String? = ".toggleStyle(CheckboxStyle())"
+    let notes: String? = ".toggleStyle(.checkbox)"
     let source = "Props"
     let keywords = "toggle custom props checkbox"
     @ViewBuilder var body: AnyView {
@@ -29,7 +45,7 @@ struct CheckboxToggleSample: PropSampleable {
             ToggleExample(title: nil) {
                 Text("Do the thing?")
             }
-            .toggleStyle(CheckBoxStyle())
+                .toggleStyle(.checkBox)
         )
     }
 }
