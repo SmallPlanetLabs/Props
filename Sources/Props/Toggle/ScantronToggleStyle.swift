@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewMultiple
 
 /// A `ToggleStyle` inspiered by number 2 pencils filling in bubbles on paper sheets
 ///
@@ -27,13 +28,13 @@ public struct ScantronToggleStyle: ToggleStyle {
                 Circle()
                     .stroke(lineWidth: 1)
                     .fill(secondaryColor)
-                    .frame(width: 19, height: 19)
+                    .frame(width: 30, height: 30)
 
                 PencilFilledCircle(seed: seed)
                     .trim(from: 0, to: configuration.isOn ? 1 : 0)
                     .stroke(style: style)
                     .foregroundColor(primaryColor)
-                    .frame(width: 12, height: 12)
+                    .frame(width: 22, height: 22)
             }
             configuration.label
                 .foregroundColor(primaryColor)
@@ -60,7 +61,7 @@ public struct ScantronToggleStyle: ToggleStyle {
             }
 
             var p = Path()
-            let steps = 33
+            let steps = 57
             let radius = min(rect.width, rect.height) / 2
             (0..<steps).forEach { yIndex in
                 let y = rect.height * CGFloat(yIndex) / CGFloat(steps)
@@ -103,23 +104,15 @@ extension ToggleStyle where Self == ScantronToggleStyle {
 
 struct ScantronToggleStyle_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            Toggle(isOn: .constant(true)) {
-                Text("Scantron seed 0")
+        HStack {
+            ForEach(0..<6) { column in
+                VStack {
+                    ForEach(0..<12) { index in
+                        Toggle(isOn: .constant(true)) { }
+                        .toggleStyle(.scantron(seed: column * 12 + index))
+                    }
+                }
             }
-            .toggleStyle(.scantron(seed: 0))
-            Toggle(isOn: .constant(true)) {
-                Text("Scantron seed 1")
-            }
-            .toggleStyle(.scantron(seed: 1))
-            Toggle(isOn: .constant(true)) {
-                Text("Scantron seed 0")
-            }
-            .toggleStyle(.scantron(seed: 0))
-            Toggle(isOn: .constant(true)) {
-                Text("Scantron seed 999")
-            }
-            .toggleStyle(.scantron(seed: 999))
         }
     }
 }
