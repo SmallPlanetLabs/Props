@@ -29,7 +29,10 @@ A Catalog app is included that demonstrates all of the styling props in this rep
 - ``SquiggleProgressStyle``
 
 ### Toggles
-- ``CheckBoxStyle``
+- ``CheckboxToggleStyle``
+- ``GravityToggleStyle``
+- ``RolloverToggleStyle``
+- ``ScantronToggleStyle``
 
 ### Utilities
 - ``PreviewMultiple``

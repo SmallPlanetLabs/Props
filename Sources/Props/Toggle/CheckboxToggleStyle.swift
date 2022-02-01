@@ -6,7 +6,9 @@
 
 import SwiftUI
 
-public struct CheckBoxStyle: ToggleStyle {
+/// A ``ToggleStyle`` that replicates a standard checkbox appearance, a rectangle with small
+/// rounded corners.
+public struct CheckboxToggleStyle: ToggleStyle {
     @Environment(\.primaryColor) var primaryColor: Color
     public init() {}
     public func makeBody(configuration: Self.Configuration) -> some View {
@@ -17,7 +19,7 @@ public struct CheckBoxStyle: ToggleStyle {
                     .fill(primaryColor)
                     .frame(width: 19, height: 19)
 
-                RoundedRectangle(cornerRadius: 3.0)
+                RoundedRectangle(cornerRadius: 3)
                     .fill(primaryColor)
                     .frame(width: 13, height: 13)
                     .opacity(configuration.isOn ? 1 : 0)
@@ -26,11 +28,22 @@ public struct CheckBoxStyle: ToggleStyle {
                 .foregroundColor(primaryColor)
         }
         .frame(height: 44)
+        .contentShape(Rectangle())
         .onTapGesture {
             withAnimation {
                 configuration.isOn.toggle()
             }
         }
+    }
+}
+
+@available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
+extension ToggleStyle where Self == CheckboxToggleStyle {
+
+    /// A `ToggleStyle` that appears as a slightly rounded square with an inset filled indicator
+    /// The toggle is tinted with `primaryColor`
+    public static var checkBox: CheckboxToggleStyle {
+        CheckboxToggleStyle()
     }
 }
 
@@ -44,6 +57,6 @@ struct CheckBox_Previews: PreviewProvider {
                 Text("This one is 🙅‍♀️")
             }
         }
-        .toggleStyle(CheckBoxStyle())
+        .toggleStyle(.checkBox)
     }
 }
