@@ -45,7 +45,7 @@ struct CheckboxToggleSample: PropSampleable {
             ToggleExample(title: nil) {
                 Text("Do the thing?")
             }
-                .toggleStyle(.checkBox)
+            .toggleStyle(.checkBox)
         )
     }
 }

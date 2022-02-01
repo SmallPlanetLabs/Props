@@ -15,7 +15,6 @@ import SwiftUI
 ///
 /// The toggle is tinted with both `primaryColor`.
 
-
 public struct ScantronToggleStyle: ToggleStyle {
     @Environment(\.primaryColor) var primaryColor: Color
     let seed: Int
@@ -30,9 +29,9 @@ public struct ScantronToggleStyle: ToggleStyle {
                     .frame(width: 19, height: 19)
 
                 PencilFilledCircle(seed: seed)
+                    .trim(from: 0, to: configuration.isOn ? 1 : 0)
                     .stroke(style: style)
                     .frame(width: 12, height: 12)
-                    .opacity(configuration.isOn ? 1 : 0)
             }
             configuration.label
                 .foregroundColor(primaryColor)
@@ -40,7 +39,9 @@ public struct ScantronToggleStyle: ToggleStyle {
         .frame(minWidth: 44, minHeight: 44)
         .contentShape(Rectangle())
         .onTapGesture {
-            configuration.isOn.toggle()
+            withAnimation {
+                configuration.isOn.toggle()
+            }
         }
     }
 

@@ -6,6 +6,8 @@
 
 import SwiftUI
 
+/// A ``ToggleStyle`` that replicates a standard checkbox appearance, a rectangle with small
+/// rounded corners.
 public struct CheckboxToggleStyle: ToggleStyle {
     @Environment(\.primaryColor) var primaryColor: Color
     public init() {}
@@ -17,7 +19,7 @@ public struct CheckboxToggleStyle: ToggleStyle {
                     .fill(primaryColor)
                     .frame(width: 19, height: 19)
 
-                RoundedRectangle(cornerRadius: 3.0)
+                RoundedRectangle(cornerRadius: 3)
                     .fill(primaryColor)
                     .frame(width: 13, height: 13)
                     .opacity(configuration.isOn ? 1 : 0)
