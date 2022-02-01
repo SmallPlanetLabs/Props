@@ -39,7 +39,7 @@ public struct ScantronToggleStyle: ToggleStyle {
         .frame(minWidth: 44, minHeight: 44)
         .contentShape(Rectangle())
         .onTapGesture {
-            withAnimation {
+            withAnimation(.easeOut(duration: 1)) {
                 configuration.isOn.toggle()
             }
         }
@@ -67,7 +67,7 @@ public struct ScantronToggleStyle: ToggleStyle {
                 let widthFromCenter = sqrt(sumOfSquared)
                 let x = yIndex.isMultiple(of: 2) ? radius + widthFromCenter : radius - widthFromCenter
                 let point = CGPoint(x: x + scatter(), y: y + scatter())
-                if yIndex == 1 {
+                if yIndex == 0 {
                     p.move(to: point)
                 } else {
                     p.addLine(to: point)
