@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let datePickers = PropGroup(name: "Date Pickers", systemImage: "calendar", subgroups: [
@@ -17,7 +18,7 @@ extension PropGroup {
 
 struct DatePickers_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .datePickers)
         }
     }

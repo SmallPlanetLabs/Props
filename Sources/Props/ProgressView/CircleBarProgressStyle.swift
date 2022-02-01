@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewMultiple
 
 public struct CircleBarProgressStyle: ProgressViewStyle {
     public init() {}
@@ -105,8 +106,10 @@ struct CircleBarProgress_Previews: PreviewProvider {
         return progress
     }()
     static var previews: some View {
-        ProgressView(progress)
-            .progressViewStyle(CircleBarProgressStyle())
+        PreviewMultiple {
+            ProgressView(progress)
+                .progressViewStyle(CircleBarProgressStyle())
             .padding()
+        }
     }
 }

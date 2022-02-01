@@ -8,6 +8,7 @@
 import SwiftUI
 import DynamicColor
 import Props
+import PreviewMultiple
 
 extension PropGroup {
     static let buttonTintingShading = PropGroup(name: "Button tinting and shading", samples: [
@@ -17,7 +18,7 @@ extension PropGroup {
 
 struct ButtonTintingShading_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBigLandscape) {
+        PreviewMultiple(devices: .lightDarkiPhoneBigLandscape) {
             PropGroupView(group: .buttonTintingShading)
         }
     }

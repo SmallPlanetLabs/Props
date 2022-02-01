@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let controlGroups = PropGroup(name: "Control Groups", systemImage: "filemenu.and.cursorarrow", subgroups: [
@@ -17,7 +18,7 @@ extension PropGroup {
 
 struct ControlGroups_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .controlGroups)
         }
     }

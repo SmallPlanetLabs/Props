@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let textFields = PropGroup(name: "Text Fields",
@@ -17,7 +18,7 @@ extension PropGroup {
 
 struct TextFields_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .textFields)
         }
     }

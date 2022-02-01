@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let groupBoxes = PropGroup(name: "Group Boxes", systemImage: "rectangle.3.group.fill", subgroups: [
@@ -19,7 +20,7 @@ extension PropGroup {
 
 struct GroupBoxes_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .groupBoxes)
         }
     }

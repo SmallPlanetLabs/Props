@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let toggles = PropGroup(name: "Toggles", systemImage: "switch.2", subgroups: [
@@ -17,7 +18,7 @@ extension PropGroup {
 
 struct Toggles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .toggles)
         }
     }
@@ -52,7 +53,7 @@ struct ToggleExample<Content>: View where Content: View {
 @available(iOS 15.0, *)
 struct ToggleStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .customToggles)
         }
     }

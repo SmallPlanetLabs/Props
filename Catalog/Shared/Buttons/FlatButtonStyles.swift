@@ -8,6 +8,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let flatButtons = PropGroup(name: "Flat buttons", samples: [
@@ -68,7 +69,7 @@ struct OutlinedButtonSample: PropSampleable {
 
 struct FlatButtonStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             PropGroupView(group: .flatButtons)
         }
     }

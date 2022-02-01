@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let buttons = PropGroup(name: "Buttons", systemImage: "cursorarrow.rays", subgroups: [
@@ -21,7 +22,7 @@ extension PropGroup {
 
 struct Buttons_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .buttons)
         }
     }

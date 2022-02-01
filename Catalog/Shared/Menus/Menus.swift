@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let menus = PropGroup(name: "Menus",
@@ -17,7 +18,7 @@ extension PropGroup {
 
 struct Menus_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .menus)
         }
     }

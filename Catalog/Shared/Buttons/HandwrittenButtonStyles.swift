@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let handwrittenButtons = PropGroup(name: "Handwritten buttons", samples: [
@@ -46,7 +47,7 @@ struct HandwrittenButtonSamples: View {
 
 struct HandwrittenButtonSample_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             HandwrittenButtonSamples()
         }
     }

@@ -8,6 +8,7 @@
 import Foundation
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let pickers = PropGroup(name: "Pickers", systemImage: "list.bullet", subgroups: [
@@ -17,7 +18,7 @@ extension PropGroup {
 
 struct Pickers_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices {
+        PreviewMultiple {
             PropGroupView(group: .pickers)
         }
     }

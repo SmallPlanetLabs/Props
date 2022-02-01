@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let systemDatePickers = PropGroup(name: "System date pickers", samples: [
@@ -77,7 +78,7 @@ struct SystemDatePickerStyles: View {
 
 struct SystemDatePickerStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             SystemDatePickerStyles()
         }
     }

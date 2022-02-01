@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Props
+import PreviewMultiple
 
 extension PropGroup {
     static let customProgress = PropGroup(name: "Custom progress views", samples: [
@@ -71,7 +72,7 @@ struct DottedProgressStyleSample: PropSampleable {
 
 struct CustomProgressViewStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .iPhone13ProMaxSizeCategories) {
+        PreviewMultiple(devices: .iPhone13ProMaxSizeCategories) {
             PropGroupView(group: .customProgress)
                 .primaryColor(.purple)
                 .secondaryColor(.gray)

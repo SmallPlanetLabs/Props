@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let verticalLabels = PropGroup(name: "Vertical labels",
@@ -48,7 +49,7 @@ struct VerticalLabelSamples: View {
 
 struct VerticalLabelSamples_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             VerticalLabelSamples()
         }
     }

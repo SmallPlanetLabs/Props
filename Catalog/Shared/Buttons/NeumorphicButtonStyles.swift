@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let neumorphicButtons = PropGroup(name: "Neumorphic buttons", samples: [
@@ -48,7 +49,7 @@ struct NeumorphicButtonSamples: View {
 
 struct NeumorphicButtonSample_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             NeumorphicButtonSamples()
         }
     }
