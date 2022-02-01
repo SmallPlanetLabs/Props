@@ -17,6 +17,7 @@ import SwiftUI
 
 public struct ScantronToggleStyle: ToggleStyle {
     @Environment(\.primaryColor) var primaryColor: Color
+    @Environment(\.secondaryColor) var secondaryColor: Color
     let seed: Int
     private let style = StrokeStyle(lineWidth: 3.00, lineCap: .round, lineJoin: .round)
 
@@ -25,12 +26,13 @@ public struct ScantronToggleStyle: ToggleStyle {
             ZStack {
                 Circle()
                     .stroke(lineWidth: 1)
-                    .fill(primaryColor)
+                    .fill(secondaryColor)
                     .frame(width: 19, height: 19)
 
                 PencilFilledCircle(seed: seed)
                     .trim(from: 0, to: configuration.isOn ? 1 : 0)
                     .stroke(style: style)
+                    .foregroundColor(primaryColor)
                     .frame(width: 12, height: 12)
             }
             configuration.label

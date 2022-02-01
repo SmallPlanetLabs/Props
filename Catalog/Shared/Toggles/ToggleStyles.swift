@@ -24,14 +24,46 @@ struct ScantronToggleSample: PropSampleable {
     let name = "Scantron toggle style"
     let notes: String? = ".toggleStyle(.scantron)"
     let source = "Props"
-    let keywords = "toggle custom props scantron"
+    let keywords = "toggle custom props scantron handdrawn"
     @ViewBuilder var body: AnyView {
         AnyView(
-            ToggleExample(title: nil) {
-                Text("True or false?")
-            }
-            .toggleStyle(.scantron)
+            ScantronToggleSampleView()
+                .secondaryColor(.blue)
         )
+    }
+}
+
+struct ScantronToggleSampleView: View {
+    var body: some View {
+        VStack {
+            ScantronRow(baseId: 10)
+            ScantronRow(baseId: 20)
+            ScantronRow(baseId: 30)
+            ScantronRow(baseId: 40)
+        }
+    }
+
+    struct ScantronSample: View {
+        @State private var isOn = false
+        let id: Int
+        var body: some View {
+            Toggle(isOn: $isOn) {}
+                .id(id)
+                .toggleStyle(.scantron(seed: id))
+        }
+    }
+
+    struct ScantronRow: View {
+        let baseId: Int
+        var body: some View {
+            HStack {
+                ScantronSample(id: baseId + 1)
+                ScantronSample(id: baseId + 2)
+                ScantronSample(id: baseId + 3)
+                ScantronSample(id: baseId + 4)
+                ScantronSample(id: baseId + 5)
+            }
+        }
     }
 }
 
