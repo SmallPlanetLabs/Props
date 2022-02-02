@@ -45,7 +45,7 @@ public struct WarpDriveProgressStyle: ProgressViewStyle {
                                     .linear(duration: duration(index: index))
                                     .repeatCount(.max, autoreverses: false),
                                 value: rotation)
-                            .padding(padding(index: index, size: geomtery.size))
+                            .padding(padding(index: index, size: geometry.size))
                     }
                 }
                 .onAppear {
