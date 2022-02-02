@@ -24,7 +24,7 @@ struct ScantronToggleSample: PropSampleable {
     let name = "Scantron toggle style"
     let notes: String? = ".toggleStyle(.scantron)"
     let source = "Props"
-    let keywords = "toggle custom props scantron handdrawn"
+    let keywords = "toggle custom props scantron handdrawn animated animation"
     @ViewBuilder var body: AnyView {
         AnyView(
             ScantronToggleSampleView()
@@ -86,7 +86,7 @@ struct SunMoonToggleSample: PropSampleable {
     let name = "Sun/moon toggle style"
     let notes: String? = ".toggleStyle(SunMoonToggleStyle())"
     let source = "Custom"
-    let keywords = "toggle custom 3rd party animated"
+    let keywords = "toggle custom 3rd party animated animated animation"
     @ViewBuilder var body: AnyView {
         AnyView(
             ToggleExample(title: nil) {
@@ -101,7 +101,7 @@ struct GravityToggleSample: PropSampleable {
     let name = "gravity toggle style"
     let notes: String? = ".toggleStyle(.gravity)"
     let source = "Custom"
-    let keywords = "toggle custom props animated gravity"
+    let keywords = "toggle custom props animated gravity animated animation"
     @ViewBuilder var body: AnyView {
         AnyView(
             ToggleExample(title: nil) {
@@ -118,7 +118,7 @@ struct RolloverToggleSample: PropSampleable {
     let name = "rollover toggle style"
     let notes: String? = ".toggleStyle(.rollover)"
     let source = "Custom"
-    let keywords = "toggle custom props animated rollover"
+    let keywords = "toggle custom props animated rollover animated animation"
     @ViewBuilder var body: AnyView {
         AnyView(
             ToggleExample(title: nil) {
