@@ -33,7 +33,7 @@ public struct WarpDriveProgressStyle: ProgressViewStyle {
         }
 
         var body: some View {
-            GeometryReader { geomtery in
+            GeometryReader { geometry in
                 ZStack {
                     ForEach(0..<count) { index in
                         Circle()
