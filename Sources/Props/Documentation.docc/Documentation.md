@@ -27,12 +27,10 @@ A Catalog app is included that demonstrates all of the styling props in this rep
 - ``CircleStepProgressStyle``
 - ``DottedProgressStyle``
 - ``SquiggleProgressStyle``
+- ``WarpDriveProgressStyle``
 
 ### Toggles
 - ``CheckboxToggleStyle``
 - ``GravityToggleStyle``
 - ``RolloverToggleStyle``
 - ``ScantronToggleStyle``
-
-### Utilities
-- ``PreviewMultiple``
