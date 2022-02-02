@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Props
+import PreviewMultiple
 
 struct PropGroup: Identifiable {
     let name: String
@@ -78,6 +79,7 @@ struct PropGroupView: View {
                                 }
                             }
                             .navigationTitle(group.name)
+                            .navigationBarTitleDisplayMode(.inline)
                         } else {
                             sampleCards(for: group.samples)
                         }
@@ -115,9 +117,9 @@ struct PropGroupView_Previews: PreviewProvider {
     private static let samples: [PropSampleable] = PropGroup.systemButtons.samples
     private static let group = PropGroup(name: "Test group", subgroups: groups)
     static var previews: some View {
-        MultipleDevices(combos: .iPadOrientations) {
+        PreviewMultiple(devices: .default) {
             NavigationView {
-                PropGroupView(group: PropGroup(name: "Test Samples", samples: samples))
+                PropGroupView(group: PropGroup(name: "Test Samples With a Long name", samples: samples))
             }
         }
         .navigationViewStyle(.stack)

@@ -7,6 +7,7 @@
 
 import Props
 import SwiftUI
+import PreviewMultiple
 
 extension PropGroup {
     static let systemControlGroups = PropGroup(name: "System control groups", samples: [
@@ -55,7 +56,7 @@ struct SystemControlGroupStyles: View {
 
 struct SystemControlGroupStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .lightDarkiPhoneBig) {
+        PreviewMultiple(devices: .lightDarkiPhoneBig) {
             SystemControlGroupStyles()
         }
     }

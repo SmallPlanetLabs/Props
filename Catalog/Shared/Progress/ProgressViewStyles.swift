@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Props
+import PreviewMultiple
 
 extension PropGroup {
     static let systemProgress = PropGroup(name: "System progress views", samples: [
@@ -37,7 +38,7 @@ struct SystemIndeterminateSample: PropSampleable {
 
 struct SystemProgressViewStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos:  .lightDarkiPhoneBig) {
+        PreviewMultiple(devices:  .lightDarkiPhoneBig) {
             PropGroupView(group: .systemProgress)
         }
     }

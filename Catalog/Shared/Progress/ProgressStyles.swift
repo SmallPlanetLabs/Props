@@ -7,9 +7,11 @@
 
 import SwiftUI
 import Props
+import PreviewMultiple
 
 extension PropGroup {
     static let customProgress = PropGroup(name: "Custom progress views", samples: [
+        WarpDriveProgressStyleSample(),
         BarsProgressStyleSample(),
         ArcsProgressStyleSample(),
         SquiggleProgressStyleSample(),
@@ -17,6 +19,19 @@ extension PropGroup {
         CircleStepProgressStyleSample(),
         DottedProgressStyleSample(),
     ])
+}
+
+struct WarpDriveProgressStyleSample: PropSampleable {
+    let name = "WarpDrive progress view"
+    let notes: String? = ".progressViewStyle(.warpDrive)"
+    let source = "Props"
+    let keywords = "progress indeterminate custom warpdrive 3d rotation"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ProgressExample(total: 12)
+                .progressViewStyle(.warpDrive)
+        )
+    }
 }
 
 struct SquiggleProgressStyleSample: PropSampleable {
@@ -99,7 +114,7 @@ struct ArcsProgressStyleSample: PropSampleable {
 
 struct CustomProgressViewStyles_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleDevices(combos: .iPhone13ProMaxSizeCategories) {
+        PreviewMultiple(devices: .iPhone13ProMaxSizeCategories) {
             PropGroupView(group: .customProgress)
                 .primaryColor(.purple)
                 .secondaryColor(.gray)
