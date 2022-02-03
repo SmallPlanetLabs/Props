@@ -28,6 +28,9 @@ A Catalog app is included that demonstrates all of the styling props in this rep
 - ``DottedProgressStyle``
 - ``SquiggleProgressStyle``
 - ``WarpDriveProgressStyle``
+- ``ArcsProgressStyle``
+- ``BarsProgressStyle``
+- ``RotatingCirclesProgressStyle``
 
 ### Toggles
 - ``CheckboxToggleStyle``

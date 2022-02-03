@@ -11,6 +11,7 @@ import PreviewMultiple
 
 extension PropGroup {
     static let customProgress = PropGroup(name: "Custom progress views", samples: [
+        RotatingCirclesProgressStyleSample(),
         WarpDriveProgressStyleSample(),
         BarsProgressStyleSample(),
         ArcsProgressStyleSample(),
@@ -108,6 +109,19 @@ struct ArcsProgressStyleSample: PropSampleable {
         AnyView(
             ProgressExample(total: 100)
                 .progressViewStyle(.arcs)
+        )
+    }
+}
+
+struct RotatingCirclesProgressStyleSample: PropSampleable {
+    let name = "Rotating circles progress view"
+    let notes: String? = ".progressViewStyle(.rotatingCircles)"
+    let source = "Props"
+    let keywords = "progress determinate custom rotating circles"
+    @ViewBuilder var body: AnyView {
+        AnyView(
+            ProgressExample(total: 100)
+                .progressViewStyle(.rotatingCircles)
         )
     }
 }
