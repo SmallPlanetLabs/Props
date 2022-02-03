@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-/// A ``ToggleStyle`` that replicates a standard checkbox appearance, a rectangle with small
+/// A `ToggleStyle` that replicates a standard checkbox appearance, a rectangle with small
 /// rounded corners.
 public struct CheckboxToggleStyle: ToggleStyle {
     @Environment(\.primaryColor) var primaryColor: Color
