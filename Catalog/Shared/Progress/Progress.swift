@@ -13,6 +13,7 @@ extension PropGroup {
                                     systemImage: "stopwatch.fill",
                                     subgroups: [
                                         .customProgress,
+                                        .warpDriveProgress,
                                         .systemProgress,
                                     ])
 }

@@ -72,6 +72,8 @@
 		A947874D2762635A001EAE3D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874B2762635A001EAE3D /* Colors.swift */; };
 		A947875027627232001EAE3D /* TintingShading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874F27627232001EAE3D /* TintingShading.swift */; };
 		A947875127627232001EAE3D /* TintingShading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947874F27627232001EAE3D /* TintingShading.swift */; };
+		A9A8579F27AB21AE00561591 /* WarpDriveProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8579E27AB21AE00561591 /* WarpDriveProgressStyles.swift */; };
+		A9A857A027AB21AE00561591 /* WarpDriveProgressStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8579E27AB21AE00561591 /* WarpDriveProgressStyles.swift */; };
 		A9C1044427337E260086AE8C /* Props in Frameworks */ = {isa = PBXBuildFile; productRef = A9C1044327337E260086AE8C /* Props */; };
 		A9C10447273391BC0086AE8C /* SunMoonToggleStyle in Frameworks */ = {isa = PBXBuildFile; productRef = A9C10446273391BC0086AE8C /* SunMoonToggleStyle */; };
 		A9C1044B2733962D0086AE8C /* Sliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C1044A2733962D0086AE8C /* Sliders.swift */; };
@@ -128,6 +130,7 @@
 		A947874B2762635A001EAE3D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A947874F27627232001EAE3D /* TintingShading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintingShading.swift; sourceTree = "<group>"; };
 		A966BADD27838A9A000A3904 /* Props */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Props; path = ..; sourceTree = "<group>"; };
+		A9A8579E27AB21AE00561591 /* WarpDriveProgressStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarpDriveProgressStyles.swift; sourceTree = "<group>"; };
 		A9C1044A2733962D0086AE8C /* Sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders.swift; sourceTree = "<group>"; };
 		A9D04EC627330A7900599EAD /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		A9D04EC827330AD000599EAD /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
@@ -311,6 +314,7 @@
 			children = (
 				A910845D27321A240056F4F9 /* Progress.swift */,
 				A933E6BC27482FF900FB5D0D /* ProgressStyles.swift */,
+				A9A8579E27AB21AE00561591 /* WarpDriveProgressStyles.swift */,
 				A910846027321BA60056F4F9 /* ProgressViewStyles.swift */,
 			);
 			path = Progress;
@@ -489,6 +493,7 @@
 				A9108448273188C80056F4F9 /* Buttons.swift in Sources */,
 				A933E6A72742EA5100FB5D0D /* PropCard.swift in Sources */,
 				1AA5C4472789DBBD00509E4D /* Pickers.swift in Sources */,
+				A9A8579F27AB21AE00561591 /* WarpDriveProgressStyles.swift in Sources */,
 				A910846127321BA60056F4F9 /* ProgressViewStyles.swift in Sources */,
 				1AEDAB73277DA67E00B57079 /* HandwrittenGroupBoxStyles.swift in Sources */,
 				A910844A27318ED60056F4F9 /* FlatButtonStyles.swift in Sources */,
@@ -545,6 +550,7 @@
 				1AA5C4482789DBBD00509E4D /* Pickers.swift in Sources */,
 				A947874D2762635A001EAE3D /* Colors.swift in Sources */,
 				A91084542731F4AC0056F4F9 /* SystemButtonStyles.swift in Sources */,
+				A9A857A027AB21AE00561591 /* WarpDriveProgressStyles.swift in Sources */,
 				A9E4D7C12785F3040075BCB0 /* ButtonTintingShading.swift in Sources */,
 				A91084512731D6D70056F4F9 /* Styling.swift in Sources */,
 				1A3C88B62763A5DF005D6757 /* HandwrittenButtonStyles.swift in Sources */,

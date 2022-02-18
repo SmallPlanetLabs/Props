@@ -12,7 +12,6 @@ import PreviewMultiple
 extension PropGroup {
     static let customProgress = PropGroup(name: "Custom progress views", samples: [
         RotatingCirclesProgressStyleSample(),
-        WarpDriveProgressStyleSample(),
         BarsProgressStyleSample(),
         ArcsProgressStyleSample(),
         SquiggleProgressStyleSample(),
@@ -22,24 +21,11 @@ extension PropGroup {
     ])
 }
 
-struct WarpDriveProgressStyleSample: PropSampleable {
-    let name = "WarpDrive progress view"
-    let notes: String? = ".progressViewStyle(.warpDrive)"
-    let source = "Props"
-    let keywords = "progress indeterminate custom warpdrive 3d rotation"
-    @ViewBuilder var body: AnyView {
-        AnyView(
-            ProgressExample(total: 12)
-                .progressViewStyle(.warpDrive)
-        )
-    }
-}
-
 struct SquiggleProgressStyleSample: PropSampleable {
     let name = "Squiggle progress view"
     let notes: String? = ".progressViewStyle(SquiggleProgressStyle())"
     let source = "Props"
-    let keywords = "progress determinate custom squiggle"
+    let keywords = "progress determinate custom squiggle animated animation"
     @ViewBuilder var body: AnyView {
         AnyView(
             ProgressExample(total: 12)
@@ -52,7 +38,7 @@ struct CircleBarProgressStyleSample: PropSampleable {
     let name = "Circle bar progress view"
     let notes: String? = ".progressViewStyle(CircleBarProgressStyle())"
     let source = "Props"
-    let keywords = "progress determinate custom circles"
+    let keywords = "progress determinate custom circles animated animation"
     @ViewBuilder var body: AnyView {
         AnyView(
             ProgressExample(total: 15)
@@ -78,7 +64,7 @@ struct DottedProgressStyleSample: PropSampleable {
     let name = "Dotted progress view"
     let notes: String? = ".progressViewStyle(DottedProgressStyle())"
     let source = "Props"
-    let keywords = "progress determinate custom dotted dots"
+    let keywords = "progress determinate custom dotted dots animated animation"
     @ViewBuilder var body: AnyView {
         AnyView(
             ProgressExample(total: 12)
