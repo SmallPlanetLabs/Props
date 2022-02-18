@@ -25,7 +25,7 @@ public struct RotatingCirclesProgressStyle: ProgressViewStyle {
     struct IndeterminateView: View {
         
         // MARK: - Properties
-        @State private var isOn = false
+        @State private var rotation = Angle.zero
         let count: Int
         let content: AnyView
         
@@ -39,17 +39,19 @@ public struct RotatingCirclesProgressStyle: ProgressViewStyle {
             GeometryReader { geometry in
                 ForEach(0..<count) { index in
                     circle(forIndex: index, in: geometry.size)
-                        .rotationEffect(isOn ? .degrees(360) : .degrees(0))
+                        .rotationEffect(rotation)
                         .animation(
                             Animation
                                 .timingCurve(0.5, 0.15 + Double(index) / 5, 0.25, 1, duration: 1.5)
-                                .repeatCount(isOn ? .max : 1, autoreverses: false)
-                            , value: isOn
+                                .repeatCount(.max, autoreverses: false)
+                            , value: rotation
                         )
                 }
             }
             .onAppear {
-                isOn = true
+                DispatchQueue.main.async {
+                    rotation = Angle(degrees: 360)
+                }
             }
             .aspectRatio(contentMode: .fit)
         }
@@ -57,12 +59,11 @@ public struct RotatingCirclesProgressStyle: ProgressViewStyle {
         private func circle(forIndex index: Int, in geometrySize: CGSize) -> some View {
             content
                 .frame(width: geometrySize.width, height: geometrySize.height)
-                .scaleEffect(isOn ? animatingScale(forIndex: index) : 1 )
+                .scaleEffect(animatingScale(forIndex: index))
                 .offset(y: geometrySize.width / 10 - geometrySize.height / 2)
         }
         
-        private func animatingScale(forIndex index: Int) -> CGFloat { CGFloat(index + 1) / CGFloat(count)
-        }
+        private func animatingScale(forIndex index: Int) -> CGFloat { CGFloat(index + 1) / CGFloat(count) }
         
     }
     
