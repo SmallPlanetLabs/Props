@@ -4,6 +4,8 @@
 
 Note this is prerelease software subject to robust changes.
 
+![Animation of Catalog example application](/.github/resources/props-catalog-animated.gif "Props examples in Catalog sample app")
+
 ### Background
 
 The props concept grew from a collaboration between the designer and development teams while building rapid prototypes. Working together, we saw the parallels between what we were doing and what a photo stylist and photographer do during a photo shoot. From this, the idea of a catalog of props, reusable visual elements, grew and became this repository. 
@@ -18,15 +20,17 @@ Add Props to your project through Xcode by adding a project with the repository'
 
 ### Usage
 
-Examine the Catalog sample application for usage examples of all props in this repo plus some other cool UI elements we've found in our github travels. As most of the Props follow SwiftUI's styling approach, their use follows the pattern of:
+Examine the Catalog sample application for usage examples of all props in this repo plus some other cool UI elements we've found in our GitHub travels. As most of the Props follow SwiftUI's styling approach, their use follows the pattern of:
 
 ```swift
     Button {} label: {
         Text("Handwritten Button")
     }
-    .buttonStyle(HandwrittenButtonStyle())
+    .buttonStyle(.handwritten)
 ```
-where `Button {} ...` is a normal SwiftUI Button and `HandwrittenButtonStyle` is a `ButtonStyle` Prop.
+where `Button {} ...` is a normal SwiftUI Button and `.handwritten` is shorthand for `HandwrittenButtonStyle` which is a `ButtonStyle` Prop.
+
+![Prop example of Button styled with HandwrittenButtonStyle](/.github/resources/handwritten-button-prop.png)
 
 ## License
 

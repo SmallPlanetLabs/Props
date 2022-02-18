@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-/// A ``ProgressViewStyle`` with 3D rotating circles.
+/// A `ProgressViewStyle` with 3D rotating circles.
 /// - Parameter count: Number of circles
 /// 
-/// Uses ``primaryColor``
+/// Uses `primaryColor`
 
 public struct WarpDriveProgressStyle: ProgressViewStyle {
     let count: Int
@@ -114,12 +114,12 @@ public struct WarpDriveProgressStyle: ProgressViewStyle {
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 extension ProgressViewStyle where Self == WarpDriveProgressStyle {
 
-    /// A ``ProgressViewStyle`` with 3D rotating circles.
+    /// A `ProgressViewStyle` with 3D rotating circles.
     public static var warpDrive: WarpDriveProgressStyle {
         WarpDriveProgressStyle()
     }
 
-    /// A ``ProgressViewStyle`` with 3D rotating circles.
+    /// A `ProgressViewStyle` with 3D rotating circles.
     /// - Parameter count: Number of circles
     public static func warpDrive(count: Int = 7, signature: WarpDriveProgressStyle.Signature) -> WarpDriveProgressStyle {
         WarpDriveProgressStyle(count: count, signature: signature)
