@@ -26,7 +26,7 @@ public struct ArcsProgressStyle: ProgressViewStyle {
     struct IndeterminateView: View {
         
         // MARK: - Properties
-        @State private var isOn = false
+        @State private var rotation = Angle.zero
         let count: Int
         let width: CGFloat
         let spacing: CGFloat
@@ -42,18 +42,20 @@ public struct ArcsProgressStyle: ProgressViewStyle {
             GeometryReader { geometry in
                 ForEach(0..<count) { index in
                     arc(forIndex: index, in: geometry.size)
-                        .rotationEffect(isOn ? .degrees(360) : .degrees(0))
+                        .rotationEffect(rotation)
                         .animation(
                             Animation
                                 .default
                                 .speed(Double.random(in: 0.2...0.4))
-                                .repeatCount(isOn ? .max : 1, autoreverses: false)
-                            , value: isOn
+                                .repeatCount(.max, autoreverses: false)
+                            , value: rotation
                         )
                 }
             }
             .onAppear {
-                isOn = true
+                DispatchQueue.main.async {
+                    rotation = .degrees(360)
+                }
             }
             .aspectRatio(contentMode: .fit)
         }
