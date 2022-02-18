@@ -58,7 +58,9 @@ public struct BarsProgressStyle: ProgressViewStyle {
                 }
             }
             .onAppear {
-                isOn = true
+                DispatchQueue.main.async {
+                    isOn = true
+                }
             }
         }
     }
